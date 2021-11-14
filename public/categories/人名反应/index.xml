@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>人名反应 on Edward Kerman</title>
+    <link>/categories/%E4%BA%BA%E5%90%8D%E5%8F%8D%E5%BA%94/</link>
+    <description>Recent content in 人名反应 on Edward Kerman</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 Nov 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/%E4%BA%BA%E5%90%8D%E5%8F%8D%E5%BA%94/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>乙酰乙酸酯合成</title>
+      <link>/post/2021/11/13/%E4%B9%99%E9%85%B0%E4%B9%99%E9%85%B8%E9%85%AF%E5%90%88%E6%88%90/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021/11/13/%E4%B9%99%E9%85%B0%E4%B9%99%E9%85%B8%E9%85%AF%E5%90%88%E6%88%90/</guid>
+      <description>简介 通过乙酰乙酸酯的碳上烷基化制备酮称为乙酰乙酸酯合成。乙酰乙酸酯可以在 C2 或 C2、C4 上去质子化，这取决于所用碱的量和强度。起始乙酰乙酸酯最常通过相应酯的 Claisen 缩合获得，但也可使用其他方法制备它们。
+C2 和 C4 相当酸性（C2 的 pKa ~11 ，C4 的 pKa ~24），因此在存在一当量碱（醇盐、LDA、NaHMDS 或 LiHMDS 等）的情况下，C2 位置首先去质子化。再用另一当量的碱和烷基化剂也可以在 C2 处进行第二次烷基化。
+当乙酰乙酸酯受到过量碱的作用（同时）时，会形成相应的双负离子。当亲电子试剂（例如卤代烷）加入二价阴离子时，烷基化首先发生在最亲核的 C4 上（迟到早退）。
+所得烷基化乙酰乙酸酯衍生物可进行两种水解，具体取决于条件：
+ 酮式分解：稀酸水解酯基，所得β-酮酸脱羧得到酮（单取代或双取代丙酮衍生物） 酸式分解：碱诱导的逆-Claisen 缩合，在质子化后得到酸  最常用的是稀酸水解，因为反应混合物不会被副产物1污染。最近，Krapcho 脱羧方法带来了中性脱羧条件。
+与丙二酸酯一样，乙酰乙酸酯的单烷基衍生物在碘存在下进行碱催化偶联反应。 偶联产物水解、脱羧产生 γ-二酮。
+合成中的应用 M. Nakada 及其同事通过乙酰乙酸酯的双负离子连续两次加成（烷基化）开发了四氢呋喃和四氢吡喃衍生物的新型合成方法。通过使用 $\ce{LiClO4}$ 作为添加剂实现了四氢呋喃衍生物的选择性形成。
+C.H.Heathcock 实验室针对Stemona alkaloids典型核心结构的合成节选。其中一步告诉我们酮和卤代烃中卤代烃优先被进攻（无论是否是 α-卤代）
+  进攻酮后逆-Claisen 缩合 &amp;#x21a9;&amp;#xfe0e;
+   </description>
+    </item>
+    
+  </channel>
+</rss>
