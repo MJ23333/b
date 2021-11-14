@@ -46,7 +46,7 @@ menu:
 params:
   homePosts: 6
   mainSections: ["post", "work"]
-  editLink: "https://github.com/MJ23333/b"
+  editLink: "https://github.com/MJ23333/b/contnet/"
   authorDelimiter: " / "
   pageFeatures: [+sidenotes]
   description: >
