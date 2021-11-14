@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>成环 on Edward Kerman</title>
+    <link>/tags/%E6%88%90%E7%8E%AF/</link>
+    <description>Recent content in 成环 on Edward Kerman</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 Nov 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/%E6%88%90%E7%8E%AF/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>酮醇缩合</title>
+      <link>/post/2021/11/13/%E9%85%AE%E9%86%87%E7%BC%A9%E5%90%88/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021/11/13/%E9%85%AE%E9%86%87%E7%BC%A9%E5%90%88/</guid>
+      <description>简介 通过用熔融的钠在热二甲苯中处理脂肪酯1，缩合并酸化后得到偶姻（α-羟基酮）。脂肪族单酯产生对称化合物，而二酯产生环状偶姻。分子内缩合是关闭 10 元或更多元环（最多至 34 元环）的最佳方式之一。对于小环（4-6），在存在 TMSCl 和使用超声波的情况下，产率大大提高。 偶姻及其阴离子很容易被氧化。添加 TMSCl 通过防止碱催化副反应，如 β-消除、Claisen 或 Dieckmann 缩合。所得的双甲硅烷氧基烯烃通过简单的水解或醇解即被分离或转化为酰基。
+机理 目前存在两种机理（其中第一种机理较为常见）：
+合成应用 产生自由基的方法千万种，为什么不能将几种 SET 过程共同连在一起2呢？J.Salaün 及其同事研究了超声波和 TMSCl 促进的羧酸酯的酰基缩合和环化：
+D.J.Burnell 等人通过路易斯酸促进的 Geminal acylation reaction 合成双环二酮，所需的双甲硅烷氧基烯烃是通过使用标准的酮醇缩合条件制备的。
+在此顺路补充所谓的 Geminal acylation reaction的机理：3
+  为制备芳香偶姻则应用安息香缩合 &amp;#x21a9;&amp;#xfe0e;
+ 小心三元环 $sp^2$ 杂化不好，加成变为缩酮衍生物 &amp;#x21a9;&amp;#xfe0e;
+ 还存在如下开环产物：&amp;#x21a9;&amp;#xfe0e;
+   </description>
+    </item>
+    
+  </channel>
+</rss>
