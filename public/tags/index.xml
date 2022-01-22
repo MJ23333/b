@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Edward Kerman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Nov 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>奇怪</title>
+      <link>/tags/%E5%A5%87%E6%80%AA/</link>
+      <pubDate>Tue, 23 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/%E5%A5%87%E6%80%AA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>入门</title>
+      <link>/tags/%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/%E5%85%A5%E9%97%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>取代</title>
+      <link>/tags/%E5%8F%96%E4%BB%A3/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/%E5%8F%96%E4%BB%A3/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>成环</title>
@@ -17,6 +44,15 @@
       <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>/tags/%E6%88%90%E7%8E%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>碳链</title>
+      <link>/tags/%E7%A2%B3%E9%93%BE/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/%E7%A2%B3%E9%93%BE/</guid>
       <description></description>
     </item>
     
@@ -30,11 +66,29 @@
     </item>
     
     <item>
-      <title>奇怪</title>
-      <link>/tags/%E5%A5%87%E6%80%AA/</link>
-      <pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate>
+      <title>过渡金属</title>
+      <link>/tags/%E8%BF%87%E6%B8%A1%E9%87%91%E5%B1%9E/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/%E5%A5%87%E6%80%AA/</guid>
+      <guid>/tags/%E8%BF%87%E6%B8%A1%E9%87%91%E5%B1%9E/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>重排</title>
+      <link>/tags/%E9%87%8D%E6%8E%92/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/%E9%87%8D%E6%8E%92/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>量子化学</title>
+      <link>/tags/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6/</guid>
       <description></description>
     </item>
     

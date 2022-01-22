@@ -15,32 +15,67 @@
   </url>
   
   <url>
+    <loc>/categories/</loc>
+    <lastmod>2021-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2021-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2021-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2021-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2021/11/23/%E5%85%B3%E4%BA%8E%E7%A7%91%E5%AD%A6%E4%BC%A6%E7%90%86%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/</loc>
+    <lastmod>2021-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/%E5%A5%87%E6%80%AA/</loc>
+    <lastmod>2021-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/%E6%84%9F%E6%83%B3/</loc>
+    <lastmod>2021-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/categories/academic/</loc>
     <lastmod>2021-11-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>/post/2021/11/13/aldol-%E7%BC%A9%E5%90%88/</loc>
+    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2021/11/13/amadori-%E9%87%8D%E6%8E%92/</loc>
+    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2021/11/13/arbuzov-%E5%8F%8D%E5%BA%94/</loc>
+    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2021/11/13/arndt-eistert-%E5%8F%8D%E5%BA%94/</loc>
     <lastmod>2021-11-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/post/2021/11/13/ene%E5%8F%8D%E5%BA%94/</loc>
-    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2021-11-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -55,7 +90,42 @@
   </url>
   
   <url>
+    <loc>/tags/%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2021/11/13/%E5%85%A5%E9%97%A8%E7%BA%A7%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B/</loc>
+    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/%E5%8F%96%E4%BB%A3/</loc>
+    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/%E6%88%90%E7%8E%AF/</loc>
+    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2021/11/13/%E7%82%94%E7%83%83%E5%A4%8D%E5%88%86%E8%A7%A3/</loc>
+    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2021/11/13/%E7%83%AF%E7%83%83%E5%A4%8D%E5%88%86%E8%A7%A3/</loc>
+    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%A6/</loc>
+    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/%E7%A2%B3%E9%93%BE/</loc>
     <lastmod>2021-11-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -65,22 +135,27 @@
   </url>
   
   <url>
+    <loc>/tags/%E8%BF%87%E6%B8%A1%E9%87%91%E5%B1%9E/</loc>
+    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2021/11/13/%E9%85%AE%E9%86%87%E7%BC%A9%E5%90%88/</loc>
     <lastmod>2021-11-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/%E5%A5%87%E6%80%AA/</loc>
-    <lastmod>2021-11-10T00:00:00+00:00</lastmod>
+    <loc>/tags/%E9%87%8D%E6%8E%92/</loc>
+    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6/</loc>
+    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/post/2021/11/10/%E5%BF%AB%E9%A9%AC%E4%B8%80%E9%9E%AD/</loc>
-    <lastmod>2021-11-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/%E6%84%9F%E6%83%B3/</loc>
     <lastmod>2021-11-10T00:00:00+00:00</lastmod>
   </url>
   

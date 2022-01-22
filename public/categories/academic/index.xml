@@ -12,6 +12,59 @@
     
     
     <item>
+      <title>Aldol 缩合</title>
+      <link>/post/2021/11/13/aldol-%E7%BC%A9%E5%90%88/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021/11/13/aldol-%E7%BC%A9%E5%90%88/</guid>
+      <description>简介 醛醇反应涉及将羰基化合物（Nu）的烯醇/烯醇阴离子加成到醛或酮（E）上。反应的初始产物为 β-羟基羰基化合物，在一定条件下脱水生成相应的 α,β-不饱和羰基化合物1。一定要注意：Aldol 反应是可逆的！
+最初，Aldol 反应是用 Brönsted 酸/碱催化的，但这些过程受到副反应，例如自缩合、缩聚、脱水和迈克尔加成的影响。
+预形成的烯醇化物是 Aldol 方法学的一个突破。最常用的烯醇化物有锂、硼、钛、和烯醇硅醚，但其他烯醇衍生物，例如镁、铝、锆、铑、铈、钨、钼、铼、钴、铁和锌烯醇化物也被研究过。
+烯醇化物的形成可具有高度区域和立体选择性。构型确定的烯醇化物的 Aldol 反应具有高度的非对映选择性。(E)-烯醇化物通常产生 anti 产物，而 (Z)-烯醇化物则主要产生 syn 产物。而LA 参与的烯醇硅醚 Aldol 反应（Mukaiyama Aldol Reaction）通常提供 anti 产物。
+可以通过使用对映纯起始材料（试剂控制）或不对称催化来控制反应的绝对立体化学结果：
+试剂控制可以通过以下方式实现： 1. 利用烯醇中的手性基团； 2. 在硼烯醇化物上应用手性配体； 3. 使用手性醛。
+直接不对称催化 Aldol 反应可以通过以下方式实现：1. 酶或抗体的生化催化； 2. 手性金属配合物的催化；3. 利用有机小分子的有机催化（2021诺奖）。
+机理 经典的酸催化 Aldol 反应的机制涉及烯醇的平衡形成，烯醇作为Nu，亲电试剂的羰基通过质子化被激活以进行亲核攻击。而在碱催化反应中，烯醇化物通过去质子化形成（可逆/不可逆），然后将烯醇阴离子加成到羰基上。
+预先形成的烯醇的 Aldol 反应的对映选择性可以基于 Zimmerman-Traxler 模型进行合理化，根据该模型，反应通过椅式六元环状TS进行。根据该模型，控制因素是避免在TS中的 1,3-直立键排斥。 合成中的应用 以下几个是如何控制绝对构型的离子，以后单独讨论：
+  该转化的名称来自 3-羟基丁醛，通常称为羟醛。 &amp;#x21a9;&amp;#xfe0e;
+   </description>
+    </item>
+    
+    <item>
+      <title>Amadori 重排</title>
+      <link>/post/2021/11/13/amadori-%E9%87%8D%E6%8E%92/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021/11/13/amadori-%E9%87%8D%E6%8E%92/</guid>
+      <description>简介 醛糖的 N-糖苷（糖基胺）在酸或碱催化下异构化为 1-氨基-1-脱氧酮糖的反应，称为 Amadori 反应/重排。底物和产品均称为“Amadori 化合物”。
+路易斯酸被用作诱导这种重排的催化剂。醛糖在催化量的酸存在下与胺反应，也会发生重排。糖胺衍生物与复杂的美拉德反应有关，其中糖类、胺类和氨基酸（蛋白质）在烹饪或食品保存过程中经常缩合、重排和降解。
+其实，你也可以把这个看做偶姻的缩酮（胺）的重排。
+机理 请注意互变异构的妙用： 合成应用 不一定要在糖中：</description>
+    </item>
+    
+    <item>
+      <title>Arbuzov 反应</title>
+      <link>/post/2021/11/13/arbuzov-%E5%8F%8D%E5%BA%94/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021/11/13/arbuzov-%E5%8F%8D%E5%BA%94/</guid>
+      <description>简介 由三价磷酸酯和烷基卤化物合成五价磷酸酯被称为 Arbuzov 反应（也称为 Michaelis-Arbuzov 反应）。
+这种转化的一般特征是：
+ 它通常与较好的 SN 底物反应；大多数仲和叔卤代烷形成烯烃或直接不反应； 活化的芳基卤化物（例如杂芳基卤化物：异恶唑、吖啶、香豆素）也可发生反应； 卤代烷不能含有酮或硝基官能团，因为它们通常会引起副反应（还原等）； α-氯代酮和溴代酮与亚磷酸三烷基酯发生 Perkow 反应，得到二烷基乙烯基磷酸酯，但 α-碘代酮产生预期的 Arbuzov 产物；  三价磷反应物可以是环状的； 催化剂可以是各种金属、金属盐和配合物、质子酸或光。  Wittig 反应的 Horner-Emmons-Wadsworth 改进使用膦酸酯代替膦。更容易去质子化，产生更具反应性的叶立德。膦酸盐与酮（不与一般的 Wittig 试剂作用）反应。
+机理 合成应用 卤代烷只是表象，SN 才是本质： </description>
+    </item>
+    
+    <item>
+      <title>Arndt-Eistert 反应</title>
+      <link>/post/2021/11/13/arndt-eistert-%E5%8F%8D%E5%BA%94/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021/11/13/arndt-eistert-%E5%8F%8D%E5%BA%94/</guid>
+      <description>简介 Arndt-Eistert 合成是羧酸碳链延长的最佳方法之一。如果反应在醇或胺（得有氢）存在下进行，则会形成相应的同系酯或酰胺。金属（$\ce{Ag2O,Pt,Cu}$）也催化重氮酮的分解，在亲核溶剂（H2O、ROH 或 RNH2）存在下加热或光解重氮酮也是一种方法。该反应耐受范围广泛的非酸性官能团（烷基、芳基、双键）。但酸性官能团会与重氮甲烷或重氮酮（“碳负”）反应。
+机理 由于$\ce{HCl}$是酰氯与重氮甲烷反应的副产物，因此还需要一当量的重氮甲烷来中和，生成氯甲烷和氮气。重氮酮可以以两种构象存在，即 s-(E) 和 s-(Z) 构象，它们由围绕 C-C 单键的旋转产生。 已经表明 Wolff 重排优先发生在 s-(Z) 构象。 随着氮分子的损失，重氮酮的分解涉及形成卡宾，然后在环氧乙烷的中间体下进行卡宾重排。 卡宾经历快速的 [1,2] 位移以提供乙烯酮，该乙烯酮与亲核溶剂反应得到同系化的酸衍生物。 </description>
+    </item>
+    
+    <item>
       <title>ene反应</title>
       <link>/post/2021/11/13/ene%E5%8F%8D%E5%BA%94/</link>
       <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
@@ -44,6 +97,50 @@ C2 和 C4 相当酸性（C2 的 pKa ~11 ，C4 的 pKa ~24），因此在存在�
 C.H.Heathcock 实验室针对Stemona alkaloids典型核心结构的合成节选。其中一步告诉我们酮和卤代烃中卤代烃优先被进攻（无论是否是 α-卤代）
   进攻酮后逆-Claisen 缩合 &amp;#x21a9;&amp;#xfe0e;
    </description>
+    </item>
+    
+    <item>
+      <title>入门级薛定谔方程</title>
+      <link>/post/2021/11/13/%E5%85%A5%E9%97%A8%E7%BA%A7%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021/11/13/%E5%85%A5%E9%97%A8%E7%BA%A7%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B/</guid>
+      <description>没啥关系——里德堡公式，氢原子光谱 $$ \widetilde v=\frac1\lambda=R_{\rm H}\left(\frac1{n_1^2}-\frac1{n_2^2}\right) $$
+当$n_1=2$时称为 Balmer 系，是可见光波段
+de Broglie 关系和Einstein 关系 $$ E={\color{blue}\frac12mv^2}={\color{blue}\frac{p^2}{2m}}=\color{red}{hv}\
+p={\color{blue}mv}=\color{red}{\frac h\lambda} $$
+蓝色是粒子性的表现，而红色是波动性的表现！
+含时薛定谔方程 我们首先引入波函数： $$ \psi(x,t)=Ae^{i(kx-\omega t)} $$ 其中$\omega$是角频率，$k$为波数（另一种），请查看以获得更多介绍
+运用上述的关系式： $$ k=\frac{2\pi}{\lambda}=\frac p\hbar\
+\omega=2\pi v=\frac E\hbar\
+\hbar=\frac h{2\pi} $$ 我们不妨对波函数做一个置换： $$ \psi(x,t)=Ae^{i({\color{red}p}x-{\color{red}E}t)/{\color{red}\hbar}} $$ 做一些偏微分： $$ \frac\part{\part x}\psi(x,t)=i\frac p\hbar\psi(x,t)\
+\frac{\part^2}{\part x^2}\psi(x,t)=-\frac {p^2}{\hbar^2}\psi(x,t)\
+\frac\part{\part t}\psi(x,t)=i\frac E\hbar\psi(x,t) $$ 又知道$E=T+V=p^2/2m+V(x)$（假设势能与时间无关），对比后两个等式的右端： $$ i\hbar\frac{\part}{\part t}\psi(x,t)=\left{-\frac{\hbar^2}{2m}\frac{\part^2}{\part x^2}+V(x)\right}\psi(x,t) $$ 拓展到三次元： $$ i\hbar\frac{\part}{\part t}\psi(\mathbf r,t)=\left{-\frac{\hbar^2}{2m}\nabla^2+V(\mathbf r)\right}\psi(\mathbf r,t) $$
+不含时薛定谔方程 继续在一维的语境，分离变量： $$ \psi(x,t)=T(t)\phi(x) $$ 带入含时薛定谔方程： $$ {\color{red}i\hbar\left{\frac{\mathrm d}{\mathrm d t}T(t)\right}}{\color{blue}\phi(x)}={\color{red}T(t)}{\color{blue}\left{-\frac{\hbar^2}{2m}\frac{\part^2}{\part x^2}+V(x)\right}\phi(x)}\</description>
+    </item>
+    
+    <item>
+      <title>炔烃复分解</title>
+      <link>/post/2021/11/13/%E7%82%94%E7%83%83%E5%A4%8D%E5%88%86%E8%A7%A3/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021/11/13/%E7%82%94%E7%83%83%E5%A4%8D%E5%88%86%E8%A7%A3/</guid>
+      <description>简介 在 1970 年代初，A. Mortreux 及其同事率先实现了碳-碳三键的均相催化复分解反应，在该反应中，他们在统计上将对甲苯基苯乙炔歧化为 tolan（二苯乙炔），并在原位形成$\ce{[Mo(CO)6]}$/间苯二酚催化剂。
+然而，该催化剂无法通过复分解转化，仅得到了环状三聚体和复杂的聚合物。十年后，在 1980 年代， Schrock 钨碳炔配合物$\ce{[(t-BuO)3W≡Ct-Bu]$被证明可以催化末端炔烃的复分解（乙炔脱离体系）。该反应也容易聚合到聚乙炔。在 20 世纪 90 年代，M. Mori 及其同事在 Mortreux 型催化剂存在下成功地交叉复分解内部炔烃，在 A. Fürstner 的实验室开发了 RCAM（闭环炔烃复分解）的条件。通过 RCAM 获得的环炔烃可以通过催化氢化、硼氢化和随后的质子化以及其他方法立体选择性地转化为相应的 (Z)- 或 (E)-烯烃。
+机理 炔烃复分解可以通过热和光化学方式进行，下面的机理解释了炔烃交叉复分解产物的形成： 合成应用 主要用于控制环内烯烃的立体化学（Z或E），除了乙炔可以起飞外，丁炔也是常见的另一个的产物。</description>
+    </item>
+    
+    <item>
+      <title>烯烃复分解</title>
+      <link>/post/2021/11/13/%E7%83%AF%E7%83%83%E5%A4%8D%E5%88%86%E8%A7%A3/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021/11/13/%E7%83%AF%E7%83%83%E5%A4%8D%E5%88%86%E8%A7%A3/</guid>
+      <description>简介 烯烃复分解于 1955 年被首次报道，但 N. Calderon 及其同事在 13 年后才引入了术语“烯烃复分解”。有几种不同的烯烃复分解反应：开环复分解聚合（ROMP）、关环复分解（RCM）、无环双烯复分解聚合（ADMET）、开环复分解（ROM）和交叉复分解（CM 或 XMET）。
+这些不同的烯烃复分解反应提供了通过其他方式难以获得的分子和聚合物。ROMP 使制备官能化聚合物成为可能，而 RCM 则提供了简便的形成中大型碳环以及杂环化合物的途径。在过去的 10 年中，烯烃复分解已成为一种可靠且应用广泛的合成方法。
+目前使用的$\ce{L(L&amp;rsquo;)X2Ru=CHR}$催化剂体系具有高活性并具有足够的官能团耐受性。然而，它还有几个问题：
+ 与碱性官能团（腈和胺）不相容； 交叉复分解形成四取代烯烃； CM 和大环 RCM 反应的立体选择性低。  机理 目前常用的催化剂的晶体结构表明它们具有扭曲的四方锥体几何形状，亚烷基位于轴向位置，trans-膦和卤化物位于赤道平面。RH Grubbs 和同事进行了广泛的动力学研究，并提出了一种与观察到的活性趋势一致的机制。有两种可能的机理（I 和 II）： 其中，红 R 始终朝内，而蓝 R 则尽量远离红 R 并朝向四方锥底面。
+合成应用 首先看几种常见的催化剂： A.B.Smith 及其同事设计了一种合成环环芳烃家族天然产物的有效策略。他们使用了两次闭环复分解来形成一个二倍的大环： 在有多个双键的地方，端位双键反应： </description>
     </item>
     
     <item>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> 入门级薛定谔方程 | Edward Kerman</title>
+    
+    
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="入门级薛定谔方程"/>
+<meta name="twitter:description" content="没啥关系——里德堡公式，氢原子光谱 $$ \widetilde v=\frac1\lambda=R_{\rm H}\left(\frac1{n_1^2}-\frac1{n_2^2}\right) $$
+当$n_1=2$时称为 Balmer 系，是可见光波段
+de Broglie 关系和Einstein 关系 $$ E={\color{blue}\frac12mv^2}={\color{blue}\frac{p^2}{2m}}=\color{red}{hv}\
+p={\color{blue}mv}=\color{red}{\frac h\lambda} $$
+蓝色是粒子性的表现，而红色是波动性的表现！
+含时薛定谔方程 我们首先引入波函数： $$ \psi(x,t)=Ae^{i(kx-\omega t)} $$ 其中$\omega$是角频率，$k$为波数（另一种），请查看以获得更多介绍
+运用上述的关系式： $$ k=\frac{2\pi}{\lambda}=\frac p\hbar\
+\omega=2\pi v=\frac E\hbar\
+\hbar=\frac h{2\pi} $$ 我们不妨对波函数做一个置换： $$ \psi(x,t)=Ae^{i({\color{red}p}x-{\color{red}E}t)/{\color{red}\hbar}} $$ 做一些偏微分： $$ \frac\part{\part x}\psi(x,t)=i\frac p\hbar\psi(x,t)\
+\frac{\part^2}{\part x^2}\psi(x,t)=-\frac {p^2}{\hbar^2}\psi(x,t)\
+\frac\part{\part t}\psi(x,t)=i\frac E\hbar\psi(x,t) $$ 又知道$E=T&#43;V=p^2/2m&#43;V(x)$（假设势能与时间无关），对比后两个等式的右端： $$ i\hbar\frac{\part}{\part t}\psi(x,t)=\left{-\frac{\hbar^2}{2m}\frac{\part^2}{\part x^2}&#43;V(x)\right}\psi(x,t) $$ 拓展到三次元： $$ i\hbar\frac{\part}{\part t}\psi(\mathbf r,t)=\left{-\frac{\hbar^2}{2m}\nabla^2&#43;V(\mathbf r)\right}\psi(\mathbf r,t) $$
+不含时薛定谔方程 继续在一维的语境，分离变量： $$ \psi(x,t)=T(t)\phi(x) $$ 带入含时薛定谔方程： $$ {\color{red}i\hbar\left{\frac{\mathrm d}{\mathrm d t}T(t)\right}}{\color{blue}\phi(x)}={\color{red}T(t)}{\color{blue}\left{-\frac{\hbar^2}{2m}\frac{\part^2}{\part x^2}&#43;V(x)\right}\phi(x)}\"/>
+
+
+  </head>
+
+  <body>
+
+    <nav class="menu">
+    <ul>
+      <li class="left">
+        <a href="/"><span>Edward Kerman</span></a>
+      </li>
+      
+      <li>
+        <a href="/">Home</a>
+      </li>
+      
+      <li>
+        <a href="/about/">About</a>
+      </li>
+      
+      <li>
+        <a href="/sitemap/">Sitemap</a>
+      </li>
+      
+      <li id="menu-search">
+        <a href="/#">Search</a>
+      </li>
+      
+      <li>
+        <a href="/index.xml">Subscribe</a>
+      </li>
+      
+    </ul>
+    </nav>
+
+
+<div class="container single">
+<main>
+
+<div class="article-meta">
+<h1><span class="title">入门级薛定谔方程</span></h1>
+
+<h3 class="author">
+Edward Kerman
+</h3>
+
+<h3 class="date">2021-11-13</h3>
+<p class="terms">
+  
+  
+  Categories: <a href="/categories/academic">Academic</a> <a href="/categories/%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%A6">物理化学</a> 
+  
+  
+  
+  Tags: <a href="/tags/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6">量子化学</a> <a href="/tags/%E5%85%A5%E9%97%A8">入门</a> 
+  
+  
+</p>
+</div>
+
+<div class="article">
+<h2 id="没啥关系里德堡公式氢原子光谱">没啥关系——里德堡公式，氢原子光谱</h2>
+<p>$$
+\widetilde v=\frac1\lambda=R_{\rm H}\left(\frac1{n_1^2}-\frac1{n_2^2}\right)
+$$</p>
+<p>当$n_1=2$时称为 Balmer 系，是可见光波段</p>
+<h2 id="de-broglie-关系和einstein-关系">de Broglie 关系和Einstein 关系</h2>
+<p>$$
+E={\color{blue}\frac12mv^2}={\color{blue}\frac{p^2}{2m}}=\color{red}{hv}\<br>
+p={\color{blue}mv}=\color{red}{\frac h\lambda}
+$$</p>
+<p>蓝色是粒子性的表现，而红色是波动性的表现！</p>
+<h2 id="含时薛定谔方程">含时薛定谔方程</h2>
+<p>我们首先引入波函数：
+$$
+\psi(x,t)=Ae^{i(kx-\omega t)}
+$$
+其中$\omega$是角频率，$k$为波数（另一种），<a href="https://www.animations.physics.unsw.edu.au/jw/travelling_sine_wave.htm">请查看</a>以获得更多介绍</p>
+<p>运用上述的关系式：
+$$
+k=\frac{2\pi}{\lambda}=\frac p\hbar\<br>
+\omega=2\pi v=\frac E\hbar\<br>
+\hbar=\frac h{2\pi}
+$$
+我们不妨对波函数做一个置换：
+$$
+\psi(x,t)=Ae^{i({\color{red}p}x-{\color{red}E}t)/{\color{red}\hbar}}
+$$
+做一些偏微分：
+$$
+\frac\part{\part x}\psi(x,t)=i\frac p\hbar\psi(x,t)\<br>
+\frac{\part^2}{\part x^2}\psi(x,t)=-\frac {p^2}{\hbar^2}\psi(x,t)\<br>
+\frac\part{\part t}\psi(x,t)=i\frac E\hbar\psi(x,t)
+$$
+又知道$E=T+V=p^2/2m+V(x)$（假设势能与时间无关），对比后两个等式的右端：
+$$
+i\hbar\frac{\part}{\part t}\psi(x,t)=\left{-\frac{\hbar^2}{2m}\frac{\part^2}{\part x^2}+V(x)\right}\psi(x,t)
+$$
+拓展到三次元：
+$$
+i\hbar\frac{\part}{\part t}\psi(\mathbf r,t)=\left{-\frac{\hbar^2}{2m}\nabla^2+V(\mathbf r)\right}\psi(\mathbf r,t)
+$$</p>
+<h2 id="不含时薛定谔方程">不含时薛定谔方程</h2>
+<p>继续在<strong>一维</strong>的语境，分离变量：
+$$
+\psi(x,t)=T(t)\phi(x)
+$$
+带入含时薛定谔方程：
+$$
+{\color{red}i\hbar\left{\frac{\mathrm d}{\mathrm d t}T(t)\right}}{\color{blue}\phi(x)}={\color{red}T(t)}{\color{blue}\left{-\frac{\hbar^2}{2m}\frac{\part^2}{\part x^2}+V(x)\right}\phi(x)}\<br>
+{\color{red}\frac 1{T(t)}i\hbar\left{\frac{\mathrm d}{\mathrm d t}T(t)\right}}={\color{blue}\frac1{\phi(x)}\left{-\frac{\hbar^2}{2m}\frac{\part^2}{\part x^2}+V(x)\right}\phi(x)}={\color{green}E(\mathrm{constant})}\<br>
+$$
+解一下：
+$$
+i\hbar\frac{\mathrm d}{\mathrm d t}T(t)=ET(t)\<br>
+T(t)=Ce^{-iEt/\hbar}
+$$
+带入含时薛定谔方程并消去$t$：（拓展到三次元）
+$$
+\left{{\color{red}-\frac{\hbar^2}{2m}\nabla^2+V(\mathbf r)}\right}\phi(\mathbf r)=E\phi(x)
+$$
+简写：
+$$
+{\color{red}\hat H}\phi=E\phi
+$$</p>
+
+</div>
+</main>
+
+<section class="appendix">
+
+
+<div>
+  <div class="side side-left"><h3>Author&#39;s bio</h3></div>
+  <div>
+
+
+
+
+
+<div>Edward Kerman，一个化竞菜鸡，舟厨，ksp爱好者，浅显的哲学阅读者。</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Reuse</h3></div>
+  Text and figures are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution CC BY 4.0</a>.
+</div>
+
+
+
+<div>
+  <div class="side side-left"><h3>Suggest changes</h3></div>
+  
+  
+  
+    
+    
+  
+  If you find any mistakes (including typos) or want to suggest changes, please feel free to <a href="https://github.com/MJ23333/b/edit/master/content/post/Name%20Reactions/%e8%96%9b%e5%ae%9a%e8%b0%94%e6%96%b9%e7%a8%8b%e5%85%a5%e9%97%a8.md" id="edit-link">edit the source file of this page on Github and create a pull request.</a>
+</div>
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Citation</h3></div>
+  <p>For attribution, please cite this work as</p>
+  <pre><code class="no-highlight">Edward Kerman (2021). 入门级薛定谔方程. Edward Kerman. /post/2021/11/13/%E5%85%A5%E9%97%A8%E7%BA%A7%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B/</code></pre>
+  <p>BibTeX citation</p>
+  <pre><code class="no-highlight">@misc{
+  title = "入门级薛定谔方程",
+  author = "Edward Kerman",
+  year = "2021",
+  journal = "Edward Kerman",
+  note = "/post/2021/11/13/%E5%85%A5%E9%97%A8%E7%BA%A7%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B/"
+}</code></pre>
+</div>
+
+</section>
+
+
+
+<nav class="post-nav">
+  <span class="nav-next">&larr; <a href="/post/2021/11/13/%E7%82%94%E7%83%83%E5%A4%8D%E5%88%86%E8%A7%A3/" title=Next&#32;post&#32;(older)>炔烃复分解</a></span>
+  &hercon;
+  <span class="nav-prev"><a href="/post/2021/11/13/%E4%B9%99%E9%85%B0%E4%B9%99%E9%85%B8%E9%85%AF%E5%90%88%E6%88%90/" title=Previous&#32;post&#32;(newer)>乙酰乙酸酯合成</a> &rarr;</span>
+</nav>
+
+
+
+
+
+</div>
+
+
+  <footer>
+  <script async src="//yihui.org/js/center-img.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" integrity="sha384-UEY9IRPkV+TTTY7nK1wSrfhWPDJy9wr4PmYg3DLPcN5F4NDlIwGZkWtWveKR/45c"  crossorigin="anonymous"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+              renderMathInElement(document.body, {
+                  delimiters: [
+                      {left: "$$", right: "$$", display: true},
+                      {left: "$", right: "$", display: false}
+                  ]
+              });
+          });
+      </script>
+
+
+
+
+
+  <div class="footer">
+  
+  <ul class="copyright">
+    <li>© Edward Kerman 2020-2021</li>
+  </ul>
+  
+  <ul>
+    
+    <li>
+      <a href="/404.html">Contact</a>
+    </li>
+    
+    <li class="optional">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    <li class="optional">
+      <a href="/tags/">Tags</a>
+    </li>
+    
+    <li id="menu-edit">
+      <a href="#">Suggest an edit</a>
+    </li>
+    
+    <li>
+      <a href="#">Back to top</a>
+    </li>
+    
+  </ul>
+  </div>
+  
+  </footer>
+  <script async src="/js/features.js" data-page-features="[null,[&#34;&#43;sidenotes&#34;],null]"></script>
+  </body>
+</html>
+

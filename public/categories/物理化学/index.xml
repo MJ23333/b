@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>物理化学 on Edward Kerman</title>
+    <link>/categories/%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%A6/</link>
+    <description>Recent content in 物理化学 on Edward Kerman</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 Nov 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>入门级薛定谔方程</title>
+      <link>/post/2021/11/13/%E5%85%A5%E9%97%A8%E7%BA%A7%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021/11/13/%E5%85%A5%E9%97%A8%E7%BA%A7%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B/</guid>
+      <description>没啥关系——里德堡公式，氢原子光谱 $$ \widetilde v=\frac1\lambda=R_{\rm H}\left(\frac1{n_1^2}-\frac1{n_2^2}\right) $$
+当$n_1=2$时称为 Balmer 系，是可见光波段
+de Broglie 关系和Einstein 关系 $$ E={\color{blue}\frac12mv^2}={\color{blue}\frac{p^2}{2m}}=\color{red}{hv}\
+p={\color{blue}mv}=\color{red}{\frac h\lambda} $$
+蓝色是粒子性的表现，而红色是波动性的表现！
+含时薛定谔方程 我们首先引入波函数： $$ \psi(x,t)=Ae^{i(kx-\omega t)} $$ 其中$\omega$是角频率，$k$为波数（另一种），请查看以获得更多介绍
+运用上述的关系式： $$ k=\frac{2\pi}{\lambda}=\frac p\hbar\
+\omega=2\pi v=\frac E\hbar\
+\hbar=\frac h{2\pi} $$ 我们不妨对波函数做一个置换： $$ \psi(x,t)=Ae^{i({\color{red}p}x-{\color{red}E}t)/{\color{red}\hbar}} $$ 做一些偏微分： $$ \frac\part{\part x}\psi(x,t)=i\frac p\hbar\psi(x,t)\
+\frac{\part^2}{\part x^2}\psi(x,t)=-\frac {p^2}{\hbar^2}\psi(x,t)\
+\frac\part{\part t}\psi(x,t)=i\frac E\hbar\psi(x,t) $$ 又知道$E=T+V=p^2/2m+V(x)$（假设势能与时间无关），对比后两个等式的右端： $$ i\hbar\frac{\part}{\part t}\psi(x,t)=\left{-\frac{\hbar^2}{2m}\frac{\part^2}{\part x^2}+V(x)\right}\psi(x,t) $$ 拓展到三次元： $$ i\hbar\frac{\part}{\part t}\psi(\mathbf r,t)=\left{-\frac{\hbar^2}{2m}\nabla^2+V(\mathbf r)\right}\psi(\mathbf r,t) $$
+不含时薛定谔方程 继续在一维的语境，分离变量： $$ \psi(x,t)=T(t)\phi(x) $$ 带入含时薛定谔方程： $$ {\color{red}i\hbar\left{\frac{\mathrm d}{\mathrm d t}T(t)\right}}{\color{blue}\phi(x)}={\color{red}T(t)}{\color{blue}\left{-\frac{\hbar^2}{2m}\frac{\part^2}{\part x^2}+V(x)\right}\phi(x)}\</description>
+    </item>
+    
+  </channel>
+</rss>
