@@ -19,15 +19,8 @@
 de Broglie 关系和Einstein 关系 $$ \begin{gather*} E={\color{blue}\frac12mv^2}={\color{blue}\frac{p^2}{2m}}=\color{red}{hv} \newline p={\color{blue}mv}=\color{red}{\frac h\lambda} \end{gather*}$$
 蓝色是粒子性的表现，而红色是波动性的表现！
 注意Einstein 关系里的$E$是所有能量（不一定只有动能）。
-含时薛定谔方程 我们首先引入波函数： $$ \Psi(x,t)=Ae^{i(kx-\omega t)} $$ 其中$\omega$是角频率，$k$为波数（另一种），请查看以获得更多介绍
-运用上述的关系式： $$ \begin{gather*} k=\frac{2\pi}{\lambda}=\frac p\hbar\newline \omega=2\pi v=\frac E\hbar\newline \hbar=\frac h{2\pi} \end{gather*} $$ 我们不妨对波函数做一个置换： $$ \Psi(x,t)=Ae^{i({\color{red}p}x-{\color{red}E}t)/{\color{red}\hbar}} $$
-做一些偏微分：
-$$ \begin{gather*} \frac\partial{\partial x}\Psi(x,t)=i\frac p\hbar\Psi(x,t) \newline \frac{\partial^2}{\partial x^2}\Psi(x,t)=-\frac {p^2}{\hbar^2}\Psi(x,t) \newline \frac\partial{\partial t}\Psi(x,t)=i\frac E\hbar\Psi(x,t) \end{gather*} $$
-又知道$E=T&#43;V=p^2/2m&#43;V(x)$（假设势能与时间无关），对比后两个等式的右端：
-$$ i\hbar\frac{\partial}{\partial t}\Psi(x,t)=\left\{-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}&#43;V(x)\right\}\Psi(x,t) $$
-拓展到三次元：
-$$ i\hbar\frac{\partial}{\partial t}\Psi(\mathbf r,t)=\left\{-\frac{\hbar^2}{2m}\nabla^2&#43;V(\mathbf r)\right\}\Psi(\mathbf r,t) $$
-不含时薛定谔方程 继续在一维的语境，分离变量： $$ \Psi(x,t)=T(t)\psi(x) $$ 带入含时薛定谔方程，由于左边不依赖于$x$，右边不依赖于$t$，那么他们共同的值既不依赖于$x$也不依赖于$t$，设为一个常数$G$。 $$ \begin{gather*} {\color{red}i\hbar\left\{\frac{\mathrm d}{\mathrm d t}T(t)\right\}}{\color{blue}\psi(x)}={\color{red}T(t)}{\color{blue}\left\{-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}&#43;V(x)\right\}\psi(x)}\newline {\color{red}\frac 1{T(t)}i\hbar\left\{\frac{\mathrm d}{\mathrm d t}T(t)\right\}}={\color{blue}\frac1{\psi(x)}\left\{-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}&#43;V(x)\right\}\psi(x)}={\color{green}G(\mathrm{constant})} \end{gather*} $$ 只看右边，重写为： $$ \frac{\mathrm d}{\mathrm dt}T(t)=-\frac{iG}{\hbar}T(t) $$ 猜一个解： $$ T(t)=e^{\alpha t} $$ 求导： $$ \frac{\mathrm d}{\mathrm dt}T(t)=\alpha T(t) $$ 带入上面的方程： $$ \alpha T(t)=-\frac{iG}{\hbar}T(t) $$ 不难看出$\alpha=-iG/\hbar$，带入$T(t)$表达式： $$ T(t)=e^{-iGt/\hbar} $$ 这是一个简谐波，不难看出频率$v=G/h$，而由 Einstein 关系注意到$v=E/h$，整个波函数与$t$有关的全在$T(t)$中，故波函数的频率与$T(t)$相同，很容易得到： $$G=E$$ 可以得到： $$ T(t)=e^{-i{\color{green}E}t/\hbar} $$ $$$$ 带入含时薛定谔方程并消去$t$：（拓展到三次元） $$ \begin{align*} \left\{{\color{red}-\frac{\hbar^2}{2m}\nabla^2&#43;V(\mathbf r)}\right\}\psi(\mathbf r)=E\psi(\mathbf r) \end{align*} $$ 简写： $$ {\color{red}\hat H}\psi=E\psi $$"/>
+含时薛定谔方程 假设波函数是一个最简单的简谐波： $$ \Psi(x,t)=Ae^{i(kx-\omega t)} $$ 其中$\omega$是角频率，$k$为波数（另一种），请查看以获得更多介绍
+结合 Einstein 关系： $$ \omega=2\pi v=\frac E\hbar\newline $$ 我们可以推一波： $$ \begin{gather*} \frac{\partial}{\partial x} \Psi=-i\omega\Psi \\ \hbar\frac{\partial}{\partial x} \Psi=-i{\color{green}E}\Psi \\ i\hbar\frac{\partial}{\partial x} \Psi={\color{green}E}\Psi \end{gather*} $$ 又知道$E=T&#43;V=p^2/2m&#43;V(x)$（假设势能与时间无关），结合关系： $$ {\color{green}E}={\color{green}\frac{\hbar^2k^2}{2m}&#43;V(x)} $$ 得到： $$ i\hbar\frac{\partial}{\partial x} \Psi=\left({\color{green}\frac{\hbar^2{\color{red}k^2}}{2m}&#43;V(x)}\right)\Psi $$ 做一波偏微分： $$ \frac\partial{\partial x}\Psi=ik\Psi,\qquad \frac{\partial^2}{\partial x^2}\Psi=-k^2\Psi $$ 推得： $$ {\color{red}k^2}={\color{red}-\frac{{\partial^2}/{\partial x^2}\Psi}\Psi} $$ 带入上式： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{{\color{red}-}\frac{\hbar^2}{2m}{\color{red}\frac{\partial^2}{\partial x^2}}&#43;V(x)\right\}\Psi $$ 拓展到三次元： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{-\frac{\hbar^2}{2m}{\color{blue}\nabla}^2&#43;V(\mathbf {\color{blue}r})\right\}\Psi $$ 定义哈密顿算子$\hat H$： $$ {\color{orange}\hat H}=-\frac{\hbar^2}{2m}\nabla^2&#43;V(\mathbf r) $$ 所以简写为： $$ {\color{orange}\hat H}\Psi=i\hbar\frac{\partial}{\partial t}\Psi $$"/>
 
 
   </head>
@@ -96,38 +89,52 @@ p={\color{blue}mv}=\color{red}{\frac h\lambda} \end{gather*}$$</p>
 <p>蓝色是粒子性的表现，而红色是波动性的表现！</p>
 <p>注意Einstein 关系里的$E$是所有能量（不一定只有动能）。</p>
 <h2 id="含时薛定谔方程">含时薛定谔方程</h2>
-<p>我们首先引入波函数：
+<p>假设波函数是一个最简单的简谐波：
 $$
 \Psi(x,t)=Ae^{i(kx-\omega t)}
 $$
 其中$\omega$是角频率，$k$为波数（另一种），<a href="https://www.animations.physics.unsw.edu.au/jw/travelling_sine_wave.htm">请查看</a>以获得更多介绍</p>
-<p>运用上述的关系式：
+<p>结合 Einstein 关系：
 $$
-\begin{gather*}
-k=\frac{2\pi}{\lambda}=\frac p\hbar\newline
 \omega=2\pi v=\frac E\hbar\newline
-\hbar=\frac h{2\pi}
-\end{gather*}
 $$
-我们不妨对波函数做一个置换：
+我们可以推一波：
 $$
-\Psi(x,t)=Ae^{i({\color{red}p}x-{\color{red}E}t)/{\color{red}\hbar}}
-$$</p>
-<p>做一些偏微分：</p>
-<p>$$
 \begin{gather*}
-\frac\partial{\partial x}\Psi(x,t)=i\frac p\hbar\Psi(x,t) \newline
-\frac{\partial^2}{\partial x^2}\Psi(x,t)=-\frac {p^2}{\hbar^2}\Psi(x,t) \newline
-\frac\partial{\partial t}\Psi(x,t)=i\frac E\hbar\Psi(x,t)
+\frac{\partial}{\partial x} \Psi=-i\omega\Psi \\ \hbar\frac{\partial}{\partial x} \Psi=-i{\color{green}E}\Psi \\ i\hbar\frac{\partial}{\partial x} \Psi={\color{green}E}\Psi
 \end{gather*}
-$$</p>
-<p>又知道$E=T+V=p^2/2m+V(x)$（假设势能与时间无关），对比后两个等式的右端：</p>
-<p>$$
-i\hbar\frac{\partial}{\partial t}\Psi(x,t)=\left\{-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)\right\}\Psi(x,t)
-$$</p>
-<p>拓展到三次元：</p>
-<p>$$
-i\hbar\frac{\partial}{\partial t}\Psi(\mathbf r,t)=\left\{-\frac{\hbar^2}{2m}\nabla^2+V(\mathbf r)\right\}\Psi(\mathbf r,t)
+$$
+又知道$E=T+V=p^2/2m+V(x)$（假设势能与时间无关），结合关系：
+$$
+{\color{green}E}={\color{green}\frac{\hbar^2k^2}{2m}+V(x)}
+$$
+得到：
+$$
+i\hbar\frac{\partial}{\partial x} \Psi=\left({\color{green}\frac{\hbar^2{\color{red}k^2}}{2m}+V(x)}\right)\Psi
+$$
+做一波偏微分：
+$$
+\frac\partial{\partial x}\Psi=ik\Psi,\qquad \frac{\partial^2}{\partial x^2}\Psi=-k^2\Psi
+$$
+推得：
+$$
+{\color{red}k^2}={\color{red}-\frac{{\partial^2}/{\partial x^2}\Psi}\Psi}
+$$
+带入上式：
+$$
+i\hbar\frac{\partial}{\partial t}\Psi=\left\{{\color{red}-}\frac{\hbar^2}{2m}{\color{red}\frac{\partial^2}{\partial x^2}}+V(x)\right\}\Psi
+$$
+拓展到三次元：
+$$
+i\hbar\frac{\partial}{\partial t}\Psi=\left\{-\frac{\hbar^2}{2m}{\color{blue}\nabla}^2+V(\mathbf {\color{blue}r})\right\}\Psi
+$$
+定义哈密顿算子$\hat H$：
+$$
+{\color{orange}\hat H}=-\frac{\hbar^2}{2m}\nabla^2+V(\mathbf r)
+$$
+所以简写为：
+$$
+{\color{orange}\hat H}\Psi=i\hbar\frac{\partial}{\partial t}\Psi
 $$</p>
 <h2 id="不含时薛定谔方程">不含时薛定谔方程</h2>
 <p>继续在<strong>一维</strong>的语境，分离变量：
@@ -162,7 +169,7 @@ $$
 T(t)=e^{-iGt/\hbar}
 $$
 这是一个简谐波，不难看出频率$v=G/h$，而由 Einstein 关系注意到$v=E/h$，整个波函数与$t$有关的全在$T(t)$中，故波函数的频率与$T(t)$相同，很容易得到：
-$$G=E$$
+$${\color{green}G}={\color{green}E}$$
 可以得到：
 $$
 T(t)=e^{-i{\color{green}E}t/\hbar}
@@ -171,12 +178,12 @@ $$$$
 带入含时薛定谔方程并消去$t$：（拓展到三次元）
 $$
 \begin{align*}
-\left\{{\color{red}-\frac{\hbar^2}{2m}\nabla^2+V(\mathbf r)}\right\}\psi(\mathbf r)=E\psi(\mathbf r)
+\left\{{\color{orange}-\frac{\hbar^2}{2m}\nabla^2+V(\mathbf r)}\right\}\psi(\mathbf r)=E\psi(\mathbf r)
 \end{align*}
 $$
 简写：
 $$
-{\color{red}\hat H}\psi=E\psi
+{\color{orange}\hat H}\psi=E\psi
 $$</p>
 
 </div>

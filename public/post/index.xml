@@ -161,6 +161,20 @@ $$\hat p=\frac{\hbar}i\frac{\partial}{\partial x}$$</description>
     </item>
     
     <item>
+      <title>薛定谔方程的启发式推导</title>
+      <link>/post/2021/11/13/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E6%8E%A8%E5%AF%BC/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2021/11/13/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E6%8E%A8%E5%AF%BC/</guid>
+      <description>快速的启发式推导，仅用于帮助理解就行了。
+de Broglie 关系和Einstein 关系 $$ \begin{gather*} E={\color{blue}\frac12mv^2}={\color{blue}\frac{p^2}{2m}}=\color{red}{hv} \newline p={\color{blue}mv}=\color{red}{\frac h\lambda} \end{gather*}$$
+蓝色是粒子性的表现，而红色是波动性的表现！
+注意Einstein 关系里的$E$是所有能量（不一定只有动能）。
+含时薛定谔方程 假设波函数是一个最简单的简谐波： $$ \Psi(x,t)=Ae^{i(kx-\omega t)} $$ 其中$\omega$是角频率，$k$为波数（另一种），请查看以获得更多介绍
+结合 Einstein 关系： $$ \omega=2\pi v=\frac E\hbar\newline $$ 我们可以推一波： $$ \begin{gather*} \frac{\partial}{\partial x} \Psi=-i\omega\Psi \\ \hbar\frac{\partial}{\partial x} \Psi=-i{\color{green}E}\Psi \\ i\hbar\frac{\partial}{\partial x} \Psi={\color{green}E}\Psi \end{gather*} $$ 又知道$E=T+V=p^2/2m+V(x)$（假设势能与时间无关），结合关系： $$ {\color{green}E}={\color{green}\frac{\hbar^2k^2}{2m}+V(x)} $$ 得到： $$ i\hbar\frac{\partial}{\partial x} \Psi=\left({\color{green}\frac{\hbar^2{\color{red}k^2}}{2m}+V(x)}\right)\Psi $$ 做一波偏微分： $$ \frac\partial{\partial x}\Psi=ik\Psi,\qquad \frac{\partial^2}{\partial x^2}\Psi=-k^2\Psi $$ 推得： $$ {\color{red}k^2}={\color{red}-\frac{{\partial^2}/{\partial x^2}\Psi}\Psi} $$ 带入上式： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{{\color{red}-}\frac{\hbar^2}{2m}{\color{red}\frac{\partial^2}{\partial x^2}}+V(x)\right\}\Psi $$ 拓展到三次元： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{-\frac{\hbar^2}{2m}{\color{blue}\nabla}^2+V(\mathbf {\color{blue}r})\right\}\Psi $$ 定义哈密顿算子$\hat H$： $$ {\color{orange}\hat H}=-\frac{\hbar^2}{2m}\nabla^2+V(\mathbf r) $$ 所以简写为： $$ {\color{orange}\hat H}\Psi=i\hbar\frac{\partial}{\partial t}\Psi $$</description>
+    </item>
+    
+    <item>
       <title>酮醇缩合</title>
       <link>/post/2021/11/13/%E9%85%AE%E9%86%87%E7%BC%A9%E5%90%88/</link>
       <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
@@ -273,20 +287,6 @@ Adele（常做女性名称）来自于德语Adel ，意思是“高贵品质”�
  海蟾蜍并不如其名般是水生的，反倒是全陆生的，只有在繁殖时才会走到水边。只是它的蝌蚪可以在15%盐度的海水中生存。 &amp;#x21a9;&amp;#xfe0e;
  日本利用蟾毒素作为电脑配件及头发再生药 &amp;#x21a9;&amp;#xfe0e;
    </description>
-    </item>
-    
-    <item>
-      <title>薛定谔方程的启发式推导</title>
-      <link>/post/1/01/01/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E6%8E%A8%E5%AF%BC/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/post/1/01/01/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E6%8E%A8%E5%AF%BC/</guid>
-      <description>快速的启发式推导，仅用于帮助理解就行了。
-de Broglie 关系和Einstein 关系 $$ \begin{gather*} E={\color{blue}\frac12mv^2}={\color{blue}\frac{p^2}{2m}}=\color{red}{hv} \newline p={\color{blue}mv}=\color{red}{\frac h\lambda} \end{gather*}$$
-蓝色是粒子性的表现，而红色是波动性的表现！
-注意Einstein 关系里的$E$是所有能量（不一定只有动能）。
-含时薛定谔方程 假设波函数是一个最简单的简谐波： $$ \Psi(x,t)=Ae^{i(kx-\omega t)} $$ 其中$\omega$是角频率，$k$为波数（另一种），请查看以获得更多介绍
-结合 Einstein 关系： $$ \omega=2\pi v=\frac E\hbar\newline $$ 我们可以推一波： $$ \begin{gather*} \frac{\partial}{\partial x} \Psi=-i\omega\Psi \\ \hbar\frac{\partial}{\partial x} \Psi=-i{\color{green}E}\Psi \\ i\hbar\frac{\partial}{\partial x} \Psi={\color{green}E}\Psi \end{gather*} $$ 又知道$E=T+V=p^2/2m+V(x)$（假设势能与时间无关），结合关系： $$ {\color{green}E}={\color{green}\frac{\hbar^2k^2}{2m}+V(x)} $$ 得到： $$ i\hbar\frac{\partial}{\partial x} \Psi=\left({\color{green}\frac{\hbar^2{\color{red}k^2}}{2m}+V(x)}\right)\Psi $$ 做一波偏微分： $$ \frac\partial{\partial x}\Psi=ik\Psi,\qquad \frac{\partial^2}{\partial x^2}\Psi=-k^2\Psi $$ 推得： $$ {\color{red}k^2}={\color{red}-\frac{{\partial^2}/{\partial x^2}\Psi}\Psi} $$ 带入上式： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{{\color{red}-}\frac{\hbar^2}{2m}{\color{red}\frac{\partial^2}{\partial x^2}}+V(x)\right\}\Psi $$ 拓展到三次元： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{-\frac{\hbar^2}{2m}{\color{blue}\nabla}^2+V(\mathbf {\color{blue}r})\right\}\Psi $$ 定义**哈密顿算子**$\hat H$： $$ {\color{orange}\hat H}=-\frac{\hbar^2}{2m}\nabla^2+V(\mathbf r) $$ 所以简写为： $$ {\color{orange}\hat H}\Psi=i\hbar\frac{\partial}{\partial t}\Psi $$</description>
     </item>
     
   </channel>
