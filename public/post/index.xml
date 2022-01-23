@@ -6,10 +6,45 @@
     <description>Recent content in Posts on Edward Kerman&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Jan 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>波函数及数学基础</title>
+      <link>/post/2022/01/23/%E6%B3%A2%E5%87%BD%E6%95%B0%E5%8F%8A%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/01/23/%E6%B3%A2%E5%87%BD%E6%95%B0%E5%8F%8A%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</guid>
+      <description>薛定谔方程复习 具体推导见前一篇 blog。 $$ {\color{red}\hat H}\psi=E\psi $$
+波恩解释 如果一个粒子的波函数在$\mathbf r$处的值为$\psi$，那么，在该位置的一个无穷小体积的$\mathrm d\tau =\mathrm dx\mathrm dy\mathrm dz$内发现这个粒子的概率正比于$|\psi|^2\mathrm d\tau$，其中要注意：$|\psi|^2=\psi\psi^*$（若$\psi$是复函数）。
+波函数为零的点，其概率密度也为零，称为节点。
+波函数有如下几个性质：
+ 归一化： 薛定谔方程有一个特点，若$\psi$为解，则$N\psi$也是一个解，其中$N$为任意常数。 $$N^2\int\psi\psi^*\mathrm d\tau=1$$（以后假设都已经归一化，即使用$N\psi$作为以后使用的波函数） 约束条件：有限区域内不允许是无限的；单质的；连续的；又连续的一阶导数（斜率）  对波函数的限制条件直接导致了粒子的能量是量子化的。
+数学基础 算符 $$(\text{算符})(\text{函数})=(\text{新函数})$$
+本征方程： $$ {\color{red}\hat\Omega} \psi={\color{blue}\omega}\psi \\ \begin{gather*}(\text{算符})(\text{本征函数})=(\text{本征值})(\text{本征函数})\end{gather*}$$ $\psi$称为算符$\hat\Omega$的本征函数
+如果波函数是对应可观测量$\Omega$的算符$\hat\Omega$的本征函数，那么性质$\Omega$的测量结果将是对应于该本征函数的本征值。
+听起来不好理解，我们来看一个例子——动量。
+动量算符 我们首先想到利用波恩解释来求平均动量： $$\overline p=\int_{-\infin}^{+\infin}\psi(x)p\psi(x)^* \mathrm dx$$ 但由于测不准原理，我们没办法精确地将$p$表示为$x$的函数。怎么办呢？只好换个方法思考。
+考虑一个位势$V(x)$为$0$的自由粒子，那它的不含时薛定谔方程为： $$-\frac{\hbar^2}{2m}\frac{\partial ^2}{\partial x^2}\psi(x)=E\psi(x)$$ 我们可以解出一个平面波： $$\psi_k(x)=e^{i{\color{red}k}x}$$ $k$是前文提到过的波数。稍加改写：（de Broglie） $$\psi_k(x)=e^{i{\color{red}p}x/{\color{red}\hbar}}$$ 有丶东西，我们求其关于空间位置的偏导数： $${\color{red}\frac{\partial}{\partial x}\psi_k(x)}=\frac{ip}{\hbar}e^{i{p}x/{\hbar}}={\color{red}\frac{i}{\hbar}}{\color{blue}p\psi_k}$$ 我们倒一下： $${\color{red}{\frac \hbar i}\frac{\partial}{\partial x}\psi_k(x)}={\color{blue}p\psi_k}$$
+可见$\psi_k$被$p$作用得到效果与被算符${\frac \hbar i}\frac{\partial}{\partial x}$作用得到的相同，我们把这个算子命名为动量算符$\hat p$，也就是说：动量算符的本征函数是自由粒子的波函数$\psi_k$，本征值为动量$p$（与上文呼应）：
+$$\hat p=\frac{\hbar}i\frac{\partial}{\partial x}$$</description>
+    </item>
+    
+    <item>
+      <title>薛定谔方程的启发式推导</title>
+      <link>/post/2022/01/22/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E6%8E%A8%E5%AF%BC/</link>
+      <pubDate>Sat, 22 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/01/22/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E6%8E%A8%E5%AF%BC/</guid>
+      <description>快速的启发式推导，仅用于帮助理解就行了。
+de Broglie 关系和Einstein 关系 $$ \begin{gather*} E={\color{blue}\frac12mv^2}={\color{blue}\frac{p^2}{2m}}=\color{red}{hv} \newline p={\color{blue}mv}=\color{red}{\frac h\lambda} \end{gather*}$$
+蓝色是粒子性的表现，而红色是波动性的表现！
+注意Einstein 关系里的$E$是所有能量（不一定只有动能）。
+含时薛定谔方程 假设波函数是一个最简单的简谐波： $$ \Psi(x,t)=Ae^{i(kx-\omega t)} $$ 其中$\omega$是角频率，$k$为波数（另一种），请查看以获得更多介绍
+结合 Einstein 关系： $$ \omega=2\pi v=\frac E\hbar\newline $$ 我们可以推一波： $$ \begin{gather*} \frac{\partial}{\partial x} \Psi=-i\omega\Psi \\ \hbar\frac{\partial}{\partial x} \Psi=-i{\color{green}E}\Psi \\ i\hbar\frac{\partial}{\partial x} \Psi={\color{green}E}\Psi \end{gather*} $$ 又知道$E=T+V=p^2/2m+V(x)$（假设势能与时间无关），结合关系： $$ {\color{green}E}={\color{green}\frac{\hbar^2k^2}{2m}+V(x)} $$ 得到： $$ i\hbar\frac{\partial}{\partial x} \Psi=\left({\color{green}\frac{\hbar^2{\color{red}k^2}}{2m}+V(x)}\right)\Psi $$ 做一波偏微分： $$ \frac\partial{\partial x}\Psi=ik\Psi,\qquad \frac{\partial^2}{\partial x^2}\Psi=-k^2\Psi $$ 推得： $$ {\color{red}k^2}={\color{red}-\frac{{\partial^2}/{\partial x^2}\Psi}\Psi} $$ 带入上式： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{{\color{red}-}\frac{\hbar^2}{2m}{\color{red}\frac{\partial^2}{\partial x^2}}+V(x)\right\}\Psi $$ 拓展到三次元： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{-\frac{\hbar^2}{2m}{\color{blue}\nabla}^2+V(\mathbf {\color{blue}r})\right\}\Psi $$ 定义哈密顿算子$\hat H$： $$ {\color{orange}\hat H}=-\frac{\hbar^2}{2m}\nabla^2+V(\mathbf r) $$ 所以简写为： $$ {\color{orange}\hat H}\Psi=i\hbar\frac{\partial}{\partial t}\Psi $$</description>
+    </item>
     
     <item>
       <title>关于科学伦理的一些思考</title>
@@ -116,27 +151,6 @@ C.H.Heathcock 实验室针对Stemona alkaloids典型核心结构的合成节选�
     </item>
     
     <item>
-      <title>波函数及数学基础</title>
-      <link>/post/2021/11/13/%E6%B3%A2%E5%87%BD%E6%95%B0%E5%8F%8A%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</link>
-      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2021/11/13/%E6%B3%A2%E5%87%BD%E6%95%B0%E5%8F%8A%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</guid>
-      <description>薛定谔方程复习 具体推导见前一篇 blog。 $$ {\color{red}\hat H}\psi=E\psi $$
-波恩解释 如果一个粒子的波函数在$\mathbf r$处的值为$\psi$，那么，在该位置的一个无穷小体积的$\mathrm d\tau =\mathrm dx\mathrm dy\mathrm dz$内发现这个粒子的概率正比于$|\psi|^2\mathrm d\tau$，其中要注意：$|\psi|^2=\psi\psi^*$（若$\psi$是复函数）。
-波函数为零的点，其概率密度也为零，称为节点。
-波函数有如下几个性质：
- 归一化： 薛定谔方程有一个特点，若$\psi$为解，则$N\psi$也是一个解，其中$N$为任意常数。 $$N^2\int\psi\psi^*\mathrm d\tau=1$$（以后假设都已经归一化，即使用$N\psi$作为以后使用的波函数） 约束条件：有限区域内不允许是无限的；单质的；连续的；又连续的一阶导数（斜率）  对波函数的限制条件直接导致了粒子的能量是量子化的。
-数学基础 算符 $$(\text{算符})(\text{函数})=(\text{新函数})$$
-本征方程： $$ {\color{red}\hat\Omega} \psi={\color{blue}\omega}\psi \\ \begin{gather*}(\text{算符})(\text{本征函数})=(\text{本征值})(\text{本征函数})\end{gather*}$$ $\psi$称为算符$\hat\Omega$的本征函数
-如果波函数是对应可观测量$\Omega$的算符$\hat\Omega$的本征函数，那么性质$\Omega$的测量结果将是对应于该本征函数的本征值。
-听起来不好理解，我们来看一个例子——动量。
-动量算符 我们首先想到利用波恩解释来求平均动量： $$\overline p=\int_{-\infin}^{+\infin}\psi(x)p\psi(x)^* \mathrm dx$$ 但由于测不准原理，我们没办法精确地将$p$表示为$x$的函数。怎么办呢？只好换个方法思考。
-考虑一个位势$V(x)$为$0$的自由粒子，那它的不含时薛定谔方程为： $$-\frac{\hbar^2}{2m}\frac{\partial ^2}{\partial x^2}\psi(x)=E\psi(x)$$ 我们可以解出一个平面波： $$\psi_k(x)=e^{i{\color{red}k}x}$$ $k$是前文提到过的波数。稍加改写：（de Broglie） $$\psi_k(x)=e^{i{\color{red}p}x/{\color{red}\hbar}}$$ 有丶东西，我们求其关于空间位置的偏导数： $${\color{red}\frac{\partial}{\partial x}\psi_k(x)}=\frac{ip}{\hbar}e^{i{p}x/{\hbar}}={\color{red}\frac{i}{\hbar}}{\color{blue}p\psi_k}$$ 我们倒一下： $${\color{red}{\frac \hbar i}\frac{\partial}{\partial x}\psi_k(x)}={\color{blue}p\psi_k}$$
-可见$\psi_k$被$p$作用得到效果与被算符${\frac \hbar i}\frac{\partial}{\partial x}$作用得到的相同，我们把这个算子命名为动量算符$\hat p$，也就是说：动量算符的本征函数是自由粒子的波函数$\psi_k$，本征值为动量$p$（与上文呼应）：
-$$\hat p=\frac{\hbar}i\frac{\partial}{\partial x}$$</description>
-    </item>
-    
-    <item>
       <title>炔烃复分解</title>
       <link>/post/2021/11/13/%E7%82%94%E7%83%83%E5%A4%8D%E5%88%86%E8%A7%A3/</link>
       <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
@@ -158,20 +172,6 @@ $$\hat p=\frac{\hbar}i\frac{\partial}{\partial x}$$</description>
 目前使用的$\ce{L(L&amp;rsquo;)X2Ru=CHR}$催化剂体系具有高活性并具有足够的官能团耐受性。然而，它还有几个问题：
  与碱性官能团（腈和胺）不相容； 交叉复分解形成四取代烯烃； CM 和大环 RCM 反应的立体选择性低。  机理 目前常用的催化剂的晶体结构表明它们具有扭曲的四方锥体几何形状，亚烷基位于轴向位置，trans-膦和卤化物位于赤道平面。RH Grubbs 和同事进行了广泛的动力学研究，并提出了一种与观察到的活性趋势一致的机制。有两种可能的机理（I 和 II）： 其中，红 R 始终朝内，而蓝 R 则尽量远离红 R 并朝向四方锥底面。
 合成应用 首先看几种常见的催化剂： A.B.Smith 及其同事设计了一种合成环环芳烃家族天然产物的有效策略。他们使用了两次闭环复分解来形成一个二倍的大环： 在有多个双键的地方，端位双键反应： </description>
-    </item>
-    
-    <item>
-      <title>薛定谔方程的启发式推导</title>
-      <link>/post/2021/11/13/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E6%8E%A8%E5%AF%BC/</link>
-      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2021/11/13/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E6%8E%A8%E5%AF%BC/</guid>
-      <description>快速的启发式推导，仅用于帮助理解就行了。
-de Broglie 关系和Einstein 关系 $$ \begin{gather*} E={\color{blue}\frac12mv^2}={\color{blue}\frac{p^2}{2m}}=\color{red}{hv} \newline p={\color{blue}mv}=\color{red}{\frac h\lambda} \end{gather*}$$
-蓝色是粒子性的表现，而红色是波动性的表现！
-注意Einstein 关系里的$E$是所有能量（不一定只有动能）。
-含时薛定谔方程 假设波函数是一个最简单的简谐波： $$ \Psi(x,t)=Ae^{i(kx-\omega t)} $$ 其中$\omega$是角频率，$k$为波数（另一种），请查看以获得更多介绍
-结合 Einstein 关系： $$ \omega=2\pi v=\frac E\hbar\newline $$ 我们可以推一波： $$ \begin{gather*} \frac{\partial}{\partial x} \Psi=-i\omega\Psi \\ \hbar\frac{\partial}{\partial x} \Psi=-i{\color{green}E}\Psi \\ i\hbar\frac{\partial}{\partial x} \Psi={\color{green}E}\Psi \end{gather*} $$ 又知道$E=T+V=p^2/2m+V(x)$（假设势能与时间无关），结合关系： $$ {\color{green}E}={\color{green}\frac{\hbar^2k^2}{2m}+V(x)} $$ 得到： $$ i\hbar\frac{\partial}{\partial x} \Psi=\left({\color{green}\frac{\hbar^2{\color{red}k^2}}{2m}+V(x)}\right)\Psi $$ 做一波偏微分： $$ \frac\partial{\partial x}\Psi=ik\Psi,\qquad \frac{\partial^2}{\partial x^2}\Psi=-k^2\Psi $$ 推得： $$ {\color{red}k^2}={\color{red}-\frac{{\partial^2}/{\partial x^2}\Psi}\Psi} $$ 带入上式： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{{\color{red}-}\frac{\hbar^2}{2m}{\color{red}\frac{\partial^2}{\partial x^2}}+V(x)\right\}\Psi $$ 拓展到三次元： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{-\frac{\hbar^2}{2m}{\color{blue}\nabla}^2+V(\mathbf {\color{blue}r})\right\}\Psi $$ 定义哈密顿算子$\hat H$： $$ {\color{orange}\hat H}=-\frac{\hbar^2}{2m}\nabla^2+V(\mathbf r) $$ 所以简写为： $$ {\color{orange}\hat H}\Psi=i\hbar\frac{\partial}{\partial t}\Psi $$</description>
     </item>
     
     <item>

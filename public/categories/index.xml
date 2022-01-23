@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Edward Kerman&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Jan 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Academic</title>
+      <link>/categories/academic/</link>
+      <pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/academic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>量子化学</title>
+      <link>/categories/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6/</link>
+      <pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>感想</title>
@@ -21,29 +39,11 @@
     </item>
     
     <item>
-      <title>Academic</title>
-      <link>/categories/academic/</link>
-      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/academic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>人名反应</title>
       <link>/categories/%E4%BA%BA%E5%90%8D%E5%8F%8D%E5%BA%94/</link>
       <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>/categories/%E4%BA%BA%E5%90%8D%E5%8F%8D%E5%BA%94/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>量子化学</title>
-      <link>/categories/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6/</link>
-      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6/</guid>
       <description></description>
     </item>
     

@@ -6,17 +6,17 @@
     <description>Recent content in 量子化学 on Edward Kerman&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Jan 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>波函数及数学基础</title>
-      <link>/post/2021/11/13/%E6%B3%A2%E5%87%BD%E6%95%B0%E5%8F%8A%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</link>
-      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      <link>/post/2022/01/23/%E6%B3%A2%E5%87%BD%E6%95%B0%E5%8F%8A%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>/post/2021/11/13/%E6%B3%A2%E5%87%BD%E6%95%B0%E5%8F%8A%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</guid>
+      <guid>/post/2022/01/23/%E6%B3%A2%E5%87%BD%E6%95%B0%E5%8F%8A%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/</guid>
       <description>薛定谔方程复习 具体推导见前一篇 blog。 $$ {\color{red}\hat H}\psi=E\psi $$
 波恩解释 如果一个粒子的波函数在$\mathbf r$处的值为$\psi$，那么，在该位置的一个无穷小体积的$\mathrm d\tau =\mathrm dx\mathrm dy\mathrm dz$内发现这个粒子的概率正比于$|\psi|^2\mathrm d\tau$，其中要注意：$|\psi|^2=\psi\psi^*$（若$\psi$是复函数）。
 波函数为零的点，其概率密度也为零，称为节点。
@@ -34,10 +34,10 @@ $$\hat p=\frac{\hbar}i\frac{\partial}{\partial x}$$</description>
     
     <item>
       <title>薛定谔方程的启发式推导</title>
-      <link>/post/2021/11/13/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E6%8E%A8%E5%AF%BC/</link>
-      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      <link>/post/2022/01/22/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E6%8E%A8%E5%AF%BC/</link>
+      <pubDate>Sat, 22 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>/post/2021/11/13/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E6%8E%A8%E5%AF%BC/</guid>
+      <guid>/post/2022/01/22/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E6%8E%A8%E5%AF%BC/</guid>
       <description>快速的启发式推导，仅用于帮助理解就行了。
 de Broglie 关系和Einstein 关系 $$ \begin{gather*} E={\color{blue}\frac12mv^2}={\color{blue}\frac{p^2}{2m}}=\color{red}{hv} \newline p={\color{blue}mv}=\color{red}{\frac h\lambda} \end{gather*}$$
 蓝色是粒子性的表现，而红色是波动性的表现！
