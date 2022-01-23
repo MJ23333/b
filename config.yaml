@@ -2,7 +2,7 @@ baseurl: "/"
 languageCode: "en-us"
 defaultContentLanguage: "en"
 # defaultContentLanguage: "zh"
-title: "Edward Kerman"
+title: "Edward Kerman's blog"
 theme: "hugo-prose"
 googleAnalytics: ""
 disqusShortname: ""
@@ -52,7 +52,7 @@ params:
   description: >
     A website built through Hugo with the hugo-prose theme.
   footer: >
-    &copy; Edward Kerman 2020-2021
+    &copy; Edward Kerman 2020-2022
     
   license: >
     Text and figures are licensed under [Creative Commons Attribution CC BY

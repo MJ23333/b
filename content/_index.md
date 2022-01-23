@@ -5,6 +5,6 @@ menu:
     weight: 1
 ---
 
-Edward Kerman，一个化竞菜鸡，舟厨，ksp爱好者，浅显的哲学阅读者。
+Edward Kerman，一个化竞菜鸡，舟厨，看动画片。
 
 > *Chemistry fucks me everyday.*
