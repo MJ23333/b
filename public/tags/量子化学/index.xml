@@ -23,37 +23,25 @@
 波函数有如下几个性质：
  归一化： 薛定谔方程有一个特点，若$\psi$为解，则$N\psi$也是一个解，其中$N$为任意常数。 $$N^2\int\psi\psi^*\mathrm d\tau=1$$（以后假设都已经归一化，即使用$N\psi$作为以后使用的波函数） 约束条件：有限区域内不允许是无限的；单质的；连续的；又连续的一阶导数（斜率）  对波函数的限制条件直接导致了粒子的能量是量子化的。
 数学基础 算符 $$(\text{算符})(\text{函数})=(\text{新函数})$$
-本征方程：
-$$ {\color{red}\hat\Omega} \psi={\color{blue}\omega}\psi \\ \begin{gather*}(\text{算符})(\text{本征函数})=(\text{本征值})(\text{本征函数})\end{gather*}$$
-$\psi$称为算符$\hat\Omega$的本征函数
+本征方程： $$ {\color{red}\hat\Omega} \psi={\color{blue}\omega}\psi \\ \begin{gather*}(\text{算符})(\text{本征函数})=(\text{本征值})(\text{本征函数})\end{gather*}$$ $\psi$称为算符$\hat\Omega$的本征函数
 如果波函数是对应可观测量$\Omega$的算符$\hat\Omega$的本征函数，那么性质$\Omega$的测量结果将是对应于该本征函数的本征值。
 听起来不好理解，我们来看一个例子——动量。
-动量算符 我们首先想到利用波恩解释来求平均动量：
-$$\overline p=\int_{-\infin}^{+\infin}\psi(x)p\psi(x)^* \mathrm dx$$
-但由于测不准原理，我们没办法精确地将$p$表示为$x$的函数。怎么办呢？只好换个方法思考。
-考虑一个位势$V(x)$为$0$的自由粒子，那它的不含时薛定谔方程为：
-$$-\frac{\hbar^2}{2m}\frac{\partial ^2}{\partial x^2}\psi(x)=E\psi(x)$$
-我们可以解出一个平面波：
-$$\psi_k(x)=e^{i{\color{red}k}x}$$
-$k$是前文提到过的波数。稍加改写：（de Broglie）
-$$\psi_k(x)=e^{i{\color{red}p}x/{\color{red}\hbar}}$$
-有丶东西，我们求其关于空间位置的偏导数：
-$${\color{red}\frac{\partial}{\partial x}\psi_k(x)}=\frac{ip}{\hbar}e^{i{p}x/{\hbar}}={\color{red}\frac{i}{\hbar}}{\color{blue}p\psi_k}$$
-我们倒一下：
-$${\color{red}{\frac \hbar i}\frac{\partial}{\partial x}\psi_k(x)}={\color{blue}p\psi_k}$$
+动量算符 我们首先想到利用波恩解释来求平均动量： $$\overline p=\int_{-\infin}^{+\infin}\psi(x)p\psi(x)^* \mathrm dx$$ 但由于测不准原理，我们没办法精确地将$p$表示为$x$的函数。怎么办呢？只好换个方法思考。
+考虑一个位势$V(x)$为$0$的自由粒子，那它的不含时薛定谔方程为： $$-\frac{\hbar^2}{2m}\frac{\partial ^2}{\partial x^2}\psi(x)=E\psi(x)$$ 我们可以解出一个平面波： $$\psi_k(x)=e^{i{\color{red}k}x}$$ $k$是前文提到过的波数。稍加改写：（de Broglie） $$\psi_k(x)=e^{i{\color{red}p}x/{\color{red}\hbar}}$$ 有丶东西，我们求其关于空间位置的偏导数： $${\color{red}\frac{\partial}{\partial x}\psi_k(x)}=\frac{ip}{\hbar}e^{i{p}x/{\hbar}}={\color{red}\frac{i}{\hbar}}{\color{blue}p\psi_k}$$ 我们倒一下： $${\color{red}{\frac \hbar i}\frac{\partial}{\partial x}\psi_k(x)}={\color{blue}p\psi_k}$$
 可见$\psi_k$被$p$作用得到效果与被算符${\frac \hbar i}\frac{\partial}{\partial x}$作用得到的相同，我们把这个算子命名为动量算符$\hat p$，也就是说：动量算符的本征函数是自由粒子的波函数$\psi_k$，本征值为动量$p$（与上文呼应）：
 $$\hat p=\frac{\hbar}i\frac{\partial}{\partial x}$$</description>
     </item>
     
     <item>
-      <title>薛定谔方程的入门级推导</title>
-      <link>/post/2021/11/13/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%85%A5%E9%97%A8%E7%BA%A7%E6%8E%A8%E5%AF%BC/</link>
+      <title>薛定谔方程的启发式推导</title>
+      <link>/post/2021/11/13/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E6%8E%A8%E5%AF%BC/</link>
       <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>/post/2021/11/13/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%85%A5%E9%97%A8%E7%BA%A7%E6%8E%A8%E5%AF%BC/</guid>
-      <description>快速的启发式推导，并不严谨，但便于理解就行了。
+      <guid>/post/2021/11/13/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E6%8E%A8%E5%AF%BC/</guid>
+      <description>快速的启发式推导，仅用于帮助理解就行了。
 de Broglie 关系和Einstein 关系 $$ \begin{gather*} E={\color{blue}\frac12mv^2}={\color{blue}\frac{p^2}{2m}}=\color{red}{hv} \newline p={\color{blue}mv}=\color{red}{\frac h\lambda} \end{gather*}$$
 蓝色是粒子性的表现，而红色是波动性的表现！
+注意Einstein 关系里的$E$是所有能量（不一定只有动能）。
 含时薛定谔方程 我们首先引入波函数： $$ \Psi(x,t)=Ae^{i(kx-\omega t)} $$ 其中$\omega$是角频率，$k$为波数（另一种），请查看以获得更多介绍
 运用上述的关系式： $$ \begin{gather*} k=\frac{2\pi}{\lambda}=\frac p\hbar\newline \omega=2\pi v=\frac E\hbar\newline \hbar=\frac h{2\pi} \end{gather*} $$ 我们不妨对波函数做一个置换： $$ \Psi(x,t)=Ae^{i({\color{red}p}x-{\color{red}E}t)/{\color{red}\hbar}} $$
 做一些偏微分：
@@ -62,7 +50,7 @@ $$ \begin{gather*} \frac\partial{\partial x}\Psi(x,t)=i\frac p\hbar\Psi(x,t) \ne
 $$ i\hbar\frac{\partial}{\partial t}\Psi(x,t)=\left\{-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)\right\}\Psi(x,t) $$
 拓展到三次元：
 $$ i\hbar\frac{\partial}{\partial t}\Psi(\mathbf r,t)=\left\{-\frac{\hbar^2}{2m}\nabla^2+V(\mathbf r)\right\}\Psi(\mathbf r,t) $$
-不含时薛定谔方程 继续在一维的语境，分离变量： $$ \Psi(x,t)=T(t)\psi(x) $$ 带入含时薛定谔方程： $$ \begin{gather*} {\color{red}i\hbar\left\{\frac{\mathrm d}{\mathrm d t}T(t)\right\}}{\color{blue}\psi(x)}={\color{red}T(t)}{\color{blue}\left\{-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)\right\}\psi(x)}\newline {\color{red}\frac 1{T(t)}i\hbar\left\{\frac{\mathrm d}{\mathrm d t}T(t)\right\}}={\color{blue}\frac1{\psi(x)}\left\{-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)\right\}\psi(x)}={\color{green}E(\mathrm{constant})} \end{gather*} $$ 解一下： $$ \begin{gather*} i\hbar\frac{\mathrm d}{\mathrm d t}T(t)=ET(t)\newline T(t)=Ce^{-iEt/\hbar} \end{gather*} $$ 带入含时薛定谔方程并消去$t$：（拓展到三次元） $$ \begin{align*} \left\{{\color{red}-\frac{\hbar^2}{2m}\nabla^2+V(\mathbf r)}\right\}\psi(\mathbf r)=E\psi(\mathbf r) \end{align*} $$ 简写： $$ {\color{red}\hat H}\psi=E\psi $$</description>
+不含时薛定谔方程 继续在一维的语境，分离变量： $$ \Psi(x,t)=T(t)\psi(x) $$ 带入含时薛定谔方程，由于左边不依赖于$x$，右边不依赖于$t$，那么他们共同的值既不依赖于$x$也不依赖于$t$，设为一个常数$G$。 $$ \begin{gather*} {\color{red}i\hbar\left\{\frac{\mathrm d}{\mathrm d t}T(t)\right\}}{\color{blue}\psi(x)}={\color{red}T(t)}{\color{blue}\left\{-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)\right\}\psi(x)}\newline {\color{red}\frac 1{T(t)}i\hbar\left\{\frac{\mathrm d}{\mathrm d t}T(t)\right\}}={\color{blue}\frac1{\psi(x)}\left\{-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)\right\}\psi(x)}={\color{green}G(\mathrm{constant})} \end{gather*} $$ 只看右边，重写为： $$ \frac{\mathrm d}{\mathrm dt}T(t)=-\frac{iG}{\hbar}T(t) $$ 猜一个解： $$ T(t)=e^{\alpha t} $$ 求导： $$ \frac{\mathrm d}{\mathrm dt}T(t)=\alpha T(t) $$ 带入上面的方程： $$ \alpha T(t)=-\frac{iG}{\hbar}T(t) $$ 不难看出$\alpha=-iG/\hbar$，带入$T(t)$表达式： $$ T(t)=e^{-iGt/\hbar} $$ 这是一个简谐波，不难看出频率$v=G/h$，而由 Einstein 关系注意到$v=E/h$，整个波函数与$t$有关的全在$T(t)$中，故波函数的频率与$T(t)$相同，很容易得到： $$G=E$$ 可以得到： $$ T(t)=e^{-i{\color{green}E}t/\hbar} $$ $$$$ 带入含时薛定谔方程并消去$t$：（拓展到三次元） $$ \begin{align*} \left\{{\color{red}-\frac{\hbar^2}{2m}\nabla^2+V(\mathbf r)}\right\}\psi(\mathbf r)=E\psi(\mathbf r) \end{align*} $$ 简写： $$ {\color{red}\hat H}\psi=E\psi $$</description>
     </item>
     
   </channel>
