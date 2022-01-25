@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>草稿 on Edward Kerman&#39;s blog</title>
+    <link>/categories/%E8%8D%89%E7%A8%BF/</link>
+    <description>Recent content in 草稿 on Edward Kerman&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Jan 2022 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/%E8%8D%89%E7%A8%BF/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>无机结构化学</title>
+      <link>/post/2022/01/23/%E6%97%A0%E6%9C%BA%E7%BB%93%E6%9E%84%E5%8C%96%E5%AD%A6/</link>
+      <pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/01/23/%E6%97%A0%E6%9C%BA%E7%BB%93%E6%9E%84%E5%8C%96%E5%AD%A6/</guid>
+      <description>影响配位数的因素  半径比（永远小 : 大） 共价键成分（ZnS等，一般比半径比预测的低） 电荷（BiF3=CaF2 + NaCl） 外因：温度（T升高CN下降（热振动加剧）例：高温CsCl岩盐）、压力（p升高，堆积效应升高且热运动下降，CN升高（高压RbCl变CsCl））  小贴士：各物质配位数之和（配位数×原子数）相等，你可以使用十字交叉
+低价金属氧化物（可用配位理论讨论，O为弱场配体） M2O ：反萤石
+MO：岩盐
+ThO2（熔点很高，高电荷，LE高）：萤石
+M2O3：B（三角形）→ Al → Sc（缺陷萤石Sc~4~O~6~□~2~）→Y → La （CN依次升高）
+O：ABABAB；Al：C1C2C3C1C2C3（每种只填2/3八面体空隙）
+总：AC1BC2AC3BC1AC2BC3
+Fe3+ 在弱场配体下CFSE≈0，也没有成对能，与球形场效果类似，与Al类似
+硫化物：（硫离子变形性好，共价性强） M2S（M=碱金属）、MS：同氧化物
+闪锌矿：低温（交叉型）→纤维锌矿：高温（重叠型）：椅式——船式之争
+注意：纤维锌矿的重叠是正-负重叠，不是很差
+金属氮化物 Li3N，唯一稳定碱金属氮化物（Na3N虽有但结构不一样）
+Mg3N2、Ca3N2：Sc2O3型
+AlN、GaN：纤维锌矿型
+相关氨基化物同氧化物（Li2NH、CaNH、KNH2等等）
+共价分子 （分子、共价晶体中）等电子原理大显身手（推断——广义；题中出现——狭义（看出题人的））
+广义：重原子数（不管H），价电子总数（仅能推断结构）
+FO~2~SO-OSO~2~F强氧化剂（吸电子稳定lp排斥），另一个离子：F3C-O-O-O-CF3
+比较小的单质分子溶于有机溶剂（聚合度太高则不溶了）：O3、P4、Se8、Se8（启示：相似相溶不只是极性）
+S16^2+^ 红 S8^2+^ 蓝 Se8^2+^ 绿 S42+ 黄 Se42+黄 Te42+ 红
+S4(NH)4 S4N4 As4S4 (NPCl2)n
+长的链状分子：避免lp排斥，高周期互相成键（Se~n~）
+层状分子：石墨、As、Sb、Bi、黑磷（高压稳定）——各向异性
+启示：共价键带来各向异性（方向性、饱和性）
+石墨层间可以填充各种各样的东西：阴离子、阳离子、气体分子……
+三维大分子：C、Si、Ge、灰锡（低温——锡疫产物）
+注意：熔化时不需要打断所有的键（如SiO2）
+簇状分子：自己看书，不要沉迷
+金属键 纯金属：能带理论！ 金属的堆积方式（hcp、ccp，谁是谁？）
+小心金属-金属存在共价性！（Zn）
+小心次级配位（第二远的离子的配位）：如K、Na bcc（8+6=14&amp;gt;12）</description>
+    </item>
+    
+  </channel>
+</rss>

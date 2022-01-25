@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> 晶体基础 | Edward Kerman&#39;s blog</title>
+    
+    
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="晶体基础"/>
+<meta name="twitter:description" content="晶体对称性 仅介绍一些需特别注意的内容：
+旋转轴（记号：数字）——一定要符合晶格的特点：仅2，3，4，6
+与之形成对比的（平行的原子连线不等长），所以5、7、8及以上旋转轴不会出现在晶体中
+镜面（记号：m）对称中心（记号$\overline 1$）1，注意：垂直于n次轴的镜面用$n/m$表示（默认为平行）
+旋转-反演（记号$\overline n$）：下图中$\overline 6\equiv3\perp m$指三个垂直于$m$的对称面
+旋转-反映（记号$S_n$）：$S_1\equiv m; S_2 \equiv\overline 1; S_3\equiv\overline6; {\color{red}S_4\equiv\overline4}; S_6\equiv\overline3$
+可以发现$S_n$和$\overline n$（瑕旋转）是对应着的，晶体中一般选择$\overline n$
+布拉维晶系 指导思想——特定的对称性会对晶胞的形状作出限制2
+二维情况 一般（简单）格子：
+这样，我们就生成了一个最普遍的平面格子（$|\mathbf a|\neq |\mathbf b|;\gamma\neq 90^\circ$），它是平行四边形。我们可以发现无论如何改变$\mathbf a,\mathbf b$都不会失去二重轴。
+特殊格子：（以下对称元素都是分摊后的）
+1.如果我们控制点3的位置，让1,2,3构成一个直角三角形，最终会得到一个矩形$|\mathbf a|\neq |\mathbf b|;{\color{red}\gamma=90^\circ}$（新对称性：两个镜面）
+2.如果我们控制点3的位置，让1,2,3构成一个等腰三角形，得到一个菱形，我们写出周围的几个点，可以画出一个二倍大小的带心矩形$|\mathbf a|\neq |\mathbf b|;{\color{red}\gamma=90^\circ}$（新对称性：两个镜面 &#43; 4个C2轴）
+3.如果我们控制点3的位置，让1,2,3构成一个等腰直角三角形，得到一个正方形${\color{red}|\mathbf a|=|\mathbf b|};{\color{red}\gamma=90^\circ}$（新对称性：四个镜面 &#43; 2个C4（在原来中心和顶点的C2上））
+4.如果我们控制点3的位置，让1,2,3构成一个等边三角形，得到一个120°的菱形${\color{red}|\mathbf a|=|\mathbf b|};{\color{red}\gamma=120^\circ}$（新对称性：1个C6轴（原顶点C2）&#43;2个C3）
+三维情况 基础情况——六种P格子：三斜、单斜、正交、四方、立方、六方。分别分析：
+前置知识：
+1.判断对称性的有用规则：以下两种情况中的对称元素知二推一
+ 偶数次旋转轴；垂直与旋转轴的镜面；对称中心（旋转轴与镜面交点）。例：$\rm 2/m\rightarrow\overline 1$；$\color{red}\rm\overline 1&#43;m\rightarrow2\perp m$； 两个互相垂直的镜面；二重轴（相交直线上）。例：$\rm m\perp m\rightarrow 2$  2.每个晶格都是中心对称的（晶格点上或晶格点连线中点）
+所有的三维格子都可以看做二维格子向上挤出得到——开始讨论：
+以斜平面格子为基础：（平面格子仅包$2$和$\overline 1$）"/>
+
+
+  </head>
+
+  <body>
+
+    <nav class="menu">
+    <ul>
+      <li class="left">
+        <a href="/"><span>Edward Kerman&#39;s blog</span></a>
+      </li>
+      
+      <li>
+        <a href="/">Home</a>
+      </li>
+      
+      <li>
+        <a href="/about/">About</a>
+      </li>
+      
+      <li>
+        <a href="/sitemap/">Sitemap</a>
+      </li>
+      
+      <li id="menu-search">
+        <a href="/#">Search</a>
+      </li>
+      
+      <li>
+        <a href="/index.xml">Subscribe</a>
+      </li>
+      
+    </ul>
+    </nav>
+
+
+<div class="container single">
+<main>
+
+<div class="article-meta">
+<h1><span class="title">晶体基础</span></h1>
+
+<h3 class="author">
+Edward Kerman
+</h3>
+
+<h3 class="date">2022-01-24</h3>
+<p class="terms">
+  
+  
+  Categories: <a href="/categories/academic">Academic</a> <a href="/categories/%E6%97%A0%E6%9C%BA%E5%8C%96%E5%AD%A6">无机化学</a> <a href="/categories/%E7%BB%93%E6%9E%84%E5%8C%96%E5%AD%A6">结构化学</a> 
+  
+  
+  
+  Tags: <a href="/tags/%E6%99%B6%E4%BD%93">晶体</a> 
+  
+  
+</p>
+</div>
+
+<div class="article">
+<h2 id="晶体对称性">晶体对称性</h2>
+<p>仅介绍一些需特别注意的内容：</p>
+<p><strong>旋转轴</strong>（记号：数字）——一定要符合晶格的特点：仅2，3，4，6</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyoho1haexj316s0g0jsl.jpg" alt="image-20220124090847579"></p>
+<p>与之形成对比的（平行的原子连线不等长），所以<strong>5、7、8及以上旋转轴不会出现在晶体中</strong></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyohol4zrcj315s0bimxj.jpg" alt="image-20220124090919580"></p>
+<p><strong>镜面</strong>（记号：m）<strong>对称中心</strong>（记号$\overline 1$）<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>，注意：垂直于n次轴的镜面用$n/m$表示（默认为平行）</p>
+<p><strong>旋转-反演</strong>（记号$\overline n$）：下图中$\overline 6\equiv3\perp m$指三个垂直于$m$的对称面</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyohwcsffyj30p60yuacr.jpg" alt="image-20220124091647554" style="zoom:33%;" /></p>
+<p><strong>旋转-反映</strong>（记号$S_n$）：$S_1\equiv m; S_2 \equiv\overline 1; S_3\equiv\overline6; {\color{red}S_4\equiv\overline4}; S_6\equiv\overline3$</p>
+<p>可以发现$S_n$和$\overline n$（<strong>瑕旋转</strong>）是对应着的，晶体中一般选择$\overline n$</p>
+<h2 id="布拉维晶系">布拉维晶系</h2>
+<p>指导思想——<strong>特定的对称性会对晶胞的形状作出限制</strong><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<h3 id="二维情况">二维情况</h3>
+<p><strong>一般（简单）格子：</strong></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyoihnsi7oj30vc09ct97.jpg" alt="截屏2022-01-24 上午9.34.33"></p>
+<p>这样，我们就生成了一个最普遍的平面格子（$|\mathbf a|\neq |\mathbf b|;\gamma\neq 90^\circ$），它是平行四边形。我们可以发现无论如何改变$\mathbf a,\mathbf b$都不会失去二重轴。</p>
+<p><strong>特殊格子：</strong>（以下对称元素都是分摊后的）</p>
+<p>1.如果我们控制点3的位置，让1,2,3构成一个<strong>直角三角形</strong>，最终会得到一个矩形$|\mathbf a|\neq |\mathbf b|;{\color{red}\gamma=90^\circ}$（新对称性：两个镜面）</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyoknn4bj8j30i8074glm.jpg" alt="image-20220124105212693"></p>
+<p>2.如果我们控制点3的位置，让1,2,3构成一个<strong>等腰三角形</strong>，得到一个菱形，我们写出周围的几个点，可以画出一个<strong>二倍大小</strong>的带心矩形$|\mathbf a|\neq |\mathbf b|;{\color{red}\gamma=90^\circ}$（新对称性：两个镜面 + 4个C2轴）</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyolft9duhj30yq0d6js1.jpg" alt="image-20220124111917107"></p>
+<p>3.如果我们控制点3的位置，让1,2,3构成一个<strong>等腰直角三角形</strong>，得到一个正方形${\color{red}|\mathbf a|=|\mathbf b|};{\color{red}\gamma=90^\circ}$（新对称性：四个镜面 + 2个C4（在原来中心和顶点的C2上））</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyollzp71aj30hy07k0st.jpg" alt="image-20220124112513459"></p>
+<p>4.如果我们控制点3的位置，让1,2,3构成一个<strong>等边三角形</strong>，得到一个120°的菱形${\color{red}|\mathbf a|=|\mathbf b|};{\color{red}\gamma=120^\circ}$（新对称性：1个C6轴（原顶点C2）+2个C3）</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyolvza3cjj30r60fcwf0.jpg" alt="截屏2022-01-24 上午11.33.31"></p>
+<h3 id="三维情况">三维情况</h3>
+<p>基础情况——六种P格子：三斜、单斜、正交、四方、立方、六方。分别分析：</p>
+<p>前置知识：</p>
+<p>1.判断对称性的有用<strong>规则</strong>：以下两种情况中的对称元素<strong>知二推一</strong></p>
+<ul>
+<li>偶数次<strong>旋转轴</strong>；垂直与旋转轴的<strong>镜面</strong>；<strong>对称中心</strong>（旋转轴与镜面交点）。例：$\rm 2/m\rightarrow\overline 1$；$\color{red}\rm\overline 1+m\rightarrow2\perp m$；</li>
+<li><strong>两个</strong>互相垂直的<strong>镜面</strong>；<strong>二重轴</strong>（相交直线上）。例：$\rm m\perp m\rightarrow 2$</li>
+</ul>
+<p>2.每个晶格都是中心对称的（晶格点上或晶格点连线中点）</p>
+<p>所有的三维格子都可以看做二维格子向上挤出得到——开始讨论：</p>
+<p><strong>以斜平面格子为基础</strong>：（平面格子仅包$2$和$\overline 1$）</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyou1erq93j30fq09cmx8.jpg" alt="image-20220124161650083" style="zoom:33%;" /></p>
+<p>上下平面不重合→<strong>三斜</strong>：点群$\overline1$，仅有对称中心，<strong>沿c轴</strong>投影三斜P：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyotzvz8orj30ju0aojrg.jpg" alt="image-20220124161522684" style="zoom:33%;" /></p>
+<p>上下面重合→<strong>单斜</strong>：保住了二重轴（注意一般单斜是<strong>从ac面拉伸</strong>（这样γ=α=90°），看起来向后倒<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>）——点群$\rm P2/m$。下图从<strong>b轴看</strong>单斜P。</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyou5ga2lij30ig0ciq34.jpg" alt="image-20220124162043321" style="zoom:33%;" /></p>
+<p>至此找不到从平面斜格子堆积的另一种方法，讨论结束。</p>
+<p><strong>以平面矩形格子（反演、镜面、二重轴）为基础</strong>：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyoud2cnzaj30hw0fmglz.jpg" alt="image-20220124162801979" style="zoom:33%;" /></p>
+<p><strong>上下不重合</strong>：就是单斜，略</p>
+<p><strong>上下重合</strong>：没有长度限制——<strong>正交</strong>：正交P点群：<strong>Pmmm</strong><sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>（P 2/m 2/m 2/m：a、b、c三个不同的方向），从c轴投影：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyouewuqzyj30iu0hy74p.jpg" alt="image-20220124162948655" style="zoom:33%;" /></p>
+<p>矩形格子$a=b$——<strong>四方</strong>：四方P点群P <strong>4</strong>/mmm（第三个2/m是(110)晶面方向！<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>），从c轴投影：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyox5151u9j30kk0ieaay.jpg" alt="image-20220124163506504" style="zoom:33%;" /></p>
+<p>抬升高度也相等（$a=b=c$）——<strong>立方</strong>：立方P点群：$\rm Pm\overline3nm$（a方向4/m，(111)晶面方向$\overline3$，(110)方向2/m）</p>
+<p><strong>从60°菱形平面格子出发</strong>：</p>
+<p>斜着堆（叠在上一层三重轴上）——<strong>三方（R心六方）</strong>：点群：$\rm R\overline3m$（c方向$\overline3$，a方向的$2/m$）</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyous5f34gj30jm0di74y.jpg" alt="image-20220124164231797" style="zoom:33%;" /></p>
+<p>直上直下——<strong>六方</strong>：六方P点群P 6/mmm（c方向6/m，a和(210)晶面方向 2/m）</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyouxuxybxj30ku0fqq3s.jpg" alt="image-20220124164801524" style="zoom:33%;" /></p>
+<p><strong>14种布拉维点阵形式</strong>——进一步特殊情况</p>
+<p>插入法则——<strong>不降低原有对称性、点阵点环境相同</strong></p>
+<p>首先<strong>考虑单斜P</strong>（三斜对称性最低，不可能再降了）：由点群P2/m可知由对称中心，所加入的点必须在已有点阵点连线的中点，即面心、体心、<del>棱心</del>（若仅一组棱心则可减半，多组棱心则环境不同）</p>
+<p>加在(0.5,0.5,0)或(0,0.5,0.5)上（即矩形面心），得到C心单斜（a，c轴可以交换）</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyovvh8m03j30eg0b2dfy.jpg" alt="image-20220124172020340" style="zoom: 33%;" /></p>
+<p>加在(0.5,0,0.5)上，仍然是单斜P</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyovw74fqlj30ds0es74k.jpg" alt="image-20220124172101659" style="zoom:33%;" /></p>
+<p>加在(0.5,0.5,0.5)，可以转化为单斜C：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyovxjih2oj30i60di74o.jpg" alt="image-20220124172218496" style="zoom:33%;" /></p>
+<p>同时引入多个点——为保持每个点环境相同（<strong>定义！</strong>）：所有面心即<strong>F</strong>，但可转化为单斜C</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyow1ok71qj30d80aujri.jpg" alt="image-20220124172618184"></p>
+<p>其余情况可类推得到：</p>
+<p><strong>正交晶格</strong>：<strong>F、I、C</strong>都无法再缩小，也符合对称性；而A、B心则与C等同，算作一类。</p>
+<p><strong>四方晶格</strong>：存在<strong>I</strong>，但F可以缩小为$\frac12$的I，而C可以缩小为$\frac12$的P。</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gypm33719yj30pm0qy40n.jpg" alt="image-20220125082713082" style="zoom:33%;" /><img src="https://tva1.sinaimg.cn/large/008i3skNly1gypm3vsz7zj30kc0mk761.jpg" alt="image-20220125082759008" style="zoom:39%;" /></p>
+<p><strong>立方晶格</strong>：存在<strong>F、I</strong>，但C破坏对称性。</p>
+<p><strong>六方晶格</strong>：没有，唯一不破坏对称性的点为(0,0,0.5)，但可被缩小为$\frac12$得到P。</p>
+<p><strong>三方晶格（素晶胞）</strong>：C破坏对称性，F和I：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyp2pnigvxj30jk0rs0w8.jpg" alt="image-20220124211653625" style="zoom:33%;" />
+<img src="https://tva1.sinaimg.cn/large/008i3skNly1gyp2qkowhgj30lu0lqjug.jpg" alt="image-20220124211748631" style="zoom:41%;" /></p>
+<p>注意：三方晶胞的特例：α=90°——简单立方；α=60°——面心立方；α=109.5°——体心立方</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyov39s981j30u018nwjk.jpg" alt="image-20220124165313255"></p>
+<p>各类晶胞除R心六方（三方$\rm R\overline3\space2/m$）外都不改变原有对称性。</p>
+<h2 id="晶面">晶面</h2>
+<p><strong>晶面指数</strong>——截距倒数的最小整数比。小贴士：指数为0则与该轴平行</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>注意，平行于纸面：粗直角；垂直于纸面：粗线<img src="https://tva1.sinaimg.cn/large/008i3skNly1gyoiajzc4tj30h007sdfs.jpg" alt="image-20220124093026171"> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyq6ggq66vj30u013sgwq.jpg" alt="image-20220125201202624"> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>看图：<img src="https://tva1.sinaimg.cn/large/008i3skNly1gyou6gkcfoj30ha0g4dg2.jpg" alt="image-20220124162141214"> <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p>若点群只有两种轴，那么他们表示的对称元素分别在 x、y、z 方向。 <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p>第一位：<strong>高阶轴</strong>；第二位：对称<strong>等价</strong>的<strong>次级</strong>方向；第三位：对称等价的<strong>三级</strong>方向，从<strong>次级方向之间通过</strong> <a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+</div>
+</main>
+
+<section class="appendix">
+
+
+<div>
+  <div class="side side-left"><h3>Author&#39;s bio</h3></div>
+  <div>
+
+
+
+
+
+<div>Edward Kerman，一个化竞菜鸡，舟厨，ksp爱好者，浅显的哲学阅读者。</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Reuse</h3></div>
+  Text and figures are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution CC BY 4.0</a>.
+</div>
+
+
+
+<div>
+  <div class="side side-left"><h3>Suggest changes</h3></div>
+  
+  
+  
+    
+    
+  
+  If you find any mistakes (including typos) or want to suggest changes, please feel free to <a href="https://github.com/MJ23333/b/edit/master/content/post/Name%20Reactions/%e6%99%b6%e4%bd%93%e5%9f%ba%e7%a1%80.md" id="edit-link">edit the source file of this page on Github and create a pull request.</a>
+</div>
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Citation</h3></div>
+  <p>For attribution, please cite this work as</p>
+  <pre><code class="no-highlight">Edward Kerman (2022). 晶体基础. Edward Kerman&#39;s blog. /post/2022/01/24/%E6%99%B6%E4%BD%93%E5%9F%BA%E7%A1%80/</code></pre>
+  <p>BibTeX citation</p>
+  <pre><code class="no-highlight">@misc{
+  title = "晶体基础",
+  author = "Edward Kerman",
+  year = "2022",
+  journal = "Edward Kerman&#39;s blog",
+  note = "/post/2022/01/24/%E6%99%B6%E4%BD%93%E5%9F%BA%E7%A1%80/"
+}</code></pre>
+</div>
+
+</section>
+
+
+
+<nav class="post-nav">
+  <span class="nav-next">&larr; <a href="/post/2022/01/23/%E5%89%AF%E6%97%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E9%94%AE/" title=Next&#32;post&#32;(older)>副族之间的键</a></span>
+  &hercon;
+  <span class="nav-prev"><a href="/post/2022/01/25/%E9%A9%AC%E5%BE%B7%E9%9A%86%E5%B8%B8%E6%95%B0%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E6%89%AB%E9%9B%B7/" title=Previous&#32;post&#32;(newer)>马德隆常数计算方法扫雷</a> &rarr;</span>
+</nav>
+
+
+
+
+
+</div>
+
+
+  <footer>
+  <script async src="//yihui.org/js/center-img.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" integrity="sha384-UEY9IRPkV+TTTY7nK1wSrfhWPDJy9wr4PmYg3DLPcN5F4NDlIwGZkWtWveKR/45c"  crossorigin="anonymous"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+              renderMathInElement(document.body, {
+                  delimiters: [
+                      {left: "$$", right: "$$", display: true},
+                      {left: "$", right: "$", display: false}
+                  ]
+              });
+          });
+      </script>
+
+
+
+
+
+  <div class="footer">
+  
+  <ul class="copyright">
+    <li>© Edward Kerman 2020-2022</li>
+  </ul>
+  
+  <ul>
+    
+    <li>
+      <a href="/404.html">Contact</a>
+    </li>
+    
+    <li class="optional">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    <li class="optional">
+      <a href="/tags/">Tags</a>
+    </li>
+    
+    <li id="menu-edit">
+      <a href="#">Suggest an edit</a>
+    </li>
+    
+    <li>
+      <a href="#">Back to top</a>
+    </li>
+    
+  </ul>
+  </div>
+  
+  </footer>
+  <script async src="/js/features.js" data-page-features="[null,[&#34;&#43;sidenotes&#34;],null]"></script>
+  </body>
+</html>
+

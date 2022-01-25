@@ -15,9 +15,9 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="薛定谔方程的启发式推导"/>
-<meta name="twitter:description" content="快速的启发式推导，仅用于帮助理解就行了。
+<meta name="twitter:description" content="快速的启发式推导，仅用于帮助理解就行了。1
 de Broglie 关系和Einstein 关系 $$ \begin{gather*} E={\color{blue}\frac12mv^2}={\color{blue}\frac{p^2}{2m}}=\color{red}{hv} \newline p={\color{blue}mv}=\color{red}{\frac h\lambda} \end{gather*}$$
-蓝色是粒子性的表现，而红色是波动性的表现！
+蓝色是粒子性的表现，而红色是波动性的表现！2
 注意Einstein 关系里的$E$是所有能量（不一定只有动能）。
 含时薛定谔方程 假设波函数是一个最简单的简谐波： $$ \Psi(x,t)=Ae^{i(kx-\omega t)} $$ 其中$\omega$是角频率，$k$为波数（另一种），请查看以获得更多介绍
 结合 Einstein 关系： $$ \omega=2\pi v=\frac E\hbar\newline $$ 我们可以推一波： $$ \begin{gather*} \frac{\partial}{\partial x} \Psi=-i\omega\Psi \\ \hbar\frac{\partial}{\partial x} \Psi=-i{\color{green}E}\Psi \\ i\hbar\frac{\partial}{\partial x} \Psi={\color{green}E}\Psi \end{gather*} $$ 又知道$E=T&#43;V=p^2/2m&#43;V(x)$（假设势能与时间无关），结合关系： $$ {\color{green}E}={\color{green}\frac{\hbar^2k^2}{2m}&#43;V(x)} $$ 得到： $$ i\hbar\frac{\partial}{\partial x} \Psi=\left({\color{green}\frac{\hbar^2{\color{red}k^2}}{2m}&#43;V(x)}\right)\Psi $$ 做一波偏微分： $$ \frac\partial{\partial x}\Psi=ik\Psi,\qquad \frac{\partial^2}{\partial x^2}\Psi=-k^2\Psi $$ 推得： $$ {\color{red}k^2}={\color{red}-\frac{{\partial^2}/{\partial x^2}\Psi}\Psi} $$ 带入上式： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{{\color{red}-}\frac{\hbar^2}{2m}{\color{red}\frac{\partial^2}{\partial x^2}}&#43;V(x)\right\}\Psi $$ 拓展到三次元： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{-\frac{\hbar^2}{2m}{\color{blue}\nabla}^2&#43;V(\mathbf {\color{blue}r})\right\}\Psi $$ 定义哈密顿算子$\hat H$： $$ {\color{orange}\hat H}=-\frac{\hbar^2}{2m}\nabla^2&#43;V(\mathbf r) $$ 所以简写为： $$ {\color{orange}\hat H}\Psi=i\hbar\frac{\partial}{\partial t}\Psi $$"/>
@@ -82,11 +82,11 @@ Edward Kerman
 </div>
 
 <div class="article">
-<p>快速的启发式推导，仅用于帮助理解<del>就行了</del>。</p>
+<p>快速的启发式推导，仅用于帮助理解<del>就行了</del>。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <h2 id="de-broglie-关系和einstein-关系">de Broglie 关系和Einstein 关系</h2>
 <p>$$ \begin{gather*} E={\color{blue}\frac12mv^2}={\color{blue}\frac{p^2}{2m}}=\color{red}{hv} \newline
 p={\color{blue}mv}=\color{red}{\frac h\lambda} \end{gather*}$$</p>
-<p>蓝色是粒子性的表现，而红色是波动性的表现！</p>
+<p>蓝色是粒子性的表现，而红色是波动性的表现！<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
 <p>注意Einstein 关系里的$E$是所有能量（不一定只有动能）。</p>
 <h2 id="含时薛定谔方程">含时薛定谔方程</h2>
 <p>假设波函数是一个最简单的简谐波：
@@ -185,6 +185,17 @@ $$
 $$
 {\color{orange}\hat H}\psi=E\psi
 $$</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyq851ovu8j30hf0qzwgc.jpg" alt="img"> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyq8ems0nlj307d07oglw.jpg" alt="Einstein"> <img src="https://tva1.sinaimg.cn/large/008i3skNly1gyq8g0aewxj30920doglz.jpg" alt="德布罗意"> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
 
 </div>
 </main>
