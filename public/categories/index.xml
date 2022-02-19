@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Edward Kerman&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Feb 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>Academic</title>
       <link>/categories/academic/</link>
-      <pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>/categories/academic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>物理化学</title>
+      <link>/categories/%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%A6/</link>
+      <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%A6/</guid>
       <description></description>
     </item>
     

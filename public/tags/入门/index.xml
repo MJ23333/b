@@ -6,10 +6,31 @@
     <description>Recent content in 入门 on Edward Kerman&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Feb 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/%E5%85%A5%E9%97%A8/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>热力学第一定律</title>
+      <link>/post/2022/02/18/%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%B8%80%E5%AE%9A%E5%BE%8B/</link>
+      <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/02/18/%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%B8%80%E5%AE%9A%E5%BE%8B/</guid>
+      <description>第零定律——温度 表述：如果A、B同时和C热平衡，那么A、B彼此也热平衡
+温度：两个热平衡的系统所拥有的的共同性质
+一些概念 系统：隔离→封闭→敞开
+系统的性质：广度→$\lambda^1$；强度→$\lambda^0$。其中$f(\lambda x,\lambda y,\cdots)=\lambda^nf(x,y,\cdots)$
+状态函数：只取决于开始和终了的状态（处于定态的系统与历史无关），状态函数具有全微分性质： $$ \begin{align*}\mathrm dA={\left(\frac{\partial A}{\partial x}\right)_{y,\cdots}\mathrm dx} + { \left(\frac{\partial A}{\partial y}\right)_{x,\cdots}\mathrm dy} +\cdots\end{align*} $$ 状态函数用$\mathrm d$，非状态函数用$\delta$。
+状态方程：多组分均相系统（一般用得到的最复杂）： $$ T=f(p,V,n_1,n_2,\cdots) $$ 变化过程：等温（全程且等于环境温度）；等压（始态和终态且等于环境应力）；等容（全程）；绝热（绝热壁或太快而来不及交换）
+热：由于温度不同而传递的能量
+功：除了热以外的能量传递，以系统来看（国家标准），几种常见的：$F\mathrm dl,E\mathrm dQ,{\color{red}-}p_{\color{red}e}\mathrm dV,\gamma\mathrm dA$（最后一个是表面功），好好思考正负。
+热一——能量守恒 $$ \mathrm dU=\delta Q+\delta W $$
+几种膨胀过程：自由：$0$；等外压：$-p_e\Delta V$；可逆膨胀：$-RT\ln\frac{V_2}{V_1}$
+可逆过程：系统和环境都完全复原：准静态过程；熔点、沸点的相变；可逆电池外加电动势与电池电动势相等；某些化学反应。可逆过程中系统是个大好人（给的多得的少）
+等容反应热： $$ \Delta U =Q_V $$ 焓：绝对成立： $$ H\equiv U+pV $$ 等压反应热： $$ \Delta H=Q_p $$
+热容 注意区分$C(T),C_\mathrm m(T)$ $$ C_\mathrm m(T)\equiv\frac1n\frac{\delta Q}{\mathrm dT} $$ 在等压和等容过程中又和$\Delta U,\Delta H$联系起来——$C_V,C_p$</description>
+    </item>
     
     <item>
       <title>波函数及数学基础</title>
