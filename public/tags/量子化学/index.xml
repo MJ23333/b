@@ -6,10 +6,20 @@
     <description>Recent content in 量子化学 on Edward Kerman&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Mar 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>简谐振动</title>
+      <link>/post/2022/03/03/%E7%AE%80%E8%B0%90%E6%8C%AF%E5%8A%A8/</link>
+      <pubDate>Thu, 03 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/03/03/%E7%AE%80%E8%B0%90%E6%8C%AF%E5%8A%A8/</guid>
+      <description>简谐运动 我们知道简谐运动的一般运动方程： $$ m\frac{\mathrm d^2x}{\mathrm d^2t}=-kx $$ 我们把常数搞到一起： $$ \frac{\mathrm d^2x}{\mathrm d^2t}+\omega^2x\text{，其中}\omega=\sqrt{\frac{k}{m}} $$ 二阶导竟然还可以等于自己乘上一个常数，猜测这是怎么导都稳得一批的指数函数$Ae^{\lambda t}$，那么： $$ Ae^{\lambda x}\left(\lambda^2+\omega^2\right)=0 $$ 那么： $$ \lambda=\pm i\omega $$ 所以有这么个通解（$A_1,A_2,A$是复常数）： $$ x(t)=A_1e^{i\omega t}+A_2e^{-i\omega t}=Ae^{i\omega t} $$ 其中$A$是一个复数，称为复振幅，$A$的模长$|A|$就是振幅，幅角的相反数$\phi_0=-\mathrm{arg}(A)$就是初相位。
+我们希望$x(t)$是个实数，那么它应该等于它的复共轭： $$ A_1e^{i\omega t}+A_2e^{-i\omega t}=A^*_2e^{i\omega t}+A^*_1e^{-i\omega t} $$ 得到： $$ A_1=A^*_2 $$ 那我们写$A_1=ae^{i\phi}$，$A_2=ae^{-i\phi}$，得到： $$ x(t)=a\left[e^{i(\omega t+\phi)}+e^{-i(\omega t+\phi)}\right] $$ 套入欧拉公式： $$ x(t)=2a\cos(\omega t+\phi)=x_0\cos(\omega t+\phi) $$</description>
+    </item>
     
     <item>
       <title>波函数及数学基础</title>
@@ -39,11 +49,11 @@ $$\hat p=\frac{\hbar}i\frac{\partial}{\partial x}$$</description>
       
       <guid>/post/2022/01/22/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E6%8E%A8%E5%AF%BC/</guid>
       <description>快速的启发式推导，仅用于帮助理解就行了。1
-de Broglie 关系和Einstein 关系 $$ \begin{gather*} E={\color{blue}\frac12mv^2}={\color{blue}\frac{p^2}{2m}}=\color{red}{hv} \newline p={\color{blue}mv}=\color{red}{\frac h\lambda} \end{gather*}$$
+de Broglie 关系和 Einstein 关系 $$ \begin{gather*} E={\color{blue}\frac12mv^2+V}={\color{blue}\frac{p^2}{2m}+V}=\color{red}{h\nu} \newline p={\color{blue}mv}=\color{red}{\frac h\lambda} \end{gather*}$$
 蓝色是粒子性的表现，而红色是波动性的表现！2
-注意Einstein 关系里的$E$是所有能量（不一定只有动能）。
-含时薛定谔方程 假设波函数是一个最简单的简谐波： $$ \Psi(x,t)=Ae^{i(kx-\omega t)} $$ 其中$\omega$是角频率，$k$为波数（另一种），请查看以获得更多介绍
-结合 Einstein 关系： $$ \omega=2\pi v=\frac E\hbar\newline $$ 我们可以推一波： $$ \begin{gather*} \frac{\partial}{\partial x} \Psi=-i\omega\Psi \\ \hbar\frac{\partial}{\partial x} \Psi=-i{\color{green}E}\Psi \\ i\hbar\frac{\partial}{\partial x} \Psi={\color{green}E}\Psi \end{gather*} $$ 又知道$E=T+V=p^2/2m+V(x)$（假设势能与时间无关），结合关系： $$ {\color{green}E}={\color{green}\frac{\hbar^2k^2}{2m}+V(x)} $$ 得到： $$ i\hbar\frac{\partial}{\partial x} \Psi=\left({\color{green}\frac{\hbar^2{\color{red}k^2}}{2m}+V(x)}\right)\Psi $$ 做一波偏微分： $$ \frac\partial{\partial x}\Psi=ik\Psi,\qquad \frac{\partial^2}{\partial x^2}\Psi=-k^2\Psi $$ 推得： $$ {\color{red}k^2}={\color{red}-\frac{{\partial^2}/{\partial x^2}\Psi}\Psi} $$ 带入上式： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{{\color{red}-}\frac{\hbar^2}{2m}{\color{red}\frac{\partial^2}{\partial x^2}}+V(x)\right\}\Psi $$ 拓展到三次元： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{-\frac{\hbar^2}{2m}{\color{blue}\nabla}^2+V(\mathbf {\color{blue}r})\right\}\Psi $$ 定义哈密顿算子$\hat H$： $$ {\color{orange}\hat H}=-\frac{\hbar^2}{2m}\nabla^2+V(\mathbf r) $$ 所以简写为： $$ {\color{orange}\hat H}\Psi=i\hbar\frac{\partial}{\partial t}\Psi $$</description>
+注意 Einstein 关系里的$E$是所有能量（不一定只有动能）。
+含时薛定谔方程 假设波函数是一个最简单的简谐波： $$ \Psi(x,t)=Ae^{i(kx-\omega t)} $$ 其中$\omega$是角频率，$k$为波数（都多乘了$2\pi$），请查看以获得更多介绍
+结合 Einstein 关系： $$ \omega=2\pi \nu=\frac E\hbar\newline $$ 我们可以推一波： $$ \begin{gather*} \frac{\partial}{\partial t} \Psi=-i\omega\Psi \\ \hbar\frac{\partial}{\partial t} \Psi=-i{\color{green}E}\Psi \\ i\hbar\frac{\partial}{\partial t} \Psi={\color{green}E}\Psi \end{gather*} $$ 又知道$E=T+V=p^2/2m+V(x)$（假设势能与时间无关），结合关系： $$ {\color{green}E}={\color{green}\frac{\hbar^2k^2}{2m}+V(x)} $$ 得到： $$ i\hbar\frac{\partial}{\partial t} \Psi=\left({\color{green}\frac{\hbar^2{\color{red}k^2}}{2m}+V(x)}\right)\Psi $$ 做一波偏微分： $$ \frac\partial{\partial x}\Psi=ik\Psi,\qquad \frac{\partial^2}{\partial x^2}\Psi=-k^2\Psi $$ 推得： $$ {\color{red}k^2}={\color{red}-\frac{{\partial^2}/{\partial x^2}\Psi}\Psi} $$ 带入上式： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{{\color{red}-}\frac{\hbar^2}{2m}{\color{red}\frac{\partial^2}{\partial x^2}}+V(x)\right\}\Psi $$ 拓展到三次元： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{-\frac{\hbar^2}{2m}{\color{blue}\nabla}^2+V(\mathbf {\color{blue}r})\right\}\Psi $$ 定义哈密顿算子$\hat H$： $$ {\color{orange}\hat H}=-\frac{\hbar^2}{2m}\nabla^2+V(\mathbf r) $$ 所以简写为： $$ {\color{orange}\hat H}\Psi=i\hbar\frac{\partial}{\partial t}\Psi $$</description>
     </item>
     
   </channel>

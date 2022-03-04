@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> 简谐振动 | Edward Kerman&#39;s blog</title>
+    
+    
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
+<link href="https://fonts.font.im/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="简谐振动"/>
+<meta name="twitter:description" content="简谐运动 我们知道简谐运动的一般运动方程： $$ m\frac{\mathrm d^2x}{\mathrm d^2t}=-kx $$ 我们把常数搞到一起： $$ \frac{\mathrm d^2x}{\mathrm d^2t}&#43;\omega^2x\text{，其中}\omega=\sqrt{\frac{k}{m}} $$ 二阶导竟然还可以等于自己乘上一个常数，猜测这是怎么导都稳得一批的指数函数$Ae^{\lambda t}$，那么： $$ Ae^{\lambda x}\left(\lambda^2&#43;\omega^2\right)=0 $$ 那么： $$ \lambda=\pm i\omega $$ 所以有这么个通解（$A_1,A_2,A$是复常数）： $$ x(t)=A_1e^{i\omega t}&#43;A_2e^{-i\omega t}=Ae^{i\omega t} $$ 其中$A$是一个复数，称为复振幅，$A$的模长$|A|$就是振幅，幅角的相反数$\phi_0=-\mathrm{arg}(A)$就是初相位。
+我们希望$x(t)$是个实数，那么它应该等于它的复共轭： $$ A_1e^{i\omega t}&#43;A_2e^{-i\omega t}=A^*_2e^{i\omega t}&#43;A^*_1e^{-i\omega t} $$ 得到： $$ A_1=A^*_2 $$ 那我们写$A_1=ae^{i\phi}$，$A_2=ae^{-i\phi}$，得到： $$ x(t)=a\left[e^{i(\omega t&#43;\phi)}&#43;e^{-i(\omega t&#43;\phi)}\right] $$ 套入欧拉公式： $$ x(t)=2a\cos(\omega t&#43;\phi)=x_0\cos(\omega t&#43;\phi) $$"/>
+
+
+  </head>
+
+  <body>
+
+    <nav class="menu">
+    <ul>
+      <li class="left">
+        <a href="/"><span>Edward Kerman&#39;s blog</span></a>
+      </li>
+      
+      <li>
+        <a href="/">Home</a>
+      </li>
+      
+      <li>
+        <a href="/about/">About</a>
+      </li>
+      
+      <li>
+        <a href="/sitemap/">Sitemap</a>
+      </li>
+      
+      <li id="menu-search">
+        <a href="/#">Search</a>
+      </li>
+      
+      <li>
+        <a href="/index.xml">Subscribe</a>
+      </li>
+      
+    </ul>
+    </nav>
+		
+
+
+<div class="container single">
+<main>
+
+<div class="article-meta">
+<h1><span class="title">简谐振动</span></h1>
+
+<h3 class="author">
+Edward Kerman
+</h3>
+
+<h3 class="date">2022-03-03</h3>
+<p class="terms">
+  
+  
+  Categories: <a href="/categories/academic">Academic</a> <a href="/categories/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6">量子化学</a> 
+  
+  
+  
+  Tags: <a href="/tags/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6">量子化学</a> <a href="/tags/%E5%85%A5%E9%97%A8">入门</a> 
+  
+  
+</p>
+</div>
+
+<div class="article">
+<h2 id="简谐运动">简谐运动</h2>
+<p>我们知道简谐运动的一般运动方程：
+$$
+m\frac{\mathrm d^2x}{\mathrm d^2t}=-kx
+$$
+我们把常数搞到一起：
+$$
+\frac{\mathrm d^2x}{\mathrm d^2t}+\omega^2x\text{，其中}\omega=\sqrt{\frac{k}{m}}
+$$
+二阶导竟然还可以等于自己乘上一个常数，猜测这是怎么导都稳得一批的指数函数$Ae^{\lambda t}$，那么：
+$$
+Ae^{\lambda x}\left(\lambda^2+\omega^2\right)=0
+$$
+那么：
+$$
+\lambda=\pm i\omega
+$$
+所以有这么个通解（$A_1,A_2,A$是复常数）：
+$$
+x(t)=A_1e^{i\omega t}+A_2e^{-i\omega t}=Ae^{i\omega t}
+$$
+其中$A$是一个复数，称为复振幅，$A$的模长$|A|$就是振幅，幅角的相反数$\phi_0=-\mathrm{arg}(A)$就是初相位。</p>
+<p>我们希望$x(t)$是个实数，那么它应该等于它的复共轭：
+$$
+A_1e^{i\omega t}+A_2e^{-i\omega t}=A^*_2e^{i\omega t}+A^*_1e^{-i\omega t}
+$$
+得到：
+$$
+A_1=A^*_2
+$$
+那我们写$A_1=ae^{i\phi}$，$A_2=ae^{-i\phi}$，得到：
+$$
+x(t)=a\left[e^{i(\omega t+\phi)}+e^{-i(\omega t+\phi)}\right]
+$$
+套入欧拉公式：
+$$
+x(t)=2a\cos(\omega t+\phi)=x_0\cos(\omega t+\phi)
+$$</p>
+
+</div>
+</main>
+
+<section class="appendix">
+
+
+<div>
+  <div class="side side-left"><h3>Author&#39;s bio</h3></div>
+  <div>
+
+
+
+
+
+<div>Edward Kerman，一个化竞菜鸡，舟厨，ksp爱好者。</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Reuse</h3></div>
+  Text and figures are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution CC BY 4.0</a>.
+</div>
+
+
+
+<div>
+  <div class="side side-left"><h3>Suggest changes</h3></div>
+  
+  
+  
+    
+    
+  
+  If you find any mistakes (including typos) or want to suggest changes, please feel free to <a href="https://github.com/MJ23333/b/edit/master/content/post/jghx/%e7%ae%80%e8%b0%90%e6%8c%af%e5%8a%a8.md" id="edit-link">edit the source file of this page on Github and create a pull request.</a>
+</div>
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Citation</h3></div>
+  <p>For attribution, please cite this work as</p>
+  <pre><code class="no-highlight">Edward Kerman (2022). 简谐振动. Edward Kerman&#39;s blog. /post/2022/03/03/%E7%AE%80%E8%B0%90%E6%8C%AF%E5%8A%A8/</code></pre>
+  <p>BibTeX citation</p>
+  <pre><code class="no-highlight">@misc{
+  title = "简谐振动",
+  author = "Edward Kerman",
+  year = "2022",
+  journal = "Edward Kerman&#39;s blog",
+  note = "/post/2022/03/03/%E7%AE%80%E8%B0%90%E6%8C%AF%E5%8A%A8/"
+}</code></pre>
+</div>
+
+</section>
+
+
+
+<nav class="post-nav">
+  <span class="nav-next">&larr; <a href="/post/2022/02/18/%E5%A4%9A%E7%BB%84%E5%88%86%E7%83%AD%E5%8A%9B%E5%AD%A6/" title=Next&#32;post&#32;(older)>多组分热力学</a></span>
+  &hercon;
+  <span class="nav-prev"></span>
+</nav>
+
+
+
+
+
+</div>
+
+
+  <footer>
+  <script async src="//yihui.org/js/center-img.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" integrity="sha384-UEY9IRPkV+TTTY7nK1wSrfhWPDJy9wr4PmYg3DLPcN5F4NDlIwGZkWtWveKR/45c"  crossorigin="anonymous"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+              renderMathInElement(document.body, {
+                  delimiters: [
+                      {left: "$$", right: "$$", display: true},
+                      {left: "$", right: "$", display: false}
+                  ]
+              });
+          });
+      </script>
+
+
+
+
+
+  <div class="footer">
+  
+  <ul class="copyright">
+    <li>© Edward Kerman 2020-2022</li>
+  </ul>
+  
+  <ul>
+    
+    <li>
+      <a href="/404.html">Contact</a>
+    </li>
+    
+    <li class="optional">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    <li class="optional">
+      <a href="/tags/">Tags</a>
+    </li>
+    
+    <li id="menu-edit">
+      <a href="#">Suggest an edit</a>
+    </li>
+    
+    <li>
+      <a href="#">Back to top</a>
+    </li>
+    
+  </ul>
+  </div>
+  
+  </footer>
+  <script async src="/js/features.js" data-page-features="[null,[&#34;&#43;sidenotes&#34;],null]"></script>
+  </body>
+</html>
+
