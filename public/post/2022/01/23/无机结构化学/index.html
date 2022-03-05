@@ -13,6 +13,7 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
+<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="无机结构化学"/>
 <meta name="twitter:description" content="影响配位数的因素  半径比（永远小 : 大） 共价键成分（ZnS等，一般比半径比预测的低） 电荷（BiF3=CaF2 &#43; NaCl） 外因：温度（T升高CN下降（热振动加剧）例：高温CsCl岩盐）、压力（p升高，堆积效应升高且热运动下降，CN升高（高压RbCl变CsCl））  小贴士：各物质配位数之和（配位数×原子数）相等，你可以使用十字交叉
@@ -326,6 +327,9 @@ Edward Kerman
 				MathJax.Hub.Config({
 					extensions: ["tex2jax.js"],
 					jax: ["input/TeX", "output/HTML-CSS"],
+					TeX: {
+						extensions: ["mhchem.js"]
+					},
 					tex2jax: {
 						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
 						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],

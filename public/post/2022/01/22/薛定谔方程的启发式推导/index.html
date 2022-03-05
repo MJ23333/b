@@ -13,14 +13,15 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
+<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="薛定谔方程的启发式推导"/>
 <meta name="twitter:description" content="快速的启发式推导，仅用于帮助理解就行了。1
-de Broglie 关系和 Einstein 关系 $$ \begin{gather*} E={\color{blue}{\frac12}mv^2&#43;V}={\color{blue}{\frac{p^2}{2m}}&#43;V}=\color{red}{h\nu} \newline p={\color{blue}mv}=\color{red}{\frac h\lambda} \end{gather*}$$
+de Broglie 关系和 Einstein 关系 $$ \begin{gather*} E=\color{blue}{{\frac12}mv^2&#43;V}=\color{blue}{{\frac{p^2}{2m}}&#43;V}=\color{red}{h\nu} \newline p=\color{blue}{mv}=\color{red}{\frac h\lambda} \end{gather*}$$
 蓝色是粒子性的表现，而红色是波动性的表现！2
 注意 Einstein 关系里的$E$是所有能量（不一定只有动能）。
 含时薛定谔方程 假设波函数是一个最简单的简谐波： $$ \Psi(x,t)=Ae^{i(kx-\omega t)} $$ 其中$\omega$是角频率，$k$为波数（都多乘了$2\pi$），请查看以获得更多介绍
-结合 Einstein 关系： $$ \omega=2\pi \nu=\frac E\hbar\newline $$ 我们可以推一波： $$ \begin{gather*} \frac{\partial}{\partial t} \Psi=-i\omega\Psi \ \hbar\frac{\partial}{\partial t} \Psi=-i{\color{green}E}\Psi \ i\hbar\frac{\partial}{\partial t} \Psi={\color{green}E}\Psi \end{gather*} $$ 又知道$E=T&#43;V=p^2/2m&#43;V(x)$（假设势能与时间无关），结合关系： $$ {\color{green}E}={\color{green}{\frac{\hbar^2k^2}{2m}}&#43;V(x)} $$ 得到： $$ i\hbar\frac{\partial}{\partial t} \Psi=\left({\color{green}{\frac{\hbar^2{\color{red}k^2}}{2m}}&#43;V(x)}\right)\Psi $$ 做一波偏微分： $$ \frac\partial{\partial x}\Psi=ik\Psi,\qquad \frac{\partial^2}{\partial x^2}\Psi=-k^2\Psi $$ 推得： $$ {\color{red}k^2}={\color{red}-{\frac{{\partial^2}/{\partial x^2}\Psi}\Psi}} $$ 带入上式： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{{\color{red}-}\frac{\hbar^2}{2m}{\color{red}{\frac{\partial^2}{\partial x^2}}}&#43;V(x)\right\}\Psi $$ 拓展到三次元： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{-\frac{\hbar^2}{2m}{\color{blue}\nabla}^2&#43;V(\mathbf {\color{blue}r})\right\}\Psi $$ 定义哈密顿算子$\hat H$： $$ {\color{orange}{\hat H}}=-\frac{\hbar^2}{2m}\nabla^2&#43;V(\mathbf r) $$ 所以简写为： $$ {\color{orange}{\hat H}}\Psi=i\hbar\frac{\partial}{\partial t}\Psi $$"/>
+结合 Einstein 关系： $$ \omega=2\pi \nu=\frac E\hbar\newline $$ 我们可以推一波： $$ \begin{gather*} \frac{\partial}{\partial t} \Psi=-i\omega\Psi \ \hbar\frac{\partial}{\partial t} \Psi=-i\color{green}{E}\Psi \ i\hbar\frac{\partial}{\partial t} \Psi=\color{green}{E}\Psi \end{gather*} $$ 又知道$E=T&#43;V=p^2/2m&#43;V(x)$（假设势能与时间无关），结合关系： $$ \color{green}{E}=\color{green}{{\frac{\hbar^2k^2}{2m}}&#43;V(x)} $$ 得到： $$ i\hbar\frac{\partial}{\partial t} \Psi=\left(\color{green}{{\frac{\hbar^2\color{red}{k^2}}{2m}}&#43;V(x)}\right)\Psi $$ 做一波偏微分： $$ \frac\partial{\partial x}\Psi=ik\Psi,\qquad \frac{\partial^2}{\partial x^2}\Psi=-k^2\Psi $$ 推得： $$ \color{red}{k^2}=\color{red}{-{\frac{{\partial^2}/{\partial x^2}\Psi}\Psi}} $$ 带入上式： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{\color{red}{-}\frac{\hbar^2}{2m}\color{red}{{\frac{\partial^2}{\partial x^2}}}&#43;V(x)\right\}\Psi $$ 拓展到三次元： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{-\frac{\hbar^2}{2m}{\color{blue}\nabla}^2&#43;V(\mathbf {\color{blue}r})\right\}\Psi $$ 定义哈密顿算子$\hat H$： $$ {\color{orange}{\hat H}}=-\frac{\hbar^2}{2m}\nabla^2&#43;V(\mathbf r) $$ 所以简写为： $$ {\color{orange}{\hat H}}\Psi=i\hbar\frac{\partial}{\partial t}\Psi $$"/>
 
 
   </head>
@@ -85,8 +86,8 @@ Edward Kerman
 <div class="article">
 <p>快速的启发式推导，仅用于帮助理解<del>就行了</del>。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <h2 id="de-broglie-关系和-einstein-关系">de Broglie 关系和 Einstein 关系</h2>
-<p>$$ \begin{gather*} E={\color{blue}{\frac12}mv^2+V}={\color{blue}{\frac{p^2}{2m}}+V}=\color{red}{h\nu} \newline
-p={\color{blue}mv}=\color{red}{\frac h\lambda} \end{gather*}$$</p>
+<p>$$ \begin{gather*} E=\color{blue}{{\frac12}mv^2+V}=\color{blue}{{\frac{p^2}{2m}}+V}=\color{red}{h\nu} \newline
+p=\color{blue}{mv}=\color{red}{\frac h\lambda} \end{gather*}$$</p>
 <p>蓝色是粒子性的表现，而红色是波动性的表现！<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
 <p>注意 Einstein 关系里的$E$是所有能量（不一定只有动能）。</p>
 <h2 id="含时薛定谔方程">含时薛定谔方程</h2>
@@ -102,16 +103,16 @@ $$
 我们可以推一波：
 $$
 \begin{gather*}
-\frac{\partial}{\partial t} \Psi=-i\omega\Psi \ \hbar\frac{\partial}{\partial t} \Psi=-i{\color{green}E}\Psi \ i\hbar\frac{\partial}{\partial t} \Psi={\color{green}E}\Psi
+\frac{\partial}{\partial t} \Psi=-i\omega\Psi \ \hbar\frac{\partial}{\partial t} \Psi=-i\color{green}{E}\Psi \ i\hbar\frac{\partial}{\partial t} \Psi=\color{green}{E}\Psi
 \end{gather*}
 $$
 又知道$E=T+V=p^2/2m+V(x)$（假设势能与时间无关），结合关系：
 $$
-{\color{green}E}={\color{green}{\frac{\hbar^2k^2}{2m}}+V(x)}
+\color{green}{E}=\color{green}{{\frac{\hbar^2k^2}{2m}}+V(x)}
 $$
 得到：
 $$
-i\hbar\frac{\partial}{\partial t} \Psi=\left({\color{green}{\frac{\hbar^2{\color{red}k^2}}{2m}}+V(x)}\right)\Psi
+i\hbar\frac{\partial}{\partial t} \Psi=\left(\color{green}{{\frac{\hbar^2\color{red}{k^2}}{2m}}+V(x)}\right)\Psi
 $$
 做一波偏微分：
 $$
@@ -119,11 +120,11 @@ $$
 $$
 推得：
 $$
-{\color{red}k^2}={\color{red}-{\frac{{\partial^2}/{\partial x^2}\Psi}\Psi}}
+\color{red}{k^2}=\color{red}{-{\frac{{\partial^2}/{\partial x^2}\Psi}\Psi}}
 $$
 带入上式：
 $$
-i\hbar\frac{\partial}{\partial t}\Psi=\left\{{\color{red}-}\frac{\hbar^2}{2m}{\color{red}{\frac{\partial^2}{\partial x^2}}}+V(x)\right\}\Psi
+i\hbar\frac{\partial}{\partial t}\Psi=\left\{\color{red}{-}\frac{\hbar^2}{2m}\color{red}{{\frac{\partial^2}{\partial x^2}}}+V(x)\right\}\Psi
 $$
 拓展到三次元：
 $$
@@ -140,14 +141,14 @@ $$</p>
 <h2 id="不含时薛定谔方程">不含时薛定谔方程</h2>
 <p>继续在<strong>一维</strong>的语境，分离变量：
 $$
-{\color{green}\Psi(x,t)}=T(t)\psi(x)
+\color{green}{\Psi(x,t)}=T(t)\psi(x)
 $$
 带入含时薛定谔方程，移项，由于左边不依赖于$x$，右边不依赖于$t$，那么他们共同的值既不依赖于$x$也不依赖于$t$，设为一个常数$G$。
 $$
 \begin{gather*}
-i\hbar\frac{\partial}{\partial t}{\color{green}\Psi}=\left\{{-}\frac{\hbar^2}{2m}{\frac{\partial^2}{\partial x^2}}+V(x)\right\}{\color{green}\Psi}\newline
-{\color{red}i\hbar{\left\{\frac{\mathrm d}{\mathrm d t}T(t)\right\}}}{\color{blue}\psi(x)}={\color{blue}{\left\{-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)\right\}}{\color{red}T(t)}\psi(x)}\newline
-{\color{red}{\frac 1{T(t)}}i\hbar{\left\{\frac{\mathrm d}{\mathrm d t}T(t)\right\}}}={\color{blue}{\frac1{\psi(x)}}{\left\{-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)\right\}}\psi(x)}={\color{green}G(\mathrm{constant})}
+i\hbar\frac{\partial}{\partial t}\color{green}{\Psi}=\left\{{-}\frac{\hbar^2}{2m}{\frac{\partial^2}{\partial x^2}}+V(x)\right\}\color{green}{\Psi}\newline
+\color{red}{i\hbar{\left\{\frac{\mathrm d}{\mathrm d t}T(t)\right\}}}{\color{blue}\psi(x)}={\color{blue}{\left\{-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)\right\}}\color{red}{T(t)}\psi(x)}\newline
+\color{red}{{\frac 1{T(t)}}i\hbar{\left\{\frac{\mathrm d}{\mathrm d t}T(t)\right\}}}={\color{blue}{\frac1{\psi(x)}}{\left\{-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)\right\}}\psi(x)}=\color{green}{G(\mathrm{constant})}
 \end{gather*}
 $$
 只看左边，重写为：
@@ -171,10 +172,10 @@ $$
 T(t)=e^{-i(Gt/\hbar)}=e^{-i2\pi(Gt/{h})}
 $$
 这是一个简谐波，不难看出频率$v=G/h$，而由 Einstein 关系注意到$v=E/h$，由于整个波函数与$t$有关的全在$T(t)$中，故波函数的频率与$T(t)$相同，很容易得到：
-$${\color{green}G}={\color{green}E}$$
+$$\color{green}{G}=\color{green}{E}$$
 可以得到：
 $$
-T(t)=e^{-i{\color{green}E}t/\hbar}
+T(t)=e^{-i\color{green}{E}t/\hbar}
 $$
 $$$$
 带入刚才等式的右半边（蓝色部分）并消去$t$：（拓展到三次元）
@@ -285,6 +286,9 @@ $$</p>
 				MathJax.Hub.Config({
 					extensions: ["tex2jax.js"],
 					jax: ["input/TeX", "output/HTML-CSS"],
+					TeX: {
+						extensions: ["mhchem.js"]
+					},
 					tex2jax: {
 						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
 						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],

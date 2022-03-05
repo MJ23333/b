@@ -13,6 +13,7 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
+<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Academic"/>
 <meta name="twitter:description" content="A website built through Hugo with the hugo-prose theme.
@@ -130,7 +131,7 @@ O：ABABAB；Al：C1C2C3C1C2C3（每种只填2/3八面体空隙）
       
       
       
-      具体推导见前一篇 blog。 $$ {\color{red}\hat H}\psi=E\psi $$
+      具体推导见前一篇 blog。 $$ \color{red}{\hat H}\psi=E\psi $$
 [&hellip;] 如果一个粒子的波函数在$\mathbf r$处的值为$\psi$，那么，在该位置的一个无穷小体积的$\mathrm d\tau =\mathrm dx\mathrm dy\mathrm dz$内发现这个粒子的概率正比于$|\psi|^2\mathrm d\tau$，其中要注 &hellip;
       <a href="/post/2022/01/23/%E6%B3%A2%E5%87%BD%E6%95%B0%E5%8F%8A%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" class="more" title=Read&#32;More>Read More &rarr;</a>
     </div>
@@ -195,6 +196,9 @@ O：ABABAB；Al：C1C2C3C1C2C3（每种只填2/3八面体空隙）
 				MathJax.Hub.Config({
 					extensions: ["tex2jax.js"],
 					jax: ["input/TeX", "output/HTML-CSS"],
+					TeX: {
+						extensions: ["mhchem.js"]
+					},
 					tex2jax: {
 						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
 						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],

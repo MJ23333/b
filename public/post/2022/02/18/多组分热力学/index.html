@@ -13,6 +13,7 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
+<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="多组分热力学"/>
 <meta name="twitter:description" content="多组分系统：两种或两种以上组分所形成的系统
@@ -22,8 +23,8 @@
 质量分数： $$ w_{\rm B}\doteq \frac{m({\rm B})}{m_{\rm tot}} $$
 物质的量浓度： $$ c_{\rm B}=[{\rm B}]\doteq \frac{n_{\rm B}}{V_{\rm tot}} $$
 摩尔分数： $$ x_{\rm B}\doteq \frac{n_{\rm B}}{n_{\rm tot}} $$
-对于溶液 质量摩尔浓度： $$ m_{\rm B}\doteq \frac{m_{\rm B}}{m_{\color{red} \rm A}} $$
-溶质的摩尔比： $$ r_{\rm B}\doteq \frac{n_{\rm B}}{n_{\color{red} \rm A}} $$
+对于溶液 质量摩尔浓度： $$ m_{\rm B}\doteq \frac{m_{\rm B}}{m_\color{red}{ \rm A}} $$
+溶质的摩尔比： $$ r_{\rm B}\doteq \frac{n_{\rm B}}{n_\color{red}{ \rm A}} $$
 偏摩尔量 对于一个$k$组分均相系统的广度性质$Z$，它与各个组分的物质的量有关$n_i$： $$ Z=Z(T,p,n_1,\dots,n_k) $$ 在等温等压下，有： $$ \mathrm dZ=\sum_{\mathrm B=1}^k\left(\frac{\partial Z}{\partial n_{\rm B}}\right)_{T,p,n_{\rm C}(\rm C\neq B)}\mathrm dn_{\rm B}=\sum_{\mathrm B=1}^kZ_{\rm B}\mathrm dn_{\rm B} $$ $Z_{\rm B}$称为某种广度性质$Z$的偏摩尔量。注意偏摩尔吉布斯自由能又称化学势： $$ \mu_{\rm B}=G_{\rm B}=\left(\frac{\partial G}{\partial n_{\rm B}}\right)_{T,p,n_{\rm C}(\rm C\neq B)} $$ 我们对偏摩尔量的定义积个分： $$ Z=\sum_{\mathrm B=1}^kZ_{\rm B}n_{\rm B} $$ 注意不同组成时偏摩尔量是不同的。"/>
 
 
@@ -111,11 +112,11 @@ $$</p>
 <h3 id="对于溶液">对于溶液</h3>
 <p><strong>质量摩尔浓度</strong>：
 $$
-m_{\rm B}\doteq \frac{m_{\rm B}}{m_{\color{red} \rm A}}
+m_{\rm B}\doteq \frac{m_{\rm B}}{m_\color{red}{ \rm A}}
 $$</p>
 <p>溶质的摩尔比：
 $$
-r_{\rm B}\doteq \frac{n_{\rm B}}{n_{\color{red} \rm A}}
+r_{\rm B}\doteq \frac{n_{\rm B}}{n_\color{red}{ \rm A}}
 $$</p>
 <h2 id="偏摩尔量">偏摩尔量</h2>
 <p>对于一个$k$组分均相系统的广度性质$Z$，它与各个组分的物质的量有关$n_i$：
@@ -151,7 +152,7 @@ $$
 $$
 合体（上面两步也可以认为是同时除了个$\mathrm dn_1$然后正常求导，最后消掉$\mathrm d_n$）：
 $$
-x_2\frac{\partial V_{\rm m}}{\partial x_2}=-{\color{red}{\frac{\partial V}{\partial n_1}}}+{\color{blue}{\frac{V}{n_1+n_2}}}=-{\color{red}V_1} + {\color{blue}V_{\rm m}}
+x_2\frac{\partial V_{\rm m}}{\partial x_2}=-\color{red}{{\frac{\partial V}{\partial n_1}}}+\color{blue}{{\frac{V}{n_1+n_2}}}=-\color{red}{{V_1}} + \color{blue}{{V_{\rm m}}}
 $$</p>
 <h2 id="吉布斯-杜亥姆公式">吉布斯-杜亥姆公式</h2>
 <p>由加和性质，在$T$、$p$恒定时：
@@ -173,7 +174,7 @@ $$
 $$
 显然，物质从$\mu_{\rm B}$高的地方流向$\mu_{\rm B}$较小的地方，且平衡时$\mu^\alpha_{\rm B}=\mu^\beta_{\rm B}$。</p>
 <h2 id="化学势与温度压力的关系">化学势与温度、压力的关系</h2>
-<p>把$\mu_{\rm B}$换成定义，再利用偏位商的规则，最后变成偏摩尔量相关：
+<p>把$\mu_{\rm B}$换成定义，再利用偏微商的规则，最后变成偏摩尔量相关：
 $$
 \begin{gather*}\left(\frac{\partial \mu_{\rm B}}{\partial p}\right)_{T,n_{\rm C}}=V_{\rm B}\\\left(\frac{\partial \mu_{\rm B}}{\partial T}\right)_{p,n_{\rm C}}=-S_{\rm B}\\\left(\frac{\partial \left(\frac{\mu_{\rm B}}T\right)}{\partial T}\right)_{p,n_{\rm C}}=-\frac{H_{\rm B}}{T^2}\end{gather*}
 $$
@@ -278,6 +279,9 @@ $$</p>
 				MathJax.Hub.Config({
 					extensions: ["tex2jax.js"],
 					jax: ["input/TeX", "output/HTML-CSS"],
+					TeX: {
+						extensions: ["mhchem.js"]
+					},
 					tex2jax: {
 						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
 						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],

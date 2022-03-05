@@ -13,6 +13,7 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
+<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="气体"/>
 <meta name="twitter:description" content="纯气体 状态方程表达了热力学系统中若干个态函数参量之间的关系
@@ -22,7 +23,7 @@
 气体混合物 分压（Dalton分压定律）： $$ p_j=x_jp $$ 分体积（Amagat）： $$ V_j=x_jV $$
 气体动理论 压力 简单物理知识：$\mathbf p=m\mathbf v,\mathbf F=m\mathbf a$，那么$\mathbf F=\mathrm d\mathbf p/{\mathrm dt}$
 有一个方形容器，横截面积为$A$，容器壁平行于坐标平面。一个很短的时间$\Delta t$内一个分子在x方向上碰壁反弹（速率不变）的概率$P$为： $$ \mathrm P=\frac{Av_x\Delta t}{V} $$ 该分子“平均”（期望）作用力为： $$ F_x=\frac{2mv_x}{\Delta t}\times \frac{Av_x\Delta t}{V}=\frac{2mAv_x^2}{V} $$ 推广到一堆（$n\space \rm mol$）分子，我们用速率平方的平均值$\overline{v_x^2}$来表示，注意在速率平方后，我们多计算了一倍背道而驰的分子，所以要扣除： $$ F_x=\frac{2mA\overline{v_x^2}}{V}\times \frac12nN_A=\frac{nMA\overline{v_x^2}}{V} $$ 三个方向都是如此，即$\overline{v_x^2}=\frac13\overline{v^2}$，定义方均根速率： $$ v_{\rm rms}=\sqrt{\overline{v^2}} $$ 所以： $$ pV=\frac13nMv_{\rm rms}^2 $$ 开个挂，用理想气体状态方程带入，得到： $$ v_{\rm rms}=\sqrt{\frac{3RT}M} $$
-麦克斯韦-玻尔兹曼分布 由玻尔兹曼分布： $$ f(v)=Ke^{-\varepsilon/kT} $$ 容易得到： $$ f(v)=Ke^{-mv^2/2kT} $$ 我们可以发现不同$v$的概率是不一样的，但分解开的$v_x,v_y,v_z$却是均匀的，考虑分解$v$。 $$ f(v_x)=K_xe^{-mv_x^2/2kT} $$ 由于$v_x$取任意值的概率必定为一： $$ \int_{-\infin}^{\infin}f(v_x)\mathrm dv_x=1 $$ 积分得：$K_x=(m/2\pi kT)^{1/2}$，所以： $$ f(v_x)=\left(\frac{m}{2\pi kT}\right)^{1/2}e^{-mv_x^2/2kT} $$ 合体： $$ f(v_x)f(v_y)f(v_z)\mathrm dv_x\mathrm dv_y\mathrm dv_z=\left(\frac{m}{2\pi kT}\right)^{3/2}e^{-mv^2/2kT}\mathrm dv_x\mathrm dv_y\mathrm dv_z $$ 把这些转化为$\mathrm dv$，并$k\rightarrow R,m\rightarrow M$，推得： $$ f(v)=4\pi\left(\frac M{2\pi RT}\right)^{3/2}v^2e^{-Mv^2/2RT} $$ 可以计算方均根速率： $$ v_{\rm rms}^2=\int_0^{\infin}v^2f(v)\mathrm dv $$ 得到一样的结果： $$ v_{\rm rms}=\sqrt{\frac{3RT}M} $$ 其他速率："/>
+麦克斯韦-玻尔兹曼分布 由玻尔兹曼分布： $$ f(v)=Ke^{-\varepsilon/kT} $$ 容易得到： $$ f(v)=Ke^{-mv^2/2kT} $$ 我们可以发现不同$v$的概率是不一样的，但分解开的$v_x,v_y,v_z$却是均匀的，考虑分解$v$。 $$ f(v_x)=K_xe^{-mv_x^2/2kT} $$ 由于$v_x$取任意值的概率必定为一： $$ \int_{-\infty}^{\infty}f(v_x)\mathrm dv_x=1 $$ 积分得：$K_x=(m/2\pi kT)^{1/2}$，所以： $$ f(v_x)=\left(\frac{m}{2\pi kT}\right)^{1/2}e^{-mv_x^2/2kT} $$ 合体： $$ f(v_x)f(v_y)f(v_z)\mathrm dv_x\mathrm dv_y\mathrm dv_z=\left(\frac{m}{2\pi kT}\right)^{3/2}e^{-mv^2/2kT}\mathrm dv_x\mathrm dv_y\mathrm dv_z $$ 把这些转化为$\mathrm dv$，并$k\rightarrow R,m\rightarrow M$，推得： $$ f(v)=4\pi\left(\frac M{2\pi RT}\right)^{3/2}v^2e^{-Mv^2/2RT} $$ 可以计算方均根速率： $$ v_{\rm rms}^2=\int_0^{\infty}v^2f(v)\mathrm dv $$ 得到一样的结果： $$ v_{\rm rms}=\sqrt{\frac{3RT}M} $$ 其他速率："/>
 
 
   </head>
@@ -145,7 +146,7 @@ f(v_x)=K_xe^{-mv_x^2/2kT}
 $$
 由于$v_x$取任意值的概率必定为一：
 $$
-\int_{-\infin}^{\infin}f(v_x)\mathrm dv_x=1
+\int_{-\infty}^{\infty}f(v_x)\mathrm dv_x=1
 $$
 积分得：$K_x=(m/2\pi kT)^{1/2}$，所以：
 $$
@@ -161,7 +162,7 @@ f(v)=4\pi\left(\frac M{2\pi RT}\right)^{3/2}v^2e^{-Mv^2/2RT}
 $$
 可以计算方均根速率：
 $$
-v_{\rm rms}^2=\int_0^{\infin}v^2f(v)\mathrm dv
+v_{\rm rms}^2=\int_0^{\infty}v^2f(v)\mathrm dv
 $$
 得到一样的结果：
 $$
@@ -280,6 +281,9 @@ $$
 				MathJax.Hub.Config({
 					extensions: ["tex2jax.js"],
 					jax: ["input/TeX", "output/HTML-CSS"],
+					TeX: {
+						extensions: ["mhchem.js"]
+					},
 					tex2jax: {
 						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
 						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],

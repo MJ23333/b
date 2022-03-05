@@ -13,6 +13,7 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
+<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="热力学第一定律"/>
 <meta name="twitter:description" content="第零定律——温度 表述：如果A、B同时和C热平衡，那么A、B彼此也热平衡
@@ -22,7 +23,7 @@
 状态函数：只取决于开始和终了的状态（处于定态的系统与历史无关），状态函数具有全微分性质： $$ \begin{align*}\mathrm dA={\left(\frac{\partial A}{\partial x}\right)_{y,\cdots}\mathrm dx} &#43; { \left(\frac{\partial A}{\partial y}\right)_{x,\cdots}\mathrm dy} &#43;\cdots\end{align*} $$ 状态函数用$\mathrm d$，非状态函数用$\delta$。
 状态方程：多组分均相系统（一般用得到的最复杂）： $$ T=f(p,V,n_1,n_2,\cdots) $$ 变化过程：等温（全程且等于环境温度）；等压（始态和终态相等且等于环境压力）；等容（全程）；绝热（绝热壁或反应太快而来不及交换）
 热：由于温度不同而传递的能量
-功：除了热以外的能量传递，以系统来看（国家标准），几种常见的：$F\mathrm dl,E\mathrm dQ,{\color{red}-}p_{\color{red}e}\mathrm dV,\gamma\mathrm dA$（最后一个是表面功），好好思考正负。
+功：除了热以外的能量传递，以系统来看（国家标准），几种常见的：$F\mathrm dl,E\mathrm dQ,\color{red}{-}p_\color{red}{e}\mathrm dV,\gamma\mathrm dA$（最后一个是表面功），好好思考正负。
 热一——能量守恒 $$ \mathrm dU=\delta Q&#43;\delta W $$
 几种膨胀过程：自由：$0$；等外压：$-p_e\Delta V$；可逆膨胀：$-RT\ln\frac{V_2}{V_1}$
 可逆过程：系统和环境都完全复原：准静态过程；熔点、沸点的相变；可逆电池外加电动势与电池电动势相等；某些化学反应。可逆过程中系统是带善人（给的多得的少）
@@ -107,7 +108,7 @@ T=f(p,V,n_1,n_2,\cdots)
 $$
 <strong>变化过程</strong>：等温（全程且等于环境温度）；等压（始态和终态相等且等于环境压力）；等容（全程）；绝热（绝热壁或反应太快而来不及交换）</p>
 <p><strong>热</strong>：由于温度不同而传递的能量</p>
-<p><strong>功</strong>：除了热以外的能量传递，以<strong>系统</strong>来看（国家标准），几种常见的：$F\mathrm dl,E\mathrm dQ,{\color{red}-}p_{\color{red}e}\mathrm dV,\gamma\mathrm dA$（最后一个是表面功），好好思考正负。</p>
+<p><strong>功</strong>：除了热以外的能量传递，以<strong>系统</strong>来看（国家标准），几种常见的：$F\mathrm dl,E\mathrm dQ,\color{red}{-}p_\color{red}{e}\mathrm dV,\gamma\mathrm dA$（最后一个是表面功），好好思考正负。</p>
 <h2 id="热一能量守恒">热一——能量守恒</h2>
 <p>$$
 \mathrm dU=\delta Q+\delta W
@@ -140,7 +141,7 @@ $$
 也可以知道$C_V,C_p$也只是温度的函数</p>
 <h3 id="求理想气体的热容关系">求理想气体的热容关系</h3>
 <p>考虑$U=U(T,V)$和$V=(T,p)$，那么：
-$$\begin{align*}\mathrm dU&amp;=\left(\frac{\partial U}{\partial T}\right)_{V}\mathrm dT+\left(\frac{\partial U}{\partial V}\right)_{T}{\color{green}\mathrm dV}\\\mathrm dV&amp;={\color{green}\left(\frac{\partial V}{\partial T}\right)_{p}\mathrm dT+\left(\frac{\partial V}{\partial p}\right)_{T}\mathrm dp}\end{align*}$$
+$$\begin{align*}\mathrm dU&amp;=\left(\frac{\partial U}{\partial T}\right)_{V}\mathrm dT+\left(\frac{\partial U}{\partial V}\right)_{T}\color{green}{\mathrm dV}\\\mathrm dV&amp;=\color{green}{\left(\frac{\partial V}{\partial T}\right)_{p}\mathrm dT+\left(\frac{\partial V}{\partial p}\right)_{T}\mathrm dp}\end{align*}$$
 带入整理：
 $$
 \begin{align*}\mathrm dU=\left(\frac{\partial V}{\partial p}\right)_{T}\mathrm dp+\left[\left(\frac{\partial U}{\partial V}\right)_{T}\left(\frac{\partial V}{\partial T}\right)_{p}+\left(\frac{\partial U}{\partial T}\right)_{V}\right]\mathrm dT\end{align*}
@@ -151,11 +152,11 @@ $$
 $$
 对比两个式子：
 $$
-\left(\frac{\partial U}{\partial T}\right)_{p}={\color{blue}\left(\frac{\partial U}{\partial V}\right)_{T}\left(\frac{\partial V}{\partial T}\right)_{p}+\left(\frac{\partial U}{\partial T}\right)_{V}}
+\left(\frac{\partial U}{\partial T}\right)_{p}=\color{blue}{\left(\frac{\partial U}{\partial V}\right)_{T}\left(\frac{\partial V}{\partial T}\right)_{p}+\left(\frac{\partial U}{\partial T}\right)_{V}}
 $$
 扯回问题：
 $$
-C_p-C_V=\left(\frac{\partial (U+pV)}{\partial T}\right)_p-\left(\frac{\partial U}{\partial T}\right)_V={{\color{blue}\left(\frac{\partial U}{\partial T}\right)_p}}+p\left(\frac{\partial V}{\partial T}\right)_p-\left(\frac{\partial U}{\partial T}\right)_V
+C_p-C_V=\left(\frac{\partial (U+pV)}{\partial T}\right)_p-\left(\frac{\partial U}{\partial T}\right)_V=\color{blue}{{\left(\frac{\partial U}{\partial T}\right)_p}}+p\left(\frac{\partial V}{\partial T}\right)_p-\left(\frac{\partial U}{\partial T}\right)_V
 $$
 带入：
 $$
@@ -218,7 +219,7 @@ W=-nR(T_{\rm h}-T_{\rm c})\ln\frac{V_2}{V_1}
 $$</p>
 <h3 id="热机效率">热机效率</h3>
 <p>$$
-\begin{gather*}\eta=\frac {{\color{red}-}W}{Q_{\rm h}}=\frac W{W_1}=\frac{T_{\rm h}-T_{\rm c}}{T_{\rm h}}=1-\frac{T_{\rm c}}{T_{\rm h}}\\\eta=\frac {Q_{\rm h}+Q_{\rm c}}{Q_{\rm h}}=1+\frac {Q_{\rm c}}{Q_{\rm h}}\end{gather*}
+\begin{gather*}\eta=\frac {\color{red}{-}W}{Q_{\rm h}}=\frac W{W_1}=\frac{T_{\rm h}-T_{\rm c}}{T_{\rm h}}=1-\frac{T_{\rm c}}{T_{\rm h}}\newline\eta=\frac {Q_{\rm h}+Q_{\rm c}}{Q_{\rm h}}=1+\frac {Q_{\rm c}}{Q_{\rm h}}\end{gather*}
 $$</p>
 <p>我们可以发现：<strong>温度差越大越好</strong></p>
 <p>还可以导出（埋下伏笔）：
@@ -262,11 +263,11 @@ $$
 \Delta_{\rm r}H_{\rm m}^\ominus=\sum_{\rm B}\nu_{\rm B}\Delta_{\rm f}H_{\rm m}^\ominus(\rm B)
 $$</p>
 <p><strong>键焓</strong>：是平均值，只能用来估算：反应物-产物（<strong>特例</strong>）</p>
-<p><strong>标准摩尔离子生成焓</strong>：定义$\Delta_{\rm f}H_{\mathrm m}^{\ominus}{\ce{H+}(\infin\space\rm aq)}=0$，关系如下：
+<p><strong>标准摩尔离子生成焓</strong>：定义$\Delta_{\rm f}H_{\mathrm m}^{\ominus}\{\ce{H+}(\infty\space\rm aq)\}=0$，关系如下：
 $$
-\Delta_{\rm sol}H_{\mathrm m}^{\ominus}=\Delta_{\rm f}H_{\mathrm m}^{\ominus}{\ce{H+}(\infin\space\rm aq)}+\Delta_{\rm f}H_{\mathrm m}^{\ominus}{\ce{Cl-}(\infin\space\rm aq)}-\Delta_{\rm f}H_{\mathrm m}^{\ominus}{\ce{HCl(g)}}
+\Delta_{\rm sol}H_{\mathrm m}^{\ominus}=\Delta_{\rm f}H_{\mathrm m}^{\ominus}\{\ce{H+}(\infty\space\rm aq)\}+\Delta_{\rm f}H_{\mathrm m}^{\ominus}\{\ce{Cl-}(\infty\space\rm aq)\}-\Delta_{\rm f}H_{\mathrm m}^{\ominus}\{\ce{HCl(g)}\}
 $$</p>
-<p><strong>标准摩尔燃烧焓</strong>：也是反着用，注意室温下$\color{red}\ce{H2O(l),SO2(g),N2(g),HCl(aq),Ag(s)}$</p>
+<p><strong>标准摩尔燃烧焓</strong>：也是反着用，注意室温下$\color{red}{\ce{H2O(l),SO2(g),N2(g),HCl(aq),Ag(s)}}$</p>
 <h3 id="溶解热和稀释热">溶解热和稀释热</h3>
 <p>积分___：总效应，直接测量，一般为曲线（斜率降低）</p>
 <p>微分___：在大量给定浓度的溶液中再加入$1\rm mol$物质的热效应（积分溶解热的斜率）：
@@ -368,6 +369,9 @@ $$
 				MathJax.Hub.Config({
 					extensions: ["tex2jax.js"],
 					jax: ["input/TeX", "output/HTML-CSS"],
+					TeX: {
+						extensions: ["mhchem.js"]
+					},
 					tex2jax: {
 						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
 						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],

@@ -1,10 +1,10 @@
 body {
-  font-family: 'Noto Serif SC', "Noto Sans SC", Arial, serif;
+  font-family: 'Neo Euler','Noto Serif SC', "Noto Sans SC", Arial, serif;
 }
 code {
-  font-family: "Lucida Console", Monaco, monospace;
+  font-family: "Lucida Console", Monaco, monospace,"Noto Sans SC";
   font-size: 85%;
 }
 h1, h2, h3 {
-  font-family: 'Noto Serif SC', Book Antiqua, serif;
+  font-family: 'Neo Euler','Noto Serif SC', Book Antiqua, serif;
 }

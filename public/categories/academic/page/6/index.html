@@ -13,6 +13,7 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
+<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Academic"/>
 <meta name="twitter:description" content="A website built through Hugo with the hugo-prose theme.
@@ -93,7 +94,7 @@
       
       
       快速的启发式推导，仅用于帮助理解就行了。1
-[&hellip;] $$ \begin{gather*} E={\color{blue}{\frac12}mv^2+V}={\color{blue}{\frac{p^2}{2m}}+V}=\color{red}{h\nu} \newline p={\color{blue}mv}=\color{red}{\frac h\lambda} &hellip;
+[&hellip;] $$ \begin{gather*} E=\color{blue}{{\frac12}mv^2+V}=\color{blue}{{\frac{p^2}{2m}}+V}=\color{red}{h\nu} \newline p=\color{blue}{mv}=\color{red}{\frac h\lambda} &hellip;
       <a href="/post/2022/01/22/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E6%8E%A8%E5%AF%BC/" class="more" title=Read&#32;More>Read More &rarr;</a>
     </div>
     </td>
@@ -157,6 +158,9 @@
 				MathJax.Hub.Config({
 					extensions: ["tex2jax.js"],
 					jax: ["input/TeX", "output/HTML-CSS"],
+					TeX: {
+						extensions: ["mhchem.js"]
+					},
 					tex2jax: {
 						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
 						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],

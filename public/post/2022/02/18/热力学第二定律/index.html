@@ -13,6 +13,7 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
+<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="热力学第二定律"/>
 <meta name="twitter:description" content="自发变化的特征：一个自发变化发生之后，不可能使系统和环境都恢复到原来的状态而不留下任何影响，也就是说自发变化具有方向性。
@@ -25,7 +26,7 @@
  假设如下的系统，其中左侧是任意热机：
 我们让任意热机驱动卡诺热机（效率为$\eta&#39;$）逆向运行，不难得到$T_{\rm h}$到$T_{\rm c}$的热量$Q_{\rm trans}$： $$ Q_{\rm trans}=\left(1-\eta\right)Q-\eta Q\left(\frac1{\eta&rsquo;}-1\right)=Q\left(1-\frac{\eta}{\eta&rsquo;}\right) $$ 此时没有其他变化，为了遵守克劳修斯说法，$Q$不能小于$0$，显然有： $$ \eta&rsquo;\ge\eta $$ 卡诺定律得证。假如左右都是可逆机，那么我可以将现有循环调转顺序，得到： $$ \eta\ge\eta&rsquo; $$ 综合一下： $$ \eta=\eta&rsquo; $$ 也就是说所有可逆热机的效率都是一样的。
 熵的概念 考虑可逆循环（在$p-V$图上画得出来的都是可逆循环，原因下面讲），我们可以给它沿可逆绝热线切片，每个切片做上下两条等温线，将每个切片转化为一个小卡诺循环，用我们在热一时留下的引子（$\rm R$代表可逆）： $$ \begin{equation*}\sum_i\left(\frac{\delta Q_i}{T_i}\right) _{\mathrm R}=0\end{equation*} $$ 推广到任意的可逆循环： $$ \oint\left(\frac{\delta Q}{T}\right)_{\rm R}=0 $$
-假如我们在循环上取两个点，那么可以发现循环被切成了两个过程，根据上式： $$ \begin{equation*}\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R_1}=-\int_{\color{red}B}^{\color{red}A}\left(\frac{\delta Q}{T}\right)_{\rm R_2}\end{equation*} $$ 颠倒始末态，改变符号： $$ \begin{equation*}\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R_1}=\int_{\color{red}A}^{\color{red}B}\left(\frac{\delta Q}{T}\right)_{\rm R_2}\end{equation*} $$ 由于可逆循环是任意的，我们发现$\int_A^B\left({\delta Q}/{T}\right)_{\rm R}$的值只于始末状态有关，与具体途径无关，是个状态函数，我们叫它熵： $$ \Delta S=\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R} $$"/>
+假如我们在循环上取两个点，那么可以发现循环被切成了两个过程，根据上式： $$ \begin{equation*}\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R_1}=-\int_\color{red}{B}^\color{red}{A}\left(\frac{\delta Q}{T}\right)_{\rm R_2}\end{equation*} $$ 颠倒始末态，改变符号： $$ \begin{equation*}\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R_1}=\int_\color{red}{A}^\color{red}{B}\left(\frac{\delta Q}{T}\right)_{\rm R_2}\end{equation*} $$ 由于可逆循环是任意的，我们发现$\int_A^B\left({\delta Q}/{T}\right)_{\rm R}$的值只于始末状态有关，与具体途径无关，是个状态函数，我们叫它熵： $$ \Delta S=\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R} $$"/>
 
 
   </head>
@@ -132,11 +133,11 @@ $$
 $$</p>
 <p>假如我们在循环上取两个点，那么可以发现循环被切成了两个过程，根据上式：
 $$
-\begin{equation*}\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R_1}=-\int_{\color{red}B}^{\color{red}A}\left(\frac{\delta Q}{T}\right)_{\rm R_2}\end{equation*}
+\begin{equation*}\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R_1}=-\int_\color{red}{B}^\color{red}{A}\left(\frac{\delta Q}{T}\right)_{\rm R_2}\end{equation*}
 $$
 颠倒始末态，改变符号：
 $$
-\begin{equation*}\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R_1}=\int_{\color{red}A}^{\color{red}B}\left(\frac{\delta Q}{T}\right)_{\rm R_2}\end{equation*}
+\begin{equation*}\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R_1}=\int_\color{red}{A}^\color{red}{B}\left(\frac{\delta Q}{T}\right)_{\rm R_2}\end{equation*}
 $$
 由于可逆循环是任意的，我们发现$\int_A^B\left({\delta Q}/{T}\right)_{\rm R}$的值只于始末状态有关，与具体途径无关，是个状态函数，我们叫它熵：
 $$
@@ -250,12 +251,12 @@ $$
 $$</p>
 <p>等温变化（对于理想气体）：
 $$
-\begin{gather*}{\color{red}\mathrm dG=V\mathrm dp}-S\mathrm dT\\\Delta G=nRT\ln\frac{p_2}{p_1}=-nRT\ln\frac{V_2}{V_1}\end{gather*}
+\begin{gather*}\color{red}{\mathrm dG=V\mathrm dp}-S\mathrm dT\newline\Delta G=nRT\ln\frac{p_2}{p_1}=-nRT\ln\frac{V_2}{V_1}\end{gather*}
 $$
 注意理想气体等温下吉布斯自由能变与亥姆霍兹自由能、可逆过程做功一样：$\Delta G=\Delta A=W$。</p>
 <h2 id="几种判据">几种判据</h2>
 <p>$$
-\begin{gather*}\mathrm dS_{\text{绝热}}\ge 0\\(\mathrm dA)_{T,{\color{red}V},W_f=0}\le0\\(\mathrm dG)_{T,p,W_f=0}\le0\end{gather*}
+\begin{gather*}\mathrm dS_{\text{绝热}}\ge 0\\(\mathrm dA)_{T,\color{red}{V},W_f=0}\le0\\(\mathrm dG)_{T,p,W_f=0}\le0\end{gather*}
 $$</p>
 <h2 id="范特霍夫等温式">范特霍夫等温式</h2>
 <p>可以从范特霍夫平衡箱推导出来，有如下形式：
@@ -319,7 +320,7 @@ $$
 注意：计算规定熵时要加上物态变化（在可逆的温度下）</p>
 <p>规定熵值：
 $$
-S=\int^{T}<em>{0\rm K}\frac{C_p}{T}\mathrm dT=\int^{T}</em>{0\rm K}{C_p}\mathrm d\ln T
+\begin{equation*}S={\int^{T}_{0\rm K}\frac{C_p}{T}\mathrm d T} = {\int^{T}_{0\rm K}C_p\mathrm d{\ln T}}\end{equation*}
 $$</p>
 <h2 id="化学反应的熵变">化学反应的熵变</h2>
 <p>改变温度：
@@ -421,6 +422,9 @@ $$</p>
 				MathJax.Hub.Config({
 					extensions: ["tex2jax.js"],
 					jax: ["input/TeX", "output/HTML-CSS"],
+					TeX: {
+						extensions: ["mhchem.js"]
+					},
 					tex2jax: {
 						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
 						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
