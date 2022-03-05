@@ -7,7 +7,7 @@ body {
 }
 body, .side, .menu { background: #fafafa; }
 main, .menu ul, .footer, .single section, .post-nav {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto 0;
 }
 main {
@@ -353,8 +353,6 @@ th, td { padding: 5px; }
   }
   .search input, .search #menu-search a { font-size: 1em; }
 }
-
-.katex { font-size: 1em !important; } 
 /* dark theme */
 /* @media (prefers-color-scheme: dark) {
   body {
