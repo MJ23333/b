@@ -224,7 +224,7 @@ S4(NH)4 S4N4 As4S4 (NPCl2)n
 波函数有如下几个性质：
  归一化： 薛定谔方程有一个特点，若$\psi$为解，则$N\psi$也是一个解，其中$N$为任意常数。 $$N^2\int\psi\psi^*\mathrm d\tau=1$$（以后假设都已经归一化，即使用$N\psi$作为以后使用的波函数） 约束条件：有限区域内不允许是无限的；单质的；连续的；又连续的一阶导数（斜率）  对波函数的限制条件直接导致了粒子的能量是量子化的。
 数学基础 算符 $$(\text{算符})(\text{函数})=(\text{新函数})$$
-本征方程： $$ \color{red}{\hat\Omega} \psi=\color{blue}{\omega}\psi \\ \begin{gather*}(\color{red}{\text{算符}})(\text{本征函数})=(\color{blue}{\text{本征值}})(\text{本征函数})\end{gather*}$$ $\psi$称为算符$\hat\Omega$的本征函数
+本征方程： $$ \begin{align*}\color{red}{\hat\Omega} \psi&amp;amp;=\color{blue}{\omega}\psi \\ (\color{red}{\text{算符}})(\text{本征函数})&amp;amp;=(\color{blue}{\text{本征值}})(\text{本征函数})\end{align*}$$ $\psi$称为算符$\hat\Omega$的本征函数
 如果波函数是对应可观测量$\Omega$的算符$\hat\Omega$的本征函数，那么性质$\Omega$的测量结果将是对应于该本征函数的本征值。
 听起来不好理解，我们来看一个例子——动量。
 动量算符 我们首先想到利用波恩解释来求平均动量： $$\overline p=\int_{-\infty}^{+\infty}\psi(x)p\psi(x)^* \mathrm dx$$ 但由于测不准原理，我们没办法精确地将$p$表示为$x$的函数。怎么办呢？只好换个方法思考。
