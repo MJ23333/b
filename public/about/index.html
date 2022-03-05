@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/custom.css" />
     <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
-<link href="https://fonts.font.im/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="About Hugo Prose"/>
 <meta name="twitter:description" content="Hugo Prose is a minimalist theme derived from the XMin theme, and inspired by Wowchemy (previously known as the Academic theme), Distill, and tufte.css. This theme itself is completely plain-text and lightweight, and does not use any icons, images, or emojis.1 By default, the theme only uses two JavaScript libraries, MathJax and highlight.js, and they are loaded only when necessary. The rest of JavaScript is written from scratch and also relatively short."/>
@@ -538,24 +538,20 @@ helped a lot with our implementation of the client-side search.</p>
   <script async src="//yihui.org/js/center-img.js"></script>
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
 
-    
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" integrity="sha384-UEY9IRPkV+TTTY7nK1wSrfhWPDJy9wr4PmYg3DLPcN5F4NDlIwGZkWtWveKR/45c"  crossorigin="anonymous"></script>
-    
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-        <script>
-          document.addEventListener("DOMContentLoaded", function() {
-              renderMathInElement(document.body, {
-                  delimiters: [
-                      {left: "$$", right: "$$", display: true},
-                      {left: "$", right: "$", display: false}
-                  ]
-              });
-          });
-      </script>
+			<script type="text/x-mathjax-config">
+				MathJax.Hub.Config({
+					extensions: ["tex2jax.js"],
+					jax: ["input/TeX", "output/HTML-CSS"],
+					tex2jax: {
+						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+						processEscapes: true
+					},
+					"HTML-CSS": { fonts: ["Neo-Euler"] }
+				});
+			</script>
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 
 
 

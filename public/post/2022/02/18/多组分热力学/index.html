@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/custom.css" />
     <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
-<link href="https://fonts.font.im/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="多组分热力学"/>
 <meta name="twitter:description" content="多组分系统：两种或两种以上组分所形成的系统
@@ -151,7 +151,7 @@ $$
 $$
 合体（上面两步也可以认为是同时除了个$\mathrm dn_1$然后正常求导，最后消掉$\mathrm d_n$）：
 $$
-x_2\frac{\partial V_{\rm m}}{\partial x_2}=-{\color{red}\frac{\partial V}{\partial n_1}}+{\color{blue}\frac{V}{n_1+n_2}}=-{\color{red}V_1} + {\color{blue}V_{\rm m}}
+x_2\frac{\partial V_{\rm m}}{\partial x_2}=-{\color{red}{\frac{\partial V}{\partial n_1}}}+{\color{blue}{\frac{V}{n_1+n_2}}}=-{\color{red}V_1} + {\color{blue}V_{\rm m}}
 $$</p>
 <h2 id="吉布斯-杜亥姆公式">吉布斯-杜亥姆公式</h2>
 <p>由加和性质，在$T$、$p$恒定时：
@@ -181,7 +181,7 @@ $$
 <h2 id="理想气体混合物的化学势">理想气体混合物的化学势</h2>
 <p>如果只有一种理想气体，强行定义化学势：
 $$
-\left(\frac{\partial \mu_{\rm B}}{\partial p}\right)_{T}=V_{\rm m}\implies\mu(T,p)=\mu^\ominus(T,p^\ominus)+RT\ln\frac{p}{p^\ominus}
+\left(\frac{\partial \mu_{\rm B}}{\partial p}\right)_{T}=V_{\rm m}\\mu(T,p)=\mu^\ominus(T,p^\ominus)+RT\ln\frac{p}{p^\ominus}
 $$
 考虑在理想气体混合物中的一个组分$B$，我们用一个只能透过$B$的半透膜将容器隔开，平衡时另一侧的压力和化学势分别为$p_{\rm B}^*,\mu^*_{\rm B}$，那么：
 $$
@@ -273,24 +273,20 @@ $$</p>
   <script async src="//yihui.org/js/center-img.js"></script>
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
 
-    
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" integrity="sha384-UEY9IRPkV+TTTY7nK1wSrfhWPDJy9wr4PmYg3DLPcN5F4NDlIwGZkWtWveKR/45c"  crossorigin="anonymous"></script>
-    
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-        <script>
-          document.addEventListener("DOMContentLoaded", function() {
-              renderMathInElement(document.body, {
-                  delimiters: [
-                      {left: "$$", right: "$$", display: true},
-                      {left: "$", right: "$", display: false}
-                  ]
-              });
-          });
-      </script>
+			<script type="text/x-mathjax-config">
+				MathJax.Hub.Config({
+					extensions: ["tex2jax.js"],
+					jax: ["input/TeX", "output/HTML-CSS"],
+					tex2jax: {
+						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+						processEscapes: true
+					},
+					"HTML-CSS": { fonts: ["Neo-Euler"] }
+				});
+			</script>
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 
 
 

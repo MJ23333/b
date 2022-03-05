@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/custom.css" />
     <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
-<link href="https://fonts.font.im/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content="A website built through Hugo with the hugo-prose theme.
@@ -129,8 +129,8 @@
       
       
       对马德隆常数常见算法中的数列的论证：1
-任务：证明数列 $$ \sum^\infin_{n=1}\frac{(-1)^nC_3(n)}{\sqrt{n}} $$ 发散。
-首先定义数列的大O记号，对于实数数列$\{a_n\}^\infin_{n=1}$和实数$\beta$，当数列$\{n^{-\beta} a_n\}$有界时，我们记$a_n=O(n^\beta)$（参考信息学复杂度的大O记号）
+任务：证明数列 $$ \sum^\infty_{n=1}\frac{(-1)^nC_3(n)}{\sqrt{n}} $$ 发散。
+首先定义数列的大O记号，对于实数数列$\{a_n\}^\infty_{n=1}$和实数$\beta$，当数列$\{n^{-\beta} a_n\}$有界时，我们记$a_n=O(n^\beta)$（参考信息学复杂度的大O记号）
 我们 &hellip;
       <a href="/post/2022/01/25/%E9%A9%AC%E5%BE%B7%E9%9A%86%E5%B8%B8%E6%95%B0%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E6%89%AB%E9%9B%B7/" class="more" title=Read&#32;More>Read More &rarr;</a>
     </div>
@@ -190,24 +190,20 @@
   <script async src="//yihui.org/js/center-img.js"></script>
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
 
-    
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" integrity="sha384-UEY9IRPkV+TTTY7nK1wSrfhWPDJy9wr4PmYg3DLPcN5F4NDlIwGZkWtWveKR/45c"  crossorigin="anonymous"></script>
-    
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-        <script>
-          document.addEventListener("DOMContentLoaded", function() {
-              renderMathInElement(document.body, {
-                  delimiters: [
-                      {left: "$$", right: "$$", display: true},
-                      {left: "$", right: "$", display: false}
-                  ]
-              });
-          });
-      </script>
+			<script type="text/x-mathjax-config">
+				MathJax.Hub.Config({
+					extensions: ["tex2jax.js"],
+					jax: ["input/TeX", "output/HTML-CSS"],
+					tex2jax: {
+						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+						processEscapes: true
+					},
+					"HTML-CSS": { fonts: ["Neo-Euler"] }
+				});
+			</script>
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 
 
 
