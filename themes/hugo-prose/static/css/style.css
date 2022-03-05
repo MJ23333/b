@@ -4,6 +4,7 @@ body {
   margin: 0 auto 0;
   line-height: 1.5em;
   overflow-x: hidden;
+	font-size: 1.3em;
 }
 body, .side, .menu { background: #fafafa; }
 main, .menu ul, .footer, .single section, .post-nav {
@@ -124,7 +125,7 @@ pre code:not(.hljs), pre .hljs {
 
 /* left/right elements*/
 .side {
-  width: 200px;
+  width: 250px;
   margin: 0 auto;
 }
 .side > :first-child { margin-top: 0; }
@@ -132,13 +133,13 @@ pre code:not(.hljs), pre .hljs {
 .side-left {
   float: left;
   clear: left;
-  margin-left: calc(-200px - 2em);
+  margin-left: calc(-250px - 2em);
   position: sticky;
 }
 .side-right {
   float: right;
   clear: right;
-  margin-right: calc(-200px - 2em);
+  margin-right: calc(-250px - 2em);
 }
 h3.side-left { text-align: right; }
 .quote-left, .quote-right { width: 45%; }
