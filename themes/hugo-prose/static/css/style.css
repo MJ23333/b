@@ -353,7 +353,9 @@ th, td { padding: 5px; }
   }
   .search input, .search #menu-search a { font-size: 1em; }
 }
-
+.mjx-chtml{
+  white-space: normal!important;
+}
 /* dark theme */
 /* @media (prefers-color-scheme: dark) {
   body {
