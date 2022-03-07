@@ -1,5 +1,15 @@
 {{ partial "header.html" . }}
-
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      const hitokoto = document.getElementById('hitokoto_text')
+      hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
+			const fr=(data.from_who)?('    ——' + data.from_who) : ('')
+      hitokoto.innerText = data.hitokoto + fr
+    })
+    .catch(console.error)
+</script>
 <div class="container">
 <main>
 	<div align="center">
@@ -7,6 +17,7 @@
 		<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h01mm1unc2g20e80e8x6q.gif" alt="404" style="width:200px;height:200px;">
 		<br /><br />
 <h1>404 NOT FOUND</h1>
+		<p id="hitokoto_text"></p>
 	</div>
 </main>
 </div>
