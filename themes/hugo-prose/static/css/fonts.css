@@ -1,14 +1,12 @@
 @font-face { 
   font-family: "cn";
+	font-weight:normal;
   src: url("fonts/CN.TTF"); 
-	font-style:normal;
-	font-weight:400;
 }
 @font-face { 
   font-family: "cn";
+	font-weight:bold;
   src: url("fonts/CNB.TTF"); 
-	font-style:normal;
-	font-weight:700;
 }
 @font-face { 
   font-family: "cn";
@@ -23,5 +21,5 @@ code {
   font-size: 85%;
 }
 h1, h2, h3 {
-  font-family: 'Neo Euler','CN', Book Antiqua, serif;
+  font-family: 'Neo Euler','cn', Book Antiqua, serif;
 }
