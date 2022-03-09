@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title> 波函数及数学基础 | Edward Kerman&#39;s blog</title>
     
-    
+    <link rel="icon" type="image/png" href="/icons/Hi-Res.png" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/custom.css" />
@@ -15,6 +15,7 @@
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
 <link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
 <link href="http://fonts.cdnfonts.com/css/operator-mono" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="波函数及数学基础"/>
 <meta name="twitter:description" content="薛定谔方程复习 具体推导见前一篇 blog。 $$ \color{red}{\hat H}\psi=E\psi $$
@@ -212,6 +213,8 @@ $$\color{red}{{\frac \hbar i}\frac{\partial}{\partial x}\psi_k(x)}=\color{blue}{
   <footer>
   <script async src="//yihui.org/js/center-img.js"></script>
 
+<script src="/js/twemoji.min.js"></script>
+<script>twemoji.parse(document.body,{"base":"/twemoji/","ext":".svg","folder":"svg"})</script>
 
 
 			<script type="text/x-mathjax-config">
@@ -219,7 +222,18 @@ $$\color{red}{{\frac \hbar i}\frac{\partial}{\partial x}\psi_k(x)}=\color{blue}{
 					extensions: ["tex2jax.js"],
 					jax: ["input/TeX", "output/HTML-CSS"],
 					TeX: {
-						extensions: ["mhchem.js"]
+						extensions: ["mhchem.js"],
+						Macros: {
+								d: "{\\mathrm d}",
+								B: "{\\mathrm B}",
+								m: "{\\mathrm m}",
+								align: ["{\\begin{align*} #1 \\end{align*}}",1],
+								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
+								l: ["{\\left( #1\\right)}",1],
+								red: ["{\\color{red}{ #1}}",1],
+								green: ["{\\color{green}{ #1}}",1],
+								blue: ["{\\color{blue}{ #1}}",1]
+						}
 					},
 					tex2jax: {
 						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -244,10 +258,6 @@ $$\color{red}{{\frac \hbar i}\frac{\partial}{\partial x}\psi_k(x)}=\color{blue}{
   </ul>
   
   <ul>
-    
-    <li>
-      <a href="/404.html">Contact</a>
-    </li>
     
     <li class="optional">
       <a href="/categories/">Categories</a>

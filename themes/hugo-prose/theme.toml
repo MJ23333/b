@@ -10,3 +10,6 @@ min_version = "0.55.0"
 [author]
   name = "Yihui Xie"
   homepage = "https://yihui.org"
+[module]
+[[module.imports]]
+  path = "github.com/jakejarvis/hugo-mod-twemoji"

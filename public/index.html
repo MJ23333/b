@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title> Home | Edward Kerman&#39;s blog</title>
     
-    
+    <link rel="icon" type="image/png" href="/icons/Hi-Res.png" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/custom.css" />
@@ -16,6 +16,7 @@
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
 <link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
 <link href="http://fonts.cdnfonts.com/css/operator-mono" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Home"/>
 <meta name="twitter:description" content="A website built through Hugo with the hugo-prose theme.
@@ -78,10 +79,9 @@
   <tbody>
   <tr>
   
-  <td class="side-title"><h1>Anime</h1></td>
+  <td class="side-title"><h1>A</h1></td>
   <td class="spacer spacer-left"></td>
   <td><p>最喜欢的动画公司——扳机社。</p>
-<iframe src="https://player.bilibili.com/player.html?aid=632609940&bvid=BV1Lb4y1m7hW&cid=394262825&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="500"> </iframe>
 </td>
   
   </tr>
@@ -94,11 +94,10 @@
   <tbody>
   <tr>
   
-  <td><p>最讨厌分析化学
-<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gweimkgem3j30yb0u0n01.jpg" alt="啊"></p>
+  <td><p>最讨厌分析化学</p>
 </td>
   <td class="spacer spacer-right"></td>
-  <td class="side-title"><h1>Chem</h1></td>
+  <td class="side-title"><h1>C</h1></td>
   
   </tr>
   </tbody>
@@ -110,10 +109,9 @@
   <tbody>
   <tr>
   
-  <td class="side-title"><h1>Games</h1></td>
+  <td class="side-title"><h1>G</h1></td>
   <td class="spacer spacer-left"></td>
-  <td><p>最爱 <em><strong>Kerbal Space Program</strong></em> 和 <em><strong>Arknights</strong></em>。偶尔也玩玩 <em><strong>Battlefield</strong></em>、<em><strong>Halo</strong></em>被虐。</p>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gweiqvtx5wj31z40u0gno.jpg" alt="6190829f8bbc2"></p>
+  <td><p>最爱 <strong>Kerbal Space Program</strong> 和 <strong>Arknights</strong>。偶尔也玩玩 <strong>Battlefield</strong>、<strong>Halo</strong>被虐。</p>
 </td>
   
   </tr>
@@ -370,6 +368,8 @@
   <footer>
   <script async src="//yihui.org/js/center-img.js"></script>
 
+<script src="/js/twemoji.min.js"></script>
+<script>twemoji.parse(document.body,{"base":"/twemoji/","ext":".svg","folder":"svg"})</script>
 
 
 			<script type="text/x-mathjax-config">
@@ -377,7 +377,18 @@
 					extensions: ["tex2jax.js"],
 					jax: ["input/TeX", "output/HTML-CSS"],
 					TeX: {
-						extensions: ["mhchem.js"]
+						extensions: ["mhchem.js"],
+						Macros: {
+								d: "{\\mathrm d}",
+								B: "{\\mathrm B}",
+								m: "{\\mathrm m}",
+								align: ["{\\begin{align*} #1 \\end{align*}}",1],
+								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
+								l: ["{\\left( #1\\right)}",1],
+								red: ["{\\color{red}{ #1}}",1],
+								green: ["{\\color{green}{ #1}}",1],
+								blue: ["{\\color{blue}{ #1}}",1]
+						}
 					},
 					tex2jax: {
 						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -402,10 +413,6 @@
   </ul>
   
   <ul>
-    
-    <li>
-      <a href="/404.html">Contact</a>
-    </li>
     
     <li class="optional">
       <a href="/categories/">Categories</a>

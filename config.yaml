@@ -25,20 +25,17 @@ menu:
     - name: Subscribe
       url: "index.xml"
   footer:
-    - name: Contact
-      url: "/404.html"
-      weight: 1
     - name: Categories
       url: "/categories/"
-      weight: 2
+      weight: 1
       pre: "optional"
     - name: Tags
       url: "/tags/"
-      weight: 3
+      weight: 2
       pre: "optional"
     - name: Suggest an edit
       url: "#"
-      weight: 4
+      weight: 3
       identifier: "menu-edit"
     - name: Back to top
       url: "#"
@@ -64,3 +61,6 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+module:
+  imports:
+  - path: hugo-mod-twemoji

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title> 薛定谔方程的启发式推导 | Edward Kerman&#39;s blog</title>
     
-    
+    <link rel="icon" type="image/png" href="/icons/Hi-Res.png" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/custom.css" />
@@ -15,6 +15,7 @@
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
 <link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
 <link href="http://fonts.cdnfonts.com/css/operator-mono" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="薛定谔方程的启发式推导"/>
 <meta name="twitter:description" content="快速的启发式推导，仅用于帮助理解就行了。1
@@ -265,7 +266,7 @@ $$</p>
 
 
 <nav class="post-nav">
-  <span class="nav-next">&larr; <a href="/post/2021/11/23/%E5%85%B3%E4%BA%8E%E7%A7%91%E5%AD%A6%E4%BC%A6%E7%90%86%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/" title=Next&#32;post&#32;(older)>关于科学伦理的一些思考</a></span>
+  <span class="nav-next">&larr; <a href="/post/2021/11/23/%E5%85%B3%E4%BA%8E%E7%A7%91%E5%AD%A6%E4%BC%A6%E7%90%86%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/" title=Next&#32;post&#32;(older)>关于科学伦理的一些思考🤔</a></span>
   &hercon;
   <span class="nav-prev"><a href="/post/2022/01/23/%E6%B3%A2%E5%87%BD%E6%95%B0%E5%8F%8A%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" title=Previous&#32;post&#32;(newer)>波函数及数学基础</a> &rarr;</span>
 </nav>
@@ -280,6 +281,8 @@ $$</p>
   <footer>
   <script async src="//yihui.org/js/center-img.js"></script>
 
+<script src="/js/twemoji.min.js"></script>
+<script>twemoji.parse(document.body,{"base":"/twemoji/","ext":".svg","folder":"svg"})</script>
 
 
 			<script type="text/x-mathjax-config">
@@ -287,7 +290,18 @@ $$</p>
 					extensions: ["tex2jax.js"],
 					jax: ["input/TeX", "output/HTML-CSS"],
 					TeX: {
-						extensions: ["mhchem.js"]
+						extensions: ["mhchem.js"],
+						Macros: {
+								d: "{\\mathrm d}",
+								B: "{\\mathrm B}",
+								m: "{\\mathrm m}",
+								align: ["{\\begin{align*} #1 \\end{align*}}",1],
+								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
+								l: ["{\\left( #1\\right)}",1],
+								red: ["{\\color{red}{ #1}}",1],
+								green: ["{\\color{green}{ #1}}",1],
+								blue: ["{\\color{blue}{ #1}}",1]
+						}
 					},
 					tex2jax: {
 						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -312,10 +326,6 @@ $$</p>
   </ul>
   
   <ul>
-    
-    <li>
-      <a href="/404.html">Contact</a>
-    </li>
     
     <li class="optional">
       <a href="/categories/">Categories</a>

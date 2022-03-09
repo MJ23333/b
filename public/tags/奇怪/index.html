@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title> 奇怪 | Edward Kerman&#39;s blog</title>
     
-    
+    <link rel="icon" type="image/png" href="/icons/Hi-Res.png" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/custom.css" />
@@ -15,6 +15,7 @@
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
 <link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
 <link href="http://fonts.cdnfonts.com/css/operator-mono" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="奇怪"/>
 <meta name="twitter:description" content="A website built through Hugo with the hugo-prose theme.
@@ -83,7 +84,7 @@
     </div>
     
     
-    <h1><a href="/post/2021/11/23/%E5%85%B3%E4%BA%8E%E7%A7%91%E5%AD%A6%E4%BC%A6%E7%90%86%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/">关于科学伦理的一些思考</a></h1>
+    <h1><a href="/post/2021/11/23/%E5%85%B3%E4%BA%8E%E7%A7%91%E5%AD%A6%E4%BC%A6%E7%90%86%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/">关于科学伦理的一些思考🤔</a></h1>
     <div>
       <span>2021-11-23</span>
       <span>Edward Kerman</span>
@@ -116,7 +117,7 @@
     </div>
     
     
-    <h1><a href="/post/2021/11/10/%E5%BF%AB%E9%A9%AC%E4%B8%80%E9%9E%AD/">快马一鞭</a></h1>
+    <h1><a href="/post/2021/11/10/%E5%BF%AB%E9%A9%AC%E4%B8%80%E9%9E%AD/">快马一鞭🐎</a></h1>
     <div>
       <span>2021-11-10</span>
       <span>Edward Kerman</span>
@@ -154,6 +155,8 @@
   <footer>
   <script async src="//yihui.org/js/center-img.js"></script>
 
+<script src="/js/twemoji.min.js"></script>
+<script>twemoji.parse(document.body,{"base":"/twemoji/","ext":".svg","folder":"svg"})</script>
 
 
 			<script type="text/x-mathjax-config">
@@ -161,7 +164,18 @@
 					extensions: ["tex2jax.js"],
 					jax: ["input/TeX", "output/HTML-CSS"],
 					TeX: {
-						extensions: ["mhchem.js"]
+						extensions: ["mhchem.js"],
+						Macros: {
+								d: "{\\mathrm d}",
+								B: "{\\mathrm B}",
+								m: "{\\mathrm m}",
+								align: ["{\\begin{align*} #1 \\end{align*}}",1],
+								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
+								l: ["{\\left( #1\\right)}",1],
+								red: ["{\\color{red}{ #1}}",1],
+								green: ["{\\color{green}{ #1}}",1],
+								blue: ["{\\color{blue}{ #1}}",1]
+						}
 					},
 					tex2jax: {
 						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -186,10 +200,6 @@
   </ul>
   
   <ul>
-    
-    <li>
-      <a href="/404.html">Contact</a>
-    </li>
     
     <li class="optional">
       <a href="/categories/">Categories</a>

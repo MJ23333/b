@@ -215,35 +215,11 @@
   </url>
   
   <url>
-    <loc>/about/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/appendix/</loc>
-  </url>
-  
-  <url>
     <loc>/card/</loc>
   </url>
   
   <url>
-    <loc>/tags/citation/</loc>
-  </url>
-  
-  <url>
     <loc>/categories/hugo/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/menu/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/numbered-section/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/sidenote/</loc>
   </url>
   
   <url>
@@ -255,7 +231,7 @@
   </url>
   
   <url>
-    <loc>/tags/toc/</loc>
+    <loc>/about/</loc>
   </url>
   
 </urlset>

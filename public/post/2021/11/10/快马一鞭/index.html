@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title> 快马一鞭 | Edward Kerman&#39;s blog</title>
+    <title> 快马一鞭🐎 | Edward Kerman&#39;s blog</title>
     
-    
+    <link rel="icon" type="image/png" href="/icons/Hi-Res.png" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/custom.css" />
@@ -15,8 +15,9 @@
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
 <link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
 <link href="http://fonts.cdnfonts.com/css/operator-mono" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="快马一鞭"/>
+<meta name="twitter:title" content="快马一鞭🐎"/>
 <meta name="twitter:description" content="有一句俗话叫“快马一鞭，快人一言。”1它通常解释为一言为定，绝不反悔。
 跑得快的马只要抽一鞭就能跑到底，爽快的人一句话就能说清楚。这句话告诉我们说话、做人要爽快，要言而有信。在我看来，“快马一鞭”不仅是及时兑现对别人的承诺，更是认真达到自己定下的目标，兑现对自己的承诺。
 接下来，我们来谈谈为什么我们要对自己言而有信。多巴胺2是一种神经递质，传递兴奋及开心的信息。大脑很大程度上是基于根据期待得到多巴胺的含量来制定活动的优先级。人类的天性和多巴胺的控制让我们本能上更倾向于短期的快乐而非为未来做长远的打算和努力。当我们沉迷于娱乐时，我们的大脑便会获得一定的多巴胺耐受性，这将导致我们对少量多巴胺的敏感会更低，所以我们更难有动力去完成学习、工作、锻炼等产生低量多巴胺的活动。
@@ -64,7 +65,7 @@
 <main>
 
 <div class="article-meta">
-<h1><span class="title">快马一鞭</span></h1>
+<h1><span class="title">快马一鞭🐎</span></h1>
 
 <h3 class="author">
 Edward Kerman
@@ -150,10 +151,10 @@ Edward Kerman
 <div>
   <div class="side side-left"><h3>Citation</h3></div>
   <p>For attribution, please cite this work as</p>
-  <pre><code class="no-highlight">Edward Kerman (2021). 快马一鞭. Edward Kerman&#39;s blog. /post/2021/11/10/%E5%BF%AB%E9%A9%AC%E4%B8%80%E9%9E%AD/</code></pre>
+  <pre><code class="no-highlight">Edward Kerman (2021). 快马一鞭🐎. Edward Kerman&#39;s blog. /post/2021/11/10/%E5%BF%AB%E9%A9%AC%E4%B8%80%E9%9E%AD/</code></pre>
   <p>BibTeX citation</p>
   <pre><code class="no-highlight">@misc{
-  title = "快马一鞭",
+  title = "快马一鞭🐎",
   author = "Edward Kerman",
   year = "2021",
   journal = "Edward Kerman&#39;s blog",
@@ -168,7 +169,7 @@ Edward Kerman
 <nav class="post-nav">
   <span class="nav-next">&larr; <a href="/post/2020/07/30/%E5%B9%B2%E5%91%98%E8%80%83%E6%8D%AE%E8%89%BE%E9%9B%85%E6%B3%95%E6%8B%89/" title=Next&#32;post&#32;(older)>干员考据——艾雅法拉</a></span>
   &hercon;
-  <span class="nav-prev"><a href="/post/2021/11/23/%E5%85%B3%E4%BA%8E%E7%A7%91%E5%AD%A6%E4%BC%A6%E7%90%86%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/" title=Previous&#32;post&#32;(newer)>关于科学伦理的一些思考</a> &rarr;</span>
+  <span class="nav-prev"><a href="/post/2021/11/23/%E5%85%B3%E4%BA%8E%E7%A7%91%E5%AD%A6%E4%BC%A6%E7%90%86%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/" title=Previous&#32;post&#32;(newer)>关于科学伦理的一些思考🤔</a> &rarr;</span>
 </nav>
 
 
@@ -181,6 +182,8 @@ Edward Kerman
   <footer>
   <script async src="//yihui.org/js/center-img.js"></script>
 
+<script src="/js/twemoji.min.js"></script>
+<script>twemoji.parse(document.body,{"base":"/twemoji/","ext":".svg","folder":"svg"})</script>
 
 
 			<script type="text/x-mathjax-config">
@@ -188,7 +191,18 @@ Edward Kerman
 					extensions: ["tex2jax.js"],
 					jax: ["input/TeX", "output/HTML-CSS"],
 					TeX: {
-						extensions: ["mhchem.js"]
+						extensions: ["mhchem.js"],
+						Macros: {
+								d: "{\\mathrm d}",
+								B: "{\\mathrm B}",
+								m: "{\\mathrm m}",
+								align: ["{\\begin{align*} #1 \\end{align*}}",1],
+								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
+								l: ["{\\left( #1\\right)}",1],
+								red: ["{\\color{red}{ #1}}",1],
+								green: ["{\\color{green}{ #1}}",1],
+								blue: ["{\\color{blue}{ #1}}",1]
+						}
 					},
 					tex2jax: {
 						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -213,10 +227,6 @@ Edward Kerman
   </ul>
   
   <ul>
-    
-    <li>
-      <a href="/404.html">Contact</a>
-    </li>
     
     <li class="optional">
       <a href="/categories/">Categories</a>

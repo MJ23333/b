@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title> Sitemap | Edward Kerman&#39;s blog</title>
     
-    
+    <link rel="icon" type="image/png" href="/icons/Hi-Res.png" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/custom.css" />
@@ -15,9 +15,10 @@
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
 <link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
 <link href="http://fonts.cdnfonts.com/css/operator-mono" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Sitemap"/>
-<meta name="twitter:description" content="Below is a full list of posts and pages on this website ordered by date."/>
+<meta name="twitter:description" content=""/>
 
 
   </head>
@@ -58,7 +59,7 @@
 <main>
 <h1>Sitemap</h1>
 
-<p>Below is a full list of posts and pages on this website ordered by date.</p>
+<p><img src="/icons/emojibest_com_telegram-animoji4.gif" alt="emojibest_com_telegram-animoji4" style="zoom:50%;" /></p>
 
 
 
@@ -68,12 +69,12 @@
     
     <li>
       
-      <a href="/about/">About Hugo Prose</a>
+      <a href="/sitemap/">Sitemap</a>
     </li>
     
     <li>
       
-      <a href="/sitemap/">Sitemap</a>
+      <a href="/about/">关于我👈</a>
     </li>
     
   </ul>
@@ -85,17 +86,17 @@
     
     <li>
       
-      <a href="/card/anime/">Anime</a>
+      <a href="/card/anime/">A</a>
     </li>
     
     <li>
       
-      <a href="/card/chem/">Chem</a>
+      <a href="/card/chem/">C</a>
     </li>
     
     <li>
       
-      <a href="/card/games/">Games</a>
+      <a href="/card/games/">G</a>
     </li>
     
   </ul>
@@ -162,12 +163,12 @@
     
     <li>
       <span class="date">2021/11/23</span>
-      <a href="/post/2021/11/23/%E5%85%B3%E4%BA%8E%E7%A7%91%E5%AD%A6%E4%BC%A6%E7%90%86%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/">关于科学伦理的一些思考</a>
+      <a href="/post/2021/11/23/%E5%85%B3%E4%BA%8E%E7%A7%91%E5%AD%A6%E4%BC%A6%E7%90%86%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/">关于科学伦理的一些思考🤔</a>
     </li>
     
     <li>
       <span class="date">2021/11/10</span>
-      <a href="/post/2021/11/10/%E5%BF%AB%E9%A9%AC%E4%B8%80%E9%9E%AD/">快马一鞭</a>
+      <a href="/post/2021/11/10/%E5%BF%AB%E9%A9%AC%E4%B8%80%E9%9E%AD/">快马一鞭🐎</a>
     </li>
     
     <li>
@@ -182,7 +183,7 @@
     
     <li>
       <span class="date">2020/07/30</span>
-      <a href="/post/2020/07/30/%E7%A7%8D%E6%97%8F%E8%80%83%E6%8D%AE%E5%AE%89%E5%8A%AA%E6%8B%89/">种族考据——安努拉</a>
+      <a href="/post/2020/07/30/%E7%A7%8D%E6%97%8F%E8%80%83%E6%8D%AE%E5%AE%89%E5%8A%AA%E6%8B%89/">种族考据——安努拉🐸</a>
     </li>
     
   </ul>
@@ -194,6 +195,8 @@
   <footer>
   <script async src="//yihui.org/js/center-img.js"></script>
 
+<script src="/js/twemoji.min.js"></script>
+<script>twemoji.parse(document.body,{"base":"/twemoji/","ext":".svg","folder":"svg"})</script>
 
 
 			<script type="text/x-mathjax-config">
@@ -201,7 +204,18 @@
 					extensions: ["tex2jax.js"],
 					jax: ["input/TeX", "output/HTML-CSS"],
 					TeX: {
-						extensions: ["mhchem.js"]
+						extensions: ["mhchem.js"],
+						Macros: {
+								d: "{\\mathrm d}",
+								B: "{\\mathrm B}",
+								m: "{\\mathrm m}",
+								align: ["{\\begin{align*} #1 \\end{align*}}",1],
+								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
+								l: ["{\\left( #1\\right)}",1],
+								red: ["{\\color{red}{ #1}}",1],
+								green: ["{\\color{green}{ #1}}",1],
+								blue: ["{\\color{blue}{ #1}}",1]
+						}
 					},
 					tex2jax: {
 						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -226,10 +240,6 @@
   </ul>
   
   <ul>
-    
-    <li>
-      <a href="/404.html">Contact</a>
-    </li>
     
     <li class="optional">
       <a href="/categories/">Categories</a>

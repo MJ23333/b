@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title> Anime | Edward Kerman&#39;s blog</title>
+    <title> A | Edward Kerman&#39;s blog</title>
     
-    
+    <link rel="icon" type="image/png" href="/icons/Hi-Res.png" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/custom.css" />
@@ -15,10 +15,10 @@
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
 <link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
 <link href="http://fonts.cdnfonts.com/css/operator-mono" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Anime"/>
-<meta name="twitter:description" content="最喜欢的动画公司——扳机社。
- "/>
+<meta name="twitter:title" content="A"/>
+<meta name="twitter:description" content="最喜欢的动画公司——扳机社。"/>
 
 
   </head>
@@ -59,7 +59,7 @@
 <main>
 
 <div class="article-meta">
-<h1><span class="title">Anime</span></h1>
+<h1><span class="title">A</span></h1>
 
 
 <p class="terms">
@@ -73,7 +73,6 @@
 
 <div class="article">
 <p>最喜欢的动画公司——扳机社。</p>
-<iframe src="https://player.bilibili.com/player.html?aid=632609940&bvid=BV1Lb4y1m7hW&cid=394262825&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="500"> </iframe>
 
 </div>
 </main>
@@ -112,7 +111,7 @@
 
 
 <nav class="post-nav">
-  <span class="nav-next">&larr; <a href="/card/chem/" title=Next&#32;post&#32;(older)>Chem</a></span>
+  <span class="nav-next">&larr; <a href="/card/chem/" title=Next&#32;post&#32;(older)>C</a></span>
   &hercon;
   <span class="nav-prev"></span>
 </nav>
@@ -127,6 +126,8 @@
   <footer>
   <script async src="//yihui.org/js/center-img.js"></script>
 
+<script src="/js/twemoji.min.js"></script>
+<script>twemoji.parse(document.body,{"base":"/twemoji/","ext":".svg","folder":"svg"})</script>
 
 
 			<script type="text/x-mathjax-config">
@@ -134,7 +135,18 @@
 					extensions: ["tex2jax.js"],
 					jax: ["input/TeX", "output/HTML-CSS"],
 					TeX: {
-						extensions: ["mhchem.js"]
+						extensions: ["mhchem.js"],
+						Macros: {
+								d: "{\\mathrm d}",
+								B: "{\\mathrm B}",
+								m: "{\\mathrm m}",
+								align: ["{\\begin{align*} #1 \\end{align*}}",1],
+								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
+								l: ["{\\left( #1\\right)}",1],
+								red: ["{\\color{red}{ #1}}",1],
+								green: ["{\\color{green}{ #1}}",1],
+								blue: ["{\\color{blue}{ #1}}",1]
+						}
 					},
 					tex2jax: {
 						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -159,10 +171,6 @@
   </ul>
   
   <ul>
-    
-    <li>
-      <a href="/404.html">Contact</a>
-    </li>
     
     <li class="optional">
       <a href="/categories/">Categories</a>

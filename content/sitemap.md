@@ -7,4 +7,4 @@ menu:
     weight: 3
 ---
 
-Below is a full list of posts and pages on this website ordered by date.
+<img src="/icons/emojibest_com_telegram-animoji4.gif" alt="emojibest_com_telegram-animoji4" style="zoom:50%;" />

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title> 干员考据——艾雅法拉 | Edward Kerman&#39;s blog</title>
     
-    
+    <link rel="icon" type="image/png" href="/icons/Hi-Res.png" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/custom.css" />
@@ -15,6 +15,7 @@
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
 <link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
 <link href="http://fonts.cdnfonts.com/css/operator-mono" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="干员考据——艾雅法拉"/>
 <meta name="twitter:description" content="艾雅法拉的种族是卡普里尼（Caprinae），也就是羊亚科。鉴于艾雅法拉所属羊亚科主要分布在高原山地地区，而奥地利1的确 70% 为高原山地，而European mouflon（Ovis aries musimon）在奥地利刚好分布广泛2，我们不妨认为艾雅法拉属于European mouflon。
@@ -205,7 +206,7 @@ Edward Kerman
 <nav class="post-nav">
   <span class="nav-next">&larr; <a href="/post/2020/07/30/%E5%B9%B2%E5%91%98%E8%80%83%E6%8D%AE%E8%93%9D%E6%AF%92/" title=Next&#32;post&#32;(older)>干员考据——蓝毒</a></span>
   &hercon;
-  <span class="nav-prev"><a href="/post/2021/11/10/%E5%BF%AB%E9%A9%AC%E4%B8%80%E9%9E%AD/" title=Previous&#32;post&#32;(newer)>快马一鞭</a> &rarr;</span>
+  <span class="nav-prev"><a href="/post/2021/11/10/%E5%BF%AB%E9%A9%AC%E4%B8%80%E9%9E%AD/" title=Previous&#32;post&#32;(newer)>快马一鞭🐎</a> &rarr;</span>
 </nav>
 
 
@@ -218,6 +219,8 @@ Edward Kerman
   <footer>
   <script async src="//yihui.org/js/center-img.js"></script>
 
+<script src="/js/twemoji.min.js"></script>
+<script>twemoji.parse(document.body,{"base":"/twemoji/","ext":".svg","folder":"svg"})</script>
 
 
 			<script type="text/x-mathjax-config">
@@ -225,7 +228,18 @@ Edward Kerman
 					extensions: ["tex2jax.js"],
 					jax: ["input/TeX", "output/HTML-CSS"],
 					TeX: {
-						extensions: ["mhchem.js"]
+						extensions: ["mhchem.js"],
+						Macros: {
+								d: "{\\mathrm d}",
+								B: "{\\mathrm B}",
+								m: "{\\mathrm m}",
+								align: ["{\\begin{align*} #1 \\end{align*}}",1],
+								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
+								l: ["{\\left( #1\\right)}",1],
+								red: ["{\\color{red}{ #1}}",1],
+								green: ["{\\color{green}{ #1}}",1],
+								blue: ["{\\color{blue}{ #1}}",1]
+						}
 					},
 					tex2jax: {
 						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -250,10 +264,6 @@ Edward Kerman
   </ul>
   
   <ul>
-    
-    <li>
-      <a href="/404.html">Contact</a>
-    </li>
     
     <li class="optional">
       <a href="/categories/">Categories</a>

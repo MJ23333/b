@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title> 干员考据——蓝毒 | Edward Kerman&#39;s blog</title>
     
-    
+    <link rel="icon" type="image/png" href="/icons/Hi-Res.png" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/custom.css" />
@@ -15,6 +15,7 @@
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
 <link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
 <link href="http://fonts.cdnfonts.com/css/operator-mono" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="干员考据——蓝毒"/>
 <meta name="twitter:description" content="就蓝毒的造型色调以及其精二立绘中的动物形象来看，可以确定其动物原型是钴蓝箭毒蛙。而她的代号——蓝毒（Blue Poison）可能正是取自于钴蓝箭毒蛙的英文写法（Blue poison dart frog）。而蓝毒的自称（Azureus）则来自于其学名（Dendrobates azureus）。1
@@ -302,7 +303,7 @@ Edward Kerman
 
 
 <nav class="post-nav">
-  <span class="nav-next">&larr; <a href="/post/2020/07/30/%E7%A7%8D%E6%97%8F%E8%80%83%E6%8D%AE%E5%AE%89%E5%8A%AA%E6%8B%89/" title=Next&#32;post&#32;(older)>种族考据——安努拉</a></span>
+  <span class="nav-next">&larr; <a href="/post/2020/07/30/%E7%A7%8D%E6%97%8F%E8%80%83%E6%8D%AE%E5%AE%89%E5%8A%AA%E6%8B%89/" title=Next&#32;post&#32;(older)>种族考据——安努拉🐸</a></span>
   &hercon;
   <span class="nav-prev"><a href="/post/2020/07/30/%E5%B9%B2%E5%91%98%E8%80%83%E6%8D%AE%E8%89%BE%E9%9B%85%E6%B3%95%E6%8B%89/" title=Previous&#32;post&#32;(newer)>干员考据——艾雅法拉</a> &rarr;</span>
 </nav>
@@ -317,6 +318,8 @@ Edward Kerman
   <footer>
   <script async src="//yihui.org/js/center-img.js"></script>
 
+<script src="/js/twemoji.min.js"></script>
+<script>twemoji.parse(document.body,{"base":"/twemoji/","ext":".svg","folder":"svg"})</script>
 
 
 			<script type="text/x-mathjax-config">
@@ -324,7 +327,18 @@ Edward Kerman
 					extensions: ["tex2jax.js"],
 					jax: ["input/TeX", "output/HTML-CSS"],
 					TeX: {
-						extensions: ["mhchem.js"]
+						extensions: ["mhchem.js"],
+						Macros: {
+								d: "{\\mathrm d}",
+								B: "{\\mathrm B}",
+								m: "{\\mathrm m}",
+								align: ["{\\begin{align*} #1 \\end{align*}}",1],
+								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
+								l: ["{\\left( #1\\right)}",1],
+								red: ["{\\color{red}{ #1}}",1],
+								green: ["{\\color{green}{ #1}}",1],
+								blue: ["{\\color{blue}{ #1}}",1]
+						}
 					},
 					tex2jax: {
 						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -349,10 +363,6 @@ Edward Kerman
   </ul>
   
   <ul>
-    
-    <li>
-      <a href="/404.html">Contact</a>
-    </li>
     
     <li class="optional">
       <a href="/categories/">Categories</a>

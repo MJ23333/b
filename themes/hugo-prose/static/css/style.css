@@ -356,6 +356,12 @@ th, td { padding: 5px; }
 .mjx-chtml{
   white-space: normal!important;
 }
+img.emoji {
+  height: 1em;
+  width: 1em;
+  margin: 0 .05em 0 .1em;
+  vertical-align: -0.1em;
+}
 /* dark theme */
 /* @media (prefers-color-scheme: dark) {
   body {

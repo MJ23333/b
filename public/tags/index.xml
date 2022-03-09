@@ -110,59 +110,5 @@
       <description></description>
     </item>
     
-    <item>
-      <title>appendix</title>
-      <link>/tags/appendix/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/appendix/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>citation</title>
-      <link>/tags/citation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/citation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>menu</title>
-      <link>/tags/menu/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/menu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>numbered section</title>
-      <link>/tags/numbered-section/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/numbered-section/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sidenote</title>
-      <link>/tags/sidenote/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/sidenote/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>TOC</title>
-      <link>/tags/toc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/toc/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
