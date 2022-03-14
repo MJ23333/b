@@ -20,7 +20,7 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="简谐振动"/>
 <meta name="twitter:description" content="简谐运动 我们知道简谐运动的一般运动方程： $$ m\frac{\mathrm d^2x}{\mathrm d^2t}=-kx $$ 我们把常数搞到一起： $$ \frac{\mathrm d^2x}{\mathrm d^2t}&#43;\omega^2x\text{，其中}\omega=\sqrt{\frac{k}{m}} $$ 二阶导竟然还可以等于自己乘上一个常数，猜测这是怎么导都稳得一批的指数函数$Ae^{\lambda t}$，那么： $$ Ae^{\lambda x}\left(\lambda^2&#43;\omega^2\right)=0 $$ 那么： $$ \lambda=\pm i\omega $$ 所以有这么个通解（$A_1,A_2,A$是复常数）： $$ x(t)=A_1e^{i\omega t}&#43;A_2e^{-i\omega t}=Ae^{i\omega t} $$ 其中$A$是一个复数，称为复振幅，$A$的模长$|A|$就是振幅，幅角的相反数$\phi_0=-\mathrm{arg}(A)$就是初相位。
-我们希望$x(t)$是个实数，那么它应该等于它的复共轭： $$ A_1e^{i\omega t}&#43;A_2e^{-i\omega t}=A^*_2e^{i\omega t}&#43;A^*_1e^{-i\omega t} $$ 得到： $$ A_1=A^*_2 $$ 那我们写$A_1=ae^{i\phi}$，$A_2=ae^{-i\phi}$，得到： $$ x(t)=a\left[e^{i(\omega t&#43;\phi)}&#43;e^{-i(\omega t&#43;\phi)}\right] $$ 套入欧拉公式： $$ x(t)=2a\cos(\omega t&#43;\phi)=x_0\cos(\omega t&#43;\phi) $$"/>
+我们希望$x(t)$是个实数，那么它应该等于它的复共轭： $$ A_1e^{i\omega t}&#43;A_2e^{-i\omega t}=A^_2e^{i\omega t}&#43;A^_1e^{-i\omega t} $$ 得到： $$ A_1=A^*_2 $$ 那我们写$A_1=ae^{i\phi}$，$A_2=ae^{-i\phi}$，得到： $$ x(t)=a\left[e^{i(\omega t&#43;\phi)}&#43;e^{-i(\omega t&#43;\phi)}\right] $$ 套入欧拉公式： $$ x(t)=2a\cos(\omega t&#43;\phi)=x_0\cos(\omega t&#43;\phi) $$"/>
 
 
   </head>
@@ -106,7 +106,7 @@ $$
 其中$A$是一个复数，称为复振幅，$A$的模长$|A|$就是振幅，幅角的相反数$\phi_0=-\mathrm{arg}(A)$就是初相位。</p>
 <p>我们希望$x(t)$是个实数，那么它应该等于它的复共轭：
 $$
-A_1e^{i\omega t}+A_2e^{-i\omega t}=A^*_2e^{i\omega t}+A^*_1e^{-i\omega t}
+A_1e^{i\omega t}+A_2e^{-i\omega t}=A^<em>_2e^{i\omega t}+A^</em>_1e^{-i\omega t}
 $$
 得到：
 $$
@@ -214,6 +214,7 @@ $$</p>
 						Macros: {
 								d: "{\\mathrm d}",
 								B: "{\\mathrm B}",
+								A: "{\\mathrm A}",
 								m: "{\\mathrm m}",
 								align: ["{\\begin{align*} #1 \\end{align*}}",1],
 								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],

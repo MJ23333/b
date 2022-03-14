@@ -6,11 +6,7 @@
     <description>Recent content in Posts on Edward Kerman&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Mar 2022 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 03 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>简谐振动</title>
       <link>/post/2022/03/03/%E7%AE%80%E8%B0%90%E6%8C%AF%E5%8A%A8/</link>
@@ -18,7 +14,7 @@
       
       <guid>/post/2022/03/03/%E7%AE%80%E8%B0%90%E6%8C%AF%E5%8A%A8/</guid>
       <description>简谐运动 我们知道简谐运动的一般运动方程： $$ m\frac{\mathrm d^2x}{\mathrm d^2t}=-kx $$ 我们把常数搞到一起： $$ \frac{\mathrm d^2x}{\mathrm d^2t}+\omega^2x\text{，其中}\omega=\sqrt{\frac{k}{m}} $$ 二阶导竟然还可以等于自己乘上一个常数，猜测这是怎么导都稳得一批的指数函数$Ae^{\lambda t}$，那么： $$ Ae^{\lambda x}\left(\lambda^2+\omega^2\right)=0 $$ 那么： $$ \lambda=\pm i\omega $$ 所以有这么个通解（$A_1,A_2,A$是复常数）： $$ x(t)=A_1e^{i\omega t}+A_2e^{-i\omega t}=Ae^{i\omega t} $$ 其中$A$是一个复数，称为复振幅，$A$的模长$|A|$就是振幅，幅角的相反数$\phi_0=-\mathrm{arg}(A)$就是初相位。
-我们希望$x(t)$是个实数，那么它应该等于它的复共轭： $$ A_1e^{i\omega t}+A_2e^{-i\omega t}=A^*_2e^{i\omega t}+A^*_1e^{-i\omega t} $$ 得到： $$ A_1=A^*_2 $$ 那我们写$A_1=ae^{i\phi}$，$A_2=ae^{-i\phi}$，得到： $$ x(t)=a\left[e^{i(\omega t+\phi)}+e^{-i(\omega t+\phi)}\right] $$ 套入欧拉公式： $$ x(t)=2a\cos(\omega t+\phi)=x_0\cos(\omega t+\phi) $$</description>
+我们希望$x(t)$是个实数，那么它应该等于它的复共轭： $$ A_1e^{i\omega t}+A_2e^{-i\omega t}=A^_2e^{i\omega t}+A^_1e^{-i\omega t} $$ 得到： $$ A_1=A^*_2 $$ 那我们写$A_1=ae^{i\phi}$，$A_2=ae^{-i\phi}$，得到： $$ x(t)=a\left[e^{i(\omega t+\phi)}+e^{-i(\omega t+\phi)}\right] $$ 套入欧拉公式： $$ x(t)=2a\cos(\omega t+\phi)=x_0\cos(\omega t+\phi) $$</description>
     </item>
     
     <item>
@@ -27,16 +23,19 @@
       <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>/post/2022/02/18/%E5%A4%9A%E7%BB%84%E5%88%86%E7%83%AD%E5%8A%9B%E5%AD%A6/</guid>
-      <description>多组分系统：两种或两种以上组分所形成的系统
+      <description>( \def\d{{\mathrm d}} \def\B{{\mathrm B}} \def\A{{\mathrm A}} \def\m{{\mathrm m}} \def\align{{\begin{align*} #1 \end{align*}}} \def\f{{\frac{\partial #1}{\partial #2}}} \def\l{{\left( #1\right)}} \def\red{{\color{red}{ #1}}} \def\green{{\color{green}{ #1}}} \def\blue{{\color{blue}{ #1}}} ) **多组分系统**：两种或两种以上组分所形成的系统
 混合物：含有一种以上组分的系统
 溶液：含有一种以上组分的液相和固相（没有气相），分为溶质$\rm B$和溶剂$\rm A$。
-组成的表示 对于混合物 质量浓度（并不常用）： $$ \rho_{\rm B}\doteq \frac{m({\rm B})}{V_{\rm tot}} $$
-质量分数： $$ w_{\rm B}\doteq \frac{m({\rm B})}{m_{\rm tot}} $$
-物质的量浓度： $$ c_{\rm B}=[{\rm B}]\doteq \frac{n_{\rm B}}{V_{\rm tot}} $$
-摩尔分数： $$ x_{\rm B}\doteq \frac{n_{\rm B}}{n_{\rm tot}} $$
-对于溶液 质量摩尔浓度： $$ m_{\rm B}\doteq \frac{m_{\rm B}}{m_\color{red}{ \rm A}} $$
-溶质的摩尔比： $$ r_{\rm B}\doteq \frac{n_{\rm B}}{n_\color{red}{ \rm A}} $$
-偏摩尔量 对于一个$k$组分均相系统的广度性质$Z$，它与各个组分的物质的量有关$n_i$： $$ Z=Z(T,p,n_1,\dots,n_k) $$ 在等温等压下，有： $$ \mathrm dZ=\sum_{\mathrm B=1}^k\left(\frac{\partial Z}{\partial n_{\rm B}}\right)_{T,p,n_{\rm C}(\rm C\neq B)}\mathrm dn_{\rm B}=\sum_{\mathrm B=1}^kZ_{\rm B}\mathrm dn_{\rm B} $$ $Z_{\rm B}$称为某种广度性质$Z$的偏摩尔量。注意偏摩尔吉布斯自由能又称化学势： $$ \mu_{\rm B}=G_{\rm B}=\left(\frac{\partial G}{\partial n_{\rm B}}\right)_{T,p,n_{\rm C}(\rm C\neq B)} $$ 我们对偏摩尔量的定义积个分： $$ Z=\sum_{\mathrm B=1}^kZ_{\rm B}n_{\rm B} $$ 注意不同组成时偏摩尔量是不同的。</description>
+组成的表示 对于混合物 质量浓度（并不常用）：
+$$ \rho_{\rm B}\doteq \frac{m({\rm B})}{V_{\rm tot}} $$
+质量分数：
+$$ w_{\rm B}\doteq \frac{m({\rm B})}{m_{\rm tot}} $$
+物质的量浓度：
+$$ c_{\rm B}=[{\rm B}]\doteq \frac{n_{\rm B}}{V_{\rm tot}} $$
+摩尔分数：
+$$ x_{\rm B}\doteq \frac{n_{\rm B}}{n_{\rm tot}} $$
+对于溶液 质量摩尔浓度：
+$$ m_{\rm B}\doteq \frac{n_{\rm B}}{m_\color{red}{ \rm A}} $$</description>
     </item>
     
     <item>
@@ -90,7 +89,7 @@
 其中假想引擎从单一热源$T_{\rm h}$提取热量$Q$并完全转化为功$W=Q$（图上是$A$），显然它违反了开尔文说法。我们把它产生的功输到一个逆向运行的卡诺热机中，那么卡诺热机向$T_{\rm h}$输入了$Q/\eta$的热量，总效果是$Q(1/\eta-1)$的热量自发传向高温物体，违反克劳修斯说法。
 卡诺定律  所有工作与同温热源与同温冷源之间的热机，其效率都不可能超过可逆热机
  假设如下的系统，其中左侧是任意热机：
-我们让任意热机驱动卡诺热机（效率为$\eta&#39;$）逆向运行，不难得到$T_{\rm h}$到$T_{\rm c}$的热量$Q_{\rm trans}$： $$ Q_{\rm trans}=\left(1-\eta\right)Q-\eta Q\left(\frac1{\eta&amp;rsquo;}-1\right)=Q\left(1-\frac{\eta}{\eta&amp;rsquo;}\right) $$ 此时没有其他变化，为了遵守克劳修斯说法，$Q$不能小于$0$，显然有： $$ \eta&amp;rsquo;\ge\eta $$ 卡诺定律得证。假如左右都是可逆机，那么我可以将现有循环调转顺序，得到： $$ \eta\ge\eta&amp;rsquo; $$ 综合一下： $$ \eta=\eta&amp;rsquo; $$ 也就是说所有可逆热机的效率都是一样的。
+我们让任意热机驱动卡诺热机（效率为$\eta&#39;$）逆向运行，不难得到$T_{\rm h}$到$T_{\rm c}$的热量$Q_{\rm trans}$： $$ Q_{\rm trans}=\left(1-\eta\right)Q-\eta Q\left(\frac1{\eta&#39;}-1\right)=Q\left(1-\frac{\eta}{\eta&#39;}\right) $$ 此时没有其他变化，为了遵守克劳修斯说法，$Q$不能小于$0$，显然有： $$ \eta&#39;\ge\eta $$ 卡诺定律得证。假如左右都是可逆机，那么我可以将现有循环调转顺序，得到： $$ \eta\ge\eta&#39; $$ 综合一下： $$ \eta=\eta&#39; $$ 也就是说所有可逆热机的效率都是一样的。
 熵的概念 考虑可逆循环（在$p-V$图上画得出来的都是可逆循环，原因下面讲），我们可以给它沿可逆绝热线切片，每个切片做上下两条等温线，将每个切片转化为一个小卡诺循环，用我们在热一时留下的引子（$\rm R$代表可逆）： $$ \begin{equation*}\sum_i\left(\frac{\delta Q_i}{T_i}\right) _{\mathrm R}=0\end{equation*} $$ 推广到任意的可逆循环： $$ \oint\left(\frac{\delta Q}{T}\right)_{\rm R}=0 $$
 假如我们在循环上取两个点，那么可以发现循环被切成了两个过程，根据上式： $$ \begin{equation*}\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R_1}=-\int_\color{red}{B}^\color{red}{A}\left(\frac{\delta Q}{T}\right)_{\rm R_2}\end{equation*} $$ 颠倒始末态，改变符号： $$ \begin{equation*}\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R_1}=\int_\color{red}{A}^\color{red}{B}\left(\frac{\delta Q}{T}\right)_{\rm R_2}\end{equation*} $$ 由于可逆循环是任意的，我们发现$\int_A^B\left({\delta Q}/{T}\right)_{\rm R}$的值只于始末状态有关，与具体途径无关，是个状态函数，我们叫它熵： $$ \Delta S=\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R} $$</description>
     </item>
@@ -106,7 +105,7 @@
 首先定义数列的大O记号，对于实数数列$\{a_n\}^\infty_{n=1}$和实数$\beta$，当数列$\{n^{-\beta} a_n\}$有界时，我们记$a_n=O(n^\beta)$（参考信息学复杂度的大O记号）
 我们将半径$r$的球体内所有晶格点数记为$L_r$，对于$\sqrt{n}\le L_r&amp;lt;\sqrt{n+1}$，必然有： $$ L_r=\sum^r_{k=1}C_3(k) $$ 很容易证明： $$ L_r-\frac43\pi r^3=O(r^2) $$ 这就说明： $$ \lim_{r\to\infty}\frac{L_r}{r^3}=\frac43\pi $$ 我们假设最初的数列收敛，那这就等价于说当$n\to0$时，$\epsilon_n=C_3(n)/\sqrt n \to 0$，对于一个自然数$N$，让$M_N=\max\{\epsilon_n:n\ge N\}$，那么当$N\to 0$，$M_N\to 0$。让$N$暂时固定，考虑对于$n&amp;gt;N$： $$ \begin{align*}\frac{L_{\sqrt{n}}}{(\sqrt{n}^3)}&amp;amp;=n^{-3/2}\left[\sum^n_{k=1}\epsilon_k\sqrt k\right] \newline &amp;amp;\le n^{-3/2}\left[\sum^N_{k=1}\epsilon_k\sqrt k\right]+M_Nn^{-3/2}\left[\sum^n_{k=N+1}\sqrt k\right]\end{align*} $$ 注意（简单的放缩）： $$ \begin{align*}\sum^n_{k=N+1}\sqrt k&amp;amp;\le\int^{n+1}_{N+1}t^{1/2}\mathrm dt\newline &amp;amp;=\frac23M_N[(n+1)^{3/2}-(N+1)^{3/2}]\end{align*} $$ 代到上面去： $$ \begin{align*}\frac{L_{\sqrt{n}}}{(\sqrt n^3)}\le n^{-3/2}\left[\sum^N_{k=1}\epsilon_k\sqrt k\right]+\frac23M_N\left[\left(\frac{n+1}n\right)^{2/3}-\left(\frac{N+1}n\right)^{2/3}\right]\end{align*} $$ 让$n\to\infty$，发现对于任何的$N$，有$\limsup_{n\to\infty}L_{\sqrt{n}}/\sqrt{n}^3\le\frac23M_N$，既然$N\to\infty$时$M_N\to\infty$，我们有： $$ \lim_{n\to\infty}\frac{L_{\sqrt n}}{(\sqrt n)^3}=0 $$ 与我们一开始得到的结论矛盾。
 所以，数列 $$ \sum^\infty_{n=1}\frac{(-1)^nC_3(n)}{\sqrt{n}} $$ 发散。Q.E.D.
-  &amp;#x21a9;&amp;#xfe0e;
+  &amp;#160;&amp;#x21a9;&amp;#xfe0e;
    </description>
     </item>
     
@@ -165,11 +164,11 @@ Co(CO)4(AuPPh3)等不用多说，甚至有Ti(CO)6(AuPEt3)-（Ti七配位）
 画出MO图，发现——Re2Cl8n-中Re-Re五重键可能不？No，那是因为四个配体与一个形成δ键的轨道作用从而使其能量发生改变5（这也是为啥大多数“5重键”物种配位数极低）正因如此，四重键才是强制重叠的（配体方向的轨道因为与配体作用而不能再成δ键）。
 四重键与三重键（特别是去除δ*的电子）键长没啥区别——1.键级上升，有缩短趋势；2.库伦排斥上升，有变长趋势；3.有效核电荷上升，d轨道收缩，π键（δ太弱不考虑）成键变弱。
 五重键——低配位数（对d轨道能量影响较少不妨碍成δ键）；大（动力学保护）
-  Hoffmann教授：&amp;#x21a9;&amp;#xfe0e;
- 看清楚符号&amp;#x21a9;&amp;#xfe0e;
- 一般η5-C5H5-和η6-C6H6占三个杂化轨道 &amp;#x21a9;&amp;#xfe0e;
- &amp;#x21a9;&amp;#xfe0e;
- &amp;#x21a9;&amp;#xfe0e;
+  Hoffmann教授：&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+ 看清楚符号&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+ 一般η5-C5H5-和η6-C6H6占三个杂化轨道&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+ &amp;#160;&amp;#x21a9;&amp;#xfe0e;
+ &amp;#160;&amp;#x21a9;&amp;#xfe0e;
    </description>
     </item>
     
@@ -273,8 +272,8 @@ de Broglie 关系和 Einstein 关系 $$ \begin{gather*} E=\color{blue}{{\frac12}
 跑得快的马只要抽一鞭就能跑到底，爽快的人一句话就能说清楚。这句话告诉我们说话、做人要爽快，要言而有信。在我看来，“快马一鞭”不仅是及时兑现对别人的承诺，更是认真达到自己定下的目标，兑现对自己的承诺。
 接下来，我们来谈谈为什么我们要对自己言而有信。多巴胺2是一种神经递质，传递兴奋及开心的信息。大脑很大程度上是基于根据期待得到多巴胺的含量来制定活动的优先级。人类的天性和多巴胺的控制让我们本能上更倾向于短期的快乐而非为未来做长远的打算和努力。当我们沉迷于娱乐时，我们的大脑便会获得一定的多巴胺耐受性，这将导致我们对少量多巴胺的敏感会更低，所以我们更难有动力去完成学习、工作、锻炼等产生低量多巴胺的活动。
 周老师常常告诉我们，在总结问题时不仅要总结知识、技术上的问题，跟要刨根问底，找到“人性”上的bug。人类进化的突出标志就是动物性被理性所逐渐替代，而我们人性上的问题也大多是动物本能的遗留。如何才能让理智压过由化学物质控制的本能呢？我认为，应该通过设立一系列合理可操作的计划和目标，给自己划定规矩，通过狠下内心，及时完成以前定下的目标，屏蔽脑中的诱惑，对自己“言而有信”来提升自己。长久坚持，一点点减少对强烈多巴胺活动的依赖，我们的大脑才可能重新对多巴胺等物质变得敏感，只有这样，我们才能抵御本能的诱惑，并在学习中收获朴素的快乐。
-  出自释道原的《景德传灯录》卷六 &amp;#x21a9;&amp;#xfe0e;
- &amp;#x21a9;&amp;#xfe0e;
+  出自释道原的《景德传灯录》卷六&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+ &amp;#160;&amp;#x21a9;&amp;#xfe0e;
    </description>
     </item>
     
@@ -299,7 +298,7 @@ Adele（常做女性名称）来自于德语Adel ，意思是“高贵品质”�
 火山学研究需要在火山喷发前后期进行实地考察，在调查期间需长期停留于火山地带。而火山地带饱含源石颗粒的火山烟尘，以及冷却岩浆中不断翻涌出的源石矿脉，使火山活跃地带同时也会成为一片典型的矿石病易感地区，相信这是艾雅法拉成为感染者的直接因素。（档案资料二）
  从这几个关键词，我推测艾雅法拉父母的原型应该是 Katia and Maurice Krafft 夫妇。他们以摄影，拍摄和记录火山的先驱而闻名6。1991年6月3日，夫妇二人在日本云仙岳观测火山时因火山碎屑流脱离意料中的轨道而丧生。
 但二者之间存在一些区别：Krafft 夫妇未诞下子嗣，且Maurice Krafft曾说——“I am never afraid because I have seen so many eruptions in 23 years that even if I die tomorrow, I don&amp;rsquo;t care.”。但从干员密录中我们可以发现艾雅法拉的父母在每次考察前都十分担心无法再见到自己的女儿。再加上干员密录暗示艾雅法拉的父母死于“阴谋”，但 Krafft 夫妇则是因为未计算到的突发情况。故该考证仍然存疑。
-  莱塔尼亚的原型可能是奥匈帝国，奥地利地形图如下：&amp;#x21a9;&amp;#xfe0e;</description>
+  莱塔尼亚的原型可能是奥匈帝国，奥地利地形图如下：&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description>
     </item>
     
     <item>
@@ -355,9 +354,9 @@ Adele（常做女性名称）来自于德语Adel ，意思是“高贵品质”�
 很多青蛙的表面都有轻度毒性的蟾毒素（bufotoxin），使它们并不受猎食者的欢迎。如果能产生即时的不快感觉，捕猎者多会终止它们的捕猎行动而令它们得以逃脱；如果效果需时甚久才有效果，也可减少捕猎者于下一次再度捕猎的机会。而带有剧毒的青蛙则多会披上鲜艳的颜色，以标示它们并不适合作为食物，这种适应的的策略称作警戒作用（Aposematism）。然而有一些物种本身没有毒性，如红背异箭毒蛙，就会模拟在其地域中有毒的物种的肤色以吓退猎食者。1
 无尾目中有很多成员都具有毒性，不过毒性的强弱因具体物种的差异而不同。毒性相对较弱的例如海蟾蜍（Bufo marinus，不是与蓝毒颇为亲近的克劳格斯（Glaucus atlanticus））2，其背部分泌的蟾毒素3具有一定的致幻性——甚至有狗在舔海蟾蜍的背之后出现成瘾症状。澳大利亚的狗舔蟾蜍上瘾的事屡见不鲜，当地甚至还有专门的宠物戒毒所（舔狗.jpg）。
 而毒性比较强的无尾目成员，当属大名鼎鼎的箭毒蛙。箭毒蛙体型很小，通常长仅1-5厘米（0.5-2寸），但造型眩目，非常的显眼。南美洲的土著很久以前已懂得抽取这些箭毒蛙身上的毒液去制造飞镖（Dart (missile)）以作打猎之用。一些物种透过进食如蚂蚁或节肢类动物等以吸收它们的毒素，亦有一些物种，如澳洲的科罗澳拟蟾则能够自己合成这些有毒的生物碱。就蓝毒的造型色调、颈部花纹以及其精二立绘中的动物形象来看，可以确定其动物原型是钴蓝箭毒蛙（Dendrobates azureus）。
-  红背异箭毒蛙&amp;#x21a9;&amp;#xfe0e;
- 海蟾蜍并不如其名般是水生的，反倒是全陆生的，只有在繁殖时才会走到水边。只是它的蝌蚪可以在15%盐度的海水中生存。 &amp;#x21a9;&amp;#xfe0e;
- 日本利用蟾毒素作为电脑配件及头发再生药 &amp;#x21a9;&amp;#xfe0e;
+  红背异箭毒蛙&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+ 海蟾蜍并不如其名般是水生的，反倒是全陆生的，只有在繁殖时才会走到水边。只是它的蝌蚪可以在15%盐度的海水中生存。&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+ 日本利用蟾毒素作为电脑配件及头发再生药 &amp;#160;&amp;#x21a9;&amp;#xfe0e;
    </description>
     </item>
     

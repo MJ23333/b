@@ -6,27 +6,26 @@
     <description>Recent content in 热力学 on Edward Kerman&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Feb 2022 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/%E7%83%AD%E5%8A%9B%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 18 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E7%83%AD%E5%8A%9B%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>多组分热力学</title>
       <link>/post/2022/02/18/%E5%A4%9A%E7%BB%84%E5%88%86%E7%83%AD%E5%8A%9B%E5%AD%A6/</link>
       <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>/post/2022/02/18/%E5%A4%9A%E7%BB%84%E5%88%86%E7%83%AD%E5%8A%9B%E5%AD%A6/</guid>
-      <description>多组分系统：两种或两种以上组分所形成的系统
+      <description>( \def\d{{\mathrm d}} \def\B{{\mathrm B}} \def\A{{\mathrm A}} \def\m{{\mathrm m}} \def\align{{\begin{align*} #1 \end{align*}}} \def\f{{\frac{\partial #1}{\partial #2}}} \def\l{{\left( #1\right)}} \def\red{{\color{red}{ #1}}} \def\green{{\color{green}{ #1}}} \def\blue{{\color{blue}{ #1}}} ) **多组分系统**：两种或两种以上组分所形成的系统
 混合物：含有一种以上组分的系统
 溶液：含有一种以上组分的液相和固相（没有气相），分为溶质$\rm B$和溶剂$\rm A$。
-组成的表示 对于混合物 质量浓度（并不常用）： $$ \rho_{\rm B}\doteq \frac{m({\rm B})}{V_{\rm tot}} $$
-质量分数： $$ w_{\rm B}\doteq \frac{m({\rm B})}{m_{\rm tot}} $$
-物质的量浓度： $$ c_{\rm B}=[{\rm B}]\doteq \frac{n_{\rm B}}{V_{\rm tot}} $$
-摩尔分数： $$ x_{\rm B}\doteq \frac{n_{\rm B}}{n_{\rm tot}} $$
-对于溶液 质量摩尔浓度： $$ m_{\rm B}\doteq \frac{m_{\rm B}}{m_\color{red}{ \rm A}} $$
-溶质的摩尔比： $$ r_{\rm B}\doteq \frac{n_{\rm B}}{n_\color{red}{ \rm A}} $$
-偏摩尔量 对于一个$k$组分均相系统的广度性质$Z$，它与各个组分的物质的量有关$n_i$： $$ Z=Z(T,p,n_1,\dots,n_k) $$ 在等温等压下，有： $$ \mathrm dZ=\sum_{\mathrm B=1}^k\left(\frac{\partial Z}{\partial n_{\rm B}}\right)_{T,p,n_{\rm C}(\rm C\neq B)}\mathrm dn_{\rm B}=\sum_{\mathrm B=1}^kZ_{\rm B}\mathrm dn_{\rm B} $$ $Z_{\rm B}$称为某种广度性质$Z$的偏摩尔量。注意偏摩尔吉布斯自由能又称化学势： $$ \mu_{\rm B}=G_{\rm B}=\left(\frac{\partial G}{\partial n_{\rm B}}\right)_{T,p,n_{\rm C}(\rm C\neq B)} $$ 我们对偏摩尔量的定义积个分： $$ Z=\sum_{\mathrm B=1}^kZ_{\rm B}n_{\rm B} $$ 注意不同组成时偏摩尔量是不同的。</description>
+组成的表示 对于混合物 质量浓度（并不常用）：
+$$ \rho_{\rm B}\doteq \frac{m({\rm B})}{V_{\rm tot}} $$
+质量分数：
+$$ w_{\rm B}\doteq \frac{m({\rm B})}{m_{\rm tot}} $$
+物质的量浓度：
+$$ c_{\rm B}=[{\rm B}]\doteq \frac{n_{\rm B}}{V_{\rm tot}} $$
+摩尔分数：
+$$ x_{\rm B}\doteq \frac{n_{\rm B}}{n_{\rm tot}} $$
+对于溶液 质量摩尔浓度：
+$$ m_{\rm B}\doteq \frac{n_{\rm B}}{m_\color{red}{ \rm A}} $$</description>
     </item>
     
     <item>
@@ -80,7 +79,7 @@
 其中假想引擎从单一热源$T_{\rm h}$提取热量$Q$并完全转化为功$W=Q$（图上是$A$），显然它违反了开尔文说法。我们把它产生的功输到一个逆向运行的卡诺热机中，那么卡诺热机向$T_{\rm h}$输入了$Q/\eta$的热量，总效果是$Q(1/\eta-1)$的热量自发传向高温物体，违反克劳修斯说法。
 卡诺定律  所有工作与同温热源与同温冷源之间的热机，其效率都不可能超过可逆热机
  假设如下的系统，其中左侧是任意热机：
-我们让任意热机驱动卡诺热机（效率为$\eta&#39;$）逆向运行，不难得到$T_{\rm h}$到$T_{\rm c}$的热量$Q_{\rm trans}$： $$ Q_{\rm trans}=\left(1-\eta\right)Q-\eta Q\left(\frac1{\eta&amp;rsquo;}-1\right)=Q\left(1-\frac{\eta}{\eta&amp;rsquo;}\right) $$ 此时没有其他变化，为了遵守克劳修斯说法，$Q$不能小于$0$，显然有： $$ \eta&amp;rsquo;\ge\eta $$ 卡诺定律得证。假如左右都是可逆机，那么我可以将现有循环调转顺序，得到： $$ \eta\ge\eta&amp;rsquo; $$ 综合一下： $$ \eta=\eta&amp;rsquo; $$ 也就是说所有可逆热机的效率都是一样的。
+我们让任意热机驱动卡诺热机（效率为$\eta&#39;$）逆向运行，不难得到$T_{\rm h}$到$T_{\rm c}$的热量$Q_{\rm trans}$： $$ Q_{\rm trans}=\left(1-\eta\right)Q-\eta Q\left(\frac1{\eta&#39;}-1\right)=Q\left(1-\frac{\eta}{\eta&#39;}\right) $$ 此时没有其他变化，为了遵守克劳修斯说法，$Q$不能小于$0$，显然有： $$ \eta&#39;\ge\eta $$ 卡诺定律得证。假如左右都是可逆机，那么我可以将现有循环调转顺序，得到： $$ \eta\ge\eta&#39; $$ 综合一下： $$ \eta=\eta&#39; $$ 也就是说所有可逆热机的效率都是一样的。
 熵的概念 考虑可逆循环（在$p-V$图上画得出来的都是可逆循环，原因下面讲），我们可以给它沿可逆绝热线切片，每个切片做上下两条等温线，将每个切片转化为一个小卡诺循环，用我们在热一时留下的引子（$\rm R$代表可逆）： $$ \begin{equation*}\sum_i\left(\frac{\delta Q_i}{T_i}\right) _{\mathrm R}=0\end{equation*} $$ 推广到任意的可逆循环： $$ \oint\left(\frac{\delta Q}{T}\right)_{\rm R}=0 $$
 假如我们在循环上取两个点，那么可以发现循环被切成了两个过程，根据上式： $$ \begin{equation*}\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R_1}=-\int_\color{red}{B}^\color{red}{A}\left(\frac{\delta Q}{T}\right)_{\rm R_2}\end{equation*} $$ 颠倒始末态，改变符号： $$ \begin{equation*}\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R_1}=\int_\color{red}{A}^\color{red}{B}\left(\frac{\delta Q}{T}\right)_{\rm R_2}\end{equation*} $$ 由于可逆循环是任意的，我们发现$\int_A^B\left({\delta Q}/{T}\right)_{\rm R}$的值只于始末状态有关，与具体途径无关，是个状态函数，我们叫它熵： $$ \Delta S=\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R} $$</description>
     </item>
