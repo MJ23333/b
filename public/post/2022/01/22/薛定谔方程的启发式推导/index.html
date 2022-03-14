@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> 薛定谔方程的启发式推导 | Edward Kerman&#39;s blog</title>
+    
+    <link rel="icon" type="image/png" href="/icons/Hi-Res.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
+<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+<link href="http://fonts.cdnfonts.com/css/operator-mono" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="薛定谔方程的启发式推导"/>
+<meta name="twitter:description" content="快速的启发式推导，仅用于帮助理解就行了。1
+de Broglie 关系和 Einstein 关系 $$ \begin{gather*} E=\color{blue}{{\frac12}mv^2&#43;V}=\color{blue}{{\frac{p^2}{2m}}&#43;V}=\color{red}{h\nu} \newline p=\color{blue}{mv}=\color{red}{\frac h\lambda} \end{gather*}$$
+蓝色是粒子性的表现，而红色是波动性的表现！2
+注意 Einstein 关系里的$E$是所有能量（不一定只有动能）。
+含时薛定谔方程 假设波函数是一个最简单的简谐波： $$ \Psi(x,t)=Ae^{i(kx-\omega t)} $$ 其中$\omega$是角频率，$k$为波数（都多乘了$2\pi$），请查看以获得更多介绍
+结合 Einstein 关系： $$ \omega=2\pi \nu=\frac E\hbar\newline $$ 我们可以推一波： $$ \begin{gather*} \frac{\partial}{\partial t} \Psi=-i\omega\Psi \ \hbar\frac{\partial}{\partial t} \Psi=-i\color{green}{E}\Psi \ i\hbar\frac{\partial}{\partial t} \Psi=\color{green}{E}\Psi \end{gather*} $$ 又知道$E=T&#43;V=p^2/2m&#43;V(x)$（假设势能与时间无关），结合关系： $$ \color{green}{E}=\color{green}{{\frac{\hbar^2k^2}{2m}}&#43;V(x)} $$ 得到： $$ i\hbar\frac{\partial}{\partial t} \Psi=\left(\color{green}{{\frac{\hbar^2\color{red}{k^2}}{2m}}&#43;V(x)}\right)\Psi $$ 做一波偏微分： $$ \frac\partial{\partial x}\Psi=ik\Psi,\qquad \frac{\partial^2}{\partial x^2}\Psi=-k^2\Psi $$ 推得： $$ \color{red}{k^2}=\color{red}{-{\frac{{\partial^2}/{\partial x^2}\Psi}\Psi}} $$ 带入上式： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{\color{red}{-}\frac{\hbar^2}{2m}\color{red}{{\frac{\partial^2}{\partial x^2}}}&#43;V(x)\right\}\Psi $$ 拓展到三次元： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{-\frac{\hbar^2}{2m}{\color{blue}\nabla}^2&#43;V(\mathbf {\color{blue}r})\right\}\Psi $$ 定义哈密顿算子$\hat H$： $$ {\color{orange}{\hat H}}=-\frac{\hbar^2}{2m}\nabla^2&#43;V(\mathbf r) $$ 所以简写为： $$ {\color{orange}{\hat H}}\Psi=i\hbar\frac{\partial}{\partial t}\Psi $$"/>
+
+
+  </head>
+  <body>
+
+    <nav class="menu">
+    <ul>
+      <li class="left">
+        <a href="/"><span>Edward Kerman&#39;s blog</span></a>
+      </li>
+      
+      <li>
+        <a href="/">Home</a>
+      </li>
+      
+      <li>
+        <a href="/about/">About</a>
+      </li>
+      
+      <li>
+        <a href="/sitemap/">Sitemap</a>
+      </li>
+      
+      <li id="menu-search">
+        <a href="/#">Search</a>
+      </li>
+      
+      <li>
+        <a href="/index.xml">Subscribe</a>
+      </li>
+      
+    </ul>
+    </nav>
+		
+
+
+<div class="container single">
+<main>
+
+<div class="article-meta">
+<h1><span class="title">薛定谔方程的启发式推导</span></h1>
+
+<h3 class="author">
+Edward Kerman
+</h3>
+
+<h3 class="date">2022-01-22</h3>
+<p class="terms">
+  
+  
+  Categories: <a href="/categories/academic">Academic</a> <a href="/categories/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6">量子化学</a> 
+  
+  
+  
+  Tags: <a href="/tags/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6">量子化学</a> <a href="/tags/%E5%85%A5%E9%97%A8">入门</a> 
+  
+  
+</p>
+</div>
+
+<div class="article">
+<p>快速的启发式推导，仅用于帮助理解<del>就行了</del>。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<h2 id="de-broglie-关系和-einstein-关系">de Broglie 关系和 Einstein 关系</h2>
+<p>$$ \begin{gather*} E=\color{blue}{{\frac12}mv^2+V}=\color{blue}{{\frac{p^2}{2m}}+V}=\color{red}{h\nu} \newline
+p=\color{blue}{mv}=\color{red}{\frac h\lambda} \end{gather*}$$</p>
+<p>蓝色是粒子性的表现，而红色是波动性的表现！<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>注意 Einstein 关系里的$E$是所有能量（不一定只有动能）。</p>
+<h2 id="含时薛定谔方程">含时薛定谔方程</h2>
+<p>假设波函数是一个最简单的简谐波：
+$$
+\Psi(x,t)=Ae^{i(kx-\omega t)}
+$$
+其中$\omega$是角频率，$k$为波数（都多乘了$2\pi$），<a href="https://www.animations.physics.unsw.edu.au/jw/travelling_sine_wave.htm">请查看</a>以获得更多介绍</p>
+<p>结合 Einstein 关系：
+$$
+\omega=2\pi \nu=\frac E\hbar\newline
+$$
+我们可以推一波：
+$$
+\begin{gather*}
+\frac{\partial}{\partial t} \Psi=-i\omega\Psi \ \hbar\frac{\partial}{\partial t} \Psi=-i\color{green}{E}\Psi \ i\hbar\frac{\partial}{\partial t} \Psi=\color{green}{E}\Psi
+\end{gather*}
+$$
+又知道$E=T+V=p^2/2m+V(x)$（假设势能与时间无关），结合关系：
+$$
+\color{green}{E}=\color{green}{{\frac{\hbar^2k^2}{2m}}+V(x)}
+$$
+得到：
+$$
+i\hbar\frac{\partial}{\partial t} \Psi=\left(\color{green}{{\frac{\hbar^2\color{red}{k^2}}{2m}}+V(x)}\right)\Psi
+$$
+做一波偏微分：
+$$
+\frac\partial{\partial x}\Psi=ik\Psi,\qquad \frac{\partial^2}{\partial x^2}\Psi=-k^2\Psi
+$$
+推得：
+$$
+\color{red}{k^2}=\color{red}{-{\frac{{\partial^2}/{\partial x^2}\Psi}\Psi}}
+$$
+带入上式：
+$$
+i\hbar\frac{\partial}{\partial t}\Psi=\left\{\color{red}{-}\frac{\hbar^2}{2m}\color{red}{{\frac{\partial^2}{\partial x^2}}}+V(x)\right\}\Psi
+$$
+拓展到三次元：
+$$
+i\hbar\frac{\partial}{\partial t}\Psi=\left\{-\frac{\hbar^2}{2m}{\color{blue}\nabla}^2+V(\mathbf {\color{blue}r})\right\}\Psi
+$$
+定义哈密顿算子$\hat H$：
+$$
+{\color{orange}{\hat H}}=-\frac{\hbar^2}{2m}\nabla^2+V(\mathbf r)
+$$
+所以简写为：
+$$
+{\color{orange}{\hat H}}\Psi=i\hbar\frac{\partial}{\partial t}\Psi
+$$</p>
+<h2 id="不含时薛定谔方程">不含时薛定谔方程</h2>
+<p>继续在<strong>一维</strong>的语境，分离变量：
+$$
+\color{green}{\Psi(x,t)}=T(t)\psi(x)
+$$
+带入含时薛定谔方程，移项，由于左边不依赖于$x$，右边不依赖于$t$，那么他们共同的值既不依赖于$x$也不依赖于$t$，设为一个常数$G$。
+$$
+\begin{gather*}
+i\hbar\frac{\partial}{\partial t}\color{green}{\Psi}=\left\{{-}\frac{\hbar^2}{2m}{\frac{\partial^2}{\partial x^2}}+V(x)\right\}\color{green}{\Psi}\newline
+\color{red}{i\hbar{\left\{\frac{\mathrm d}{\mathrm d t}T(t)\right\}}}{\color{blue}\psi(x)}={\color{blue}{\left\{-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)\right\}}\color{red}{T(t)}\psi(x)}\newline
+\color{red}{{\frac 1{T(t)}}i\hbar{\left\{\frac{\mathrm d}{\mathrm d t}T(t)\right\}}}={\color{blue}{\frac1{\psi(x)}}{\left\{-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x)\right\}}\psi(x)}=\color{green}{G(\mathrm{constant})}
+\end{gather*}
+$$
+只看左边，重写为：
+$$
+\frac{\mathrm d}{\mathrm dt}T(t)=-\frac{iG}{\hbar}T(t)
+$$
+猜一个解：
+$$
+T(t)=e^{\alpha t}
+$$
+求导：
+$$
+\frac{\mathrm d}{\mathrm dt}T(t)=\alpha T(t)
+$$
+带入上面的方程：
+$$
+\alpha T(t)=-\frac{iG}{\hbar}T(t)
+$$
+不难看出$\alpha=-iG/\hbar$，带入$T(t)$表达式：
+$$
+T(t)=e^{-i(Gt/\hbar)}=e^{-i2\pi(Gt/{h})}
+$$
+这是一个简谐波，不难看出频率$v=G/h$，而由 Einstein 关系注意到$v=E/h$，由于整个波函数与$t$有关的全在$T(t)$中，故波函数的频率与$T(t)$相同，很容易得到：
+$$\color{green}{G}=\color{green}{E}$$
+可以得到：
+$$
+T(t)=e^{-i\color{green}{E}t/\hbar}
+$$
+$$$$
+带入刚才等式的右半边（蓝色部分）并消去$t$：（拓展到三次元）
+$$
+\begin{align*}
+\left\{{\color{orange}-\frac{\hbar^2}{2m}\nabla^2+V(\mathbf r)}\right\}\psi(\mathbf r)=E\psi(\mathbf r)
+\end{align*}
+$$
+简写：
+$$
+{\color{orange}{\hat H}}\psi=E\psi
+$$</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyq851ovu8j30hf0qzwgc.jpg" alt="img">&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyq8ems0nlj307d07oglw.jpg" alt="Einstein"> <img src="https://tva1.sinaimg.cn/large/008i3skNly1gyq8g0aewxj30920doglz.jpg" alt="德布罗意">&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+</div>
+</main>
+
+<section class="appendix">
+
+
+<div>
+  <div class="side side-left"><h3>Author&#39;s bio</h3></div>
+  <div>
+
+
+
+
+
+<div>Edward Kerman——化竞菜鸡，舟厨，ksp爱好者，花样滑冰云观众。</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Reuse</h3></div>
+  Text and figures are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution CC BY 4.0</a>.
+</div>
+
+
+
+<div>
+  <div class="side side-left"><h3>Suggest changes</h3></div>
+  
+  
+  
+    
+    
+  
+  If you find any mistakes (including typos) or want to suggest changes, please feel free to <a href="https://github.com/MJ23333/b/edit/master/content/post/jghx/%e8%96%9b%e5%ae%9a%e8%b0%94%e6%96%b9%e7%a8%8b%e5%85%a5%e9%97%a8.md" id="edit-link">edit the source file of this page on Github and create a pull request.</a>
+</div>
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Citation</h3></div>
+  <p>For attribution, please cite this work as</p>
+  <pre><code class="no-highlight">Edward Kerman (2022). 薛定谔方程的启发式推导. Edward Kerman&#39;s blog. /post/2022/01/22/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E6%8E%A8%E5%AF%BC/</code></pre>
+  <p>BibTeX citation</p>
+  <pre><code class="no-highlight">@misc{
+  title = "薛定谔方程的启发式推导",
+  author = "Edward Kerman",
+  year = "2022",
+  journal = "Edward Kerman&#39;s blog",
+  note = "/post/2022/01/22/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E6%8E%A8%E5%AF%BC/"
+}</code></pre>
+</div>
+
+</section>
+
+
+
+<nav class="post-nav">
+  <span class="nav-next">&larr; <a href="/post/2021/11/23/%E5%85%B3%E4%BA%8E%E7%A7%91%E5%AD%A6%E4%BC%A6%E7%90%86%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/" title=Next&#32;post&#32;(older)>关于科学伦理的一些思考🤔</a></span>
+  &hercon;
+  <span class="nav-prev"><a href="/post/2022/01/23/%E6%B3%A2%E5%87%BD%E6%95%B0%E5%8F%8A%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" title=Previous&#32;post&#32;(newer)>波函数及数学基础</a> &rarr;</span>
+</nav>
+
+
+
+
+
+</div>
+
+
+  <footer>
+  <script async src="//yihui.org/js/center-img.js"></script>
+
+			<script type="text/x-mathjax-config">
+				MathJax.Hub.Config({
+					extensions: ["tex2jax.js"],
+					jax: ["input/TeX", "output/HTML-CSS"],
+					TeX: {
+						extensions: ["mhchem.js"],
+						Macros: {
+								d: "{\\mathrm d}",
+								B: "{\\mathrm B}",
+								A: "{\\mathrm A}",
+								m: "{\\mathrm m}",
+								align: ["{\\begin{align*} #1 \\end{align*}}",1],
+								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
+								l: ["{\\left( #1\\right)}",1],
+								red: ["{\\color{red}{ #1}}",1],
+								green: ["{\\color{green}{ #1}}",1],
+								blue: ["{\\color{blue}{ #1}}",1]
+						}
+					},
+					tex2jax: {
+						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+						processEscapes: true
+					},
+					CommonHTML: { linebreaks: { automatic: true } },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+         	SVG: { linebreaks: { automatic: true } }
+				});
+			</script>
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+
+
+
+
+
+  <div class="footer">
+  
+  <ul class="copyright">
+    <li>© Edward Kerman 2020-2022</li>
+  </ul>
+  
+  <ul>
+    
+    <li class="optional">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    <li class="optional">
+      <a href="/tags/">Tags</a>
+    </li>
+    
+    <li id="menu-edit">
+      <a href="#">Suggest an edit</a>
+    </li>
+    
+    <li>
+      <a href="#">Back to top</a>
+    </li>
+    
+  </ul>
+  </div>
+  
+  </footer>
+  <script async src="/js/features.js" data-page-features="[null,[&#34;&#43;sidenotes&#34;],null]"></script>
+  </body>
+</html>
+

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>结构化学 on Edward Kerman&#39;s blog</title>
+    <link>/categories/%E7%BB%93%E6%9E%84%E5%8C%96%E5%AD%A6/</link>
+    <description>Recent content in 结构化学 on Edward Kerman&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 25 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/%E7%BB%93%E6%9E%84%E5%8C%96%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>马德隆常数计算方法扫雷</title>
+      <link>/post/2022/01/25/%E9%A9%AC%E5%BE%B7%E9%9A%86%E5%B8%B8%E6%95%B0%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E6%89%AB%E9%9B%B7/</link>
+      <pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/01/25/%E9%A9%AC%E5%BE%B7%E9%9A%86%E5%B8%B8%E6%95%B0%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E6%89%AB%E9%9B%B7/</guid>
+      <description>对马德隆常数常见算法中的数列的论证：1
+任务：证明数列 $$ \sum^\infty_{n=1}\frac{(-1)^nC_3(n)}{\sqrt{n}} $$ 发散。
+首先定义数列的大O记号，对于实数数列$\{a_n\}^\infty_{n=1}$和实数$\beta$，当数列$\{n^{-\beta} a_n\}$有界时，我们记$a_n=O(n^\beta)$（参考信息学复杂度的大O记号）
+我们将半径$r$的球体内所有晶格点数记为$L_r$，对于$\sqrt{n}\le L_r&amp;lt;\sqrt{n+1}$，必然有： $$ L_r=\sum^r_{k=1}C_3(k) $$ 很容易证明： $$ L_r-\frac43\pi r^3=O(r^2) $$ 这就说明： $$ \lim_{r\to\infty}\frac{L_r}{r^3}=\frac43\pi $$ 我们假设最初的数列收敛，那这就等价于说当$n\to0$时，$\epsilon_n=C_3(n)/\sqrt n \to 0$，对于一个自然数$N$，让$M_N=\max\{\epsilon_n:n\ge N\}$，那么当$N\to 0$，$M_N\to 0$。让$N$暂时固定，考虑对于$n&amp;gt;N$： $$ \begin{align*}\frac{L_{\sqrt{n}}}{(\sqrt{n}^3)}&amp;amp;=n^{-3/2}\left[\sum^n_{k=1}\epsilon_k\sqrt k\right] \newline &amp;amp;\le n^{-3/2}\left[\sum^N_{k=1}\epsilon_k\sqrt k\right]+M_Nn^{-3/2}\left[\sum^n_{k=N+1}\sqrt k\right]\end{align*} $$ 注意（简单的放缩）： $$ \begin{align*}\sum^n_{k=N+1}\sqrt k&amp;amp;\le\int^{n+1}_{N+1}t^{1/2}\mathrm dt\newline &amp;amp;=\frac23M_N[(n+1)^{3/2}-(N+1)^{3/2}]\end{align*} $$ 代到上面去： $$ \begin{align*}\frac{L_{\sqrt{n}}}{(\sqrt n^3)}\le n^{-3/2}\left[\sum^N_{k=1}\epsilon_k\sqrt k\right]+\frac23M_N\left[\left(\frac{n+1}n\right)^{2/3}-\left(\frac{N+1}n\right)^{2/3}\right]\end{align*} $$ 让$n\to\infty$，发现对于任何的$N$，有$\limsup_{n\to\infty}L_{\sqrt{n}}/\sqrt{n}^3\le\frac23M_N$，既然$N\to\infty$时$M_N\to\infty$，我们有： $$ \lim_{n\to\infty}\frac{L_{\sqrt n}}{(\sqrt n)^3}=0 $$ 与我们一开始得到的结论矛盾。
+所以，数列 $$ \sum^\infty_{n=1}\frac{(-1)^nC_3(n)}{\sqrt{n}} $$ 发散。Q.E.D.
+  &amp;#160;&amp;#x21a9;&amp;#xfe0e;
+   </description>
+    </item>
+    
+    <item>
+      <title>晶体基础</title>
+      <link>/post/2022/01/24/%E6%99%B6%E4%BD%93%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Mon, 24 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/01/24/%E6%99%B6%E4%BD%93%E5%9F%BA%E7%A1%80/</guid>
+      <description>晶体对称性 仅介绍一些需特别注意的内容：
+旋转轴（记号：数字）——一定要符合晶格的特点：仅2，3，4，6
+与之形成对比的（平行的原子连线不等长），所以5、7、8及以上旋转轴不会出现在晶体中
+镜面（记号：m）对称中心（记号$\overline 1$）1，注意：垂直于n次轴的镜面用$n/m$表示（默认为平行）
+旋转-反演（记号$\overline n$）：下图中$\overline 6\equiv3\perp m$指三个垂直于$m$的对称面
+旋转-反映（记号$S_n$）：$S_1\equiv m; S_2 \equiv\overline 1; S_3\equiv\overline6; {\color{red}S_4\equiv\overline4}; S_6\equiv\overline3$
+可以发现$S_n$和$\overline n$（瑕旋转）是对应着的，晶体中一般选择$\overline n$
+布拉维晶系 指导思想——特定的对称性会对晶胞的形状作出限制2
+二维情况 一般（简单）格子：
+这样，我们就生成了一个最普遍的平面格子（$|\mathbf a|\neq |\mathbf b|;\gamma\neq 90^\circ$），它是平行四边形。我们可以发现无论如何改变$\mathbf a,\mathbf b$都不会失去二重轴。
+特殊格子：（以下对称元素都是分摊后的）
+1.如果我们控制点3的位置，让1,2,3构成一个直角三角形，最终会得到一个矩形$|\mathbf a|\neq |\mathbf b|;{\color{red}\gamma=90^\circ}$（新对称性：两个镜面）
+2.如果我们控制点3的位置，让1,2,3构成一个等腰三角形，得到一个菱形，我们写出周围的几个点，可以画出一个二倍大小的带心矩形$|\mathbf a|\neq |\mathbf b|;{\color{red}\gamma=90^\circ}$（新对称性：两个镜面 + 4个C2轴）
+3.如果我们控制点3的位置，让1,2,3构成一个等腰直角三角形，得到一个正方形${\color{red}|\mathbf a|=|\mathbf b|};{\color{red}\gamma=90^\circ}$（新对称性：四个镜面 + 2个C4（在原来中心和顶点的C2上））
+4.如果我们控制点3的位置，让1,2,3构成一个等边三角形，得到一个120°的菱形${\color{red}|\mathbf a|=|\mathbf b|};{\color{red}\gamma=120^\circ}$（新对称性：1个C6轴（原顶点C2）+2个C3）
+三维情况 基础情况——六种P格子：三斜、单斜、正交、四方、立方、六方。分别分析：
+前置知识：
+1.判断对称性的有用规则：以下两种情况中的对称元素知二推一
+ 偶数次旋转轴；垂直与旋转轴的镜面；对称中心（旋转轴与镜面交点）。例：$\rm 2/m\rightarrow\overline 1$；$\color{red}\rm\overline 1+m\rightarrow2\perp m$； 两个互相垂直的镜面；二重轴（相交直线上）。例：$\rm m\perp m\rightarrow 2$  2.每个晶格都是中心对称的（晶格点上或晶格点连线中点）
+所有的三维格子都可以看做二维格子向上挤出得到——开始讨论：
+以斜平面格子为基础：（平面格子仅包$2$和$\overline 1$）</description>
+    </item>
+    
+    <item>
+      <title>副族之间的键</title>
+      <link>/post/2022/01/23/%E5%89%AF%E6%97%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E9%94%AE/</link>
+      <pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/01/23/%E5%89%AF%E6%97%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E9%94%AE/</guid>
+      <description>引入 在研究主族元素化学时，等电子原理是非常好用的手段（如BN-C）等等，但等电子原理在处理副族时遇到了困难——副族金属倾向于18电子而非8电子。怎么办呢？一个巧妙的办法是作差——看还缺几个电子来达到满壳层。
+已经满壳层（稀有气体或满足18电子）的物种十分稳定，不需多说。
+缺一个电子满壳层（卤素和17电子物种）有不少相似之处：尤其是Co(CO)4。
+缺两个电子：例：S和Fe(CO)4
+当然，作差的类比也会遇到硬茬——不符合八隅律的超价化合物（IF7、XeF4还没找到金属有机类似物）；对金属而言，当配体不如CO时，18电子规则可能就没有那么好用了，相似性也会大大减小。
+等瓣相似 当两个分子片段等瓣相似时，它们前沿轨道的数量、对称性、能量、形状以及其中的电子数是相似的。1
+我们可以就用杂化轨道理论推导（中间的电子相当于非键）2：
+不要把等瓣相似和开头的作差法混为一谈，虽然二者不少时候都能得到相同结果（尝试：Cr(CO)5、Fe(CO)5）。简化思考的方法——考虑电子数（作差）、可成键轨道数3（一般六个d2sp3）。
+我们可以在两端增减电子4：
+同样，可以将等瓣相似拓展到四边形配位，但相应的d电子数要加2（一个成键轨道不参与杂化，变为非键）
+更多——三角双锥、四面体……）
+特别注意：（下面的非键轨道只写d轨道）我们把一个个片段全部等效成CH3（也就是H）、CH2、CH、C，也可以再用等电子原理推广成P、S等其他原子找熟面孔，接下来的推断我相信没有人不会。
+但等瓣相似也不是绝对的，尤其是针对第一过渡系原子的多聚物，常有意想不到的桥破坏对称性（其实成不成桥对18电子规则等没有影响）
+例：P5-——Cp-
+例：Ph3PAu——CH3——H（自己画画轨道）
+Co(CO)4(AuPPh3)等不用多说，甚至有Ti(CO)6(AuPEt3)-（Ti七配位）
+金属-金属键 同样可以认为是等瓣相似的结果（可惜没有δ键，某人朝思暮想的碳碳四键并不存在）
+画出MO图，发现——Re2Cl8n-中Re-Re五重键可能不？No，那是因为四个配体与一个形成δ键的轨道作用从而使其能量发生改变5（这也是为啥大多数“5重键”物种配位数极低）正因如此，四重键才是强制重叠的（配体方向的轨道因为与配体作用而不能再成δ键）。
+四重键与三重键（特别是去除δ*的电子）键长没啥区别——1.键级上升，有缩短趋势；2.库伦排斥上升，有变长趋势；3.有效核电荷上升，d轨道收缩，π键（δ太弱不考虑）成键变弱。
+五重键——低配位数（对d轨道能量影响较少不妨碍成δ键）；大（动力学保护）
+  Hoffmann教授：&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+ 看清楚符号&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+ 一般η5-C5H5-和η6-C6H6占三个杂化轨道&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+ &amp;#160;&amp;#x21a9;&amp;#xfe0e;
+ &amp;#160;&amp;#x21a9;&amp;#xfe0e;
+   </description>
+    </item>
+    
+    <item>
+      <title>无机结构化学</title>
+      <link>/post/2022/01/23/%E6%97%A0%E6%9C%BA%E7%BB%93%E6%9E%84%E5%8C%96%E5%AD%A6/</link>
+      <pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/01/23/%E6%97%A0%E6%9C%BA%E7%BB%93%E6%9E%84%E5%8C%96%E5%AD%A6/</guid>
+      <description>影响配位数的因素  半径比（永远小 : 大） 共价键成分（ZnS等，一般比半径比预测的低） 电荷（BiF3=CaF2 + NaCl） 外因：温度（T升高CN下降（热振动加剧）例：高温CsCl岩盐）、压力（p升高，堆积效应升高且热运动下降，CN升高（高压RbCl变CsCl））  小贴士：各物质配位数之和（配位数×原子数）相等，你可以使用十字交叉
+低价金属氧化物（可用配位理论讨论，O为弱场配体） M2O ：反萤石
+MO：岩盐
+ThO2（熔点很高，高电荷，LE高）：萤石
+M2O3：B（三角形）→ Al → Sc（缺陷萤石Sc~4~O~6~□~2~）→Y → La （CN依次升高）
+O：ABABAB；Al：C1C2C3C1C2C3（每种只填2/3八面体空隙）
+总：AC1BC2AC3BC1AC2BC3
+Fe3+ 在弱场配体下CFSE≈0，也没有成对能，与球形场效果类似，与Al类似
+硫化物：（硫离子变形性好，共价性强） M2S（M=碱金属）、MS：同氧化物
+闪锌矿：低温（交叉型）→纤维锌矿：高温（重叠型）：椅式——船式之争
+注意：纤维锌矿的重叠是正-负重叠，不是很差
+金属氮化物 Li3N，唯一稳定碱金属氮化物（Na3N虽有但结构不一样）
+Mg3N2、Ca3N2：Sc2O3型
+AlN、GaN：纤维锌矿型
+相关氨基化物同氧化物（Li2NH、CaNH、KNH2等等）
+共价分子 （分子、共价晶体中）等电子原理大显身手（推断——广义；题中出现——狭义（看出题人的））
+广义：重原子数（不管H），价电子总数（仅能推断结构）
+FO~2~SO-OSO~2~F强氧化剂（吸电子稳定lp排斥），另一个离子：F3C-O-O-O-CF3
+比较小的单质分子溶于有机溶剂（聚合度太高则不溶了）：O3、P4、Se8、Se8（启示：相似相溶不只是极性）
+S16^2+^ 红 S8^2+^ 蓝 Se8^2+^ 绿 S42+ 黄 Se42+黄 Te42+ 红
+S4(NH)4 S4N4 As4S4 (NPCl2)n
+长的链状分子：避免lp排斥，高周期互相成键（Se~n~）
+层状分子：石墨、As、Sb、Bi、黑磷（高压稳定）——各向异性
+启示：共价键带来各向异性（方向性、饱和性）
+石墨层间可以填充各种各样的东西：阴离子、阳离子、气体分子……
+三维大分子：C、Si、Ge、灰锡（低温——锡疫产物）
+注意：熔化时不需要打断所有的键（如SiO2）
+簇状分子：自己看书，不要沉迷
+金属键 纯金属：能带理论！ 金属的堆积方式（hcp、ccp，谁是谁？）
+小心金属-金属存在共价性！（Zn）
+小心次级配位（第二远的离子的配位）：如K、Na bcc（8+6=14&amp;gt;12）</description>
+    </item>
+    
+  </channel>
+</rss>

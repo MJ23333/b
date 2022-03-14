@@ -61,6 +61,3 @@ markup:
   goldmark:
     renderer:
       unsafe: true
-module:
-  imports:
-  - path: hugo-mod-twemoji

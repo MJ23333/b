@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> 马德隆常数计算方法扫雷 | Edward Kerman&#39;s blog</title>
+    
+    <link rel="icon" type="image/png" href="/icons/Hi-Res.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
+<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+<link href="http://fonts.cdnfonts.com/css/operator-mono" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="马德隆常数计算方法扫雷"/>
+<meta name="twitter:description" content="对马德隆常数常见算法中的数列的论证：1
+任务：证明数列 $$ \sum^\infty_{n=1}\frac{(-1)^nC_3(n)}{\sqrt{n}} $$ 发散。
+首先定义数列的大O记号，对于实数数列$\{a_n\}^\infty_{n=1}$和实数$\beta$，当数列$\{n^{-\beta} a_n\}$有界时，我们记$a_n=O(n^\beta)$（参考信息学复杂度的大O记号）
+我们将半径$r$的球体内所有晶格点数记为$L_r$，对于$\sqrt{n}\le L_r&lt;\sqrt{n&#43;1}$，必然有： $$ L_r=\sum^r_{k=1}C_3(k) $$ 很容易证明： $$ L_r-\frac43\pi r^3=O(r^2) $$ 这就说明： $$ \lim_{r\to\infty}\frac{L_r}{r^3}=\frac43\pi $$ 我们假设最初的数列收敛，那这就等价于说当$n\to0$时，$\epsilon_n=C_3(n)/\sqrt n \to 0$，对于一个自然数$N$，让$M_N=\max\{\epsilon_n:n\ge N\}$，那么当$N\to 0$，$M_N\to 0$。让$N$暂时固定，考虑对于$n&gt;N$： $$ \begin{align*}\frac{L_{\sqrt{n}}}{(\sqrt{n}^3)}&amp;=n^{-3/2}\left[\sum^n_{k=1}\epsilon_k\sqrt k\right] \newline &amp;\le n^{-3/2}\left[\sum^N_{k=1}\epsilon_k\sqrt k\right]&#43;M_Nn^{-3/2}\left[\sum^n_{k=N&#43;1}\sqrt k\right]\end{align*} $$ 注意（简单的放缩）： $$ \begin{align*}\sum^n_{k=N&#43;1}\sqrt k&amp;\le\int^{n&#43;1}_{N&#43;1}t^{1/2}\mathrm dt\newline &amp;=\frac23M_N[(n&#43;1)^{3/2}-(N&#43;1)^{3/2}]\end{align*} $$ 代到上面去： $$ \begin{align*}\frac{L_{\sqrt{n}}}{(\sqrt n^3)}\le n^{-3/2}\left[\sum^N_{k=1}\epsilon_k\sqrt k\right]&#43;\frac23M_N\left[\left(\frac{n&#43;1}n\right)^{2/3}-\left(\frac{N&#43;1}n\right)^{2/3}\right]\end{align*} $$ 让$n\to\infty$，发现对于任何的$N$，有$\limsup_{n\to\infty}L_{\sqrt{n}}/\sqrt{n}^3\le\frac23M_N$，既然$N\to\infty$时$M_N\to\infty$，我们有： $$ \lim_{n\to\infty}\frac{L_{\sqrt n}}{(\sqrt n)^3}=0 $$ 与我们一开始得到的结论矛盾。
+所以，数列 $$ \sum^\infty_{n=1}\frac{(-1)^nC_3(n)}{\sqrt{n}} $$ 发散。Q.E.D.
+  &#160;&#x21a9;&#xfe0e;
+   "/>
+
+
+  </head>
+  <body>
+
+    <nav class="menu">
+    <ul>
+      <li class="left">
+        <a href="/"><span>Edward Kerman&#39;s blog</span></a>
+      </li>
+      
+      <li>
+        <a href="/">Home</a>
+      </li>
+      
+      <li>
+        <a href="/about/">About</a>
+      </li>
+      
+      <li>
+        <a href="/sitemap/">Sitemap</a>
+      </li>
+      
+      <li id="menu-search">
+        <a href="/#">Search</a>
+      </li>
+      
+      <li>
+        <a href="/index.xml">Subscribe</a>
+      </li>
+      
+    </ul>
+    </nav>
+		
+
+
+<div class="container single">
+<main>
+
+<div class="article-meta">
+<h1><span class="title">马德隆常数计算方法扫雷</span></h1>
+
+<h3 class="author">
+Edward Kerman
+</h3>
+
+<h3 class="date">2022-01-25</h3>
+<p class="terms">
+  
+  
+  Categories: <a href="/categories/academic">Academic</a> <a href="/categories/%E6%97%A0%E6%9C%BA%E5%8C%96%E5%AD%A6">无机化学</a> <a href="/categories/%E7%BB%93%E6%9E%84%E5%8C%96%E5%AD%A6">结构化学</a> 
+  
+  
+  
+  Tags: <a href="/tags/%E6%99%B6%E4%BD%93">晶体</a> 
+  
+  
+</p>
+</div>
+
+<div class="article">
+<p>对马德隆常数常见算法中的数列的论证：<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p><strong>任务</strong>：证明数列
+$$
+\sum^\infty_{n=1}\frac{(-1)^nC_3(n)}{\sqrt{n}}
+$$
+发散。</p>
+<p>首先定义数列的大O记号，对于实数数列$\{a_n\}^\infty_{n=1}$和实数$\beta$，当数列$\{n^{-\beta} a_n\}$有界时，我们记$a_n=O(n^\beta)$（参考信息学复杂度的大O记号）</p>
+<p>我们将半径$r$的球体内所有晶格点数记为$L_r$，对于$\sqrt{n}\le L_r&lt;\sqrt{n+1}$，必然有：
+$$
+L_r=\sum^r_{k=1}C_3(k)
+$$
+很容易证明：
+$$
+L_r-\frac43\pi r^3=O(r^2)
+$$
+这就说明：
+$$
+\lim_{r\to\infty}\frac{L_r}{r^3}=\frac43\pi
+$$
+我们假设最初的数列收敛，那这就等价于说当$n\to0$时，$\epsilon_n=C_3(n)/\sqrt n \to 0$，对于一个自然数$N$，让$M_N=\max\{\epsilon_n:n\ge N\}$，那么当$N\to 0$，$M_N\to 0$。让$N$暂时固定，考虑对于$n&gt;N$：
+$$
+\begin{align*}\frac{L_{\sqrt{n}}}{(\sqrt{n}^3)}&amp;=n^{-3/2}\left[\sum^n_{k=1}\epsilon_k\sqrt k\right] \newline &amp;\le n^{-3/2}\left[\sum^N_{k=1}\epsilon_k\sqrt k\right]+M_Nn^{-3/2}\left[\sum^n_{k=N+1}\sqrt k\right]\end{align*}
+$$
+注意（简单的放缩）：
+$$
+\begin{align*}\sum^n_{k=N+1}\sqrt k&amp;\le\int^{n+1}_{N+1}t^{1/2}\mathrm dt\newline &amp;=\frac23M_N[(n+1)^{3/2}-(N+1)^{3/2}]\end{align*}
+$$
+代到上面去：
+$$
+\begin{align*}\frac{L_{\sqrt{n}}}{(\sqrt n^3)}\le n^{-3/2}\left[\sum^N_{k=1}\epsilon_k\sqrt k\right]+\frac23M_N\left[\left(\frac{n+1}n\right)^{2/3}-\left(\frac{N+1}n\right)^{2/3}\right]\end{align*}
+$$
+让$n\to\infty$，发现对于任何的$N$，有$\limsup_{n\to\infty}L_{\sqrt{n}}/\sqrt{n}^3\le\frac23M_N$，既然$N\to\infty$时$M_N\to\infty$，我们有：
+$$
+\lim_{n\to\infty}\frac{L_{\sqrt n}}{(\sqrt n)^3}=0
+$$
+与我们一开始得到的结论矛盾。</p>
+<p>所以，数列
+$$
+\sum^\infty_{n=1}\frac{(-1)^nC_3(n)}{\sqrt{n}}
+$$
+发散。Q.E.D.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyq6dwx6q2j30i00pq40g.jpg" alt="image-20220125200935980">&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+</div>
+</main>
+
+<section class="appendix">
+
+
+<div>
+  <div class="side side-left"><h3>Author&#39;s bio</h3></div>
+  <div>
+
+
+
+
+
+<div>Edward Kerman——化竞菜鸡，舟厨，ksp爱好者，花样滑冰云观众。</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Reuse</h3></div>
+  Text and figures are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution CC BY 4.0</a>.
+</div>
+
+
+
+<div>
+  <div class="side side-left"><h3>Suggest changes</h3></div>
+  
+  
+  
+    
+    
+  
+  If you find any mistakes (including typos) or want to suggest changes, please feel free to <a href="https://github.com/MJ23333/b/edit/master/content/post/jghx/%e9%a9%ac%e5%be%b7%e9%9a%86%e5%b8%b8%e6%95%b0%e7%9a%84%e6%80%9d%e8%80%83.md" id="edit-link">edit the source file of this page on Github and create a pull request.</a>
+</div>
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Citation</h3></div>
+  <p>For attribution, please cite this work as</p>
+  <pre><code class="no-highlight">Edward Kerman (2022). 马德隆常数计算方法扫雷. Edward Kerman&#39;s blog. /post/2022/01/25/%E9%A9%AC%E5%BE%B7%E9%9A%86%E5%B8%B8%E6%95%B0%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E6%89%AB%E9%9B%B7/</code></pre>
+  <p>BibTeX citation</p>
+  <pre><code class="no-highlight">@misc{
+  title = "马德隆常数计算方法扫雷",
+  author = "Edward Kerman",
+  year = "2022",
+  journal = "Edward Kerman&#39;s blog",
+  note = "/post/2022/01/25/%E9%A9%AC%E5%BE%B7%E9%9A%86%E5%B8%B8%E6%95%B0%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E6%89%AB%E9%9B%B7/"
+}</code></pre>
+</div>
+
+</section>
+
+
+
+<nav class="post-nav">
+  <span class="nav-next">&larr; <a href="/post/2022/01/24/%E6%99%B6%E4%BD%93%E5%9F%BA%E7%A1%80/" title=Next&#32;post&#32;(older)>晶体基础</a></span>
+  &hercon;
+  <span class="nav-prev"><a href="/post/2022/02/18/%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%AE%9A%E5%BE%8B/" title=Previous&#32;post&#32;(newer)>热力学第二定律</a> &rarr;</span>
+</nav>
+
+
+
+
+
+</div>
+
+
+  <footer>
+  <script async src="//yihui.org/js/center-img.js"></script>
+
+			<script type="text/x-mathjax-config">
+				MathJax.Hub.Config({
+					extensions: ["tex2jax.js"],
+					jax: ["input/TeX", "output/HTML-CSS"],
+					TeX: {
+						extensions: ["mhchem.js"],
+						Macros: {
+								d: "{\\mathrm d}",
+								B: "{\\mathrm B}",
+								A: "{\\mathrm A}",
+								m: "{\\mathrm m}",
+								align: ["{\\begin{align*} #1 \\end{align*}}",1],
+								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
+								l: ["{\\left( #1\\right)}",1],
+								red: ["{\\color{red}{ #1}}",1],
+								green: ["{\\color{green}{ #1}}",1],
+								blue: ["{\\color{blue}{ #1}}",1]
+						}
+					},
+					tex2jax: {
+						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+						processEscapes: true
+					},
+					CommonHTML: { linebreaks: { automatic: true } },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+         	SVG: { linebreaks: { automatic: true } }
+				});
+			</script>
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+
+
+
+
+
+  <div class="footer">
+  
+  <ul class="copyright">
+    <li>© Edward Kerman 2020-2022</li>
+  </ul>
+  
+  <ul>
+    
+    <li class="optional">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    <li class="optional">
+      <a href="/tags/">Tags</a>
+    </li>
+    
+    <li id="menu-edit">
+      <a href="#">Suggest an edit</a>
+    </li>
+    
+    <li>
+      <a href="#">Back to top</a>
+    </li>
+    
+  </ul>
+  </div>
+  
+  </footer>
+  <script async src="/js/features.js" data-page-features="[null,[&#34;&#43;sidenotes&#34;],null]"></script>
+  </body>
+</html>
+

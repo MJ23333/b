@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cards on Edward Kerman&#39;s blog</title>
+    <link>/card/</link>
+    <description>Recent content in Cards on Edward Kerman&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/card/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A</title>
+      <link>/card/anime/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/card/anime/</guid>
+      <description>最喜欢的动画公司——扳机社。</description>
+    </item>
+    
+    <item>
+      <title>C</title>
+      <link>/card/chem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/card/chem/</guid>
+      <description>最讨厌分析化学</description>
+    </item>
+    
+    <item>
+      <title>G</title>
+      <link>/card/games/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/card/games/</guid>
+      <description>最爱 Kerbal Space Program 和 Arknights。偶尔也玩玩 Battlefield、Halo被虐。</description>
+    </item>
+    
+  </channel>
+</rss>
