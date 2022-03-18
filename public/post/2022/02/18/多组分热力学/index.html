@@ -19,7 +19,7 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="多组分热力学"/>
-<meta name="twitter:description" content="( \def\d{{\mathrm d}} \def\B{{\mathrm B}} \def\A{{\mathrm A}} \def\m{{\mathrm m}} \def\align{{\begin{align*} #1 \end{align*}}} \def\f{{\frac{\partial #1}{\partial #2}}} \def\l{{\left( #1\right)}} \def\red{{\color{red}{ #1}}} \def\green{{\color{green}{ #1}}} \def\blue{{\color{blue}{ #1}}} ) **多组分系统**：两种或两种以上组分所形成的系统
+<meta name="twitter:description" content="( \def\d{{\mathrm d}} \def\B{{\mathrm B}} \def\A{{\mathrm A}} \def\m{{\mathrm m}} \def\align #1{{\begin{align*} #1 \end{align*}}} \def\f #1#2{{\frac{\partial #1}{\partial #2}}} \def\l #1{{\left( #1\right)}} \def\red #1{{\color{red}{ #1}}} \def\green #1{{\color{green}{ #1}}} \def\blue #1{{\color{blue}{ #1}}} ) **多组分系统**：两种或两种以上组分所形成的系统
 混合物：含有一种以上组分的系统
 溶液：含有一种以上组分的液相和固相（没有气相），分为溶质$\rm B$和溶剂$\rm A$。
 组成的表示 对于混合物 质量浓度（并不常用）：
@@ -29,9 +29,7 @@ $$ w_{\rm B}\doteq \frac{m({\rm B})}{m_{\rm tot}} $$
 物质的量浓度：
 $$ c_{\rm B}=[{\rm B}]\doteq \frac{n_{\rm B}}{V_{\rm tot}} $$
 摩尔分数：
-$$ x_{\rm B}\doteq \frac{n_{\rm B}}{n_{\rm tot}} $$
-对于溶液 质量摩尔浓度：
-$$ m_{\rm B}\doteq \frac{n_{\rm B}}{m_\color{red}{ \rm A}} $$"/>
+$$ x_{\rm B}\doteq \frac{n_{\rm B}}{n_{\rm tot}} $$"/>
 
 
   </head>
@@ -98,12 +96,12 @@ Edward Kerman
 \def\B{{\mathrm B}}
 \def\A{{\mathrm A}}
 \def\m{{\mathrm m}}
-\def\align{{\begin{align*} #1 \end{align*}}}
-\def\f{{\frac{\partial  #1}{\partial  #2}}}
-\def\l{{\left( #1\right)}}
-\def\red{{\color{red}{ #1}}}
-\def\green{{\color{green}{ #1}}}
-\def\blue{{\color{blue}{ #1}}}
+\def\align #1{{\begin{align*} #1 \end{align*}}}
+\def\f #1#2{{\frac{\partial  #1}{\partial  #2}}}
+\def\l #1{{\left( #1\right)}}
+\def\red #1{{\color{red}{ #1}}}
+\def\green #1{{\color{green}{ #1}}}
+\def\blue #1{{\color{blue}{ #1}}}
 )
 **多组分系统**：两种或两种以上组分所形成的系统</p>
 <p><strong>混合物</strong>：含有一种以上组分的系统</p>
@@ -203,11 +201,11 @@ $$</p>
 $$</p>
 <p>考虑在理想气体混合物中的一个组分$B$，我们用一个只能透过$B$的半透膜将容器隔开，平衡时另一侧的压力和化学势分别为$p_{\rm B}^*,\mu^*_{\rm B}$，那么：</p>
 <p>$$
-p_{\rm B}^*=p_{\rm B}\qquad\mu^*_{\rm B}=\mu_{\rm B}=\mu(T,p^\ominus)+RT\ln\frac{p}{p^\ominus}
+p_{\rm B}^*=p_{\rm B}\qquad\mu^*_{\rm B}=\mu_{\rm B}=\mu(T,\red{p^\ominus})+RT\ln\frac{p}{p^\ominus}
 $$</p>
 <p>设混合物总压为$p$，套用分压定律：</p>
 <p>$$
-\mu_{\rm B}=\mu^*(T,p)+RT\ln x_{\rm B}
+\mu_{\rm B}=\mu^*(T,\red{p})+RT\ln x_{\rm B}
 $$</p>
 <h2 id="稀溶液的经验定律">稀溶液的经验定律</h2>
 <p>它们都是<strong>稀溶液</strong>中的经验定律：</p>
@@ -232,6 +230,23 @@ p_\B=k_{m,\B}m_\B
 $$
 **特别注意**：与Raoult定律不同，Henry定律使用溶液中的浓度，考虑缔合、**电离**。</p>
 <p>升高温度、降低分压都可以让溶液变稀，更服从Henry定律</p>
+<h2 id="理想液体混合物">理想液体混合物</h2>
+<p><strong>宏观</strong>：液态混合物中任意组分在全部浓度范围内遵守Raoult定律</p>
+<p><strong>微观</strong>：一种组分的分子被另一种取代后没有能量或空间结构的变化：$\Delta_{\rm mix}H=0,\Delta_{\rm mix}V=0$</p>
+<p>根据理想气体的化学势和Raoult定律：</p>
+<p>$$
+\mu_\B(\mathrm l)=\mu^*_\B(\mathrm l)(T,\red p)+ RT\ln x_\B
+$$</p>
+<p>知道$\l{\f{\mu_\B}p}_{T,n_i}=V_\B$，积分：</p>
+<p>$$
+\mu^*<em>\B(\mathrm l)(T,\red p)=\mu^\ominus</em>\B(\mathrm l)+\int_{p^\ominus}^{p}V_\B(\mathrm l)\d p
+$$</p>
+<p>由于$p$和$p^\ominus$相差很小，所以：</p>
+<p>$$
+\mu^*<em>\B(\mathrm l)(T,\red p)=\mu^\ominus</em>\B(\mathrm l)+RT\lnx_\B
+$$</p>
+<p>此式可看做理想气体的理想液态混合物的<strong>热力学定义</strong>。</p>
+<h2 id="heading"></h2>
 
 </div>
 </main>
