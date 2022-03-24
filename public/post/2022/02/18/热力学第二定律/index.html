@@ -192,8 +192,8 @@ $$
 Q_{\rm R}=\int T\mathrm dS
 $$
 那么，对于一个可逆循环，我们可以画出$T-S$图，每条曲线下面的面积等于该过程的热效应$Q_{\rm R}$。循环围的面积是做的功$W$。</p>
-<p><strong>Tip</strong>：对于各种各样的图，逆着坐标轴方向覆盖的面积是正的，顺着坐标轴的方向覆盖的面积是负的。</p>
-<p><img src="https://www.tf.uni-kiel.de/matwis/amat/td_kin_i/kap_1/pictures/carnot_cycle_pv_ts.png" alt="Carnot cycle: p-V diagram and T-S diagram" style="zoom:33%;" /></p>
+<p><strong>Tip</strong>：对于各种各样的图，逆着坐标轴方向覆盖的面积是正的，顺着坐标轴的方向覆盖的面积是负的——就是<b>积分</b>。</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0kzq7ophxj217t0ol0vx.jpg" alt="Carnot cycle: p-V diagram and T-S diagram" style="zoom:33%;" /></p>
 <h2 id="熵变的计算">熵变的计算</h2>
 <p><strong>前提</strong>：必须<b>全程可逆</b>，以下讨论均是<strong>可逆的</strong>。</p>
 <p>理想气体等温可逆变化：
@@ -232,7 +232,7 @@ $$</p>
 <h2 id="自由能">自由能</h2>
 <p>我们认为环境是巨大的，温度不变，整个看做隔离系统，并认为始末温度都与环境相等（<strong>不变</strong>）：
 $$
-\begin{gather*}\mathrm dS-\frac{\delta W}{T}\ge0\\-\delta W\le-\mathrm d(U-TS)\end{gather*}
+\begin{gather*}\mathrm dS-\frac{\delta Q}{T_{\rm sur}}\ge0\\-\delta W\le-\mathrm d(U-TS)\end{gather*}
 $$
 定义亥姆霍兹自由能:
 $$
@@ -242,7 +242,7 @@ $$
 $$
 -\delta W\le-\mathrm dA
 $$
-即在等温过程（不要求温度始终不变）中，一个封闭系统所能做的最大功（体积+其他）等于其亥姆霍兹自由能的减少。</p>
+即在等温过程（不要求温度始终不变）中，一个封闭系统所能<b>对外</b>做的最大功（体积+其他）等于其亥姆霍兹自由能的减少。</p>
 <p>我们把功给拆成两份：
 $$
 \begin{gather*}p\mathrm dV-\delta W_f\le-\mathrm d(U-TS)\\-\delta W_f\le-\mathrm d(H-TS)\end{gather*}
@@ -255,17 +255,30 @@ $$
 $$
 -\delta W_f\le-\mathrm dG
 $$
-即在等温、等压过程中，一个封闭系统所能做的最大非膨胀功等于其吉布斯自由能的减少。</p>
+即在等温、等压过程中，一个封闭系统所能<b>对外做的</b>最大非膨胀功等于其吉布斯自由能的减少。</p>
 <h2 id="delta-g计算">$\Delta G$计算</h2>
-<p>可逆相变：
+<p><b>可逆相变</b>：
 $$
 \Delta G=0
 $$</p>
-<p>等温变化（对于理想气体）：
+<p><b>等温变化</b>（对于理想气体）：
 $$
 \begin{gather*}\color{red}{\mathrm dG=V\mathrm dp}-S\mathrm dT\newline\Delta G=nRT\ln\frac{p_2}{p_1}=-nRT\ln\frac{V_2}{V_1}\end{gather*}
 $$
 注意理想气体等温下吉布斯自由能变与亥姆霍兹自由能、可逆过程做功一样：$\Delta G=\Delta A=W$。</p>
+<p><b>溶剂化</b>：使用Born公式计算$\D_{\rm sol}G^\ominus$</p>
+<p>把离子想象成一个球形粒子，让它分别在两种介质（真空，溶液）中，知道静电场中储存的总能量为（为了简化，我们把电场强度看做正确值的模）：
+$$
+U=\frac12\varepsilon_0\varepsilon_r\int E^2\d V
+$$
+在<b>一个</b>半径为$r_0$离子（标准状况下表现为无限稀释）形成的静电场中：
+$$
+U=\frac12\varepsilon_0\varepsilon_r\int_r^{+\infty}\l{\frac{ze}{4\pi\varepsilon_0\varepsilon_rr^2}}4\pi r^2\d r=\frac{z^2e^2}{8\pi\varepsilon_0\varepsilon_rr_0^2}
+$$
+两者相减：
+$$
+\D_{\rm sol}G^\ominus=N_A\left[U(\varepsilon_r)-U(\varepsilon_r=1)\right]=\red-\frac{z^2e^2}{8\pi\varepsilon_0r_0^2}\l{1-\frac1{\varepsilon_r}}
+$$</p>
 <h2 id="几种判据">几种判据</h2>
 <p>$$
 \begin{gather*}\mathrm dS_{\text{绝热}}\ge 0\\(\mathrm dA)_{T,\color{red}{V},W_f=0}\le0\\(\mathrm dG)_{T,p,W_f=0}\le0\end{gather*}
@@ -288,7 +301,7 @@ $$
 $$
 \left(\frac{\partial M}{\partial y}\right)_x=\left(\frac{\partial N}{\partial x}\right)_y
 $$
-说白了——让$z$先后对$x,y$和$y,x$求导，结果一样，但我们把第一次求导的结果换成对应的状态函数（根据定义），完了。</p>
+$z$先后对$x,y$和$y,x$求导，结果一样，但我们根据定义把第一次求导的结果<b>换成</b>对应的状态函数。</p>
 <p>我们有四个关系式，那不就——</p>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1gzwso1ceq6j213o0lsmza.jpg" alt="image-20220303165411679" style="zoom:33%;" /></p>
 <p>在此就应用举一例：我们想知道$U-V$之间的关系，不难变形得到（同时除以$\mathrm dV$）：
@@ -300,22 +313,28 @@ $$
 \begin{gather*}\left(\frac{\partial U}{\partial V}\right)_T=T\left(\frac{\partial p}{\partial T}\right)_V-p=T\left(\frac{nR}{V}\right)-p=0\end{gather*}
 $$</p>
 <h2 id="吉亥方程">吉亥方程</h2>
-<p>由热力学基本公式，在<strong>等压</strong>下：
+<p>以前推导GH方程时会直接告诉你要求$G/T$的偏导没说为啥，非常反直觉。为了说明这种看似很奇怪的初始设定，我们不得不再次提到Legendre变换，假设我们有个函数：
 $$
-\left(\frac{\partial \Delta G}{\partial T}\right)_p=-\Delta S=\frac{\Delta G-\Delta H}{T}
+y=y(x_1,x_2)=p_1\d x_1+p_2\d x_2
 $$
-同时除以$T$，移项：
+对$x_1$做Legendre：
 $$
-\frac1T\left(\frac{\partial \Delta G}{\partial T}\right)_p-\frac{\Delta G}{T^2}=-\frac{\Delta H}{T^2}
+\align{\psi(p_1)=&amp;y-x_1p_1\\=&amp;y-x_1\lf y{x_1}\\=&amp;-x_1^{\red2}\left[\frac1{x_1}\lf y{x_1}-\frac1{x^2}y\right]}
 $$
-注意到$\mathrm d(fg)/\mathrm dx=f(\mathrm dg/\mathrm dx)+d(\mathrm df/\mathrm dx)$，倒着用：
+逆向的乘法求导：
 $$
-\left[\frac{\partial\left(\frac{\Delta G}{T}\right)}{\partial T}\right]=-\frac{\Delta H}{T^2}
-$$
-套用此法，得到：
-$$
-\left[\frac{\partial\left(\frac{\Delta A}{T}\right)}{\partial T}\right]=-\frac{\Delta U}{T^2}
+\align{\psi(p_1)=&amp;-x_1^2\left[\frac{\partial\l{\frac{y}{x}}}{\partial x}\right]}
 $$</p>
+<p>前面已经说过$H,A,G$都是$U$变换出来的，不难推广——这四个量是可以互相Legendre的，以$G,H$为例：
+$$
+H=G+TS=G-T\lf GT
+$$
+带入刚才的式子
+$$
+H=-T^2\left[\frac{\partial\lf{G}{T}}{\partial T}\right]\\<br>
+\frac{\partial\lf{G}{T}}{\partial T}=-\frac H{T^2}
+$$</p>
+<p>所以说我们现在常说GH只是大家庭中$2\times P_4^2=24$胞胎中的一个。</p>
 <h2 id="delta-g与p的关系">$\Delta G$与$p$的关系</h2>
 <p>由热力学基本公式：
 $$

@@ -64,6 +64,18 @@ v=\frac{n\hbar}{rm_e} $$
     </item>
     
     <item>
+      <title>圆柱坐标下的拉普拉斯算子</title>
+      <link>/post/2022/03/21/%E5%9C%86%E6%9F%B1%E5%9D%90%E6%A0%87%E4%B8%8B%E7%9A%84%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AE%97%E5%AD%90/</link>
+      <pubDate>Mon, 21 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/03/21/%E5%9C%86%E6%9F%B1%E5%9D%90%E6%A0%87%E4%B8%8B%E7%9A%84%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AE%97%E5%AD%90/</guid>
+      <description>拉普兰德在使用圆规前必须掌握的圆柱坐标下拉普拉斯算子的推导。
+圆柱坐标与笛卡尔坐标关系如下： $$ x=r\cos \phi\tag1\\
+y=r\sin \phi\\
+$$ 把上下平方相加，得到： $$ F(x,y,r)=x^2+y^2-r^2=0\tag2 $$ 接下来只介绍对于$x$的部分，$y$部分方法完全一致,根据隐函数求偏导方法（见《一些数学》）： $$ \f rx=-\frac{\partial F/\partial x}{\partial F/\partial r}=-\frac{2x}{-2r}=\frac xr=\cos\phi\tag3 $$ (1)式两边对$x$求偏导，并带入(3)式结果： $$ \align{1&amp;amp;=\f rx\cos\phi+\f{\cos\phi}xr\\&amp;amp;=\cos^2\phi-r\sin\phi\f \phi x\\\f \phi x&amp;amp;=-\frac{\sin\phi}r\tag4} $$ 显然，对于一个指定的点，$(x,y)$和$(r,\phi)$两种表示一一对应，必然有： $$\psi(r,\phi)=\psi(r(x,y),\phi(x,y))$$ 应用链式法则（《一些数学》），带入(3)、(4)得到： $$ \align{\f \psi x&amp;amp;=\f \psi r \f rx+\f \psi \phi \f \phi x\\&amp;amp;=\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r \tag5} $$ 我们接着再求一次偏导，同样有（把一阶偏导看做一个函数）： $$\f \psi x(r,\phi)=\f \psi x(r(x,y),\phi(x,y))$$ 又用链式法则： $$ \align{\f{^2\psi}{x^2}=\f {\lf \psi x}{x}&amp;amp;=\f {\lf \psi x} r \cos\phi-\f {\lf \psi x} \phi\frac{\sin\phi}r } $$ 把(5)带入其中，并使用乘法求导法则： $$ \align{\f{^2\psi}{x^2}=&amp;amp;\f {\left(\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r\right)} r \cos\phi-\f {\left(\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r\right)} \phi\frac{\sin\phi}r \\ =&amp;amp;\left(\f{^2\psi}{r^2}\cos\phi-\f{^2\psi}{\phi\partial r}\frac{\sin\phi}r+\f{\psi}{\phi}\frac{\sin\phi}{r^2}\right)\cos\phi\\&amp;amp;-\left(\f{^2\psi}{r\partial\phi}\cos\phi-\f\psi r\sin\phi-\f{^2\psi}{\phi^2}\frac{\sin \phi}{r}-\f{\psi}{\phi}\frac{\cos\phi}{r^2}\right)\frac{\sin\phi}r\\=&amp;amp;\f{^2\psi}{r^2}\cos^2\phi-\f{^2\psi}{r\partial\phi}\frac{2\sin\phi\cos\phi}{r}+\f{^2\psi}{\phi^2}\frac{\sin^2\phi}{r^2}+\f\psi r\frac{\sin^2\phi}{r}+\f\psi\phi\frac{2\sin\phi\cos\phi}{r^2}} $$ 同理，对$y$做相同的事情： $$ \f{^2\psi}{y^2}=\f{^2\psi}{r^2}\red{\sin^2}\phi\red{+}\f{^2\psi}{r\partial\phi}\frac{2\sin\phi\cos\phi}{r}+\f{^2\psi}{\phi^2}\frac{\red{\cos^2}\phi}{r^2}+\f\psi r\frac{\red{\cos^2}\phi}{r}\red-\f\psi\phi\frac{2\sin\phi\cos\phi}{r^2} $$ 合体！写成算符形式 $$ \f{^2}{x^2}+\f{^2}{y^2}=\f{^2}{r^2}+\frac1r\f{}{r}+\frac1{r^2}\f{^2}{\psi^2} $$ 去吃千层酥罢！</description>
+    </item>
+    
+    <item>
       <title>一些量子力学结论</title>
       <link>/post/2022/03/19/%E4%B8%80%E4%BA%9B%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%BB%93%E8%AE%BA/</link>
       <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
@@ -160,7 +172,8 @@ UI方面，只能说——yjNB，必须实装，太帅了。
 寻找主轴的方向：找最少的相同元素（最少的元素、基团），从他们的连线、面来找。
 $C_n$群 仅一个$C_n$，特点是风扇型且上下不等（注意不能有$\sigma_h$或$\sigma_v$，因此上下左右都要扭）。一般是多层，上下都有$C_3$，但略微扭曲。
 $C_{nv}$群 $C_n+\sigma_v$，也就是上下不等的风扇掰直了或正好交叉，通常加入一个$C_\infty$层变成锥形（同时让层**不同**）。
-$C_{nh}$群 $C_n+\sigma_h$，每层是压扁了的上下不等风扇（无$\sigma_v$），或风扇和它的对映体叠在一起，特点是层之间有重叠。存在$S_n$但即使是$S_{4n}$也不是独立对称元素。当$n$为偶数的时候还存在**独立对称元素**$i$。注意下图中R基的扭曲 $D_{n}$群 $C_n+C_2\perp C_n$。很多$D_n$看似$S_{2n}$，但无法对称上去——上下**相等**的风扇
+$C_{nh}$群 $C_n+\sigma_h$，每层是压扁了的上下不等风扇（无$\sigma_v$），或风扇和它的对映体叠在一起，特点是层之间有重叠。存在$S_n$但即使是$S_{4n}$也不是独立对称元素。当$n$为偶数的时候还存在**独立对称元素**$i$。注意下图中R基的扭曲
+$D_{n}$群 $C_n+C_2\perp C_n$。很多$D_n$看似$S_{2n}$，但无法对称上去——上下**相等**的风扇
 $D_{nh}$群 $C_n+C_2\perp C_n+\sigma_h$，同时又有$\sigma_\red{v}$（镜面和旋转轴组合出另一个镜面），**重叠**的上下**相等**风扇。
 $D_{nd}$群 $C_n+C_2\perp C_n+n\sigma_d$，完美交错的上下相等风扇。同时包含$S_{2n}$，独立对称元素必然有$nC_2,n\sigma_d$，当$n$为奇数，$S_{2n}$被拆开，独立对称元素加上$C_n,i$，当$n$为偶数，$S_{2n}$为一个独立对称元素。
  补充：$S_n$的等价情况（按$n$分类）——奇数：$C_n,i$；偶数但非$4$的倍数：$C_{n/2},\sigma_h$；$4$的倍数：**独立对称元素**（$S_{n},C_{n/2}$同时存在（由于分子没有$C_n$故不能写出））。
@@ -168,7 +181,8 @@ $D_{nd}$群 $C_n+C_2\perp C_n+n\sigma_d$，完美交错的上下相等风扇。�
 $C_{3i}$群 其实也就是$S_6$群，破坏了对称性的$D_{3d}$（风扇化）。注意看似$D_{3d}$的[6,5]-冠烷1：
 $T$系列 带$T$的都有$4C_3,3C_2(\text{or} S_4)$：
 $T$群，仅含有上述元素（$4C_3,3C_2$），非常罕见，比如新戊烷的四个甲基扭曲了（没有$\sigma$）。
-$T_h$群，判据是$4C_3+3C_2+\sigma_h$，注意此$\sigma_h$垂直于$C_\red{2}$，非常稀少，大多可看做十二面体的不等长变体（位于立方体面上边长度变化），get到每条边朝向的神韵： $T_d$群，存在平分$C_2$的$\sigma_d$，独立对称元素：$3S_4,4C_3,6\sigma_d$（注意$S_4$包含了所有$C_2$的操作）——纯正的正四面体
+$T_h$群，判据是$4C_3+3C_2+\sigma_h$，注意此$\sigma_h$垂直于$C_\red{2}$，非常稀少，大多可看做十二面体的不等长变体（位于立方体面上边长度变化），get到每条边朝向的神韵：
+$T_d$群，存在平分$C_2$的$\sigma_d$，独立对称元素：$3S_4,4C_3,6\sigma_d$（注意$S_4$包含了所有$C_2$的操作）——纯正的正四面体
 $O$系列 都有$4C_3,3C_4,6C_2$
 $O$群：与$T$群一样是风扇化的$O_h$（大多为甲基等扭转）。
 $O_h$群：存在垂直于$C_4$的$\sigma_h$——大多为正八面体或立方体。
@@ -242,8 +256,8 @@ NiAs：Oh共面（所以纯离子型的不会采用）
       <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>/post/2022/02/18/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/</guid>
-      <description>高斯积分 $$ \align{\int_0^\infty e^{-\lambda x^2}\d x&amp;amp;=\frac12\sqrt\frac{\pi}{\lambda}\\\int_0^\infty xe^{-\lambda x^2}\d x&amp;amp;=\frac1{2\lambda}\\\int_0^\infty x^2e^{-\lambda x^2}\d x&amp;amp;=\frac14\sqrt\frac{\pi}{\lambda^3}} $$
-偏导数 当你知道$f=f(x,y)=f(x,y(x,z))$时： $$ \align{\d f&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\d y\\&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\left[\l{\f{y}{x}}_z\d x+\l{\f{y}{z}}_x\d z\right]\\&amp;amp;=\left[\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z\right]\d x+\l{\f{f}{y}}_x\l{\f{y}{z}}_x\d z} $$ 此时，根据偏导数的定义得到性质1： $$ \l{\f{f}{x}}_z=\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z $$ 它有什么用呢？考虑下面一个例子： $$ \align{\d f&amp;amp;=\lf fx_y\d x+\lf fy_x\d y\\\lf fx_z&amp;amp;=\lf fx_y+\lf fy_x\lf yx_z} $$ 直接把$\d x$除过去是很爽，但以前总会心有芥蒂——为啥出过去就自动$z$不变了？现在我们有了完美的解答——把$\d y$进一步用$x,z$表示出来即可。
+      <description>偏导数 当你知道$f=f(x,y)=f(x,y(x,z))$时： $$ \align{\d f&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\d y\\&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\left[\l{\f{y}{x}}_z\d x+\l{\f{y}{z}}_x\d z\right]\\&amp;amp;=\left[\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z\right]\d x+\l{\f{f}{y}}_x\l{\f{y}{z}}_x\d z} $$ 此时，根据偏导数的定义得到性质1： $$ \l{\f{f}{x}}_z=\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z $$ 它有什么用呢？考虑下面一个例子： $$ \align{\d f&amp;amp;=\lf fx_y\d x+\lf fy_x\d y\\\lf fx_z&amp;amp;=\lf fx_y+\lf fy_x\lf yx_z} $$ 直接把$\d x$除过去是很爽，但以前总会心有芥蒂——为啥出过去就自动$z$不变了？现在我们有了完美的解答——把$\d y$进一步用$x,z$表示出来即可。
+我们进一步推广，对于$f=f(u(x,y),v(x,y))$，如法炮制，得到： $$ \f fx=\f fu\f ux+\f fv\f vx $$ 其实这是复合函数偏导的链式法则。
 同时，不难知道性质2： $$ \l{\f{x}{y}}_z=\frac1{\l{\f{y}{x}}_z} $$
 我们继续研究$x,y,z$的关系，知道： $$ x=x(y,z)=x\left[y(x,z),z\right] $$ 那么写出全微分： $$ \align{\d x&amp;amp;=\lf{x}{y}_z\d y+\lf{x}{z}_y\d z\\&amp;amp;=\lf{x}{y}_z\left[\lf{y}{x}_z\d x+\lf{y}{z}_x\d z\right]+\lf{x}{z}_y\d z\\&amp;amp;=\left[\lf{x}{y}_z\lf{y}{x}_z\right]\d x+\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z} $$ 根据性质2，得到性质3： $$ \align{\d x&amp;amp;=\d x+\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z\\0&amp;amp;=\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z\\\lf{x}{z}_y&amp;amp;=-\lf{x}{y}_z\lf{y}{z}_x} $$</description>
     </item>
@@ -560,7 +574,7 @@ C3投影图的无敌画法（最好分层画）：分数坐标转换——
 Frenkel缺陷：一种粒子移动到空隙（位置改变）例：AgCl中Ag（Oh→Td）；PbF2的F（Td→Oh），在低配为结构中较多——空隙较多较大
 原子互换缺陷：两个不同粒子交换位置（二元离子中不多），如反式尖晶石
 上面都不改变化学式，离子强，高配位——Schottky；共价强，低配位——Frenkel。
-外赋缺陷2 掺入杂质——电荷相等、大小相似；不能太多；掺杂通常改变固体电子结构（NP结、ZrO2中掺入CaO导电）</description>
+外赋缺陷 掺入杂质——电荷相等、大小相似；不能太多；掺杂通常改变固体电子结构（NP结、ZrO2中掺入CaO导电）</description>
     </item>
     
     <item>

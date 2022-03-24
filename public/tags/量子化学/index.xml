@@ -33,6 +33,18 @@ v=\frac{n\hbar}{rm_e} $$
     </item>
     
     <item>
+      <title>圆柱坐标下的拉普拉斯算子</title>
+      <link>/post/2022/03/21/%E5%9C%86%E6%9F%B1%E5%9D%90%E6%A0%87%E4%B8%8B%E7%9A%84%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AE%97%E5%AD%90/</link>
+      <pubDate>Mon, 21 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/03/21/%E5%9C%86%E6%9F%B1%E5%9D%90%E6%A0%87%E4%B8%8B%E7%9A%84%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AE%97%E5%AD%90/</guid>
+      <description>拉普兰德在使用圆规前必须掌握的圆柱坐标下拉普拉斯算子的推导。
+圆柱坐标与笛卡尔坐标关系如下： $$ x=r\cos \phi\tag1\\
+y=r\sin \phi\\
+$$ 把上下平方相加，得到： $$ F(x,y,r)=x^2+y^2-r^2=0\tag2 $$ 接下来只介绍对于$x$的部分，$y$部分方法完全一致,根据隐函数求偏导方法（见《一些数学》）： $$ \f rx=-\frac{\partial F/\partial x}{\partial F/\partial r}=-\frac{2x}{-2r}=\frac xr=\cos\phi\tag3 $$ (1)式两边对$x$求偏导，并带入(3)式结果： $$ \align{1&amp;amp;=\f rx\cos\phi+\f{\cos\phi}xr\\&amp;amp;=\cos^2\phi-r\sin\phi\f \phi x\\\f \phi x&amp;amp;=-\frac{\sin\phi}r\tag4} $$ 显然，对于一个指定的点，$(x,y)$和$(r,\phi)$两种表示一一对应，必然有： $$\psi(r,\phi)=\psi(r(x,y),\phi(x,y))$$ 应用链式法则（《一些数学》），带入(3)、(4)得到： $$ \align{\f \psi x&amp;amp;=\f \psi r \f rx+\f \psi \phi \f \phi x\\&amp;amp;=\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r \tag5} $$ 我们接着再求一次偏导，同样有（把一阶偏导看做一个函数）： $$\f \psi x(r,\phi)=\f \psi x(r(x,y),\phi(x,y))$$ 又用链式法则： $$ \align{\f{^2\psi}{x^2}=\f {\lf \psi x}{x}&amp;amp;=\f {\lf \psi x} r \cos\phi-\f {\lf \psi x} \phi\frac{\sin\phi}r } $$ 把(5)带入其中，并使用乘法求导法则： $$ \align{\f{^2\psi}{x^2}=&amp;amp;\f {\left(\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r\right)} r \cos\phi-\f {\left(\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r\right)} \phi\frac{\sin\phi}r \\ =&amp;amp;\left(\f{^2\psi}{r^2}\cos\phi-\f{^2\psi}{\phi\partial r}\frac{\sin\phi}r+\f{\psi}{\phi}\frac{\sin\phi}{r^2}\right)\cos\phi\\&amp;amp;-\left(\f{^2\psi}{r\partial\phi}\cos\phi-\f\psi r\sin\phi-\f{^2\psi}{\phi^2}\frac{\sin \phi}{r}-\f{\psi}{\phi}\frac{\cos\phi}{r^2}\right)\frac{\sin\phi}r\\=&amp;amp;\f{^2\psi}{r^2}\cos^2\phi-\f{^2\psi}{r\partial\phi}\frac{2\sin\phi\cos\phi}{r}+\f{^2\psi}{\phi^2}\frac{\sin^2\phi}{r^2}+\f\psi r\frac{\sin^2\phi}{r}+\f\psi\phi\frac{2\sin\phi\cos\phi}{r^2}} $$ 同理，对$y$做相同的事情： $$ \f{^2\psi}{y^2}=\f{^2\psi}{r^2}\red{\sin^2}\phi\red{+}\f{^2\psi}{r\partial\phi}\frac{2\sin\phi\cos\phi}{r}+\f{^2\psi}{\phi^2}\frac{\red{\cos^2}\phi}{r^2}+\f\psi r\frac{\red{\cos^2}\phi}{r}\red-\f\psi\phi\frac{2\sin\phi\cos\phi}{r^2} $$ 合体！写成算符形式 $$ \f{^2}{x^2}+\f{^2}{y^2}=\f{^2}{r^2}+\frac1r\f{}{r}+\frac1{r^2}\f{^2}{\psi^2} $$ 去吃千层酥罢！</description>
+    </item>
+    
+    <item>
       <title>一些量子力学结论</title>
       <link>/post/2022/03/19/%E4%B8%80%E4%BA%9B%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%BB%93%E8%AE%BA/</link>
       <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
@@ -62,6 +74,18 @@ v=\frac{n\hbar}{rm_e} $$
       <description>简谐运动 我们知道简谐运动的一般运动方程： $$ m\frac{\mathrm d^2x}{\mathrm d^2t}=-kx $$ 我们把常数搞到一起： $$ \frac{\mathrm d^2x}{\mathrm d^2t}+\omega^2x\text{，其中}\omega=\sqrt{\frac{k}{m}} $$ 二阶导竟然还可以等于自己乘上一个常数，猜测这是怎么导都稳得一批的指数函数$Ae^{\lambda t}$，那么： $$ Ae^{\lambda x}\left(\lambda^2+\omega^2\right)=0 $$ 那么： $$ \lambda=\pm i\omega $$ 所以有这么个通解（$A_1,A_2,A$是复常数）： $$ x(t)=A_1e^{i\omega t}+A_2e^{-i\omega t}=Ae^{i\omega t} $$ 其中$A$是一个复数，称为复振幅，$A$的模长$|A|$就是振幅，幅角的相反数$\phi_0=-\mathrm{arg}(A)$就是初相位。
 我们希望$x(t)$是个实数，那么它应该等于它的复共轭： $$ A_1e^{i\omega t}+A_2e^{-i\omega t}=A_2^*e^{i\omega t}+A_1^*e^{-i\omega t} $$
 得到： $$ A_1=A^*_2 $$ 那我们写$A_1=ae^{i\phi}$，$A_2=ae^{-i\phi}$，得到： $$ x(t)=a\left[e^{i(\omega t+\phi)}+e^{-i(\omega t+\phi)}\right] $$ 套入欧拉公式： $$ x(t)=2a\cos(\omega t+\phi)=x_0\cos(\omega t+\phi) $$</description>
+    </item>
+    
+    <item>
+      <title>一些数学</title>
+      <link>/post/2022/02/18/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/</link>
+      <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/02/18/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/</guid>
+      <description>偏导数 当你知道$f=f(x,y)=f(x,y(x,z))$时： $$ \align{\d f&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\d y\\&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\left[\l{\f{y}{x}}_z\d x+\l{\f{y}{z}}_x\d z\right]\\&amp;amp;=\left[\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z\right]\d x+\l{\f{f}{y}}_x\l{\f{y}{z}}_x\d z} $$ 此时，根据偏导数的定义得到性质1： $$ \l{\f{f}{x}}_z=\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z $$ 它有什么用呢？考虑下面一个例子： $$ \align{\d f&amp;amp;=\lf fx_y\d x+\lf fy_x\d y\\\lf fx_z&amp;amp;=\lf fx_y+\lf fy_x\lf yx_z} $$ 直接把$\d x$除过去是很爽，但以前总会心有芥蒂——为啥出过去就自动$z$不变了？现在我们有了完美的解答——把$\d y$进一步用$x,z$表示出来即可。
+我们进一步推广，对于$f=f(u(x,y),v(x,y))$，如法炮制，得到： $$ \f fx=\f fu\f ux+\f fv\f vx $$ 其实这是复合函数偏导的链式法则。
+同时，不难知道性质2： $$ \l{\f{x}{y}}_z=\frac1{\l{\f{y}{x}}_z} $$
+我们继续研究$x,y,z$的关系，知道： $$ x=x(y,z)=x\left[y(x,z),z\right] $$ 那么写出全微分： $$ \align{\d x&amp;amp;=\lf{x}{y}_z\d y+\lf{x}{z}_y\d z\\&amp;amp;=\lf{x}{y}_z\left[\lf{y}{x}_z\d x+\lf{y}{z}_x\d z\right]+\lf{x}{z}_y\d z\\&amp;amp;=\left[\lf{x}{y}_z\lf{y}{x}_z\right]\d x+\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z} $$ 根据性质2，得到性质3： $$ \align{\d x&amp;amp;=\d x+\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z\\0&amp;amp;=\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z\\\lf{x}{z}_y&amp;amp;=-\lf{x}{y}_z\lf{y}{z}_x} $$</description>
     </item>
     
     <item>
