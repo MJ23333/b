@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> 一些量子力学结论 | Edward Kerman&#39;s blog</title>
+    
+    <link rel="icon" type="image/png" href="/icons/Hi-Res.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
+<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="一些量子力学结论"/>
+<meta name="twitter:description" content="旧量子论 光电效应 $$ \frac12mv^2=h\nu-\Phi $$ 其中$\Phi$为脱出功（功函）。
+Bohr的氢原子模型 两个假设：
+ 在氢原子中，电子围绕著原子核进行圆周运动。 在轨道中运动的电子的角动量的大小$L$被量子化为正整数乘以约化普朗克常数$\hbar$。  根据圆周运动和库仑定律： $$ r=\frac1{4\pi\varepsilon_0}\frac{e^2}{r^2} $$
+另外，圆周运动的角动量大小是半径乘以动量，结合假设2： $$ L=rm_ev=n\hbar\\
+v=\frac{n\hbar}{rm_e} $$
+得到： $$ r=\frac{4\pi\varepsilon_0\hbar^2}{m_ee^2}n^2 $$
+波粒关系 de Broglie和Einstein关系 对于实物粒子和光子都适用： $$ E=h\nu=hc\overline\nu=\frac{hc}\lambda\\
+\lambda=\frac h p $$
+激发光谱 外界给粒子能量 → 电子跃迁到激发态 → 回落到基态 → 发光
+不确定性原理 $$ \Delta x\Delta p_x\ge\frac\hbar2 $$
+简单的量子力学 薛定谔方程 $$ \left[-\frac{\hbar^2}{2m}\nabla^2&#43;V\right]\psi(x,y,z)=E\psi(x,y,z) $$
+一维势箱 一维势箱外$V=\infty$（显然此时$\psi=0$），势箱内$V=0$，带入薛定谔方程： $$ \frac{\hbar^2}{2m}\frac{\d^2\psi(x)}{\d x^2}&#43;E\psi(x)=0 $$ 我们把常数搞到一块： $$ k^2=\frac{2mE}{\hbar^2}\\
+\frac{\d^2\psi(x)}{\d x^2}&#43;k^2\psi(x)=0 $$ 联想我另一个博客里写的求解简谐振动的方法，通解为： $$ \psi(x)=A\cos(kx)&#43;B\sin(kx) $$ 接着带入边界条件：$\psi(0)=0$，显然$A=0$，得到： $$ \psi(x)=B\sin(kx) $$ 同时，让另一个边界$\psi(l)=0$，那么： $$ k=\frac{n\pi}{l} $$ 带回$E$： $$ E=\frac{n^2h^2}{8ml^2}\qquad n=1,2,3,\cdots $$ 注意，$n=0$无法满足归一化条件。此时最低可能能量为$n=1$时的$E$，称为零点能。"/>
+
+
+  </head>
+  <body>
+
+    <nav class="menu">
+    <ul>
+      <li class="left">
+        <a href="/"><span>Edward Kerman&#39;s blog</span></a>
+      </li>
+      
+      <li>
+        <a href="/">Home</a>
+      </li>
+      
+      <li>
+        <a href="/about/">About</a>
+      </li>
+      
+      <li>
+        <a href="/sitemap/">Sitemap</a>
+      </li>
+      
+      <li id="menu-search">
+        <a href="/#">Search</a>
+      </li>
+      
+      <li>
+        <a href="/index.xml">Subscribe</a>
+      </li>
+      
+    </ul>
+    </nav>
+		
+
+
+<div class="container single">
+<main>
+
+<div class="article-meta">
+<h1><span class="title">一些量子力学结论</span></h1>
+
+<h3 class="author">
+Edward Kerman
+</h3>
+
+<h3 class="date">2022-03-19</h3>
+<p class="terms">
+  
+  
+  Categories: <a href="/categories/academic">Academic</a> <a href="/categories/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6">量子化学</a> 
+  
+  
+  
+  Tags: <a href="/tags/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6">量子化学</a> <a href="/tags/%E5%85%A5%E9%97%A8">入门</a> 
+  
+  
+</p>
+</div>
+
+<div class="article">
+<!-- \(
+  \def\d{{\mathrm d}}
+	\def\B{{\mathrm B}}
+	\def\A{{\mathrm A}}
+	\def\m{{\mathrm m}}
+	\def\align #1{{\begin{align*} #1 \end{align*}}}
+	\def\f #1#2{{\frac{\partial  #1}{\partial  #2}}}
+	\def\l #1{{\left( #1\right)}}
+	\def\red #1{{\color{red}{ #1}}}
+	\def\green #1{{\color{green}{ #1}}}
+	\def\blue #1{{\color{blue}{ #1}}}
+	\def\bm #1{{\boldsymbol{ #1}}}
+\) -->
+<h2 id="旧量子论">旧量子论</h2>
+<h3 id="光电效应">光电效应</h3>
+<p>$$
+\frac12mv^2=h\nu-\Phi
+$$
+其中$\Phi$为脱出功（功函）。</p>
+<h3 id="bohr的氢原子模型">Bohr的氢原子模型</h3>
+<p>两个假设：</p>
+<ol>
+<li>在氢原子中，电子围绕著原子核进行圆周运动。</li>
+<li>在轨道中运动的电子的角动量的大小$L$被量子化为正整数乘以约化普朗克常数$\hbar$。</li>
+</ol>
+<p>根据圆周运动和库仑定律：
+$$
+r=\frac1{4\pi\varepsilon_0}\frac{e^2}{r^2}
+$$</p>
+<p>另外，圆周运动的角动量大小是半径乘以动量，结合假设2：
+$$
+L=rm_ev=n\hbar\\<br>
+v=\frac{n\hbar}{rm_e}
+$$</p>
+<p>得到：
+$$
+r=\frac{4\pi\varepsilon_0\hbar^2}{m_ee^2}n^2
+$$</p>
+<h2 id="波粒关系">波粒关系</h2>
+<h3 id="de-broglie和einstein关系">de Broglie和Einstein关系</h3>
+<p>对于实物粒子和光子都适用：
+$$
+E=h\nu=hc\overline\nu=\frac{hc}\lambda\\<br>
+\lambda=\frac h p
+$$</p>
+<h3 id="激发光谱">激发光谱</h3>
+<p>外界给粒子<strong>能量</strong> → 电子跃迁到激发态 → 回落到基态 → 发<strong>光</strong></p>
+<h3 id="不确定性原理">不确定性原理</h3>
+<p>$$
+\Delta x\Delta p_x\ge\frac\hbar2
+$$</p>
+<h2 id="简单的量子力学">简单的量子力学</h2>
+<h3 id="薛定谔方程">薛定谔方程</h3>
+<p>$$
+\left[-\frac{\hbar^2}{2m}\nabla^2+V\right]\psi(x,y,z)=E\psi(x,y,z)
+$$</p>
+<h3 id="一维势箱">一维势箱</h3>
+<p>一维势箱外$V=\infty$（显然此时$\psi=0$），势箱内$V=0$，带入薛定谔方程：
+$$
+\frac{\hbar^2}{2m}\frac{\d^2\psi(x)}{\d x^2}+E\psi(x)=0
+$$
+我们把常数搞到一块：
+$$
+k^2=\frac{2mE}{\hbar^2}\\<br>
+\frac{\d^2\psi(x)}{\d x^2}+k^2\psi(x)=0
+$$
+联想我另一个博客里写的求解简谐振动的方法，通解为：
+$$
+\psi(x)=A\cos(kx)+B\sin(kx)
+$$
+接着带入边界条件：$\psi(0)=0$，显然$A=0$，得到：
+$$
+\psi(x)=B\sin(kx)
+$$
+同时，让另一个边界$\psi(l)=0$，那么：
+$$
+k=\frac{n\pi}{l}
+$$
+带回$E$：
+$$
+E=\frac{n^2h^2}{8ml^2}\qquad n=1,2,3,\cdots
+$$
+注意，$n=0$无法满足归一化条件。此时最低可能能量为$n=1$时的$E$，称为零点能。</p>
+<h3 id="二维势箱">二维势箱</h3>
+<p>使用变分法处理，将$\psi(x,y)=X(x)Y(y),E=E_x+E_y$（波函数为什么要用乘法？联想独立事件概率公式），带入后将两边同时除$X(x)Y(y)$，拆开，再整理一下，用$k_x,k_y$换，那么变成两个一维势箱：
+$$
+\frac{\d^2X(x)}{\d x^2}+k_x^2X(x)=0\\<br>
+\frac{\d^2Y(y)}{\d y^2}+k_y^2Y(x)=0
+$$
+分别求解之后将$E_x,E_y$合体：
+$$
+E=\frac{h^2}{8m}\l{\frac{n_x^2}{a^2}+\frac{n_y^2}{b^2}}
+$$
+由于$\psi(x,y)=X(x)Y(y)$，因此谁也不能为$0$，否则又无法归一化，因此$n_x,n_y=1,2,3,\cdots$。</p>
+
+</div>
+</main>
+
+<section class="appendix">
+
+
+<div>
+  <div class="side side-left"><h3>Author&#39;s bio</h3></div>
+  <div>
+
+
+
+
+
+<div>Edward Kerman——化竞菜鸡，舟厨，ksp爱好者，花样滑冰云观众。</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Reuse</h3></div>
+  Text and figures are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution CC BY 4.0</a>.
+</div>
+
+
+
+<div>
+  <div class="side side-left"><h3>Suggest changes</h3></div>
+  
+  
+  
+    
+    
+  
+  If you find any mistakes (including typos) or want to suggest changes, please feel free to <a href="https://github.com/MJ23333/b/edit/master/content/post/jghx/%e4%b8%80%e4%ba%9b%e5%8f%af%e8%83%bd%e4%bc%9a%e8%80%83%e7%9a%84%e9%87%8f%e5%ad%90%e5%8a%9b%e5%ad%a6.md" id="edit-link">edit the source file of this page on Github and create a pull request.</a>
+</div>
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Citation</h3></div>
+  <p>For attribution, please cite this work as</p>
+  <pre><code class="no-highlight">Edward Kerman (2022). 一些量子力学结论. Edward Kerman&#39;s blog. /post/2022/03/19/%E4%B8%80%E4%BA%9B%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%BB%93%E8%AE%BA/</code></pre>
+  <p>BibTeX citation</p>
+  <pre><code class="no-highlight">@misc{
+  title = "一些量子力学结论",
+  author = "Edward Kerman",
+  year = "2022",
+  journal = "Edward Kerman&#39;s blog",
+  note = "/post/2022/03/19/%E4%B8%80%E4%BA%9B%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%BB%93%E8%AE%BA/"
+}</code></pre>
+</div>
+
+</section>
+
+
+
+<nav class="post-nav">
+  <span class="nav-next">&larr; <a href="/post/2022/03/19/%E5%88%86%E5%AD%90%E7%BB%93%E6%9E%84/" title=Next&#32;post&#32;(older)>分子结构</a></span>
+  &hercon;
+  <span class="nav-prev"><a href="/post/2022/03/21/%E5%8E%9F%E5%AD%90%E7%BB%93%E6%9E%84/" title=Previous&#32;post&#32;(newer)>原子结构</a> &rarr;</span>
+</nav>
+
+
+
+
+
+</div>
+
+
+  <footer>
+  <script async src="//yihui.org/js/center-img.js"></script>
+
+			<script type="text/x-mathjax-config">
+				MathJax.Hub.Config({
+					extensions: ["tex2jax.js"],
+					jax: ["input/TeX", "output/HTML-CSS"],
+					TeX: {
+						extensions: ["mhchem.js"],
+						Macros: {
+								d: "{\\mathrm d}",
+								B: "{\\mathrm B}",
+								A: "{\\mathrm A}",
+								m: "{\\mathrm m}",
+								D: "{\\Delta}",
+								Ek: "{E_{\\mathrm k}}",
+								Ep: "{E_{\\mathrm p}}",
+								K: "{\\space\\mathrm K}",
+								J: "{\\space\\mathrm J}",
+								kJ: "{\\space\\mathrm {kJ}}",
+								eV: "{\\space\\mathrm {eV}}",
+								mol: "{\\space\\mathrm {mol}}",
+								kjm: "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
+								align: ["{\\begin{align*} #1 \\end{align*}}",1],
+								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
+								l: ["{\\left( #1\\right)}",1],
+								lf: ["{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",2],
+								red: ["{\\color{red}{ #1}}",1],
+								green: ["{\\color{green}{ #1}}",1],
+								blue: ["{\\color{blue}{ #1}}",1],
+								bm: ["{\\boldsymbol{ #1}}",1]
+						}
+					},
+					tex2jax: {
+						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+						processEscapes: true
+					},
+					CommonHTML: { linebreaks: { automatic: true } },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+         	SVG: { linebreaks: { automatic: true } }
+				});
+			</script>
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+
+
+
+
+
+  <div class="footer">
+  
+  <ul class="copyright">
+    <li>© Edward Kerman 2020-2022</li>
+  </ul>
+  
+  <ul>
+    
+    <li class="optional">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    <li class="optional">
+      <a href="/tags/">Tags</a>
+    </li>
+    
+    <li id="menu-edit">
+      <a href="#">Suggest an edit</a>
+    </li>
+    
+    <li>
+      <a href="#">Back to top</a>
+    </li>
+    
+  </ul>
+  </div>
+  
+  </footer>
+  <script async src="/js/features.js" data-page-features="[null,[&#34;&#43;sidenotes&#34;],null]"></script>
+  </body>
+</html>
+

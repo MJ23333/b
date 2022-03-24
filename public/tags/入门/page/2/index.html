@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/custom.css" />
-    <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
-<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
 <link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
-<link href="http://fonts.cdnfonts.com/css/operator-mono" rel="stylesheet">
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 <meta name="twitter:card" content="summary"/>
@@ -85,9 +86,9 @@
     </div>
     
     
-    <h1><a href="/post/2022/01/22/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E6%8E%A8%E5%AF%BC/">薛定谔方程的启发式推导</a></h1>
+    <h1><a href="/post/2022/02/18/%E5%88%86%E5%B8%83/">分布</a></h1>
     <div>
-      <span>2022-01-22</span>
+      <span>2022-02-18</span>
       <span>Edward Kerman</span>
     </div>
     <div class="summary">
@@ -95,9 +96,189 @@
       
       
       
-      快速的启发式推导，仅用于帮助理解就行了。1
-[&hellip;] $$ \begin{gather*} E=\color{blue}{{\frac12}mv^2+V}=\color{blue}{{\frac{p^2}{2m}}+V}=\color{red}{h\nu} \newline p=\color{blue}{mv}=\color{red}{\frac h\lambda} &hellip;
-      <a href="/post/2022/01/22/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E6%8E%A8%E5%AF%BC/" class="more" title=Read&#32;More>Read More &rarr;</a>
+      小刻也能轻松学懂的Maxwell分布
+[&hellip;] 考虑一个系统，$T$恒定（比如和一个恒温热库交换热量），$\d V=\d N=0$。能级$\varepsilon$的简并度为$g_i$，对于两个确定状态$s_a,s_b$，由于系统的微观状态已经确定（仅1种），总系统的状态数就等于热库的微观状态数（下面的$U,S$都指热库）： $$ &hellip;
+      <a href="/post/2022/02/18/%E5%88%86%E5%B8%83/" class="more" title=Read&#32;More>Read More &rarr;</a>
+    </div>
+    </td>
+    
+    </tr>
+    </tbody>
+    </table>
+  </section>
+
+  <section class="article-list post-card">
+    <table>
+    <tbody>
+    <tr>
+    <td>
+    
+    
+    <div class="categories">
+      <a href="/categories/academic/">Academic</a>
+    </div>
+    
+    
+    <h1><a href="/post/2022/02/18/%E5%A4%9A%E7%BB%84%E5%88%86%E7%83%AD%E5%8A%9B%E5%AD%A6/">多组分热力学</a></h1>
+    <div>
+      <span>2022-02-18</span>
+      <span>Edward Kerman</span>
+    </div>
+    <div class="summary">
+      
+      
+      
+      
+      多组分系统：两种或两种以上组分所形成的系统
+混合物：含有一种以上组分的系统
+溶液：含有一种以上组分的液相和固相（没有气相），分为溶质$\rm B$和溶剂$\rm A$。
+[&hellip;] 质量浓度（并不常用）：
+$$ \rho_{\rm B}\doteq \frac{m({\rm B})}{V_{\rm tot}} $$
+质量分数：
+$$ w_{\rm B}\doteq &hellip;
+      <a href="/post/2022/02/18/%E5%A4%9A%E7%BB%84%E5%88%86%E7%83%AD%E5%8A%9B%E5%AD%A6/" class="more" title=Read&#32;More>Read More &rarr;</a>
+    </div>
+    </td>
+    
+    </tr>
+    </tbody>
+    </table>
+  </section>
+
+  <section class="article-list post-card">
+    <table>
+    <tbody>
+    <tr>
+    <td>
+    
+    
+    <div class="categories">
+      <a href="/categories/academic/">Academic</a>
+    </div>
+    
+    
+    <h1><a href="/post/2022/02/18/%E6%B0%94%E4%BD%93/">气体</a></h1>
+    <div>
+      <span>2022-02-18</span>
+      <span>Edward Kerman</span>
+    </div>
+    <div class="summary">
+      
+      
+      
+      
+      状态方程表达了热力学系统中若干个态函数参量之间的关系
+一些经验定律：在剩下二者恒定时：$pV=C$、$V=CT$、$p=CT$、$V=Cn$
+综合到一起，用$R$来表示常数，得理想气体状态方程 $$ pV=nRT $$ 温度越高、压力越低，该方程越精确
+标况——0℃（273.15K），此时$V_m=22.4{\rm L\cdot mol^{-1}}$
+[&hellip;] 分压（Dalton分压定 &hellip;
+      <a href="/post/2022/02/18/%E6%B0%94%E4%BD%93/" class="more" title=Read&#32;More>Read More &rarr;</a>
+    </div>
+    </td>
+    
+    </tr>
+    </tbody>
+    </table>
+  </section>
+
+  <section class="article-list post-card">
+    <table>
+    <tbody>
+    <tr>
+    <td>
+    
+    
+    <div class="categories">
+      <a href="/categories/academic/">Academic</a>
+    </div>
+    
+    
+    <h1><a href="/post/2022/02/18/%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%B8%80%E5%AE%9A%E5%BE%8B/">热力学第一定律</a></h1>
+    <div>
+      <span>2022-02-18</span>
+      <span>Edward Kerman</span>
+    </div>
+    <div class="summary">
+      
+      
+      
+      
+      表述：如果A、B同时和C热平衡，那么A、B彼此也热平衡
+温度：两个热平衡的系统所拥有的的共同性质
+[&hellip;] 系统：隔离→封闭→敞开
+系统的性质：广度→$\lambda^1$；强度→$\lambda^0$。其中$f(\lambda x,\lambda y,\cdots)=\lambda^nf(x,y,\cdots)$
+状态函数：只取决于开始和终了的状态（处于定态的系统与历史无关），状态函 &hellip;
+      <a href="/post/2022/02/18/%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%B8%80%E5%AE%9A%E5%BE%8B/" class="more" title=Read&#32;More>Read More &rarr;</a>
+    </div>
+    </td>
+    
+    </tr>
+    </tbody>
+    </table>
+  </section>
+
+  <section class="article-list post-card">
+    <table>
+    <tbody>
+    <tr>
+    <td>
+    
+    
+    <div class="categories">
+      <a href="/categories/academic/">Academic</a>
+    </div>
+    
+    
+    <h1><a href="/post/2022/02/18/%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%AE%9A%E5%BE%8B/">热力学第二定律</a></h1>
+    <div>
+      <span>2022-02-18</span>
+      <span>Edward Kerman</span>
+    </div>
+    <div class="summary">
+      
+      
+      
+      
+      自发变化的特征：一个自发变化发生之后，不可能使系统和环境都恢复到原来的状态而不留下任何影响，也就是说自发变化具有方向性。
+[&hellip;] 流行两种说法：
+[&hellip;] 克劳修斯说法：不可能把热从低温物体传到高温物体而不引起其他变化。
+开尔文说法：不可能从单一热源取出热使之完全变为功而不发生其他变化（第二类永动机是不可能造成的）。
+[&hellip;] 我们可以发现后面半句话都是一样 &hellip;
+      <a href="/post/2022/02/18/%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%AE%9A%E5%BE%8B/" class="more" title=Read&#32;More>Read More &rarr;</a>
+    </div>
+    </td>
+    
+    </tr>
+    </tbody>
+    </table>
+  </section>
+
+  <section class="article-list post-card">
+    <table>
+    <tbody>
+    <tr>
+    <td>
+    
+    
+    <div class="categories">
+      <a href="/categories/academic/">Academic</a>
+    </div>
+    
+    
+    <h1><a href="/post/2022/02/18/%E7%94%B5%E5%8C%96%E5%AD%A6/">电化学</a></h1>
+    <div>
+      <span>2022-02-18</span>
+      <span>Edward Kerman</span>
+    </div>
+    <div class="summary">
+      
+      
+      
+      
+      $$\ce{AgCl(s) + e- -&gt; Ag(s) + Cl-(aq)}\\\ce{Hg2Cl2(s) + 2e- -&gt; 2Hg(s) + 2Cl-(aq)}$$
+[&hellip;] 加入惰性电解质（分析物浓度太低，加大电导率）。
+
+      <a href="/post/2022/02/18/%E7%94%B5%E5%8C%96%E5%AD%A6/" class="more" title=Read&#32;More>Read More &rarr;</a>
     </div>
     </td>
     
@@ -122,11 +303,14 @@
       <li class="page-item active">
         <a href="#" aria-current="page" aria-label="Page 2" class="page-link" role="button">2</a>
       </li>
-      <li class="page-item disabled">
-        <a href="#" aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;</span></a>
+      <li class="page-item">
+        <a href="/tags/%E5%85%A5%E9%97%A8/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
       </li>
-      <li class="page-item disabled">
-        <a href="#" aria-disabled="true" aria-label="Last" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      <li class="page-item">
+        <a href="/tags/%E5%85%A5%E9%97%A8/page/3/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/tags/%E5%85%A5%E9%97%A8/page/3/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
 
@@ -151,12 +335,23 @@
 								B: "{\\mathrm B}",
 								A: "{\\mathrm A}",
 								m: "{\\mathrm m}",
+								D: "{\\Delta}",
+								Ek: "{E_{\\mathrm k}}",
+								Ep: "{E_{\\mathrm p}}",
+								K: "{\\space\\mathrm K}",
+								J: "{\\space\\mathrm J}",
+								kJ: "{\\space\\mathrm {kJ}}",
+								eV: "{\\space\\mathrm {eV}}",
+								mol: "{\\space\\mathrm {mol}}",
+								kjm: "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
 								align: ["{\\begin{align*} #1 \\end{align*}}",1],
 								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
 								l: ["{\\left( #1\\right)}",1],
+								lf: ["{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",2],
 								red: ["{\\color{red}{ #1}}",1],
 								green: ["{\\color{green}{ #1}}",1],
-								blue: ["{\\color{blue}{ #1}}",1]
+								blue: ["{\\color{blue}{ #1}}",1],
+								bm: ["{\\boldsymbol{ #1}}",1]
 						}
 					},
 					tex2jax: {

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> 晶体理论 | Edward Kerman&#39;s blog</title>
+    
+    <link rel="icon" type="image/png" href="/icons/Hi-Res.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
+<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="晶体理论"/>
+<meta name="twitter:description" content="配位数规则 配位数规则：4→6→8→12
+目标：正-负离子相互接触
+注意：平面四边形配位和八面体配位是一个条件！
+离子、金属半径随配位数增大而增大！
+GoldSchmidt半径 随着$r_正$上升，先后出现：仅负离子相切→正负相切（负负不相切）两种情况（和中间的极限情况），根据改变正负离子大小看晶格大小是否改变来推断半径（若晶格改变不大，则改变的那个离子未相切（小））
+晶体热力学 晶格能的计算： 定义——固态→气态离子： $$ \ce{M(s) -&gt;M&#43;(g) &#43; X-(g)}\qquad \Delta_{\rm L}H $$ 计算公式： $$ \Delta_{\rm L} H=\frac{N_{\rm A}Mz_Az_B}{d}\left(\frac{e^2}{4\pi\varepsilon_0}\right)\left(1-\frac\rho{d}\right) $$ $M$是马德隆常数，考虑了次级静电作用，而最后一项是修正近距离核间排斥。
+简要介绍马德隆常数的计算：
+对于NaCl来讲，不难发现： $$ M = \sum_{i,j,k=-\infty}^{\infty}{{\color{red}{(-1)^{i&#43;j&#43;k}}} \over { (i^2 &#43; j^2 &#43; k^2)^{1/2}}} $$ 红色部分巧妙地控制吸引和排斥，**注意$i=j=k=0$的情况不在计算之中**。
+注意到此数列是条件收敛的，一般有两种逼近策略，第一种： $$ \lim_{N \to \infty} \sum_{i^2&#43;j^2&#43;k^2 &lt; N} {{(-1)^{i&#43;j&#43;k}} \over { (i^2 &#43; j^2 &#43; k^2)^{1/2}}} $$ 这种方法相当简单，我们用$C_3(n)$代表将$n$写成三个平方和的方法数量，易得（$i^2&#43;j^2&#43;k^2$必定是整数）： $$ \sum^\infty_{n=1}\frac{(-1)^nC_3(n)}{\sqrt{n}} $$ 因此我们常常看到如此的序列： $$ M=-6&#43;12/{\sqrt {2}}-8/{\sqrt {3}}&#43;6/2-24/{\sqrt {5}}&#43;\dotsb =-1.74756\dots $$ 然而这个数列是发散的（证明单独成blog），这种方法也是不好。"/>
+
+
+  </head>
+  <body>
+
+    <nav class="menu">
+    <ul>
+      <li class="left">
+        <a href="/"><span>Edward Kerman&#39;s blog</span></a>
+      </li>
+      
+      <li>
+        <a href="/">Home</a>
+      </li>
+      
+      <li>
+        <a href="/about/">About</a>
+      </li>
+      
+      <li>
+        <a href="/sitemap/">Sitemap</a>
+      </li>
+      
+      <li id="menu-search">
+        <a href="/#">Search</a>
+      </li>
+      
+      <li>
+        <a href="/index.xml">Subscribe</a>
+      </li>
+      
+    </ul>
+    </nav>
+		
+
+
+<div class="container single">
+<main>
+
+<div class="article-meta">
+<h1><span class="title">晶体理论</span></h1>
+
+<h3 class="author">
+Edward Kerman
+</h3>
+
+<h3 class="date">2022-01-23</h3>
+<p class="terms">
+  
+  
+  Categories: <a href="/categories/academic">Academic</a> <a href="/categories/%E6%97%A0%E6%9C%BA%E5%8C%96%E5%AD%A6">无机化学</a> <a href="/categories/%E7%BB%93%E6%9E%84%E5%8C%96%E5%AD%A6">结构化学</a> 
+  
+  
+  
+  Tags: <a href="/tags/%E6%99%B6%E4%BD%93">晶体</a> 
+  
+  
+</p>
+</div>
+
+<div class="article">
+<h2 id="配位数规则">配位数规则</h2>
+<p><b>配位数规则</b>：4→6→8→12</p>
+<p>目标：正-负离子相互接触</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gypyzwys2xj30xu0eognb.jpg" alt="image-20220125155357215"></p>
+<p>注意：<strong>平面四边形</strong>配位和八面体配位是一个条件！</p>
+<p>离子、金属半径随配位数增大而增大！</p>
+<h2 id="goldschmidt半径">GoldSchmidt半径</h2>
+<p>随着$r_正$上升，先后出现：仅负离子相切→正负相切（负负不相切）两种情况（和中间的极限情况），根据改变正负离子大小看晶格大小是否改变来推断半径（若晶格改变不大，则改变的那个离子未相切（小））</p>
+<h2 id="晶体热力学">晶体热力学</h2>
+<h3 id="晶格能的计算">晶格能的计算：</h3>
+<p>定义——固态→气态离子：
+$$
+\ce{M(s) -&gt;M+(g) + X-(g)}\qquad \Delta_{\rm L}H
+$$
+计算公式：
+$$
+\Delta_{\rm L} H=\frac{N_{\rm A}Mz_Az_B}{d}\left(\frac{e^2}{4\pi\varepsilon_0}\right)\left(1-\frac\rho{d}\right)
+$$
+$M$是马德隆常数，考虑了次级静电作用，而最后一项是修正近距离核间排斥。</p>
+<p>简要介绍马德隆常数的计算：</p>
+<p>对于NaCl来讲，不难发现：
+$$
+M = \sum_{i,j,k=-\infty}^{\infty}{{\color{red}{(-1)^{i+j+k}}} \over { (i^2 + j^2 + k^2)^{1/2}}}
+$$
+红色部分巧妙地控制吸引和排斥，**注意$i=j=k=0$的情况不在计算之中**。</p>
+<p>注意到此数列是条件收敛的，一般有两种逼近策略，第一种：
+$$
+\lim_{N \to \infty} \sum_{i^2+j^2+k^2 &lt; N} {{(-1)^{i+j+k}} \over { (i^2 + j^2 + k^2)^{1/2}}}
+$$
+这种方法相当简单，我们用$C_3(n)$代表将$n$写成三个平方和的方法数量，易得（$i^2+j^2+k^2$必定是整数）：
+$$
+\sum^\infty_{n=1}\frac{(-1)^nC_3(n)}{\sqrt{n}}
+$$
+因此我们常常看到如此的序列：
+$$
+M=-6+12/{\sqrt {2}}-8/{\sqrt {3}}+6/2-24/{\sqrt {5}}+\dotsb =-1.74756\dots
+$$
+然而这个数列是发散的（证明单独成blog），这种方法也是不好。</p>
+<p>另一种方法是：
+$$
+\lim_{n \to \infty} \sum_{ -n &lt; i,j,k &lt; n} {{(-1)^{i+j+k}} \over { (i^2 + j^2 + k^2)^{1/2}}}
+$$
+只有第二种才能给我们需要的结果（十分暴力）。</p>
+<p>而Kapustinskii发现，许多结构马德隆常数除以化学式单元中的离子数（总）几乎是个定值→卡公式：
+$$
+\Delta_{\rm L} H=\frac{N_{\rm ion}|z_Az_B|}{d}\left(1-\frac\rho{d}\right)\kappa
+$$
+这还是太复杂了，引入究极简化——静电参数：
+$$
+\xi=\frac{|z_Az_B|}d
+$$</p>
+<h3 id="判断含氧酸盐的稳定性">判断含氧酸盐的稳定性</h3>
+<p>看含氧酸盐和氧化物能量的<strong>相对变化</strong>——大阳离子相对变化小，小阳离子相对变化大。</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyugwgk9dkj30iw0n40u4.jpg" alt="image-20220129131540692" style="zoom:25%;" /></p>
+<h3 id="热力学循环">热力学循环</h3>
+<p>不少难以直接计算的数据都可以通过热力学循环得到，同样，热力学循环也是解释问题的好帮手。</p>
+<p><strong>溶解性</strong>：溶解——晶格能 + 阳离子水合能 + 阴离子水合能</p>
+<p>离子<strong>大小</strong>和<strong>电荷</strong>、离子的<strong>软硬</strong>、固体的<strong>晶体结构</strong>以及每个离子的<b>电子结构（构型）</b>都有关。</p>
+<p>在阴阳电荷相等时，大大小小规则较为有用：对于小离子盐，异常大的晶格能不能被相对大的水合焓补偿；对于大离子的盐，即使晶格能相对较低，较小的水合焓仍然允许晶格能占主导地位。对于大-小组合，小离子较高的水合焓足够补偿较小的晶格能，因而容易溶解。
+$$
+\Delta_{\rm L}H\propto\frac1{r_++r_-}\qquad\Delta_{\rm hyd}H\propto\frac1{r_+}+\frac1{r_-}
+$$
+但上面的讨论忽略了<b>熵的贡献</b>。尽管离子解离时晶格的破坏带来熵增熵，但我们不能不考虑水合产生的<b>氢键变化</b>。盐溶解时水的氢键网络会受到干扰：具有高电荷密度的小阳离子（Li+等）是“<b>结构制造</b>”，在这些阳离子周围形成了更强大的网络（水合壳）→<b>熵减</b>。相比之下，“<b>结构破坏</b>”离子（例如Cs+）具有较低的电荷密度，破坏原有氢键网络后不会形成强大水合壳→<b>熵增</b>。（同样是大大小小：<u>饱和CsI溶液的摩尔浓度是LiF溶液的60倍以上</u>）注意：<b>在大多数时候，$\D H$的影响比$\D  S$大</b></p>
+<p>考虑：水合能——Li：-520kJ；Cs：-264kJ；F：-524kJ；I：-308kJ</p>
+<p>晶格能——LiF：1024kJ；LiI：748.6kJ；CsF：732kJ；CsI：592kJ</p>
+<p>LiF→LiI时，晶格能变化比水合能大（半径<strong>和</strong>的<strong>相对</strong>变化大）；CsI→CsF时，水合能变化比晶格能更大（半径<strong>和</strong>的<strong>相对</strong>变化小）</p>
+<p><strong>还要考虑奇怪的结构</strong>：</p>
+<p><strong>离子对</strong>：由溶液中紧密接触的阳离子和阴离子组成，离子对作为一个单元迁移，其净电荷是组成离子电荷的总和：</p>
+<p><img src="https://saylordotorg.github.io/text_general-chemistry-principles-patterns-and-applications-v1.0/section_21/71c1bcefd12f44acdffda22c7ff1c40a.jpg" alt="img" style="zoom: 25%;" /></p>
+<p>比如，在硫酸钙中，我们需要一个额外的平衡来描述离子对的形成：
+$$
+\ce{CaSO_4(s)&lt;=&gt;Ca^{2+}.SO_4^{2-}(aq)({\text{离子对}}) &lt;=&gt; Ca^{2+}(aq) +{SO_4^{2-}(aq)}}
+$$
+硫酸钙的测量$K_{\rm sp}$在 25°C 时为$4.93\times10^{-5}$。 如果不考虑离子对，溶解度应为$7.02\times10^{-3}\mathrm M$。事实上，硫酸钙在 25°C 时的实验测量溶解度为$1.6\times10^{-2}\mathrm M$，两倍于它的$K_{\rm sp}$计算值。 产生这种差异的原因是饱和溶液中离子对的浓度几乎与水合离子的浓度一样高。 静电作用对于**小的高电荷离子**来说更大。，因此，离子对的形成对于含有II价和III价离子的盐（例如$\ce{Ca^{2+}}$和$\ce{La^{3+}}$）来说是最重要的，而对于含有单正阳离子（除了最小的$\ce{Li+}$）的盐来说相对不重要。 因此，我们预计$\ce{CaSO4}$的饱和溶液含有高浓度的离子对，其溶解度将大于$K_{\rm sp}$的预测值。</p>
+<p><strong>不完全解离</strong>：离子对是离子键未完全破坏；不完全解离则是共价键未完全破坏，溶剂中仍有分子。弱酸 (HA) 的分子（未解离）形式通常非常易溶于水——乙酸与水完全混溶。与硫酸钙一样，我们需要包括一个额外的平衡来描述苯甲酸的溶解度：
+$$
+\ce{C_6H_5CO_2H{(s)}&lt;=&gt;C_6H_5CO_2H{(aq)}&lt;=&gt;C_6H_5CO^−_2{(aq)} + H^+{(aq)}}
+$$
+仅测量离子浓度会严重低估溶液中有机酸的总浓度。 以苯甲酸为例——只有大约 5% 以解离离子的形式存在。</p>
+<p><b>生成配合物</b>：不再赘述。</p>
+<h2 id="能带理论">能带理论</h2>
+<p>导电好的通常导热也好（电子的移动可以传递能量）。延展性——<strong>不活泼</strong>的更好</p>
+<p>几个名词：<strong>满带</strong>——充满电子；<strong>导带</strong>——部分充满；<strong>价带</strong>——能级最高的填了电子的能带（满带或导带）；<strong>空带</strong>——没有电子；带隙 or 禁带——不能填电子。</p>
+<p>s带、p带、d带（比如TiO<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>）——看那种轨道重叠而成（<strong>金属的d和O的p轨道</strong>）。</p>
+<p>绝缘体——$E_g\ge5\rm eV$；半导体——$E_g&lt;3\rm eV$。费米能级——0K时固体能带中充满电子的最高能级。</p>
+<p>解释：温度越高，半导体电阻<strong>越小</strong>（除金属外都是如此），与金属导电性进行对比：</p>
+<p>半导体的导电依赖于热能将电子激发到费米能级以上，形成空穴和电子（二者都可移动并导电）。而金属则不需要这点，影响金属导电性的主要是电子通过金属遇到的阻碍——热振动会加大阻碍（把电子“散射”了）。</p>
+<p>半导体对温度的依赖类似于玻尔兹曼表达式，可以认为是：
+$$
+\sigma=\sigma_0\mathrm e^{-E_\mathrm g/2kT}
+$$
+半金属的情况：（著名的例子有石墨）</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyukj0jd1hj30eg0hw0t4.jpg" alt="image-20220129152109491" style="zoom:25%;" /></p>
+<p>无论是<strong>N</strong>egative型还是<strong>P</strong>ositive型半导体都是在本征半导体的基础上减小带隙：（注意费米能级的位置）</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gys18wy4ktj313w0k4acf.jpg" alt="image-20220127104256383"></p>
+<p><strong>非计量</strong>的金属氧化物也分P、N：ZnO、Fe2O3（<strong>易被还原</strong>）<strong>是n型半导体</strong>——缺少O原子：电子富余，形成一条小能带（原本是O的lp）——在氧气中加热并冷却导电性下降；Cu2O、FeO、FeS、CuI（<strong>易被氧化</strong>）<strong>是p型半导体</strong>——电子缺失，形成空穴——在O2中加热导电性增加；MgO等不易<strong>氧化还原（主族）</strong>——<strong>绝缘体</strong>。</p>
+<h3 id="pn结2">PN结<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></h3>
+<p>由于掺杂能级的不同，P型半导体和N型半导体具有不同费米能级：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gys9tv006yj31go0cm405.jpg" alt="image-20220127153951795"></p>
+<p>当PN结形成时，半导体的能带会扭曲——为了拥有相同的费米能级：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gys8wktuwrj31d00fmwgp.jpg" alt="image-20220127150752636"></p>
+<p><strong>扩散运动</strong>：随机热运动，电子：N→P；空穴：P→N</p>
+<p>电子与空穴复合，导致扩散到对面的多数载流子都耗尽了，结区只剩下不可移动的带电离子，失去了电中性变为带电，形成了<strong>耗尽层</strong>。耗尽区形成的<strong>内建电势</strong>的方向与扩散相反，阻碍进一步扩散。</p>
+<p><strong>漂移运动</strong>：在外加电场（<strong>内建电势</strong>）下运动</p>
+<p>当我们外加电压使PN结正偏时，外加电场与内建电场方向相反，当外压足够大时，电子可以由N至P运动（空穴相反），称PN结导通。</p>
+<p>当PN结反偏时，耗尽层会变厚。并且随反向偏置电压的增加，耗尽层的厚度增加，扩散过PN结的势垒增大，电阻变大，宏观看二极管成为绝缘体。除了正向偏压导通之外，PN结还会被反向击穿：</p>
+<ol>
+<li>如果反向电压过大，PN结中的载流子会拥有很大的动能，足以和中性粒子碰撞使中性粒子分离出价电子而产生空穴-电子对。这样会导致PN结反向电流的急剧增大，发生PN结的击穿，因为被弹出的价电子又可能和其他中性粒子碰撞产生链式反应，类似于雪崩，这样的反向击穿方式成为<strong>雪崩击穿</strong>。掺杂浓度<strong>越低</strong>所需电场越强。</li>
+<li>当掺杂浓度非常高时，在PN结两端加入弱电场就会使中性粒子中的价电子脱离原子的束缚，从而成为载流子，导致PN结的击穿。这样的击穿被称作<strong>齐纳击穿</strong>。</li>
+</ol>
+<h3 id="其他二极管">其他二极管</h3>
+<p>光敏开关：在反偏时，光照可能使电子激发到导带上，使电子可以流动（变相击穿？）</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gysb872mphj30fq0gmgmh.jpg" alt="image-20220127162814319" style="zoom: 33%;" /></p>
+<p>太阳能电池板：光敏开关作为电源。</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gysb8llw3fj30ge0fq3zd.jpg" alt="image-20220127162837801" style="zoom:33%;" /></p>
+<p>LED：正偏PN结可以逆转上述，当两种载流子在耗尽层合体时，如果产生的能量变化幅度合适，它可以作为可见光释放。</p>
+<h3 id="量子点">量子点</h3>
+<p>连续的能带是大量粒子时的近似，若半导体足够小（10nm），它会显示出离散的能级。让量子点的载流子发生变化需要更多能量（例：放出能量→发光）。</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gysccd3ad0j316g0u0gon.jpg" alt="image-20220127170650048" style="zoom: 25%;" /></p>
+<p>注意到随着纳米晶体<strong>尺寸的增加</strong>，带隙变得更小，并且发射最大值移动到更高的波长（<strong>更低能量</strong>）。<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<h2 id="超导原理">超导——原理</h2>
+<p>I型，如Nb-Ti 合金。具有迈斯纳效应——在冷却到临界温度 Tc 以下时会排出所有磁通量。 它在磁场达到临界值Hc之前，否则施加的磁场会破坏超导性。（突变）</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/EfektMeisnera.svg/1920px-EfektMeisnera.svg.png" alt="img" style="zoom: 15%;" /></p>
+<p>II型超导体更为复杂：排斥→部分→正常（大多高温超导体）</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gysddpq8t4j31ba0u0act.jpg" alt="img"></p>
+<p>一个常见的演示是将一小块超导材料冷却到其临界温度以下，然后在其上方放置一个小磁铁。 磁铁悬浮在超导体上方固定位置。</p>
+<p><strong>悬浮演示仅适用于 II 型超导体</strong>，因为需要进入超导体的磁场线来阻止横向运动，并让斥力和引力的平衡——<strong>磁通钉扎</strong>。</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gysdhxubp2j308c05w3yp.jpg" alt="img"></p>
+<h2 id="磁性">磁性</h2>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyuuf60evhj30pq0my404.jpg" alt="image-20220129210326347" style="zoom: 33%;" /></p>
+<p><strong>名词</strong>：磁化率χ：磁化强度M与磁场强度H之比</p>
+<p><strong>铁磁性</strong>：在Curie温度以下自旋锁定平行，具有极大的极化率。一般<strong>d轨道（较少：f）含有未成对电子</strong>会有铁磁性。相互作用——使得自旋平行但没有成共价键。得到滞后曲线→达到某个状态后不易改变，无法原路返回。分软硬：硬（蓝色）——在外加磁场下难变化→永磁体；软（红色）——容易变化→变压器。</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyuuh8cdgaj30eg0doaaf.jpg" alt="image-20220129210526143" style="zoom:33%;" /></p>
+<p><strong>反铁磁性</strong>：在Neel温度下磁化率急剧下降，自旋被锁定在反平行，常见原因：<strong>超交换</strong>（大π键）</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyuujypcj4j30ug0fmwg4.jpg" alt="image-20220129210803469" style="zoom:33%;" /></p>
+<p><strong>超交换</strong>——180°→反铁磁性；90°→铁磁性</p>
+<p><strong>亚铁磁性</strong>：两种不同粒子的电子平行or反平行（无法完全抵消），还是有弱的铁磁性。如Fe3O4中两种Fe。</p>
+<p>总结如下：</p>
+<table>
+<thead>
+<tr>
+<th>磁性行为</th>
+<th>磁化率随温度变化</th>
+<th>场依赖性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>抗磁性（无单电子）</td>
+<td>无</td>
+<td>否</td>
+</tr>
+<tr>
+<td>顺磁性（a）</td>
+<td>下降</td>
+<td>否</td>
+</tr>
+<tr>
+<td>铁磁性（b）</td>
+<td>下降</td>
+<td>是</td>
+</tr>
+<tr>
+<td>反铁磁性（c）</td>
+<td>增加（Neel以下）</td>
+<td>（是）</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1gzhf54tggpj20lo0xamyd.jpg" alt="image-20220218094248610" style="zoom:33%;" /></p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyuk6rjs4ij30o80miacd.jpg" alt="image-20220129150922757">&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>注意符号：<img src="https://tva1.sinaimg.cn/large/008i3skNly1gysaa8g3rtj30dd0dp3z7.jpg" alt="img">&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>可见光波长：380-750nm&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+</div>
+</main>
+
+<section class="appendix">
+
+
+<div>
+  <div class="side side-left"><h3>Author&#39;s bio</h3></div>
+  <div>
+
+
+
+
+
+<div>Edward Kerman——化竞菜鸡，舟厨，ksp爱好者，花样滑冰云观众。</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Reuse</h3></div>
+  Text and figures are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution CC BY 4.0</a>.
+</div>
+
+
+
+<div>
+  <div class="side side-left"><h3>Suggest changes</h3></div>
+  
+  
+  
+    
+    
+  
+  If you find any mistakes (including typos) or want to suggest changes, please feel free to <a href="https://github.com/MJ23333/b/edit/master/content/post/jghx/%e6%99%b6%e4%bd%93%e7%90%86%e8%ae%ba.md" id="edit-link">edit the source file of this page on Github and create a pull request.</a>
+</div>
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Citation</h3></div>
+  <p>For attribution, please cite this work as</p>
+  <pre><code class="no-highlight">Edward Kerman (2022). 晶体理论. Edward Kerman&#39;s blog. /post/2022/01/23/%E6%99%B6%E4%BD%93%E7%90%86%E8%AE%BA/</code></pre>
+  <p>BibTeX citation</p>
+  <pre><code class="no-highlight">@misc{
+  title = "晶体理论",
+  author = "Edward Kerman",
+  year = "2022",
+  journal = "Edward Kerman&#39;s blog",
+  note = "/post/2022/01/23/%E6%99%B6%E4%BD%93%E7%90%86%E8%AE%BA/"
+}</code></pre>
+</div>
+
+</section>
+
+
+
+<nav class="post-nav">
+  <span class="nav-next">&larr; <a href="/post/2022/01/23/%E6%B3%A2%E5%87%BD%E6%95%B0%E5%8F%8A%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" title=Next&#32;post&#32;(older)>波函数及数学基础</a></span>
+  &hercon;
+  <span class="nav-prev"><a href="/post/2022/01/23/%E6%97%A0%E6%9C%BA%E7%BB%93%E6%9E%84%E5%8C%96%E5%AD%A6/" title=Previous&#32;post&#32;(newer)>无机结构化学</a> &rarr;</span>
+</nav>
+
+
+
+
+
+</div>
+
+
+  <footer>
+  <script async src="//yihui.org/js/center-img.js"></script>
+
+			<script type="text/x-mathjax-config">
+				MathJax.Hub.Config({
+					extensions: ["tex2jax.js"],
+					jax: ["input/TeX", "output/HTML-CSS"],
+					TeX: {
+						extensions: ["mhchem.js"],
+						Macros: {
+								d: "{\\mathrm d}",
+								B: "{\\mathrm B}",
+								A: "{\\mathrm A}",
+								m: "{\\mathrm m}",
+								D: "{\\Delta}",
+								Ek: "{E_{\\mathrm k}}",
+								Ep: "{E_{\\mathrm p}}",
+								K: "{\\space\\mathrm K}",
+								J: "{\\space\\mathrm J}",
+								kJ: "{\\space\\mathrm {kJ}}",
+								eV: "{\\space\\mathrm {eV}}",
+								mol: "{\\space\\mathrm {mol}}",
+								kjm: "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
+								align: ["{\\begin{align*} #1 \\end{align*}}",1],
+								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
+								l: ["{\\left( #1\\right)}",1],
+								lf: ["{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",2],
+								red: ["{\\color{red}{ #1}}",1],
+								green: ["{\\color{green}{ #1}}",1],
+								blue: ["{\\color{blue}{ #1}}",1],
+								bm: ["{\\boldsymbol{ #1}}",1]
+						}
+					},
+					tex2jax: {
+						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+						processEscapes: true
+					},
+					CommonHTML: { linebreaks: { automatic: true } },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+         	SVG: { linebreaks: { automatic: true } }
+				});
+			</script>
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+
+
+
+
+
+  <div class="footer">
+  
+  <ul class="copyright">
+    <li>© Edward Kerman 2020-2022</li>
+  </ul>
+  
+  <ul>
+    
+    <li class="optional">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    <li class="optional">
+      <a href="/tags/">Tags</a>
+    </li>
+    
+    <li id="menu-edit">
+      <a href="#">Suggest an edit</a>
+    </li>
+    
+    <li>
+      <a href="#">Back to top</a>
+    </li>
+    
+  </ul>
+  </div>
+  
+  </footer>
+  <script async src="/js/features.js" data-page-features="[null,[&#34;&#43;sidenotes&#34;],null]"></script>
+  </body>
+</html>
+

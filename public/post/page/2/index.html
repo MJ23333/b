@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/custom.css" />
-    <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
-<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
 <link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
-<link href="http://fonts.cdnfonts.com/css/operator-mono" rel="stylesheet">
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 <meta name="twitter:card" content="summary"/>
@@ -85,9 +86,9 @@
     </div>
     
     
-    <h1><a href="/post/2022/01/24/%E6%99%B6%E4%BD%93%E5%9F%BA%E7%A1%80/">晶体基础</a></h1>
+    <h1><a href="/post/2022/03/18/%E5%88%86%E5%AD%90%E5%AF%B9%E7%A7%B0%E6%80%A7/">分子对称性</a></h1>
     <div>
-      <span>2022-01-24</span>
+      <span>2022-03-18</span>
       <span>Edward Kerman</span>
     </div>
     <div class="summary">
@@ -95,12 +96,10 @@
       
       
       
-      仅介绍一些需特别注意的内容：
-旋转轴（记号：数字）——一定要符合晶格的特点：仅2，3，4，6
-与之形成对比的（平行的原子连线不等长），所以5、7、8及以上旋转轴不会出现在晶体中
-镜面（记号：m）对称中心（记号$\overline 1$）1，注意：垂直于n次轴的镜面用$n/m$表示（默认为平行）
-旋转-反演（记号$\overline n$）：下图中$\overline 6\equiv3\perp &hellip;
-      <a href="/post/2022/01/24/%E6%99%B6%E4%BD%93%E5%9F%BA%E7%A1%80/" class="more" title=Read&#32;More>Read More &rarr;</a>
+      在神经网络中，矩阵的意义大多是代数上的，仅作为中计算的简化方法：$\bm C=\bm A\bm B$，那么$C_{i,j}=\bm A_{i,:}\cdot\bm B_{:,j}$（注意，$\bm A_{i,:}$表示矩阵的第$i$行构成的向量）
+对于对称操作的矩阵表示，我们可以从几何角度进行如下理解：
+[&hellip;] 对于第$i$维的单位向量，变换后对应的就是变换矩阵中的第$i$列的列向 &hellip;
+      <a href="/post/2022/03/18/%E5%88%86%E5%AD%90%E5%AF%B9%E7%A7%B0%E6%80%A7/" class="more" title=Read&#32;More>Read More &rarr;</a>
     </div>
     </td>
     
@@ -121,9 +120,9 @@
     </div>
     
     
-    <h1><a href="/post/2022/01/23/%E5%89%AF%E6%97%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E9%94%AE/">副族之间的键</a></h1>
+    <h1><a href="/post/2022/03/03/%E7%AE%80%E8%B0%90%E6%8C%AF%E5%8A%A8/">简谐振动</a></h1>
     <div>
-      <span>2022-01-23</span>
+      <span>2022-03-03</span>
       <span>Edward Kerman</span>
     </div>
     <div class="summary">
@@ -131,12 +130,8 @@
       
       
       
-      在研究主族元素化学时，等电子原理是非常好用的手段（如BN-C）等等，但等电子原理在处理副族时遇到了困难——副族金属倾向于18电子而非8电子。怎么办呢？一个巧妙的办法是作差——看还缺几个电子来达到满壳层。
-已经满壳层（稀有气体或满足18电子）的物种十分稳定，不需多说。
-缺一个电子满壳层（卤素和17电子物种）有不少相似之处：尤其是Co(CO)4。
-缺两个电子：例：S和Fe(CO)4
-当然，作差的类比也 &hellip;
-      <a href="/post/2022/01/23/%E5%89%AF%E6%97%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E9%94%AE/" class="more" title=Read&#32;More>Read More &rarr;</a>
+      我们知道简谐运动的一般运动方程： $$ m\frac{\mathrm d^2x}{\mathrm d^2t}=-kx $$ 我们把常数搞到一起： $$ \frac{\mathrm d^2x}{\mathrm d^2t}+\omega^2x\text{，其中}\omega=\sqrt{\frac{k}{m}} $$ 二阶导竟然还可以等于自己乘上一个常数，猜测这是怎么导都稳得一批的指数函 &hellip;
+      <a href="/post/2022/03/03/%E7%AE%80%E8%B0%90%E6%8C%AF%E5%8A%A8/" class="more" title=Read&#32;More>Read More &rarr;</a>
     </div>
     </td>
     
@@ -157,9 +152,9 @@
     </div>
     
     
-    <h1><a href="/post/2022/01/23/%E6%97%A0%E6%9C%BA%E7%BB%93%E6%9E%84%E5%8C%96%E5%AD%A6/">无机结构化学</a></h1>
+    <h1><a href="/post/2022/02/28/%E5%8C%96%E5%AD%A6%E4%B8%AD%E7%9A%84%E5%A4%9A%E9%9D%A2%E4%BD%93/">化学中的多面体</a></h1>
     <div>
-      <span>2022-01-23</span>
+      <span>2022-02-28</span>
       <span>Edward Kerman</span>
     </div>
     <div class="summary">
@@ -167,14 +162,12 @@
       
       
       
-      小贴士：各物质配位数之和（配位数×原子数）相等，你可以使用十字交叉
-[&hellip;] M2O ：反萤石
-MO：岩盐
-ThO2（熔点很高，高电荷，LE高）：萤石
-M2O3：B（三角形）→ Al → Sc（缺陷萤石Sc~4~O~6~□~2~）→Y → La （CN依次升高）
-O：ABABAB；Al：C1C2C3C1C2C3（每种只填2/3八面体空隙）
-总：AC1BC2AC3BC1AC2BC3 &hellip;
-      <a href="/post/2022/01/23/%E6%97%A0%E6%9C%BA%E7%BB%93%E6%9E%84%E5%8C%96%E5%AD%A6/" class="more" title=Read&#32;More>Read More &rarr;</a>
+      $$ F+V=E+2 $$
+[&hellip;] 对称性——注意四面体的$\overline4$（$T_d$）、立方体的$3$（$O_h$）、八面体的$3$（$O_h$）、五角十二面体的$3$（$I_h$）、三角二十面体的$5$（$I_h$）。
+多面体相关数据计算——放到正方体中进行：（五角十二面体不在面上的顶点在体对角线）
+Td每条边的½切角得到Oh
+Oh或立方体每条边二分之一切角得到立方八面 &hellip;
+      <a href="/post/2022/02/28/%E5%8C%96%E5%AD%A6%E4%B8%AD%E7%9A%84%E5%A4%9A%E9%9D%A2%E4%BD%93/" class="more" title=Read&#32;More>Read More &rarr;</a>
     </div>
     </td>
     
@@ -195,9 +188,9 @@ O：ABABAB；Al：C1C2C3C1C2C3（每种只填2/3八面体空隙）
     </div>
     
     
-    <h1><a href="/post/2022/01/23/%E6%B3%A2%E5%87%BD%E6%95%B0%E5%8F%8A%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/">波函数及数学基础</a></h1>
+    <h1><a href="/post/2022/02/18/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/">一些数学</a></h1>
     <div>
-      <span>2022-01-23</span>
+      <span>2022-02-18</span>
       <span>Edward Kerman</span>
     </div>
     <div class="summary">
@@ -205,9 +198,8 @@ O：ABABAB；Al：C1C2C3C1C2C3（每种只填2/3八面体空隙）
       
       
       
-      具体推导见前一篇 blog。 $$ \color{red}{\hat H}\psi=E\psi $$
-[&hellip;] 如果一个粒子的波函数在$\mathbf r$处的值为$\psi$，那么，在该位置的一个无穷小体积的$\mathrm d\tau =\mathrm dx\mathrm dy\mathrm dz$内发现这个粒子的概率正比于$|\psi|^2\mathrm d\tau$，其中要注 &hellip;
-      <a href="/post/2022/01/23/%E6%B3%A2%E5%87%BD%E6%95%B0%E5%8F%8A%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" class="more" title=Read&#32;More>Read More &rarr;</a>
+      $$ \align{\int_0^\infty e^{-\lambda x^2}\d x&amp;=\frac12\sqrt\frac{\pi}{\lambda}\\\int_0^\infty xe^{-\lambda x^2}\d x&amp;=\frac1{2\lambda}\\\int_0^\infty x^2e^{-\lambda x^2}\d &hellip;
+      <a href="/post/2022/02/18/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/" class="more" title=Read&#32;More>Read More &rarr;</a>
     </div>
     </td>
     
@@ -228,9 +220,9 @@ O：ABABAB；Al：C1C2C3C1C2C3（每种只填2/3八面体空隙）
     </div>
     
     
-    <h1><a href="/post/2022/01/22/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E6%8E%A8%E5%AF%BC/">薛定谔方程的启发式推导</a></h1>
+    <h1><a href="/post/2022/02/18/%E5%88%86%E5%B8%83/">分布</a></h1>
     <div>
-      <span>2022-01-22</span>
+      <span>2022-02-18</span>
       <span>Edward Kerman</span>
     </div>
     <div class="summary">
@@ -238,9 +230,9 @@ O：ABABAB；Al：C1C2C3C1C2C3（每种只填2/3八面体空隙）
       
       
       
-      快速的启发式推导，仅用于帮助理解就行了。1
-[&hellip;] $$ \begin{gather*} E=\color{blue}{{\frac12}mv^2+V}=\color{blue}{{\frac{p^2}{2m}}+V}=\color{red}{h\nu} \newline p=\color{blue}{mv}=\color{red}{\frac h\lambda} &hellip;
-      <a href="/post/2022/01/22/%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E5%90%AF%E5%8F%91%E5%BC%8F%E6%8E%A8%E5%AF%BC/" class="more" title=Read&#32;More>Read More &rarr;</a>
+      小刻也能轻松学懂的Maxwell分布
+[&hellip;] 考虑一个系统，$T$恒定（比如和一个恒温热库交换热量），$\d V=\d N=0$。能级$\varepsilon$的简并度为$g_i$，对于两个确定状态$s_a,s_b$，由于系统的微观状态已经确定（仅1种），总系统的状态数就等于热库的微观状态数（下面的$U,S$都指热库）： $$ &hellip;
+      <a href="/post/2022/02/18/%E5%88%86%E5%B8%83/" class="more" title=Read&#32;More>Read More &rarr;</a>
     </div>
     </td>
     
@@ -257,13 +249,13 @@ O：ABABAB；Al：C1C2C3C1C2C3（每种只填2/3八面体空隙）
     
     
     <div class="categories">
-      <a href="/categories/%E6%84%9F%E6%83%B3/">感想</a>
+      <a href="/categories/academic/">Academic</a>
     </div>
     
     
-    <h1><a href="/post/2021/11/23/%E5%85%B3%E4%BA%8E%E7%A7%91%E5%AD%A6%E4%BC%A6%E7%90%86%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/">关于科学伦理的一些思考🤔</a></h1>
+    <h1><a href="/post/2022/02/18/%E5%A4%9A%E7%BB%84%E5%88%86%E7%83%AD%E5%8A%9B%E5%AD%A6/">多组分热力学</a></h1>
     <div>
-      <span>2021-11-23</span>
+      <span>2022-02-18</span>
       <span>Edward Kerman</span>
     </div>
     <div class="summary">
@@ -271,9 +263,14 @@ O：ABABAB；Al：C1C2C3C1C2C3（每种只填2/3八面体空隙）
       
       
       
-      自近代科学兴起以来，人们见证了科学改造世界的力量，也充分享受到了近代科学成果带来的社会福祉。从衣食住行到生老病死，我们已经彻底离不开科学了。遥想18世纪启蒙运动的先辈们，热情地讴歌这人类智慧的结晶：他们为后世量身定做了“科学等同于进步”，“知识就是力量”（培根是17世纪的）的乐观理念。然而，他们万万没有想到，人类在享受科学福祉的同时，也开始遭遇来自科学的远虑近忧。
-科学发展到今天，已经具备了强大的 &hellip;
-      <a href="/post/2021/11/23/%E5%85%B3%E4%BA%8E%E7%A7%91%E5%AD%A6%E4%BC%A6%E7%90%86%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/" class="more" title=Read&#32;More>Read More &rarr;</a>
+      多组分系统：两种或两种以上组分所形成的系统
+混合物：含有一种以上组分的系统
+溶液：含有一种以上组分的液相和固相（没有气相），分为溶质$\rm B$和溶剂$\rm A$。
+[&hellip;] 质量浓度（并不常用）：
+$$ \rho_{\rm B}\doteq \frac{m({\rm B})}{V_{\rm tot}} $$
+质量分数：
+$$ w_{\rm B}\doteq &hellip;
+      <a href="/post/2022/02/18/%E5%A4%9A%E7%BB%84%E5%88%86%E7%83%AD%E5%8A%9B%E5%AD%A6/" class="more" title=Read&#32;More>Read More &rarr;</a>
     </div>
     </td>
     
@@ -302,10 +299,16 @@ O：ABABAB；Al：C1C2C3C1C2C3（每种只填2/3八面体空隙）
         <a href="/post/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
       </li>
       <li class="page-item">
+        <a href="/post/page/4/" aria-label="Page 4" class="page-link" role="button">4</a>
+      </li>
+      <li class="page-item">
+        <a href="/post/page/5/" aria-label="Page 5" class="page-link" role="button">5</a>
+      </li>
+      <li class="page-item">
         <a href="/post/page/3/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/post/page/3/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/post/page/6/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
 
@@ -330,12 +333,23 @@ O：ABABAB；Al：C1C2C3C1C2C3（每种只填2/3八面体空隙）
 								B: "{\\mathrm B}",
 								A: "{\\mathrm A}",
 								m: "{\\mathrm m}",
+								D: "{\\Delta}",
+								Ek: "{E_{\\mathrm k}}",
+								Ep: "{E_{\\mathrm p}}",
+								K: "{\\space\\mathrm K}",
+								J: "{\\space\\mathrm J}",
+								kJ: "{\\space\\mathrm {kJ}}",
+								eV: "{\\space\\mathrm {eV}}",
+								mol: "{\\space\\mathrm {mol}}",
+								kjm: "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
 								align: ["{\\begin{align*} #1 \\end{align*}}",1],
 								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
 								l: ["{\\left( #1\\right)}",1],
+								lf: ["{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",2],
 								red: ["{\\color{red}{ #1}}",1],
 								green: ["{\\color{green}{ #1}}",1],
-								blue: ["{\\color{blue}{ #1}}",1]
+								blue: ["{\\color{blue}{ #1}}",1],
+								bm: ["{\\boldsymbol{ #1}}",1]
 						}
 					},
 					tex2jax: {

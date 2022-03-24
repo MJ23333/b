@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> 马利肯电负性和硬度 | Edward Kerman&#39;s blog</title>
+    
+    <link rel="icon" type="image/png" href="/icons/Hi-Res.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
+<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="马利肯电负性和硬度"/>
+<meta name="twitter:description" content="有一个函数$f(x)$，我们逼近它的倒数（使用简写），此处取中点计算： $$ f&#39;(x)=\frac{f(x&#43;\delta/2)-f(x-\delta/2)}{\delta} $$ 我们取$\delta=2$，那么： $$ \left[\f{E(N)}{N}\right]_Z=\frac{E(N&#43;1)-E(N-1)}2=\frac{E(N)-A-(E(N)&#43;I)}2=-\red{\frac{I&#43;A}{2}}=-\red{\chi^{\rm M}} $$
+对于它的二阶导数，我们采取相同的方法： $$ f&#39;&#39;(x)=\frac{\frac{f(x&#43;\delta)-f(x)}{\delta}-\frac{f(x-\delta)-f(x)}{\delta}}{\delta}=\frac{f(x&#43;\delta)-2f(x)&#43;f(x-\delta)}{\delta^2} $$ 可以认为$\frac{f(x&#43;\delta)-f(x)}{\delta}$计算的是$x&#43;\delta/2$处的倒数，或者统一认为都计算的是偏小的一方的倒数，此处取左端点计算： $$ f&#39;(x)=\frac{f(x&#43;\delta)-f(x)}{\delta} $$ 那么也存在： $$ f&#39;&#39;(x)=\frac{\frac{f(x&#43;\delta)-f(x)}{\delta}-\frac{f(x-\delta)-f(x)}{\delta}}{\delta}=\frac{f(x&#43;\delta)-2f(x)&#43;f(x-\delta)}{\delta^2} $$ 把$I,A$带入其中： $$ \left[\frac{\partial^2 E(N)}{\partial N^2}\right]_Z=\frac{E(N)-A-2E(N)&#43;E(N)&#43;I}{1^2}=\red{I-A}=\red{2\eta_S} $$
+上面的方法称为有限差分。"/>
+
+
+  </head>
+  <body>
+
+    <nav class="menu">
+    <ul>
+      <li class="left">
+        <a href="/"><span>Edward Kerman&#39;s blog</span></a>
+      </li>
+      
+      <li>
+        <a href="/">Home</a>
+      </li>
+      
+      <li>
+        <a href="/about/">About</a>
+      </li>
+      
+      <li>
+        <a href="/sitemap/">Sitemap</a>
+      </li>
+      
+      <li id="menu-search">
+        <a href="/#">Search</a>
+      </li>
+      
+      <li>
+        <a href="/index.xml">Subscribe</a>
+      </li>
+      
+    </ul>
+    </nav>
+		
+
+
+<div class="container single">
+<main>
+
+<div class="article-meta">
+<h1><span class="title">马利肯电负性和硬度</span></h1>
+
+<h3 class="author">
+Edward Kerman
+</h3>
+
+<h3 class="date">2022-03-22</h3>
+<p class="terms">
+  
+  
+  Categories: <a href="/categories/academic">Academic</a> <a href="/categories/%E6%97%A0%E6%9C%BA%E5%8C%96%E5%AD%A6">无机化学</a> <a href="/categories/%E7%BB%93%E6%9E%84%E5%8C%96%E5%AD%A6">结构化学</a> 
+  
+  
+  
+  Tags: <a href="/tags/%E7%94%B5%E8%B4%9F%E6%80%A7">电负性</a> 
+  
+  
+</p>
+</div>
+
+<div class="article">
+<p>有一个函数$f(x)$，我们逼近它的倒数（使用简写），此处取中点计算：
+$$
+f'(x)=\frac{f(x+\delta/2)-f(x-\delta/2)}{\delta}
+$$
+我们取$\delta=2$，那么：
+$$
+\left[\f{E(N)}{N}\right]_Z=\frac{E(N+1)-E(N-1)}2=\frac{E(N)-A-(E(N)+I)}2=-\red{\frac{I+A}{2}}=-\red{\chi^{\rm M}}
+$$</p>
+<p>对于它的二阶导数，我们采取相同的方法：
+$$
+f''(x)=\frac{\frac{f(x+\delta)-f(x)}{\delta}-\frac{f(x-\delta)-f(x)}{\delta}}{\delta}=\frac{f(x+\delta)-2f(x)+f(x-\delta)}{\delta^2}
+$$
+可以认为$\frac{f(x+\delta)-f(x)}{\delta}$计算的是$x+\delta/2$处的倒数，或者统一认为都计算的是偏小的一方的倒数，此处取左端点计算：
+$$
+f'(x)=\frac{f(x+\delta)-f(x)}{\delta}
+$$
+那么也存在：
+$$
+f''(x)=\frac{\frac{f(x+\delta)-f(x)}{\delta}-\frac{f(x-\delta)-f(x)}{\delta}}{\delta}=\frac{f(x+\delta)-2f(x)+f(x-\delta)}{\delta^2}
+$$
+把$I,A$带入其中：
+$$
+\left[\frac{\partial^2 E(N)}{\partial N^2}\right]_Z=\frac{E(N)-A-2E(N)+E(N)+I}{1^2}=\red{I-A}=\red{2\eta_S}
+$$</p>
+<p>上面的方法称为有限差分。</p>
+
+</div>
+</main>
+
+<section class="appendix">
+
+
+<div>
+  <div class="side side-left"><h3>Author&#39;s bio</h3></div>
+  <div>
+
+
+
+
+
+<div>Edward Kerman——化竞菜鸡，舟厨，ksp爱好者，花样滑冰云观众。</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Reuse</h3></div>
+  Text and figures are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution CC BY 4.0</a>.
+</div>
+
+
+
+<div>
+  <div class="side side-left"><h3>Suggest changes</h3></div>
+  
+  
+  
+    
+    
+  
+  If you find any mistakes (including typos) or want to suggest changes, please feel free to <a href="https://github.com/MJ23333/b/edit/master/content/post/jghx/%e9%a9%ac%e5%88%a9%e8%82%af%e7%94%b5%e8%b4%9f%e6%80%a7.md" id="edit-link">edit the source file of this page on Github and create a pull request.</a>
+</div>
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Citation</h3></div>
+  <p>For attribution, please cite this work as</p>
+  <pre><code class="no-highlight">Edward Kerman (2022). 马利肯电负性和硬度. Edward Kerman&#39;s blog. /post/2022/03/22/%E9%A9%AC%E5%88%A9%E8%82%AF%E7%94%B5%E8%B4%9F%E6%80%A7%E5%92%8C%E7%A1%AC%E5%BA%A6/</code></pre>
+  <p>BibTeX citation</p>
+  <pre><code class="no-highlight">@misc{
+  title = "马利肯电负性和硬度",
+  author = "Edward Kerman",
+  year = "2022",
+  journal = "Edward Kerman&#39;s blog",
+  note = "/post/2022/03/22/%E9%A9%AC%E5%88%A9%E8%82%AF%E7%94%B5%E8%B4%9F%E6%80%A7%E5%92%8C%E7%A1%AC%E5%BA%A6/"
+}</code></pre>
+</div>
+
+</section>
+
+
+
+<nav class="post-nav">
+  <span class="nav-next">&larr; <a href="/post/2022/03/21/%E5%8E%9F%E5%AD%90%E7%BB%93%E6%9E%84/" title=Next&#32;post&#32;(older)>原子结构</a></span>
+  &hercon;
+  <span class="nav-prev"><a href="/post/2022/03/23/%E9%9D%9E%E6%B0%B4%E6%BA%B6%E5%89%82/" title=Previous&#32;post&#32;(newer)>非水溶剂</a> &rarr;</span>
+</nav>
+
+
+
+
+
+</div>
+
+
+  <footer>
+  <script async src="//yihui.org/js/center-img.js"></script>
+
+			<script type="text/x-mathjax-config">
+				MathJax.Hub.Config({
+					extensions: ["tex2jax.js"],
+					jax: ["input/TeX", "output/HTML-CSS"],
+					TeX: {
+						extensions: ["mhchem.js"],
+						Macros: {
+								d: "{\\mathrm d}",
+								B: "{\\mathrm B}",
+								A: "{\\mathrm A}",
+								m: "{\\mathrm m}",
+								D: "{\\Delta}",
+								Ek: "{E_{\\mathrm k}}",
+								Ep: "{E_{\\mathrm p}}",
+								K: "{\\space\\mathrm K}",
+								J: "{\\space\\mathrm J}",
+								kJ: "{\\space\\mathrm {kJ}}",
+								eV: "{\\space\\mathrm {eV}}",
+								mol: "{\\space\\mathrm {mol}}",
+								kjm: "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
+								align: ["{\\begin{align*} #1 \\end{align*}}",1],
+								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
+								l: ["{\\left( #1\\right)}",1],
+								lf: ["{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",2],
+								red: ["{\\color{red}{ #1}}",1],
+								green: ["{\\color{green}{ #1}}",1],
+								blue: ["{\\color{blue}{ #1}}",1],
+								bm: ["{\\boldsymbol{ #1}}",1]
+						}
+					},
+					tex2jax: {
+						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+						processEscapes: true
+					},
+					CommonHTML: { linebreaks: { automatic: true } },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+         	SVG: { linebreaks: { automatic: true } }
+				});
+			</script>
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+
+
+
+
+
+  <div class="footer">
+  
+  <ul class="copyright">
+    <li>© Edward Kerman 2020-2022</li>
+  </ul>
+  
+  <ul>
+    
+    <li class="optional">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    <li class="optional">
+      <a href="/tags/">Tags</a>
+    </li>
+    
+    <li id="menu-edit">
+      <a href="#">Suggest an edit</a>
+    </li>
+    
+    <li>
+      <a href="#">Back to top</a>
+    </li>
+    
+  </ul>
+  </div>
+  
+  </footer>
+  <script async src="/js/features.js" data-page-features="[null,[&#34;&#43;sidenotes&#34;],null]"></script>
+  </body>
+</html>
+

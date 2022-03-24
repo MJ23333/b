@@ -6,7 +6,175 @@
     <description>Recent content in Posts on Edward Kerman&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>非水溶剂</title>
+      <link>/post/2022/03/23/%E9%9D%9E%E6%B0%B4%E6%BA%B6%E5%89%82/</link>
+      <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/03/23/%E9%9D%9E%E6%B0%B4%E6%BA%B6%E5%89%82/</guid>
+      <description>分类  质子溶剂：$\ce{HF, H2 SO4 , MeOH}$; 非质子溶剂：$\ce{N2O4 , BrF3}$ ; 配位溶剂：$\ce{MeCN, Et2O, Me2CO}$.  相对介电常数 若在两个元电荷之间放入某种材料，它们的库伦作用会发生改变： $$ 库伦势能=\frac{e^2}{4\pi\varepsilon_0\varepsilon_rr} $$ 对于水，$\varepsilon_r=78$，与真空相比，两个点电荷之间的力明显减小，离子被很好地分离。
+溶剂转移 对于卤素离子，氢键对于溶剂化十分重要（酰胺、醇√）
+拉平和区分 酸性溶剂中酸性不能超过质子化的溶剂，碱性也不能超过去质子的溶剂。故碱性溶剂对酸有拉平作用（都是强酸），反之亦然。例：液氨中超强酸和$\ce{NH4+}$的效果一样。
+而酸性溶剂不利于酸的解离，故酸性溶剂中的酸被区分开，碱性中碱被区分开。例：硫酸中$\ce{HClO4}$显两性，而$\ce{HNO3}$显露碱性。
+ 对Brønsted酸碱更广义的定义：在自电离溶剂中，酸是产生溶剂阳离子的物质，碱是产生溶剂阴离子的物质
+ 比如在$\ce{N2O4}$溶剂中，$\ce{[NO]ClO4}$表现为酸，$\ce{NaNO3}$表现为碱： $$ \ce{N2O4 -&amp;gt; NO+ + NO3^{-}} $$
+一些例子 $\ce{SO2}$ 极性非质子，很难自耦电离，很适合合成一些多中心阳离子，如：$\ce{[Se]4^{2+},[Se]8^{2+},I3+,I5+}$。
+液氨 液氨的相对介电常数小于水，在大多数时候它不那么能溶解离子化合物，例外的有包含$\ce{NH4+,I-,NO3-}$的各种盐，如$\ce{AgI}$。它还可以翻转一些反映的方向： $$ \ce{2AgCl + Ba(NO3)2 -&amp;gt; 2AgNO3 + BaCl2}\\
+\ce{AgCl + KNO3 -&amp;gt; AgNO3 + KCl} $$ 相反，大多数有机物在液氨中溶解度更大。
+在水中，由于氢键，$\ce{OH-,H3O+}$比其他离子更容易移动，但在$\ce{NH3(l)}$中$\ce{NH2-,NH4+}$移动速度和其他离子差不多。
+液氨对酸有拉平作用——$\ce{H2NSO3H}$在液氨中表现为二元酸，有$\ce{K2[HNSO3]}$。
+液氨中的s区金属：随着浓度上升电导率先减后增：出溶剂化电子 → 结合回去 → 表现得像金属；顺磁性降低： $$ \left\{\begin{align*}&amp;amp;\ce{2M+(solv) + 2e^{-}(solv) &amp;lt;=&amp;gt; M2(solv)}\\&amp;amp;\ce{M(solv) + e^{-}(solv) &amp;lt;=&amp;gt; M^{-}(solv)} \end{align*}\right.</description>
+    </item>
+    
+    <item>
+      <title>马利肯电负性和硬度</title>
+      <link>/post/2022/03/22/%E9%A9%AC%E5%88%A9%E8%82%AF%E7%94%B5%E8%B4%9F%E6%80%A7%E5%92%8C%E7%A1%AC%E5%BA%A6/</link>
+      <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/03/22/%E9%A9%AC%E5%88%A9%E8%82%AF%E7%94%B5%E8%B4%9F%E6%80%A7%E5%92%8C%E7%A1%AC%E5%BA%A6/</guid>
+      <description>有一个函数$f(x)$，我们逼近它的倒数（使用简写），此处取中点计算： $$ f&#39;(x)=\frac{f(x+\delta/2)-f(x-\delta/2)}{\delta} $$ 我们取$\delta=2$，那么： $$ \left[\f{E(N)}{N}\right]_Z=\frac{E(N+1)-E(N-1)}2=\frac{E(N)-A-(E(N)+I)}2=-\red{\frac{I+A}{2}}=-\red{\chi^{\rm M}} $$
+对于它的二阶导数，我们采取相同的方法： $$ f&#39;&#39;(x)=\frac{\frac{f(x+\delta)-f(x)}{\delta}-\frac{f(x-\delta)-f(x)}{\delta}}{\delta}=\frac{f(x+\delta)-2f(x)+f(x-\delta)}{\delta^2} $$ 可以认为$\frac{f(x+\delta)-f(x)}{\delta}$计算的是$x+\delta/2$处的倒数，或者统一认为都计算的是偏小的一方的倒数，此处取左端点计算： $$ f&#39;(x)=\frac{f(x+\delta)-f(x)}{\delta} $$ 那么也存在： $$ f&#39;&#39;(x)=\frac{\frac{f(x+\delta)-f(x)}{\delta}-\frac{f(x-\delta)-f(x)}{\delta}}{\delta}=\frac{f(x+\delta)-2f(x)+f(x-\delta)}{\delta^2} $$ 把$I,A$带入其中： $$ \left[\frac{\partial^2 E(N)}{\partial N^2}\right]_Z=\frac{E(N)-A-2E(N)+E(N)+I}{1^2}=\red{I-A}=\red{2\eta_S} $$
+上面的方法称为有限差分。</description>
+    </item>
+    
+    <item>
+      <title>原子结构</title>
+      <link>/post/2022/03/21/%E5%8E%9F%E5%AD%90%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Mon, 21 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/03/21/%E5%8E%9F%E5%AD%90%E7%BB%93%E6%9E%84/</guid>
+      <description>旧量子论 Bohr的氢原子模型 两个假设：
+ 在氢原子中，电子围绕著原子核进行圆周运动。 在轨道中运动的电子的角动量的大小$L$被量子化为正整数乘以$\hbar$，即$L=n\hbar$。  根据圆周运动和库仑定律： $$ r=\frac1{4\pi\varepsilon_0}\frac{e^2}{r^2} $$
+另外，圆周运动的角动量大小是半径乘以动量，结合假设2： $$ L=rm_ev=n\hbar\\
+v=\frac{n\hbar}{rm_e} $$
+得到： $$ r=\frac{4\pi\varepsilon_0\hbar^2}{m_ee^2}n^2 $$
+原子轨道 量子数 描述轨道的都为整数，$n\in[1,+\infty)$，$l\in\red{[0,n-1]}$，$m_l\in[-l,l]$（事实上$m_l$是轨道角动量沿某指定轴的射影）。
+描述电子还需要自旋角动量，其值为$s=\frac12$，但由于角动量需要方向，故使用磁自旋角动量$m_s$，取值为$\frac12$或$-\frac12$（事实上$m_s$是自旋$s=1/2$沿某指定轴的射影）。
+波函数的径向部分 注意s轨道在$r=0$有确定的有限值，而其他轨道在$r=0$时值为0。
+径向节点数：$n-l$
+径向分布函数 我们想要知道在距离原子核$r$找到电子的概率，即在一层球壳找到电子的概率，因此还要乘上表面积，得到径向分布函数： $$ RDS=4\pi r^2R(r)^2 $$ 可以发现$RDS\ge0$
+波函数的角部分 学习径向分布函数的经验，我们使用$A(\theta,\phi)^2$表示在某个方向找到电子的概率，但在画图时我们习惯根据原来的$A(\theta,\phi)$来着色。
+轨道的能量 对于类氢原子（不考虑电子间作用）： $$ E=R\frac{Z^2}{n^2} $$ 对于所有原子，$n$越大，能量越相近。
+更多的角动量 轨道角动量： $$ L_O=\l{\sqrt{l(l+1)}}\hbar $$ 其中关于某指定z轴的投影（分量）为$m_l\hbar$。
+自旋角动量： $$ L_{S}=\l{\sqrt{s(s+1)}}\hbar $$ 同样，z方向的分量为$m_s\hbar$。
+我们可以揉在一起，用总角动量来表示： $$ L=\l{\sqrt{j(j+1)}}\hbar $$ 其中总角动量量子数$j=|l\pm s|$。而它z方向的分量为$m_j\hbar$，其中$m_j=-j,-j+1,\cdots,j-1,j$，共$(2j+1)$个值。注意不同$j$对应的轨道能量由微弱不等（如$3\mathrm p_{3/2}$和$3\mathrm p_{1/2}$）
+多电子原子 Slater规则 由于类氢原子的所有$n$相等的轨道都是简并的，我们要对他打几个补丁：
+ 分组：s、p一组，d、f单独一组 更高组的对$\sigma$没有影响 对于n,p电子——同组0.35（1s的0.3），次组0.85，再之前1 对于d,f电子——同组0.35，之前1。  排布相关规则 Hund第一规则：先平行填入简并轨道； Pauli不相容原理：同一原子的两个电子不可能有一样的四个量子数。</description>
+    </item>
+    
+    <item>
+      <title>一些量子力学结论</title>
+      <link>/post/2022/03/19/%E4%B8%80%E4%BA%9B%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%BB%93%E8%AE%BA/</link>
+      <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/03/19/%E4%B8%80%E4%BA%9B%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%BB%93%E8%AE%BA/</guid>
+      <description>旧量子论 光电效应 $$ \frac12mv^2=h\nu-\Phi $$ 其中$\Phi$为脱出功（功函）。
+Bohr的氢原子模型 两个假设：
+ 在氢原子中，电子围绕著原子核进行圆周运动。 在轨道中运动的电子的角动量的大小$L$被量子化为正整数乘以约化普朗克常数$\hbar$。  根据圆周运动和库仑定律： $$ r=\frac1{4\pi\varepsilon_0}\frac{e^2}{r^2} $$
+另外，圆周运动的角动量大小是半径乘以动量，结合假设2： $$ L=rm_ev=n\hbar\\
+v=\frac{n\hbar}{rm_e} $$
+得到： $$ r=\frac{4\pi\varepsilon_0\hbar^2}{m_ee^2}n^2 $$
+波粒关系 de Broglie和Einstein关系 对于实物粒子和光子都适用： $$ E=h\nu=hc\overline\nu=\frac{hc}\lambda\\
+\lambda=\frac h p $$
+激发光谱 外界给粒子能量 → 电子跃迁到激发态 → 回落到基态 → 发光
+不确定性原理 $$ \Delta x\Delta p_x\ge\frac\hbar2 $$
+简单的量子力学 薛定谔方程 $$ \left[-\frac{\hbar^2}{2m}\nabla^2+V\right]\psi(x,y,z)=E\psi(x,y,z) $$
+一维势箱 一维势箱外$V=\infty$（显然此时$\psi=0$），势箱内$V=0$，带入薛定谔方程： $$ \frac{\hbar^2}{2m}\frac{\d^2\psi(x)}{\d x^2}+E\psi(x)=0 $$ 我们把常数搞到一块： $$ k^2=\frac{2mE}{\hbar^2}\\
+\frac{\d^2\psi(x)}{\d x^2}+k^2\psi(x)=0 $$ 联想我另一个博客里写的求解简谐振动的方法，通解为： $$ \psi(x)=A\cos(kx)+B\sin(kx) $$ 接着带入边界条件：$\psi(0)=0$，显然$A=0$，得到： $$ \psi(x)=B\sin(kx) $$ 同时，让另一个边界$\psi(l)=0$，那么： $$ k=\frac{n\pi}{l} $$ 带回$E$： $$ E=\frac{n^2h^2}{8ml^2}\qquad n=1,2,3,\cdots $$ 注意，$n=0$无法满足归一化条件。此时最低可能能量为$n=1$时的$E$，称为零点能。</description>
+    </item>
+    
+    <item>
+      <title>分子结构</title>
+      <link>/post/2022/03/19/%E5%88%86%E5%AD%90%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/03/19/%E5%88%86%E5%AD%90%E7%BB%93%E6%9E%84/</guid>
+      <description>一些命名 中心对称——$\rm \red g$，反对称$\rm \red u$（我恨德语）。因此对于成键轨道：$\sigma_\red{\rm g},\pi_\red{\rm u},\delta_\red{\rm g}$，注意$\rm g,u$的仅说法在两边相等的（如同核双原子分子）轨道中使用（不然哪来的中心对称）。
+双原子分子 同核 VB 认为分子轨道很大程度上保留原有原子轨道成分（定域），原子的波函数线性组合形成新的波函数（不是分子轨道）： $$ \align{\psi_{共价}&amp;amp;=N(c_1\psi_1+c_2\psi_2+\cdots)\\N&amp;amp;=\frac1{\sqrt{c_1^2+c_2^2+\cdots}}} $$ 这样可得到两个波函数，分别代表两个电子自旋平行和反平行： $$ \align{\psi_+&amp;amp;=N(\psi_1+\psi_2)\\\psi_-&amp;amp;=N(\psi_1-\psi_2)} $$
+后来为了更贴近实验，考虑了电子在不同原子核之间转移的情况（形成离子）： $$ \psi_+=N[(\psi_1+\psi_2)+c(\psi_3+\psi_4)]=N[\psi_{共价}+(c\times\psi_{离子})] $$ 其中$\psi_1$至$\psi_4$具体情况如下（电子用1，2区分）：
+至此，共振初见雏形。可惜的是，该理论无法解释$\ce{O2}$的顺磁性。
+MO s-p混杂的解释：能量比较接近且对称性相同的轨道相互作用，两组：$\sigma_{\rm 2s}-\sigma_{\rm 2p_z}$和$\sigma_{\rm 2}^*-\sigma_{\rm 2p_z}^*$，结果是让高的更高，低的更低（有四个轨道参与混杂），其中$\sigma_{\rm 2s}-\sigma_{\rm 2p_z}$比较强烈，使得组合出来的$3\sigma_{\rm g}$（不用$\rm s,p$描述）的能量高于$\pi_{\rm u}$（即$\pi$成键的能量相对更低）。
+异核 由于s-p混杂且不对称，只使用$n\sigma,n\pi$描述，不加角标。$\ce{CO,NO}$分子都存在s-p混杂。准确的轨道图示如下：
+HF的MO，注意1s与2p成键：
+CO的MO简化图：注意LUMO是σ，在C上波瓣大，HOMO是个$\pi^*$，也是在C上波瓣大。
+电负性 Pauling电负性 一开始使用如下公式估算键能1： $$ \ce{$BE$(X-Y)=\frac12[$BE$(X-X)$+BE$(Y-Y)]} $$ 然而有时该预测差异较大（如HF），根据Pauling最爱的VB，此处的贡献应来自离子性成键。于是他定义了第一种电负性： $$ \D\chi^{\rm P}=\chi^{\rm P}(\ce Y)-\chi^{\rm P}(\ce X)=\sqrt{\D BE} $$ 其中$\D BE=BE_{实际}-BE_{预测}$，单位是$\eV$。
+Mulliken电负性 十分有趣，单独成文。
+Allred-Rochow电负性 根据$Z_{\rm eff}$进行定义，与Pauling尺度关系如下： $$ \chi^{\rm AR}=\l{3590+\frac{Z_{\rm eff}}{r_{\rm cov}^2}}+0.744 $$ 其中$r_{\rm cov}$的单位是$\space\rm pm$。</description>
+    </item>
+    
+    <item>
+      <title>关于终末地的若干猜测</title>
+      <link>/post/2022/03/18/%E5%85%B3%E4%BA%8E%E7%BB%88%E6%9C%AB%E5%9C%B0%E7%9A%84%E8%8B%A5%E5%B9%B2%E7%8C%9C%E6%B5%8B/</link>
+      <pubDate>Fri, 18 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/03/18/%E5%85%B3%E4%BA%8E%E7%BB%88%E6%9C%AB%E5%9C%B0%E7%9A%84%E8%8B%A5%E5%B9%B2%E7%8C%9C%E6%B5%8B/</guid>
+      <description> 看了pv：woc，好家伙，一股卡拉克沙漠的味道，RTS1？有勇气，yj——NB！(p≧w≦q)
+看了实机：一个没有战斗的实机2？开放世界？动作？这不画饼么？🤔3
+看了官方介绍：即时战略RPG？4
+ 以下是官网爬到的关键字（节选）：
+明日方舟终末地,鹰角,角色扮演,免费下载,Unity,免费游玩,内购  注意原来是有即时战略的，但怕泄露就在发PV前删了。
+关于游戏整体的玩法，从菜单来看（编队图标看成Dropbox还有救吗？），应该是基建（所谓的自动化集成工业系统） + 探索（喜闻乐见的战斗）——类似于皇室战争和辐射避难所（感觉是副本制？那代理指挥一定得留着啊）。罗德岛的标志的棋子暗示塔防，那终末地工业的螺丝就可能暗示搞基建是很重要的玩法（模拟经营占比挺大），且是独立于战斗的（和RTS在对局中建造不同）。我推测终末地应该不是开放世界，而是箱庭式探索。我猜大概的流程应该是探索→部署→保护设施、升级设施。
+从官网图看应该是玩家自选主角性别（旅行者），不过“管理员（Endministrator）”这个名字总感觉不如博士上头。
+战斗部分：
+即时战略RPG，我认为它和RTS还是很不一样的，类似RA或AoE的大场面就别想了（克洛丝军团？）。我感觉应该和TRPG（日本那边叫 simulation RPG）差不多5，参考比较老的火纹、皇骑还有比较新的三角战略（我的像素回忆）。但实机的自由视角，可控制角色这些就不好说了。
+还有一种可能，就是yj想做RTS（也有可能是4XSLG6），想搞PV里的大场面——同时卖角色，于是让你可以单独控制角色搞小队探索。
+其实吧，我更倾向的是这个实机是来搞笑的，可能就是个临时建模的Demo，只是带你Walk Around，同时秀一下渲染，比如相机运动一看就是临时的、场景的模应该也是赶工建的。与实际玩法没啥关系，不然为什么连战斗都没有？从实机也能看出项目进度距离测试还有很长的路要走。
+联机方面，我认为还是单机为主，毕竟作为养成类游戏，不同练度、氪度的玩家PVP的体验应该不会太好，联机PVE倒还有可能（参看好友右边的一个小按钮，从图标推测应该和多人有关）。
+说完策划，接着聊聊游戏技术：
+引擎还是很保守地选择了U3D，画面就全看TA和美术的水平了：你既可以得到稀饭一样的垃圾手游画质，也可以得到崩崩崩一样全球顶尖的NPR。但在我的印象中中国研究卡通渲染比较深的貌似只有米哈游，其他的大多没咋动渲染管线，风格化的程度也不及上面俩（比如来自星辰和少前二7）。
+这次实机光影不错但动作比较拉跨，场景互动做的也一般，但毕竟是赶工 + （极大概率上）神机高画质录制出来的，不好评判。希望比来自星辰好吧。不过，sRPG或者RTS的话对人物要求应该没那么高8，从实机表现来看，只要以后画质缩水不太严重（不要向性能妥协！画质万岁！），效果应该还不错。
+UI方面，只能说——yjNB，必须实装，太帅了。
+配乐——PV是老朋友The Either，质量上乘，希望音角保持优良传统。不过一定要及时上传配乐啊！
+世界观——移动城市，源石，高墙(+)，太空(+)，传送(+)9，环带(+)（α还是ζ？），终末地工业(+)，天使(+)，侵蚀(+)（满满的死亡搁浅味），塔卫二(+)（感觉是泰拉两个月亮中的一个），伤口自动愈合(+)（PV结尾）。至于人设，希望yj保持明日方舟的水平。
+补充：首发预告四国语言，看来是想对标原神。
+但联想到上次看预告这么激动的还是战地2042，我忽然冷静下来，还是静静看yj的操作吧。希望慢工出细活，只要质量过关，运营别太阴间，肯定是要支持的；假如质量上乘，人设讨喜，我直接充爆好吧。
+  当时我还在想RTS怎么卖人设&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+ 优化任务繁重，试看未来画质和实机演示相差几个数量级。不过原生PC支持好耶！&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+ 话说云母、yj的新作咋全是3D？&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+ 泪目！守住了，初心部分守住了啊！&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+ 少前2的战棋也算一种sRPG？&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+ 那可是真是带 制 作&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+ 但少前二建模真不戳&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+ 说实话，我对yj的渲染没啥信心&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+ 建议改为：地 狱 伞 兵&amp;#160;&amp;#x21a9;&amp;#xfe0e;
+   </description>
+    </item>
+    
+    <item>
+      <title>分子对称性</title>
+      <link>/post/2022/03/18/%E5%88%86%E5%AD%90%E5%AF%B9%E7%A7%B0%E6%80%A7/</link>
+      <pubDate>Fri, 18 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/03/18/%E5%88%86%E5%AD%90%E5%AF%B9%E7%A7%B0%E6%80%A7/</guid>
+      <description>矩阵 在神经网络中，矩阵的意义大多是代数上的，仅作为中计算的简化方法：$\bm C=\bm A\bm B$，那么$C_{i,j}=\bm A_{i,:}\cdot\bm B_{:,j}$（注意，$\bm A_{i,:}$表示矩阵的第$i$行构成的向量）
+对于对称操作的矩阵表示，我们可以从几何角度进行如下理解：
+矩阵和向量相乘 对于第$i$维的单位向量，变换后对应的就是变换矩阵中的第$i$列的列向量。运算得到的结果就是在如上单位向量变换后向量在原坐标系中的位置。
+简单证明一下：对于第$i$维的单位向量$\bm a$，它除了$a_i=1$以外都为$0$，我们让它与变换矩阵相乘，对于变换矩阵的$\bm A_{k,:}$，有 $$ \bm A_{k,:}\cdot\bm a=A_{k,i}a_{i} $$ 如此操作，得到： $$ \bm A\bm a=\bm A_{:,i} $$
+对称元素的组合规律 规则：对称元素也要满足分子的对称性。
+两个旋转轴的组合：有一个$C_n$主轴和一个垂直的$C_2$必定有垂直于主轴的$n$个副轴；有两个夹角为$180^\circ/n$的$C_2$必定有一个$C_n$和$n$个垂直的$C_2$。
+旋转轴与镜面：有一个$C_n$轴和一个$\sigma$必定有垂直于轴的$n$个镜面；有两个夹角为$180^\circ/n$的$\sigma$必定有一个$C_n$和$n$个垂直的$\sigma$。
+偶次轴和垂直的镜面：偶次轴和垂直的镜面确定过交点的$i$，而$i$和穿过它的偶次轴也确定一个垂直于偶次轴的镜面。
+独立对称元素 作为独立对称元素的映轴：注意$S_{4n}$才是独立元素（而且不能有与之垂直的镜面）。
+分子点群 注意，从主轴方向看，分层——主轴的轴次看最大公因数（可以无限插入$C_\infty$的点）。
+寻找主轴的方向：找最少的相同元素（最少的元素、基团），从他们的连线、面来找。
+$C_n$群 仅一个$C_n$，特点是风扇型且上下不等（注意不能有$\sigma_h$或$\sigma_v$，因此上下左右都要扭）。一般是多层，上下都有$C_3$，但略微扭曲。
+$C_{nv}$群 $C_n+\sigma_v$，也就是上下不等的风扇掰直了或正好交叉，通常加入一个$C_\infty$层变成锥形（同时让层**不同**）。
+$C_{nh}$群 $C_n+\sigma_h$，每层是压扁了的上下不等风扇（无$\sigma_v$），或风扇和它的对映体叠在一起，特点是层之间有重叠。存在$S_n$但即使是$S_{4n}$也不是独立对称元素。当$n$为偶数的时候还存在**独立对称元素**$i$。注意下图中R基的扭曲 $D_{n}$群 $C_n+C_2\perp C_n$。很多$D_n$看似$S_{2n}$，但无法对称上去——上下**相等**的风扇
+$D_{nh}$群 $C_n+C_2\perp C_n+\sigma_h$，同时又有$\sigma_\red{v}$（镜面和旋转轴组合出另一个镜面），**重叠**的上下**相等**风扇。
+$D_{nd}$群 $C_n+C_2\perp C_n+n\sigma_d$，完美交错的上下相等风扇。同时包含$S_{2n}$，独立对称元素必然有$nC_2,n\sigma_d$，当$n$为奇数，$S_{2n}$被拆开，独立对称元素加上$C_n,i$，当$n$为偶数，$S_{2n}$为一个独立对称元素。
+ 补充：$S_n$的等价情况（按$n$分类）——奇数：$C_n,i$；偶数但非$4$的倍数：$C_{n/2},\sigma_h$；$4$的倍数：**独立对称元素**（$S_{n},C_{n/2}$同时存在（由于分子没有$C_n$故不能写出））。
+ $S_{4}$群 仅含$S_4$，多为$D_{2d}$被新加入的元素破坏对称性（风扇化），比如1,3,5,7-四甲基环辛四烯
+$C_{3i}$群 其实也就是$S_6$群，破坏了对称性的$D_{3d}$（风扇化）。注意看似$D_{3d}$的[6,5]-冠烷1：
+$T$系列 带$T$的都有$4C_3,3C_2(\text{or} S_4)$：
+$T$群，仅含有上述元素（$4C_3,3C_2$），非常罕见，比如新戊烷的四个甲基扭曲了（没有$\sigma$）。
+$T_h$群，判据是$4C_3+3C_2+\sigma_h$，注意此$\sigma_h$垂直于$C_\red{2}$，非常稀少，大多可看做十二面体的不等长变体（位于立方体面上边长度变化），get到每条边朝向的神韵： $T_d$群，存在平分$C_2$的$\sigma_d$，独立对称元素：$3S_4,4C_3,6\sigma_d$（注意$S_4$包含了所有$C_2$的操作）——纯正的正四面体
+$O$系列 都有$4C_3,3C_4,6C_2$
+$O$群：与$T$群一样是风扇化的$O_h$（大多为甲基等扭转）。
+$O_h$群：存在垂直于$C_4$的$\sigma_h$——大多为正八面体或立方体。
+$I$系列 正十二面体(12)，正二十面体(20)，二者合体$\ce{C_60}$(12+20=32)。</description>
+    </item>
+    
     <item>
       <title>简谐振动</title>
       <link>/post/2022/03/03/%E7%AE%80%E8%B0%90%E6%8C%AF%E5%8A%A8/</link>
@@ -14,7 +182,81 @@
       
       <guid>/post/2022/03/03/%E7%AE%80%E8%B0%90%E6%8C%AF%E5%8A%A8/</guid>
       <description>简谐运动 我们知道简谐运动的一般运动方程： $$ m\frac{\mathrm d^2x}{\mathrm d^2t}=-kx $$ 我们把常数搞到一起： $$ \frac{\mathrm d^2x}{\mathrm d^2t}+\omega^2x\text{，其中}\omega=\sqrt{\frac{k}{m}} $$ 二阶导竟然还可以等于自己乘上一个常数，猜测这是怎么导都稳得一批的指数函数$Ae^{\lambda t}$，那么： $$ Ae^{\lambda x}\left(\lambda^2+\omega^2\right)=0 $$ 那么： $$ \lambda=\pm i\omega $$ 所以有这么个通解（$A_1,A_2,A$是复常数）： $$ x(t)=A_1e^{i\omega t}+A_2e^{-i\omega t}=Ae^{i\omega t} $$ 其中$A$是一个复数，称为复振幅，$A$的模长$|A|$就是振幅，幅角的相反数$\phi_0=-\mathrm{arg}(A)$就是初相位。
-我们希望$x(t)$是个实数，那么它应该等于它的复共轭： $$ A_1e^{i\omega t}+A_2e^{-i\omega t}=A^_2e^{i\omega t}+A^_1e^{-i\omega t} $$ 得到： $$ A_1=A^*_2 $$ 那我们写$A_1=ae^{i\phi}$，$A_2=ae^{-i\phi}$，得到： $$ x(t)=a\left[e^{i(\omega t+\phi)}+e^{-i(\omega t+\phi)}\right] $$ 套入欧拉公式： $$ x(t)=2a\cos(\omega t+\phi)=x_0\cos(\omega t+\phi) $$</description>
+我们希望$x(t)$是个实数，那么它应该等于它的复共轭： $$ A_1e^{i\omega t}+A_2e^{-i\omega t}=A_2^*e^{i\omega t}+A_1^*e^{-i\omega t} $$
+得到： $$ A_1=A^*_2 $$ 那我们写$A_1=ae^{i\phi}$，$A_2=ae^{-i\phi}$，得到： $$ x(t)=a\left[e^{i(\omega t+\phi)}+e^{-i(\omega t+\phi)}\right] $$ 套入欧拉公式： $$ x(t)=2a\cos(\omega t+\phi)=x_0\cos(\omega t+\phi) $$</description>
+    </item>
+    
+    <item>
+      <title>化学中的多面体</title>
+      <link>/post/2022/02/28/%E5%8C%96%E5%AD%A6%E4%B8%AD%E7%9A%84%E5%A4%9A%E9%9D%A2%E4%BD%93/</link>
+      <pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/02/28/%E5%8C%96%E5%AD%A6%E4%B8%AD%E7%9A%84%E5%A4%9A%E9%9D%A2%E4%BD%93/</guid>
+      <description>基础 $$ F+V=E+2 $$
+正多面体 对称性——注意四面体的$\overline4$（$T_d$）、立方体的$3$（$O_h$）、八面体的$3$（$O_h$）、五角十二面体的$3$（$I_h$）、三角二十面体的$5$（$I_h$）。
+多面体相关数据计算——放到正方体中进行：（五角十二面体不在面上的顶点在体对角线）
+Td每条边的½切角得到Oh
+Oh或立方体每条边二分之一切角得到立方八面体（三角二十面体的扭转）
+三角多面体 注意9配位是三帽三棱柱的说
+化学中的四面体 主族 1.$\ce{Mg4OBr6(OR)4}$：
+2.$\ce{Ge4Br4S6}$——$\ce{P4S4O6}$
+3.注意一组数据：
+原因：形成d-pπ键：π58（注意F与O的相似性）
+4.$\ce{BaGe2、NaSn、NaPb}$等物质的负离子（都是负一价的IVA）结构——$\ce{A4^{4-}}$，与P4相似→香蕉键
+5.$\ce{C4R4}$（大集团保护），也有香蕉键
+6.$\ce{Li4(CH3)4}$晶体
+副族 1.单核羰基配合物貌似没有平面四边形的
+2.$\ce{M4(CO)12}$——注意Co、Rh有三个桥，Ir没有
+3.$\ce{[Os10H4(CO)24]^{2-}}$（氢并没有在结构中特定位置出现）、$\ce{[Os20(CO)40]^{2-}}$的结构。规律：顶点3个CO、棱2个CO、面上1个CO
+4.$\ce{W4S6(PR3)4}$→套娃结构（可认为是$\ce{W4@S6@P4}$）
+5.$\ce{Ni4[CNCMe3]7}$→催化乙炔成苯（异腈配体！阴间）
+晶体的四面体 注意bcc中变形四面体的位点（12个）→(0.5,0.25,0)……，如$\ce{K3C60}$的结构：
+硅酸盐 都是$\ce{[SiO4]}$共顶点连接的——减小电荷排斥
+1.与$\ce{[Si3O6]^{6-}}$相比，$\ce{[Si3O8(OH)]^{5-}}$存在链内的氢键（三个四面体一组）：
+2.一个六边形组成的硅酸盐层——$\ce{[Si2O5]^{2n-}_n}$，一般情况：Td-Oh(金属)-Td层
+3.长石：四元环→链→链之间公用顶点相连：$\ce{[AlSi3O_{16\times\frac12}]^{-}}$，其中一层的形状（角度为Si-O-Si）：
+对称性最高的透长石：
+八面体 主族 1.$\ce{{Sn6[Cr(CO)5]6}^{2-}}$：八面体，与$\ce{B6H6^{2-}}$类似
+2.$\ce{KAl(SO4)2·12H2O}$ →$\ce{[K(H2O)6][Al(H2O)6](SO4)2}$
+过渡金属 配合物略
+原子簇化合物：后过渡元素仍然符合$\ce{B6H6^{2-}}$
+原子簇中的化学键 注意μ3以上（面桥及以上）的物种给出所有的孤对电子。
+思想——每成一根键，两个原子各感受到两个电子，相当于凭空多出来两个电子，成键数（g为价电子数）： $$ b=(18n_1+8n_2-g)/2 $$ 三中心电子键：3条边，2个键价；两中心正常键：1条边，1个键价；三中心和两中心不共用一条边： $$ \begin{align*}2s+y&amp;amp;=b\\3s+y&amp;amp;=\text{多边形边数（前提是多中性的三角形不共边）}\end{align*} $$ 硼烷：**s**（3c-2e B-B-B）、**t**（3c-2e B-H-B）、**y**（B-B）、**x**(BH2基团)——可以共振
+styx（0430），b=11，正好符合（3c-2e键的键价数=2）
+戒律——3c-2e的边不能有2c-2e的
+[Au6Ni12(CO)24]2-：（Au-Au-Au 3c-2e）
+新方法——相同键价数→相似结构！比等瓣相似还简单（如b=11→$\ce{B6H6^{2-}}$）：
+晶体 注意bcc中的假Oh：
+$\ce{AuCu3}$——Au顶点，Cu面心
+NbO——Schottky缺陷的NaCl：
+$\ce{K2[PtCl6]}$→反萤石型
+$\ce{K2Na[Co(NO2)6]}$：一起堆出来的CsCl超结构
+NiAs：Oh共面（所以纯离子型的不会采用）
+多酸化学 欣赏、数原子数：（分层、对称性）
+其他正多边形 晶体中的立方体 1.</description>
+    </item>
+    
+    <item>
+      <title>一些数学</title>
+      <link>/post/2022/02/18/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/</link>
+      <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/02/18/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/</guid>
+      <description>高斯积分 $$ \align{\int_0^\infty e^{-\lambda x^2}\d x&amp;amp;=\frac12\sqrt\frac{\pi}{\lambda}\\\int_0^\infty xe^{-\lambda x^2}\d x&amp;amp;=\frac1{2\lambda}\\\int_0^\infty x^2e^{-\lambda x^2}\d x&amp;amp;=\frac14\sqrt\frac{\pi}{\lambda^3}} $$
+偏导数 当你知道$f=f(x,y)=f(x,y(x,z))$时： $$ \align{\d f&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\d y\\&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\left[\l{\f{y}{x}}_z\d x+\l{\f{y}{z}}_x\d z\right]\\&amp;amp;=\left[\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z\right]\d x+\l{\f{f}{y}}_x\l{\f{y}{z}}_x\d z} $$ 此时，根据偏导数的定义得到性质1： $$ \l{\f{f}{x}}_z=\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z $$ 它有什么用呢？考虑下面一个例子： $$ \align{\d f&amp;amp;=\lf fx_y\d x+\lf fy_x\d y\\\lf fx_z&amp;amp;=\lf fx_y+\lf fy_x\lf yx_z} $$ 直接把$\d x$除过去是很爽，但以前总会心有芥蒂——为啥出过去就自动$z$不变了？现在我们有了完美的解答——把$\d y$进一步用$x,z$表示出来即可。
+同时，不难知道性质2： $$ \l{\f{x}{y}}_z=\frac1{\l{\f{y}{x}}_z} $$
+我们继续研究$x,y,z$的关系，知道： $$ x=x(y,z)=x\left[y(x,z),z\right] $$ 那么写出全微分： $$ \align{\d x&amp;amp;=\lf{x}{y}_z\d y+\lf{x}{z}_y\d z\\&amp;amp;=\lf{x}{y}_z\left[\lf{y}{x}_z\d x+\lf{y}{z}_x\d z\right]+\lf{x}{z}_y\d z\\&amp;amp;=\left[\lf{x}{y}_z\lf{y}{x}_z\right]\d x+\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z} $$ 根据性质2，得到性质3： $$ \align{\d x&amp;amp;=\d x+\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z\\0&amp;amp;=\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z\\\lf{x}{z}_y&amp;amp;=-\lf{x}{y}_z\lf{y}{z}_x} $$</description>
+    </item>
+    
+    <item>
+      <title>分布</title>
+      <link>/post/2022/02/18/%E5%88%86%E5%B8%83/</link>
+      <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/02/18/%E5%88%86%E5%B8%83/</guid>
+      <description>麦克斯韦-玻尔兹曼统计 小刻也能轻松学懂的Maxwell分布
+基于热力学的简单推导 考虑一个系统，$T$恒定（比如和一个恒温热库交换热量），$\d V=\d N=0$。能级$\varepsilon$的简并度为$g_i$，对于两个确定状态$s_a,s_b$，由于系统的微观状态已经确定（仅1种），总系统的状态数就等于热库的微观状态数（下面的$U,S$都指热库）： $$ \frac{P(s_b)}{P(s_a)}=\frac{\Omega_b}{\Omega_a}=\frac{\exp\left(S_b/k\right)}{\exp\left(S_a/k\right)}=\exp\left(\frac {\Delta S}k\right) $$ 在$N,V,T$不变时，由热力学第一定律： $$ \d S=\frac1T\d U\\
+\Delta S=\frac {\Delta U}T $$ 带入，根据能量守恒换成系统在该状态的能量$E$ $$ \frac{P(s_b)}{P(s_a)}=\exp\left(\frac {\Delta U}{kT}\right)=\exp\left(\frac {-\Delta E}{kT}\right)=\frac{\exp\left(-E_b/kT\right)}{\exp\left(-E_a/kT\right)} $$ 那么： $$ P(s)=\frac{\exp\left(-E_s/kT\right)}Z\qquad Z=\sum_s\exp\left(-E_s/kT\right) $$ 注意现在是针对于特定状态$s$，如果想用能量或者速度之类的表示，应乘上相应的简并度，以能量为例： $$ P(\varepsilon_i)=\frac{g_i\exp\left(-\varepsilon_i/kT\right)}Z\qquad Z=\sum_jg_j\exp\left(-\varepsilon_j/kT\right) $$ 我们自然可以秒掉Maxwell分布，对$v_i$，$g_i=4\pi v_i^2$（不必在意具体值，比例正确即可）。假设能级连续： $$ f(v_i)=\frac{4\pi v_i^2\exp\l{-mv_i^2/kT}}{\int_0^\infty4\pi v^2\exp\l{-mv^2/kT}\d v} $$ 根据高斯积分（见《一些数学》）解得，整理： $$ f(v)=4\pi\left(\frac M{2\pi RT}\right)^{3/2}v^2e^{-Mv^2/2RT} $$</description>
     </item>
     
     <item>
@@ -57,7 +299,7 @@ $$ \mathrm dZ=\sum_{\mathrm B=1}^k\left(\frac{\partial Z}{\partial n_{\rm B}}\ri
 气体混合物 分压（Dalton分压定律）： $$ p_j=x_jp $$ 分体积（Amagat）： $$ V_j=x_jV $$
 气体动理论 压力 简单物理知识：$\mathbf p=m\mathbf v,\mathbf F=m\mathbf a$，那么$\mathbf F=\mathrm d\mathbf p/{\mathrm dt}$
 有一个方形容器，横截面积为$A$，容器壁平行于坐标平面。一个很短的时间$\Delta t$内一个分子在x方向上碰壁反弹（速率不变）的概率$P$为： $$ \mathrm P=\frac{Av_x\Delta t}{V} $$ 该分子“平均”（期望）作用力为： $$ F_x=\frac{2mv_x}{\Delta t}\times \frac{Av_x\Delta t}{V}=\frac{2mAv_x^2}{V} $$ 推广到一堆（$n\space \rm mol$）分子，我们用速率平方的平均值$\overline{v_x^2}$来表示，注意在速率平方后，我们多计算了一倍背道而驰的分子，所以要扣除： $$ F_x=\frac{2mA\overline{v_x^2}}{V}\times \frac12nN_A=\frac{nMA\overline{v_x^2}}{V} $$ 三个方向都是如此，即$\overline{v_x^2}=\frac13\overline{v^2}$，定义方均根速率： $$ v_{\rm rms}=\sqrt{\overline{v^2}} $$ 所以： $$ pV=\frac13nMv_{\rm rms}^2 $$ 开个挂，用理想气体状态方程带入，得到： $$ v_{\rm rms}=\sqrt{\frac{3RT}M} $$
-麦克斯韦-玻尔兹曼分布 由玻尔兹曼分布： $$ f(v)=Ke^{-\varepsilon/kT} $$ 容易得到： $$ f(v)=Ke^{-mv^2/2kT} $$ 我们可以发现不同$v$的概率是不一样的，但分解开的$v_x,v_y,v_z$却是均匀的，考虑分解$v$。 $$ f(v_x)=K_xe^{-mv_x^2/2kT} $$ 由于$v_x$取任意值的概率必定为一： $$ \int_{-\infty}^{\infty}f(v_x)\mathrm dv_x=1 $$ 积分得：$K_x=(m/2\pi kT)^{1/2}$，所以： $$ f(v_x)=\left(\frac{m}{2\pi kT}\right)^{1/2}e^{-mv_x^2/2kT} $$ 合体： $$ f(v_x)f(v_y)f(v_z)\mathrm dv_x\mathrm dv_y\mathrm dv_z=\left(\frac{m}{2\pi kT}\right)^{3/2}e^{-mv^2/2kT}\mathrm dv_x\mathrm dv_y\mathrm dv_z $$ 把这些转化为$\mathrm dv$，并$k\rightarrow R,m\rightarrow M$，推得： $$ f(v)=4\pi\left(\frac M{2\pi RT}\right)^{3/2}v^2e^{-Mv^2/2RT} $$ 可以计算方均根速率： $$ v_{\rm rms}^2=\int_0^{\infty}v^2f(v)\mathrm dv $$ 得到一样的结果： $$ v_{\rm rms}=\sqrt{\frac{3RT}M} $$ 其他速率：</description>
+麦克斯韦-玻尔兹曼分布 由玻尔兹曼分布： $$ f(v)=Ke^{-\varepsilon/kT} $$ 我们想计算不考虑方向时所有速率为$v$的分子，必须乘上球壳的体积，如此得到总概率： $$ f(v)\d v=Ke^{-mv^2/2kT}\times4\pi v^2\d v $$ 要让结果归一化，即： $$ 1=K\int_0^{\infty}e^{-mv^2/2kT}\times4\pi v^2\d v $$ 使用Mathematica积分解$K$：</description>
     </item>
     
     <item>
@@ -74,6 +316,7 @@ $$ \mathrm dZ=\sum_{\mathrm B=1}^k\left(\frac{\partial Z}{\partial n_{\rm B}}\ri
 状态方程：多组分均相系统（一般用得到的最复杂）： $$ T=f(p,V,n_1,n_2,\cdots) $$ 变化过程：等温（全程且等于环境温度）；等压（始态和终态相等且等于环境压力）；等容（全程）；绝热（绝热壁或反应太快而来不及交换）
 热：由于温度不同而传递的能量
 功：除了热以外的能量传递，以系统来看（国家标准），几种常见的：$F\mathrm dl,E\mathrm dQ,\color{red}{-}p_\color{red}{e}\mathrm dV,\gamma\mathrm dA$（最后一个是表面功），好好思考正负。
+各种能量的符号：动能$\Ek$，势能$\Ep$或$V$
 热一——能量守恒 $$ \mathrm dU=\delta Q+\delta W $$
 几种膨胀过程：自由：$0$；等外压：$-p_e\Delta V$；可逆膨胀：$-RT\ln\frac{V_2}{V_1}$
 可逆过程：系统和环境都完全复原：准静态过程；熔点、沸点的相变；可逆电池外加电动势与电池电动势相等；某些化学反应。可逆过程中系统是带善人（给的多得的少）
@@ -96,8 +339,19 @@ $$ \mathrm dZ=\sum_{\mathrm B=1}^k\left(\frac{\partial Z}{\partial n_{\rm B}}\ri
 卡诺定律  所有工作与同温热源与同温冷源之间的热机，其效率都不可能超过可逆热机
  假设如下的系统，其中左侧是任意热机：
 我们让任意热机驱动卡诺热机（效率为$\eta&#39;$）逆向运行，不难得到$T_{\rm h}$到$T_{\rm c}$的热量$Q_{\rm trans}$： $$ Q_{\rm trans}=\left(1-\eta\right)Q-\eta Q\left(\frac1{\eta&#39;}-1\right)=Q\left(1-\frac{\eta}{\eta&#39;}\right) $$ 此时没有其他变化，为了遵守克劳修斯说法，$Q$不能小于$0$，显然有： $$ \eta&#39;\ge\eta $$ 卡诺定律得证。假如左右都是可逆机，那么我可以将现有循环调转顺序，得到： $$ \eta\ge\eta&#39; $$ 综合一下： $$ \eta=\eta&#39; $$ 也就是说所有可逆热机的效率都是一样的。
-熵的概念 考虑可逆循环（在$p-V$图上画得出来的都是可逆循环，原因下面讲），我们可以给它沿可逆绝热线切片，每个切片做上下两条等温线，将每个切片转化为一个小卡诺循环，用我们在热一时留下的引子（$\rm R$代表可逆）： $$ \begin{equation*}\sum_i\left(\frac{\delta Q_i}{T_i}\right) _{\mathrm R}=0\end{equation*} $$ 推广到任意的可逆循环： $$ \oint\left(\frac{\delta Q}{T}\right)_{\rm R}=0 $$
+熵的概念 考虑可逆循环（在$p-V$图上画得出来的都是可逆循环，原因下面讲），我们可以给它沿可逆绝热线切片，每个切片做上下两条等温线，将每个切片转化为一个小卡诺循环：
+用我们在热一时留下的引子，即$Q_{\rm c}/{T_{\rm c}}+{Q_{\rm h}}/{T_{\rm h}}=0$（$\rm R$代表可逆）： $$ \begin{equation*}\sum_i\left(\frac{\delta Q_i}{T_i}\right) _{\mathrm R}=0\end{equation*} $$ 推广到任意的可逆循环： $$ \oint\left(\frac{\delta Q}{T}\right)_{\rm R}=0 $$
 假如我们在循环上取两个点，那么可以发现循环被切成了两个过程，根据上式： $$ \begin{equation*}\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R_1}=-\int_\color{red}{B}^\color{red}{A}\left(\frac{\delta Q}{T}\right)_{\rm R_2}\end{equation*} $$ 颠倒始末态，改变符号： $$ \begin{equation*}\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R_1}=\int_\color{red}{A}^\color{red}{B}\left(\frac{\delta Q}{T}\right)_{\rm R_2}\end{equation*} $$ 由于可逆循环是任意的，我们发现$\int_A^B\left({\delta Q}/{T}\right)_{\rm R}$的值只于始末状态有关，与具体途径无关，是个状态函数，我们叫它熵： $$ \Delta S=\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R} $$</description>
+    </item>
+    
+    <item>
+      <title>电化学</title>
+      <link>/post/2022/02/18/%E7%94%B5%E5%8C%96%E5%AD%A6/</link>
+      <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/02/18/%E7%94%B5%E5%8C%96%E5%AD%A6/</guid>
+      <description>参比电极 $$\ce{AgCl(s) + e- -&amp;gt; Ag(s) + Cl-(aq)}\\\ce{Hg2Cl2(s) + 2e- -&amp;gt; 2Hg(s) + 2Cl-(aq)}$$
+循环伏安法 加入惰性电解质（分析物浓度太低，加大电导率）。</description>
     </item>
     
     <item>
@@ -140,8 +394,82 @@ $$ \mathrm dZ=\sum_{\mathrm B=1}^k\left(\frac{\partial Z}{\partial n_{\rm B}}\ri
 前置知识：
 1.判断对称性的有用规则：以下两种情况中的对称元素知二推一
  偶数次旋转轴；垂直与旋转轴的镜面；对称中心（旋转轴与镜面交点）。例：$\rm 2/m\rightarrow\overline 1$；$\color{red}\rm\overline 1+m\rightarrow2\perp m$； 两个互相垂直的镜面；二重轴（相交直线上）。例：$\rm m\perp m\rightarrow 2$  2.每个晶格都是中心对称的（晶格点上或晶格点连线中点）
-所有的三维格子都可以看做二维格子向上挤出得到——开始讨论：
-以斜平面格子为基础：（平面格子仅包$2$和$\overline 1$）</description>
+3.建系方法——右手定则，放在左后下角
+4.选格子：对称性高→体积小
+5.所有的三维格子都可以看做二维格子向上挤出得到</description>
+    </item>
+    
+    <item>
+      <title>配合物基础</title>
+      <link>/post/2022/01/24/%E9%85%8D%E5%90%88%E7%89%A9%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Mon, 24 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/01/24/%E9%85%8D%E5%90%88%E7%89%A9%E5%9F%BA%E7%A1%80/</guid>
+      <description>简单的热力学 逐级稳定常数$K_n$随着$n$增大而减小。
+配位反应一般$\D H&amp;lt;0,\D S&amp;gt;0$（对溶剂分子的作用减小）。
+稳定性 一般越小、电荷越高、HSAB联系好的稳定。
+在水溶液中H-H不如S-S，因为水是硬的，在配位以前就已经存在不错的溶剂化作用。
+螯合 对于较大的金属（d区），五元环比六元环稳定
+解释 焓方面：
+ 减小静电排斥：在从两个单齿配体变为一个双齿配体时，带$\delta^-$的供体原子之间的静电排斥减少； 去溶剂化效应：在配合物形成时破坏配体 - H2O 氢键相互作用——这种氢键相互作用对于例如 NH3 比对于 en 更大； $\ce{CH2CH2}$桥在二齿或多齿配体中的诱导效应，增加了配体相对于相应的单齿配体的供体强度。  熵方面：进少量多齿配体出大量单齿</description>
+    </item>
+    
+    <item>
+      <title>具体晶体</title>
+      <link>/post/2022/01/23/%E5%85%B7%E4%BD%93%E6%99%B6%E4%BD%93/</link>
+      <pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/01/23/%E5%85%B7%E4%BD%93%E6%99%B6%E4%BD%93/</guid>
+      <description>固体电解质 阳离子型 $\ce{Ag2HgI4}$：I一直十分规则，Ag、Hg分布在Td（有的地方没有）：低温——规则；高温——随机分布；而Td远多于Ag（类似的有$\ce{AgI}$、$\ce{RbAg4I5}$）：
+β-氧化铝类——框架+充满空隙的结构：$\ce{Al2O3}$+缺陷NaCl
+阴离子型 主要依靠阴离子在空隙迁移导电，注意空隙太多形成簇状结构会降低导电能力
+掺杂低价阳离子：$\ce{ZrO2}$掺入Y、Ca。应用：氧分压传感器（$p\ce{O2}$高的地方氧化，低的地方还原出$\ce{O2}$）：
+离子电子混合型 既有离子又有电子导电。例：Oh位缺陷的钙钛矿型（$\ce{La_{1-x}Sr_{x}CoO_{3-x}}$）。应用：固体氧化物燃料电池。
+过渡金属一氧化物 多为NaCl型（向右演变到ZnS），不少为非计量化合物，以$\ce{Fe_{1-x}O}$为例，注意$\ce{Fe^{3+}}$新填入的Td空隙与消失后$\ce{Fe^{2+}}$的Oh空隙的位置关系（也是NaCl→ZnS）：
+甚至看似化学式正常的（如TiO）也会出现Schottky空隙而脱离理想状态。
+导电性：从左到右：金属性导体→半导体（d轨道收缩，互相作用变弱难以形成能带）
+靠右的半导氧化物导电是跳跃机理，即依靠载流子（电子or空穴）移动而非简单的能带。相同地，温度上升而半导体导电性也上升；$\ce{O2}$下用$\ce{Li2O}$掺入NiO增长导电性（联想N、P半导体）。
+靠左的导体氧化物——能带分析：
+磁性质：反铁磁性（超交换）：Mn→Ni逐渐加强（d收缩，与O的p重叠更好）
+高等氧化物和复合氧化物 $\ce{A2O3}$型 （CN依次升高）：B（三角形）→ Al → Sc（缺陷萤石$\ce{Sc4O6□_2}$）→Y（缺陷） → La
+刚玉：Al、Ti、V、Rh、Fe、Ga等
+O：ABABAB；Al：$\ce{C1C2C3C1C2C3}$（每种只填2/3八面体空隙——六边形网）
+总：$\ce{AC1BC2AC3BC1AC2BC3}$：
+启示：两套不同长度的循环叠加——刚玉、方解石……
+不少宝石也是这种结构
+$\ce{La2O3}$：
+$\ce{Sc2O3}$：缺陷萤石
+三氧化铼 $\ce{CaTiO3}$的魔改，Oh共享所有顶点：$\ce{RuO3,UO3,WO3}$（畸变，扭曲）
+$\ce{RuO3}$为亮红色有光泽固体，导电性类似于金属Cu——能带分析：
+$\ce{AB2X4}$ 尖晶石:
+通式为$\ce{AB2X4}$或$\ce{A3X4}$（过渡金属氧化物）
+价态搭配：**(II)+2(III)**或(IV)+2(II)，常式：$\ce{A[B2]X4}$，反式：$\ce{B[AB]X4}$
+占有因子：Td上B占总B的分数：常式——0；反式——0.5
+都为d0时，静电因素选择一般常式尖晶石（即(II)→Td，(III)→Oh）
+存在CFSE时，比较哪种高自旋（O→弱场）在Oh的配位场稳定化能大（Td很弱），一般有一个$\ce{d^5}$（无稳定）——无法解释？才考虑采取低自旋（$\ce{Co3O4}$中Co(III)为d6低自旋）
+AFe2O4可能被归入铁氧体——RT&amp;gt;J→顺磁性；RT&amp;lt;J→铁磁性或反铁磁性。
+常可用作颜料：$\ce{CoAl2O4}$（钴蓝，常式）；$\ce{CoCr2O4}$（绿色，常式）；$\ce{CuCr2O4}$（黑色，常式）……
+$\ce{K2NiF4}$：马上出现
+钙钛矿 一般是碱土金属离子（较大）占据12配位空隙。
+价态减半——$\ce{NaFeF3}$；阴阳交换——$\ce{SrNCo3}$；缺失——$\ce{ReO3}$。
+容易形成固溶体和非计量化合物。
+铁电性：整体的，永久的电极化作用——结构畸变。例子：$\ce{BaTiO3}$：
+在外电场下，这些偶极子可以定向排布，撤去电场后依然存在（Tc以下）——做电容
+压电性：收到外部压力而产生电场——也和位移有关
+类似结构——$\ce{K2NiF4}$（不是尖晶石结构）→每个片层之间位移(0.5,0.5)：
+如果多个片层为一个集合移动——Ruddlesden-Popper相：$\ce{A3B2X7}$和$\ce{A4B3X10}$——通式：$\ce{AX + nABX3}$
+联想——Wadsley缺陷的逆向操作
+巨磁阻：磁阻效应——接近or略高于Curie温度时在外加磁场中电阻显著降低：
+如$\ce{Ln_{1-x}Ca_{x}MnO3}$——**巨磁阻锰盐**：$\ce{CaTiO3}$结构。低温金属性、铁磁性：双交换——Mn(III)和Mn(IV)通过O交换；高温绝缘性、顺磁性——电子被特定位点捕获（电荷有序）；外加磁场——有序→电子离域。
+高温超导体 以下所有化学式都是理想情况——超导多为非计量化合物
+这里讨论高温铜酸盐型超导体
+$\ce{La_{2-x}Ba_{x}CuO4}$类：$\ce{K2NiF4}$型：J-T拉长了Cu所在的Oh。扩展——（Pn=VA元素）。可以发现**J-T拉长的Cu的轴向部位很容易被换成其他元素或不与Cu配位**，例：$\ce{Nd2CuO4}$中Oh→立方体空隙（Nd）+正方形空隙（Cu）
+YBCO（也叫“123”）型：$\ce{YBa2Cu3O7}$
+晶胞（四方锥成层，四边形成链）：Y——8配位；Ba——10配位。层状视角（在处理衍生物时十分有用：CuO——BaO——$\ce{CuO2}$——Y——$\ce{CuO2}$——BaO）
+可以认为是Cu(II)和Cu(III)的混合，也可以认为存在部分充满的能带——空穴浓度=Cu(III)
+衍生结构：$\ce{Tl2Ba2Ca2Cu3O10}$（TlO——TlO——BaO——$\ce{CuO2}$——Ca——$\ce{CuO2}$——Ca——$\ce{CuO2}$——BaO），品味以下结构：更多
+其他结构：
+   化合物 结构     $\ce{YBa2Cu3O7}$ 已经介绍（CaTiO3变体）   $\ce{Tl2Ba3Ca4Cu4O12}$ YBCO变体   $\ce{MgB2}$    $\ce{LiTi2O4}$ 尖晶石   $\ce{Nb3Ge，Nb3Sn}$ A15堆积   $\ce{K_{0.</description>
     </item>
     
     <item>
@@ -176,6 +504,63 @@ Co(CO)4(AuPPh3)等不用多说，甚至有Ti(CO)6(AuPEt3)-（Ti七配位）
  &amp;#160;&amp;#x21a9;&amp;#xfe0e;
  &amp;#160;&amp;#x21a9;&amp;#xfe0e;
    </description>
+    </item>
+    
+    <item>
+      <title>常见晶体</title>
+      <link>/post/2022/01/23/%E5%B8%B8%E8%A7%81%E6%99%B6%E4%BD%93/</link>
+      <pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/01/23/%E5%B8%B8%E8%A7%81%E6%99%B6%E4%BD%93/</guid>
+      <description>晶体结构初步 除了典型的金属具有金属键以外，d区元素的氧、硫化物也有一定的金属性，如ReO3（红色金属光泽）、FeS2（愚人金）。金属键让金属具有延（拉长）展（压扁）性（不活泼金属较好）。
+并非所有的金属化合物都是离子的，非金属化合物（如NH4NO3）也可能有离子键，还有一些材料同时具有离子键和金属键的特征。
+离子键和金属键都没有方向性。
+等径球密堆积 注意hcp中的空隙位置（可能出现Oh共面连接）
+面心立方的另一种视角——所有的棱心和体心
+金属的结构 注意只有Po为简单立方堆积
+规律：sp电子数少（IA）为A2，中（IIA）为A3，多（Al）为A1
+A1的延展性高于A3：金属晶体沿密度最高的原子层方向滑动（密堆积），而A1在4条体对角线方向都是密堆积。
+合金 置换型（固溶体、混合物、不改变原有结构）：半径相差小；单质晶体结构相似；电负性相似（否则形成化合物）。例：Cu-Ni；Cu-Zn（α-黄铜）
+填隙型（整比：化合物；非整比：固溶体；不改变原有结构）：金属和小原子（B、C、N等）；半径判断（最大填入八面体而不影响原有堆积——0.732）
+金属互化物（原有结构改变）：β-黄铜、MgZn2、Cu3Au、NaTl、Na5Zn21、A3B（A15型）……
+MgZn2：（注意Mg的14面体配位）
+NaTl：两套金刚石：
+A15相：坐标有0.25，不是正20面体！
+LaNi5型：一般都看的是大六棱柱，注意看配位：
+金属互化物中高电正性+低电正性的（准）金属：Zintl相——等电子规则1。
+更多Zintl相请见这个论文
+记忆合金：例：Ni-Ti——低温：马氏体（四方）→高温：奥氏体（面心立方）
+离子晶体的基本结构 二元 NaCl、CsCl（CsCl, CsBr, CsI, TlCl, TlBr, TlI, CsSH）、ZnS（纤六方、闪立方）、CaF2、NiAs（八面体共面，As填三棱柱）、MoS2、
+Cu2O：两套反SiO2：注意晶胞十分简单：
+HgI2：
+PdCl2：
+CuCl2：[CuCl4]连接成链，链之间交错，Cu畸变八面体
+BiI3：
+TiO2：
+金红石的新视角：O：畸变hcp，Ti：一半Oh：
+注意金红石晶胞中Ti-O（同层）的距离相等
+PtS、PbO（InBi）结构：
+CaCO3（方解石和文石）：
+方解石：Ca：ABCABC、CO32-：Oh空隙（朝向：1,2,1,2,1,2）
+文石：Ca：ABABAB、CO32-：Oh空隙（朝向：1,1,2,2），上下夹一层Ca。文石是正交的——每一层Ca密堆积略分上下，不那么规则。
+新视角：
+接着，将两个碳酸根抽象成八面体→点：那么中间近似一个六边形，其中间隔的三个点→2×碳酸根（两组，朝向不同）→上下交错
+Al2O3：刚玉
+O：ABABAB；Al：C1C2C3C1C2C3（每种只填2/3八面体空隙）
+总：AC1BC2AC3BC1AC2BC3
+三元 CaTiO3：另一种视角——注意是Ca和O共同堆积出ccp（Ca：12配位）
+尖晶石：MgAl2O4：（注意相同电性离子排斥）
+判断正常——反常：
+滑石（Mg3Si4O10(OH)2）：
+橄榄石：O（正交晶胞）：类hcp
+注意 结构的类比与联想——数量比（加入空隙）；价态（扩倍）；阴阳（交换）；种类（多种→一种；原子团→一种）；形状（畸变：不规则原子团 or 氢键、共价键等带方向的作用）；堆积方式——类似的立方→六方（六方尖晶石）（填隙方式类似）
+C3投影图的无敌画法（最好分层画）：分数坐标转换——
+缺陷 形成缺陷，$\Delta H&amp;gt;0,\Delta S&amp;gt;0$，高温、晶体较大时有利（状态数（W）更多，熵增更大）
+几种类型 本征缺陷 Schottky缺陷：粒子按化学计量比成对消失，在高配位结构（离子、金属等）中多见（MO一氧化物）
+Frenkel缺陷：一种粒子移动到空隙（位置改变）例：AgCl中Ag（Oh→Td）；PbF2的F（Td→Oh），在低配为结构中较多——空隙较多较大
+原子互换缺陷：两个不同粒子交换位置（二元离子中不多），如反式尖晶石
+上面都不改变化学式，离子强，高配位——Schottky；共价强，低配位——Frenkel。
+外赋缺陷2 掺入杂质——电荷相等、大小相似；不能太多；掺杂通常改变固体电子结构（NP结、ZrO2中掺入CaO导电）</description>
     </item>
     
     <item>
@@ -215,6 +600,23 @@ S4(NH)4 S4N4 As4S4 (NPCl2)n
 金属键 纯金属：能带理论！ 金属的堆积方式（hcp、ccp，谁是谁？）
 小心金属-金属存在共价性！（Zn）
 小心次级配位（第二远的离子的配位）：如K、Na bcc（8+6=14&amp;gt;12）</description>
+    </item>
+    
+    <item>
+      <title>晶体理论</title>
+      <link>/post/2022/01/23/%E6%99%B6%E4%BD%93%E7%90%86%E8%AE%BA/</link>
+      <pubDate>Sun, 23 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/01/23/%E6%99%B6%E4%BD%93%E7%90%86%E8%AE%BA/</guid>
+      <description>配位数规则 配位数规则：4→6→8→12
+目标：正-负离子相互接触
+注意：平面四边形配位和八面体配位是一个条件！
+离子、金属半径随配位数增大而增大！
+GoldSchmidt半径 随着$r_正$上升，先后出现：仅负离子相切→正负相切（负负不相切）两种情况（和中间的极限情况），根据改变正负离子大小看晶格大小是否改变来推断半径（若晶格改变不大，则改变的那个离子未相切（小））
+晶体热力学 晶格能的计算： 定义——固态→气态离子： $$ \ce{M(s) -&amp;gt;M+(g) + X-(g)}\qquad \Delta_{\rm L}H $$ 计算公式： $$ \Delta_{\rm L} H=\frac{N_{\rm A}Mz_Az_B}{d}\left(\frac{e^2}{4\pi\varepsilon_0}\right)\left(1-\frac\rho{d}\right) $$ $M$是马德隆常数，考虑了次级静电作用，而最后一项是修正近距离核间排斥。
+简要介绍马德隆常数的计算：
+对于NaCl来讲，不难发现： $$ M = \sum_{i,j,k=-\infty}^{\infty}{{\color{red}{(-1)^{i+j+k}}} \over { (i^2 + j^2 + k^2)^{1/2}}} $$ 红色部分巧妙地控制吸引和排斥，**注意$i=j=k=0$的情况不在计算之中**。
+注意到此数列是条件收敛的，一般有两种逼近策略，第一种： $$ \lim_{N \to \infty} \sum_{i^2+j^2+k^2 &amp;lt; N} {{(-1)^{i+j+k}} \over { (i^2 + j^2 + k^2)^{1/2}}} $$ 这种方法相当简单，我们用$C_3(n)$代表将$n$写成三个平方和的方法数量，易得（$i^2+j^2+k^2$必定是整数）： $$ \sum^\infty_{n=1}\frac{(-1)^nC_3(n)}{\sqrt{n}} $$ 因此我们常常看到如此的序列： $$ M=-6+12/{\sqrt {2}}-8/{\sqrt {3}}+6/2-24/{\sqrt {5}}+\dotsb =-1.74756\dots $$ 然而这个数列是发散的（证明单独成blog），这种方法也是不好。</description>
     </item>
     
     <item>

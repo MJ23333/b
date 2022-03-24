@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> 分子对称性 | Edward Kerman&#39;s blog</title>
+    
+    <link rel="icon" type="image/png" href="/icons/Hi-Res.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
+<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="分子对称性"/>
+<meta name="twitter:description" content="矩阵 在神经网络中，矩阵的意义大多是代数上的，仅作为中计算的简化方法：$\bm C=\bm A\bm B$，那么$C_{i,j}=\bm A_{i,:}\cdot\bm B_{:,j}$（注意，$\bm A_{i,:}$表示矩阵的第$i$行构成的向量）
+对于对称操作的矩阵表示，我们可以从几何角度进行如下理解：
+矩阵和向量相乘 对于第$i$维的单位向量，变换后对应的就是变换矩阵中的第$i$列的列向量。运算得到的结果就是在如上单位向量变换后向量在原坐标系中的位置。
+简单证明一下：对于第$i$维的单位向量$\bm a$，它除了$a_i=1$以外都为$0$，我们让它与变换矩阵相乘，对于变换矩阵的$\bm A_{k,:}$，有 $$ \bm A_{k,:}\cdot\bm a=A_{k,i}a_{i} $$ 如此操作，得到： $$ \bm A\bm a=\bm A_{:,i} $$
+对称元素的组合规律 规则：对称元素也要满足分子的对称性。
+两个旋转轴的组合：有一个$C_n$主轴和一个垂直的$C_2$必定有垂直于主轴的$n$个副轴；有两个夹角为$180^\circ/n$的$C_2$必定有一个$C_n$和$n$个垂直的$C_2$。
+旋转轴与镜面：有一个$C_n$轴和一个$\sigma$必定有垂直于轴的$n$个镜面；有两个夹角为$180^\circ/n$的$\sigma$必定有一个$C_n$和$n$个垂直的$\sigma$。
+偶次轴和垂直的镜面：偶次轴和垂直的镜面确定过交点的$i$，而$i$和穿过它的偶次轴也确定一个垂直于偶次轴的镜面。
+独立对称元素 作为独立对称元素的映轴：注意$S_{4n}$才是独立元素（而且不能有与之垂直的镜面）。
+分子点群 注意，从主轴方向看，分层——主轴的轴次看最大公因数（可以无限插入$C_\infty$的点）。
+寻找主轴的方向：找最少的相同元素（最少的元素、基团），从他们的连线、面来找。
+$C_n$群 仅一个$C_n$，特点是风扇型且上下不等（注意不能有$\sigma_h$或$\sigma_v$，因此上下左右都要扭）。一般是多层，上下都有$C_3$，但略微扭曲。
+$C_{nv}$群 $C_n&#43;\sigma_v$，也就是上下不等的风扇掰直了或正好交叉，通常加入一个$C_\infty$层变成锥形（同时让层**不同**）。
+$C_{nh}$群 $C_n&#43;\sigma_h$，每层是压扁了的上下不等风扇（无$\sigma_v$），或风扇和它的对映体叠在一起，特点是层之间有重叠。存在$S_n$但即使是$S_{4n}$也不是独立对称元素。当$n$为偶数的时候还存在**独立对称元素**$i$。注意下图中R基的扭曲 $D_{n}$群 $C_n&#43;C_2\perp C_n$。很多$D_n$看似$S_{2n}$，但无法对称上去——上下**相等**的风扇
+$D_{nh}$群 $C_n&#43;C_2\perp C_n&#43;\sigma_h$，同时又有$\sigma_\red{v}$（镜面和旋转轴组合出另一个镜面），**重叠**的上下**相等**风扇。
+$D_{nd}$群 $C_n&#43;C_2\perp C_n&#43;n\sigma_d$，完美交错的上下相等风扇。同时包含$S_{2n}$，独立对称元素必然有$nC_2,n\sigma_d$，当$n$为奇数，$S_{2n}$被拆开，独立对称元素加上$C_n,i$，当$n$为偶数，$S_{2n}$为一个独立对称元素。
+ 补充：$S_n$的等价情况（按$n$分类）——奇数：$C_n,i$；偶数但非$4$的倍数：$C_{n/2},\sigma_h$；$4$的倍数：**独立对称元素**（$S_{n},C_{n/2}$同时存在（由于分子没有$C_n$故不能写出））。
+ $S_{4}$群 仅含$S_4$，多为$D_{2d}$被新加入的元素破坏对称性（风扇化），比如1,3,5,7-四甲基环辛四烯
+$C_{3i}$群 其实也就是$S_6$群，破坏了对称性的$D_{3d}$（风扇化）。注意看似$D_{3d}$的[6,5]-冠烷1：
+$T$系列 带$T$的都有$4C_3,3C_2(\text{or} S_4)$：
+$T$群，仅含有上述元素（$4C_3,3C_2$），非常罕见，比如新戊烷的四个甲基扭曲了（没有$\sigma$）。
+$T_h$群，判据是$4C_3&#43;3C_2&#43;\sigma_h$，注意此$\sigma_h$垂直于$C_\red{2}$，非常稀少，大多可看做十二面体的不等长变体（位于立方体面上边长度变化），get到每条边朝向的神韵： $T_d$群，存在平分$C_2$的$\sigma_d$，独立对称元素：$3S_4,4C_3,6\sigma_d$（注意$S_4$包含了所有$C_2$的操作）——纯正的正四面体
+$O$系列 都有$4C_3,3C_4,6C_2$
+$O$群：与$T$群一样是风扇化的$O_h$（大多为甲基等扭转）。
+$O_h$群：存在垂直于$C_4$的$\sigma_h$——大多为正八面体或立方体。
+$I$系列 正十二面体(12)，正二十面体(20)，二者合体$\ce{C_60}$(12&#43;20=32)。"/>
+
+
+  </head>
+  <body>
+
+    <nav class="menu">
+    <ul>
+      <li class="left">
+        <a href="/"><span>Edward Kerman&#39;s blog</span></a>
+      </li>
+      
+      <li>
+        <a href="/">Home</a>
+      </li>
+      
+      <li>
+        <a href="/about/">About</a>
+      </li>
+      
+      <li>
+        <a href="/sitemap/">Sitemap</a>
+      </li>
+      
+      <li id="menu-search">
+        <a href="/#">Search</a>
+      </li>
+      
+      <li>
+        <a href="/index.xml">Subscribe</a>
+      </li>
+      
+    </ul>
+    </nav>
+		
+
+
+<div class="container single">
+<main>
+
+<div class="article-meta">
+<h1><span class="title">分子对称性</span></h1>
+
+<h3 class="author">
+Edward Kerman
+</h3>
+
+<h3 class="date">2022-03-18</h3>
+<p class="terms">
+  
+  
+  Categories: <a href="/categories/academic">Academic</a> <a href="/categories/%E7%BB%93%E6%9E%84%E5%8C%96%E5%AD%A6">结构化学</a> 
+  
+  
+  
+  Tags: <a href="/tags/%E7%BB%93%E6%9E%84%E5%8C%96%E5%AD%A6">结构化学</a> <a href="/tags/%E5%85%A5%E9%97%A8">入门</a> 
+  
+  
+</p>
+</div>
+
+<div class="article">
+<!-- \(
+  \def\d{{\mathrm d}}
+	\def\B{{\mathrm B}}
+	\def\A{{\mathrm A}}
+	\def\m{{\mathrm m}}
+	\def\align #1{{\begin{align*} #1 \end{align*}}}
+	\def\f #1#2{{\frac{\partial  #1}{\partial  #2}}}
+	\def\l #1{{\left( #1\right)}}
+	\def\red #1{{\color{red}{ #1}}}
+	\def\green #1{{\color{green}{ #1}}}
+	\def\blue #1{{\color{blue}{ #1}}}
+	\def\bm #1{{\boldsymbol{ #1}}}
+\) -->
+<h2 id="矩阵">矩阵</h2>
+<p>在神经网络中，矩阵的意义大多是代数上的，仅作为中计算的简化方法：$\bm C=\bm A\bm B$，那么$C_{i,j}=\bm A_{i,:}\cdot\bm B_{:,j}$（注意，$\bm A_{i,:}$表示矩阵的第$i$<u>行</u>构成的向量）</p>
+<p>对于对称操作的矩阵表示，我们可以从几何角度进行如下理解：</p>
+<h3 id="矩阵和向量相乘">矩阵和向量相乘</h3>
+<p>对于第$i$维的单位向量，变换后对应的就是变换矩阵中的第$i$列的<strong>列向量</strong>。运算得到的结果就是在如上单位向量变换后向量在<strong>原坐标系</strong>中的位置。</p>
+<p>简单证明一下：对于第$i$维的单位向量$\bm a$，它除了$a_i=1$以外都为$0$，我们让它与变换矩阵相乘，对于变换矩阵的$\bm A_{k,:}$，有
+$$
+\bm A_{k,:}\cdot\bm a=A_{k,i}a_{i}
+$$
+如此操作，得到：
+$$
+\bm A\bm a=\bm A_{:,i}
+$$</p>
+<h2 id="对称元素的组合规律">对称元素的组合规律</h2>
+<p>规则：<strong>对称元素也要满足分子的对称性</strong>。</p>
+<p><strong>两个旋转轴的组合</strong>：有一个$C_n$主轴和一个垂直的$C_2$必定有垂直于主轴的$n$个副轴；有两个夹角为$180^\circ/n$的$C_2$必定有一个$C_n$和$n$个垂直的$C_2$。</p>
+<p><strong>旋转轴与镜面</strong>：有一个$C_n$轴和一个$\sigma$必定有垂直于轴的$n$个镜面；有两个夹角为$180^\circ/n$的$\sigma$必定有一个$C_n$和$n$个垂直的$\sigma$。</p>
+<p><strong>偶次轴和垂直的镜面</strong>：偶次轴和垂直的镜面确定过交点的$i$，而$i$和穿过它的偶次轴也确定一个垂直于偶次轴的镜面。</p>
+<h2 id="独立对称元素">独立对称元素</h2>
+<p>作为独立对称元素的映轴：注意$S_{4n}$才是独立元素（而且不能有与之垂直的镜面）。</p>
+<h2 id="分子点群">分子点群</h2>
+<p>注意，从主轴方向看，分层——主轴的轴次看最大公因数（可以无限插入$C_\infty$的点）。</p>
+<p>寻找主轴的方向：找最少的相同元素（最少的元素、基团），从他们的连线、面来找。</p>
+<h3 id="c_n群">$C_n$群</h3>
+<p>仅一个$C_n$，特点是风扇型且上下不等（注意不能有$\sigma_h$或$\sigma_v$，因此上下左右都要扭）。一般是多层，上下都有$C_3$，但略微扭曲。</p>
+<h3 id="c_nv群">$C_{nv}$群</h3>
+<p>$C_n+\sigma_v$，也就是上下不等的风扇掰直了<strong>或正好交叉</strong>，通常加入一个$C_\infty$层变成锥形（同时让层**不同**）。</p>
+<h3 id="c_nh群">$C_{nh}$群</h3>
+<p>$C_n+\sigma_h$，每层是<strong>压扁了</strong>的<strong>上下不等</strong>风扇（无$\sigma_v$），或风扇和它的对映体叠在一起，特点是层之间有重叠。存在$S_n$但即使是$S_{4n}$也不是独立对称元素。当$n$为偶数的时候还存在**独立对称元素**$i$。注意下图中R基的扭曲
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0040403900013848-sc1.gif" alt="Crystal structural properties of a pinwheel compound: 36 cyclophane - ScienceDirect"></p>
+<h3 id="d_n群">$D_{n}$群</h3>
+<p>$C_n+C_2\perp C_n$。很多$D_n$看似$S_{2n}$，但无法对称上去——上下**相等**的风扇</p>
+<h3 id="d_nh群">$D_{nh}$群</h3>
+<p>$C_n+C_2\perp C_n+\sigma_h$，同时又有$\sigma_\red{v}$（镜面和旋转轴组合出另一个镜面），**重叠**的上下**相等**风扇。</p>
+<h3 id="d_nd群">$D_{nd}$群</h3>
+<p>$C_n+C_2\perp C_n+n\sigma_d$，完美<strong>交错</strong>的上下<strong>相等</strong>风扇。同时包含$S_{2n}$，独立对称元素必然有$nC_2,n\sigma_d$，当$n$为奇数，$S_{2n}$被拆开，独立对称元素加上$C_n,i$，当$n$为偶数，$S_{2n}$为一个独立对称元素。</p>
+<blockquote>
+<p><strong>补充</strong>：$S_n$的等价情况（按$n$分类）——奇数：$C_n,i$；偶数但非$4$的倍数：$C_{n/2},\sigma_h$；$4$的倍数：**独立对称元素**（$S_{n},C_{n/2}$同时存在（由于分子没有$C_n$故不能写出））。</p>
+</blockquote>
+<h3 id="s_4群">$S_{4}$群</h3>
+<p>仅含$S_4$，多为$D_{2d}$被新加入的元素破坏对称性（风扇化），比如1,3,5,7-四甲基环辛四烯</p>
+<h3 id="c_3i群">$C_{3i}$群</h3>
+<p>其实也就是$S_6$群，破坏了对称性的$D_{3d}$（风扇化）。注意看似$D_{3d}$的[6,5]-冠烷<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>：</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0ebx9kxddj20qc09awev.jpg" alt="image-20220318205502733"></p>
+<h3 id="t系列">$T$系列</h3>
+<p>带$T$的都有$4C_3,3C_2(\text{or} S_4)$：</p>
+<p>$T$群，仅含有上述元素（$4C_3,3C_2$），非常罕见，比如新戊烷的四个甲基扭曲了（没有$\sigma$）。</p>
+<p>$T_h$群，判据是$4C_3+3C_2+\sigma_h$，注意此$\sigma_h$垂直于$C_\red{2}$，非常稀少，大多可看做十二面体的不等长变体（位于立方体面上边长度变化），get到每条边朝向的神韵：
+<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0eyq63jeag209609674p.gif" alt="Co(NO2)6"></p>
+<p>$T_d$群，存在平分$C_2$的$\sigma_d$，独立对称元素：$3S_4,4C_3,6\sigma_d$（注意$S_4$包含了所有$C_2$的操作）——纯正的正四面体</p>
+<h3 id="o系列">$O$系列</h3>
+<p>都有$4C_3,3C_4,6C_2$</p>
+<p>$O$群：与$T$群一样是风扇化的$O_h$（大多为甲基等扭转）。</p>
+<p>$O_h$群：存在垂直于$C_4$的$\sigma_h$——大多为正八面体或立方体。</p>
+<h3 id="i系列">$I$系列</h3>
+<p>正十二面体(12)，正二十面体(20)，二者合体$\ce{C_60}$(12+20=32)。</p>
+<h3 id="无轴群">无轴群</h3>
+<p>$C_s,C_i,C_1$</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>它画出来是这样的：<img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0ebytb78zj209i0d8q30.jpg" alt="image-20220318205634201">&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+</div>
+</main>
+
+<section class="appendix">
+
+
+<div>
+  <div class="side side-left"><h3>Author&#39;s bio</h3></div>
+  <div>
+
+
+
+
+
+<div>Edward Kerman——化竞菜鸡，舟厨，ksp爱好者，花样滑冰云观众。</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Reuse</h3></div>
+  Text and figures are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution CC BY 4.0</a>.
+</div>
+
+
+
+<div>
+  <div class="side side-left"><h3>Suggest changes</h3></div>
+  
+  
+  
+    
+    
+  
+  If you find any mistakes (including typos) or want to suggest changes, please feel free to <a href="https://github.com/MJ23333/b/edit/master/content/post/jghx/%e5%88%86%e5%ad%90%e5%af%b9%e7%a7%b0%e6%80%a7.md" id="edit-link">edit the source file of this page on Github and create a pull request.</a>
+</div>
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Citation</h3></div>
+  <p>For attribution, please cite this work as</p>
+  <pre><code class="no-highlight">Edward Kerman (2022). 分子对称性. Edward Kerman&#39;s blog. /post/2022/03/18/%E5%88%86%E5%AD%90%E5%AF%B9%E7%A7%B0%E6%80%A7/</code></pre>
+  <p>BibTeX citation</p>
+  <pre><code class="no-highlight">@misc{
+  title = "分子对称性",
+  author = "Edward Kerman",
+  year = "2022",
+  journal = "Edward Kerman&#39;s blog",
+  note = "/post/2022/03/18/%E5%88%86%E5%AD%90%E5%AF%B9%E7%A7%B0%E6%80%A7/"
+}</code></pre>
+</div>
+
+</section>
+
+
+
+<nav class="post-nav">
+  <span class="nav-next">&larr; <a href="/post/2022/03/03/%E7%AE%80%E8%B0%90%E6%8C%AF%E5%8A%A8/" title=Next&#32;post&#32;(older)>简谐振动</a></span>
+  &hercon;
+  <span class="nav-prev"><a href="/post/2022/03/18/%E5%85%B3%E4%BA%8E%E7%BB%88%E6%9C%AB%E5%9C%B0%E7%9A%84%E8%8B%A5%E5%B9%B2%E7%8C%9C%E6%B5%8B/" title=Previous&#32;post&#32;(newer)>关于终末地的若干猜测</a> &rarr;</span>
+</nav>
+
+
+
+
+
+</div>
+
+
+  <footer>
+  <script async src="//yihui.org/js/center-img.js"></script>
+
+			<script type="text/x-mathjax-config">
+				MathJax.Hub.Config({
+					extensions: ["tex2jax.js"],
+					jax: ["input/TeX", "output/HTML-CSS"],
+					TeX: {
+						extensions: ["mhchem.js"],
+						Macros: {
+								d: "{\\mathrm d}",
+								B: "{\\mathrm B}",
+								A: "{\\mathrm A}",
+								m: "{\\mathrm m}",
+								D: "{\\Delta}",
+								Ek: "{E_{\\mathrm k}}",
+								Ep: "{E_{\\mathrm p}}",
+								K: "{\\space\\mathrm K}",
+								J: "{\\space\\mathrm J}",
+								kJ: "{\\space\\mathrm {kJ}}",
+								eV: "{\\space\\mathrm {eV}}",
+								mol: "{\\space\\mathrm {mol}}",
+								kjm: "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
+								align: ["{\\begin{align*} #1 \\end{align*}}",1],
+								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
+								l: ["{\\left( #1\\right)}",1],
+								lf: ["{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",2],
+								red: ["{\\color{red}{ #1}}",1],
+								green: ["{\\color{green}{ #1}}",1],
+								blue: ["{\\color{blue}{ #1}}",1],
+								bm: ["{\\boldsymbol{ #1}}",1]
+						}
+					},
+					tex2jax: {
+						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+						processEscapes: true
+					},
+					CommonHTML: { linebreaks: { automatic: true } },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+         	SVG: { linebreaks: { automatic: true } }
+				});
+			</script>
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+
+
+
+
+
+  <div class="footer">
+  
+  <ul class="copyright">
+    <li>© Edward Kerman 2020-2022</li>
+  </ul>
+  
+  <ul>
+    
+    <li class="optional">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    <li class="optional">
+      <a href="/tags/">Tags</a>
+    </li>
+    
+    <li id="menu-edit">
+      <a href="#">Suggest an edit</a>
+    </li>
+    
+    <li>
+      <a href="#">Back to top</a>
+    </li>
+    
+  </ul>
+  </div>
+  
+  </footer>
+  <script async src="/js/features.js" data-page-features="[null,[&#34;&#43;sidenotes&#34;],null]"></script>
+  </body>
+</html>
+

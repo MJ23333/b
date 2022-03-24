@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>配合物 on Edward Kerman&#39;s blog</title>
+    <link>/tags/%E9%85%8D%E5%90%88%E7%89%A9/</link>
+    <description>Recent content in 配合物 on Edward Kerman&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E9%85%8D%E5%90%88%E7%89%A9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>配合物基础</title>
+      <link>/post/2022/01/24/%E9%85%8D%E5%90%88%E7%89%A9%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Mon, 24 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/01/24/%E9%85%8D%E5%90%88%E7%89%A9%E5%9F%BA%E7%A1%80/</guid>
+      <description>简单的热力学 逐级稳定常数$K_n$随着$n$增大而减小。
+配位反应一般$\D H&amp;lt;0,\D S&amp;gt;0$（对溶剂分子的作用减小）。
+稳定性 一般越小、电荷越高、HSAB联系好的稳定。
+在水溶液中H-H不如S-S，因为水是硬的，在配位以前就已经存在不错的溶剂化作用。
+螯合 对于较大的金属（d区），五元环比六元环稳定
+解释 焓方面：
+ 减小静电排斥：在从两个单齿配体变为一个双齿配体时，带$\delta^-$的供体原子之间的静电排斥减少； 去溶剂化效应：在配合物形成时破坏配体 - H2O 氢键相互作用——这种氢键相互作用对于例如 NH3 比对于 en 更大； $\ce{CH2CH2}$桥在二齿或多齿配体中的诱导效应，增加了配体相对于相应的单齿配体的供体强度。  熵方面：进少量多齿配体出大量单齿</description>
+    </item>
+    
+  </channel>
+</rss>

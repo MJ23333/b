@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/custom.css" />
-    <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
-<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
 <link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
-<link href="http://fonts.cdnfonts.com/css/operator-mono" rel="stylesheet">
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 <meta name="twitter:card" content="summary"/>
@@ -28,7 +29,8 @@
 卡诺定律  所有工作与同温热源与同温冷源之间的热机，其效率都不可能超过可逆热机
  假设如下的系统，其中左侧是任意热机：
 我们让任意热机驱动卡诺热机（效率为$\eta&#39;$）逆向运行，不难得到$T_{\rm h}$到$T_{\rm c}$的热量$Q_{\rm trans}$： $$ Q_{\rm trans}=\left(1-\eta\right)Q-\eta Q\left(\frac1{\eta&#39;}-1\right)=Q\left(1-\frac{\eta}{\eta&#39;}\right) $$ 此时没有其他变化，为了遵守克劳修斯说法，$Q$不能小于$0$，显然有： $$ \eta&#39;\ge\eta $$ 卡诺定律得证。假如左右都是可逆机，那么我可以将现有循环调转顺序，得到： $$ \eta\ge\eta&#39; $$ 综合一下： $$ \eta=\eta&#39; $$ 也就是说所有可逆热机的效率都是一样的。
-熵的概念 考虑可逆循环（在$p-V$图上画得出来的都是可逆循环，原因下面讲），我们可以给它沿可逆绝热线切片，每个切片做上下两条等温线，将每个切片转化为一个小卡诺循环，用我们在热一时留下的引子（$\rm R$代表可逆）： $$ \begin{equation*}\sum_i\left(\frac{\delta Q_i}{T_i}\right) _{\mathrm R}=0\end{equation*} $$ 推广到任意的可逆循环： $$ \oint\left(\frac{\delta Q}{T}\right)_{\rm R}=0 $$
+熵的概念 考虑可逆循环（在$p-V$图上画得出来的都是可逆循环，原因下面讲），我们可以给它沿可逆绝热线切片，每个切片做上下两条等温线，将每个切片转化为一个小卡诺循环：
+用我们在热一时留下的引子，即$Q_{\rm c}/{T_{\rm c}}&#43;{Q_{\rm h}}/{T_{\rm h}}=0$（$\rm R$代表可逆）： $$ \begin{equation*}\sum_i\left(\frac{\delta Q_i}{T_i}\right) _{\mathrm R}=0\end{equation*} $$ 推广到任意的可逆循环： $$ \oint\left(\frac{\delta Q}{T}\right)_{\rm R}=0 $$
 假如我们在循环上取两个点，那么可以发现循环被切成了两个过程，根据上式： $$ \begin{equation*}\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R_1}=-\int_\color{red}{B}^\color{red}{A}\left(\frac{\delta Q}{T}\right)_{\rm R_2}\end{equation*} $$ 颠倒始末态，改变符号： $$ \begin{equation*}\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R_1}=\int_\color{red}{A}^\color{red}{B}\left(\frac{\delta Q}{T}\right)_{\rm R_2}\end{equation*} $$ 由于可逆循环是任意的，我们发现$\int_A^B\left({\delta Q}/{T}\right)_{\rm R}$的值只于始末状态有关，与具体途径无关，是个状态函数，我们叫它熵： $$ \Delta S=\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R} $$"/>
 
 
@@ -125,7 +127,9 @@ $$
 $$
 也就是说所有可逆热机的效率都是一样的。</p>
 <h2 id="熵的概念">熵的概念</h2>
-<p>考虑可逆循环（在$p-V$图上画得出来的都是可逆循环，原因下面讲），我们可以给它沿可逆绝热线切片，每个切片做上下两条等温线，将每个切片转化为一个小卡诺循环，用我们在热一时留下的引子（$\rm R$代表可逆）：
+<p>考虑可逆循环（在$p-V$图上画得出来的都是可逆循环，原因下面讲），我们可以给它沿可逆绝热线切片，每个切片做上下两条等温线，将每个切片转化为一个小卡诺循环：</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0k0vyt215j20ns0faq3s.jpg" alt="image-20220323190638740" style="zoom:33%;" /></p>
+<p>用我们在热一时留下的引子，即$Q_{\rm c}/{T_{\rm c}}+{Q_{\rm h}}/{T_{\rm h}}=0$（$\rm R$代表可逆）：
 $$
 \begin{equation*}\sum_i\left(\frac{\delta Q_i}{T_i}\right) _{\mathrm R}=0\end{equation*}
 $$
@@ -167,6 +171,7 @@ $$</p>
 $$
 \mathrm dS\ge0
 $$</p>
+<p>注意，对于非绝热的过程（绝大多数），<b>必须使用</b>$\D S_{\rm tot}$来判定自发性。</p>
 <h2 id="热力学基本方程">热力学基本方程</h2>
 <p>由第一定律和第二定律，对于一个可逆过程：
 $$
@@ -179,7 +184,7 @@ $$
 $$
 对比得到（此为$T$的热力学定义）：
 $$
-\begin{align*}T&amp;=\left(\frac{\partial U}{\partial S}\right)_V\\ -p&amp;=\left(\frac{\partial U}{\partial V}\right)_S\end{align*}
+\begin{align*}T&amp;=\left(\frac{\partial U}{\partial S}\right)_V\\ \red-p&amp;=\left(\frac{\partial U}{\partial V}\right)_S\end{align*}
 $$</p>
 <h2 id="t-s图">$T-S$图</h2>
 <p>对于任何可逆过程（等温不等温都可以），都存在：
@@ -190,7 +195,7 @@ $$
 <p><strong>Tip</strong>：对于各种各样的图，逆着坐标轴方向覆盖的面积是正的，顺着坐标轴的方向覆盖的面积是负的。</p>
 <p><img src="https://www.tf.uni-kiel.de/matwis/amat/td_kin_i/kap_1/pictures/carnot_cycle_pv_ts.png" alt="Carnot cycle: p-V diagram and T-S diagram" style="zoom:33%;" /></p>
 <h2 id="熵变的计算">熵变的计算</h2>
-<p><strong>前提</strong>：必须全程可逆，以下讨论均是<strong>可逆的</strong>。</p>
+<p><strong>前提</strong>：必须<b>全程可逆</b>，以下讨论均是<strong>可逆的</strong>。</p>
 <p>理想气体等温可逆变化：
 $$
 \Delta S=nR\ln\frac{V_2}{V_1}=nR\ln\frac{p_1}{p_2}
@@ -202,11 +207,16 @@ $$</p>
 <p>等温等压<strong>可逆</strong>相变：
 $$
 \Delta S=\frac{\Delta H}{T}
-$$</p>
+$$
+<b>特鲁顿规则</b>：液体的标准蒸发熵大致为$85\kjm$。</p>
 <p>变温过程：
 $$
 \Delta S=\int_{T_1}^{T_2}\frac{nC_{V,\rm m}}T(\text{等容可逆})=\int_{T_1}^{T_2}\frac{nC_{p,\rm m}}T(\text{等压可逆})
 $$</p>
+<h2 id="熵变的测量化学">熵变的测量（化学）</h2>
+<p>从$S_\m(0\K)$开始，进行变温过程和<b>相变过程</b>，积分热容。</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0k20iny81j20o20imwfj.jpg" alt="image-20220323194534858" style="zoom:33%;" /></p>
+<p>注意与$H_\m^\ominus$不同，单质的标准熵在非$0\K$时不可能为0。</p>
 <h2 id="能量退降">能量退降</h2>
 <p>功可以无条件变成热，但热不能无条件变成功。当系统的熵增加时，一部分能量丧失了做功的能力——能量退降。</p>
 <h2 id="微观含义">微观含义</h2>
@@ -277,7 +287,8 @@ $$
 也就是说：
 $$
 \left(\frac{\partial M}{\partial y}\right)_x=\left(\frac{\partial N}{\partial x}\right)_y
-$$</p>
+$$
+说白了——让$z$先后对$x,y$和$y,x$求导，结果一样，但我们把第一次求导的结果换成对应的状态函数（根据定义），完了。</p>
 <p>我们有四个关系式，那不就——</p>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1gzwso1ceq6j213o0lsmza.jpg" alt="image-20220303165411679" style="zoom:33%;" /></p>
 <p>在此就应用举一例：我们想知道$U-V$之间的关系，不难变形得到（同时除以$\mathrm dV$）：
@@ -403,7 +414,7 @@ $$</p>
 
 
 <nav class="post-nav">
-  <span class="nav-next">&larr; <a href="/post/2022/01/25/%E9%A9%AC%E5%BE%B7%E9%9A%86%E5%B8%B8%E6%95%B0%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E6%89%AB%E9%9B%B7/" title=Next&#32;post&#32;(older)>马德隆常数计算方法扫雷</a></span>
+  <span class="nav-next">&larr; <a href="/post/2022/02/18/%E7%94%B5%E5%8C%96%E5%AD%A6/" title=Next&#32;post&#32;(older)>电化学</a></span>
   &hercon;
   <span class="nav-prev"><a href="/post/2022/02/18/%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%B8%80%E5%AE%9A%E5%BE%8B/" title=Previous&#32;post&#32;(newer)>热力学第一定律</a> &rarr;</span>
 </nav>
@@ -429,12 +440,23 @@ $$</p>
 								B: "{\\mathrm B}",
 								A: "{\\mathrm A}",
 								m: "{\\mathrm m}",
+								D: "{\\Delta}",
+								Ek: "{E_{\\mathrm k}}",
+								Ep: "{E_{\\mathrm p}}",
+								K: "{\\space\\mathrm K}",
+								J: "{\\space\\mathrm J}",
+								kJ: "{\\space\\mathrm {kJ}}",
+								eV: "{\\space\\mathrm {eV}}",
+								mol: "{\\space\\mathrm {mol}}",
+								kjm: "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
 								align: ["{\\begin{align*} #1 \\end{align*}}",1],
 								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
 								l: ["{\\left( #1\\right)}",1],
+								lf: ["{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",2],
 								red: ["{\\color{red}{ #1}}",1],
 								green: ["{\\color{green}{ #1}}",1],
-								blue: ["{\\color{blue}{ #1}}",1]
+								blue: ["{\\color{blue}{ #1}}",1],
+								bm: ["{\\boldsymbol{ #1}}",1]
 						}
 					},
 					tex2jax: {

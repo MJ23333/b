@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> 一些数学 | Edward Kerman&#39;s blog</title>
+    
+    <link rel="icon" type="image/png" href="/icons/Hi-Res.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
+<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="一些数学"/>
+<meta name="twitter:description" content="高斯积分 $$ \align{\int_0^\infty e^{-\lambda x^2}\d x&amp;=\frac12\sqrt\frac{\pi}{\lambda}\\\int_0^\infty xe^{-\lambda x^2}\d x&amp;=\frac1{2\lambda}\\\int_0^\infty x^2e^{-\lambda x^2}\d x&amp;=\frac14\sqrt\frac{\pi}{\lambda^3}} $$
+偏导数 当你知道$f=f(x,y)=f(x,y(x,z))$时： $$ \align{\d f&amp;=\l{\f{f}{x}}_y\d x&#43;\l{\f{f}{y}}_x\d y\\&amp;=\l{\f{f}{x}}_y\d x&#43;\l{\f{f}{y}}_x\left[\l{\f{y}{x}}_z\d x&#43;\l{\f{y}{z}}_x\d z\right]\\&amp;=\left[\l{\f{f}{x}}_y&#43;\l{\f{f}{y}}_x\l{\f{y}{x}}_z\right]\d x&#43;\l{\f{f}{y}}_x\l{\f{y}{z}}_x\d z} $$ 此时，根据偏导数的定义得到性质1： $$ \l{\f{f}{x}}_z=\l{\f{f}{x}}_y&#43;\l{\f{f}{y}}_x\l{\f{y}{x}}_z $$ 它有什么用呢？考虑下面一个例子： $$ \align{\d f&amp;=\lf fx_y\d x&#43;\lf fy_x\d y\\\lf fx_z&amp;=\lf fx_y&#43;\lf fy_x\lf yx_z} $$ 直接把$\d x$除过去是很爽，但以前总会心有芥蒂——为啥出过去就自动$z$不变了？现在我们有了完美的解答——把$\d y$进一步用$x,z$表示出来即可。
+同时，不难知道性质2： $$ \l{\f{x}{y}}_z=\frac1{\l{\f{y}{x}}_z} $$
+我们继续研究$x,y,z$的关系，知道： $$ x=x(y,z)=x\left[y(x,z),z\right] $$ 那么写出全微分： $$ \align{\d x&amp;=\lf{x}{y}_z\d y&#43;\lf{x}{z}_y\d z\\&amp;=\lf{x}{y}_z\left[\lf{y}{x}_z\d x&#43;\lf{y}{z}_x\d z\right]&#43;\lf{x}{z}_y\d z\\&amp;=\left[\lf{x}{y}_z\lf{y}{x}_z\right]\d x&#43;\left[\lf{x}{y}_z\lf{y}{z}_x&#43;\lf{x}{z}_y\right]\d z} $$ 根据性质2，得到性质3： $$ \align{\d x&amp;=\d x&#43;\left[\lf{x}{y}_z\lf{y}{z}_x&#43;\lf{x}{z}_y\right]\d z\\0&amp;=\left[\lf{x}{y}_z\lf{y}{z}_x&#43;\lf{x}{z}_y\right]\d z\\\lf{x}{z}_y&amp;=-\lf{x}{y}_z\lf{y}{z}_x} $$"/>
+
+
+  </head>
+  <body>
+
+    <nav class="menu">
+    <ul>
+      <li class="left">
+        <a href="/"><span>Edward Kerman&#39;s blog</span></a>
+      </li>
+      
+      <li>
+        <a href="/">Home</a>
+      </li>
+      
+      <li>
+        <a href="/about/">About</a>
+      </li>
+      
+      <li>
+        <a href="/sitemap/">Sitemap</a>
+      </li>
+      
+      <li id="menu-search">
+        <a href="/#">Search</a>
+      </li>
+      
+      <li>
+        <a href="/index.xml">Subscribe</a>
+      </li>
+      
+    </ul>
+    </nav>
+		
+
+
+<div class="container single">
+<main>
+
+<div class="article-meta">
+<h1><span class="title">一些数学</span></h1>
+
+<h3 class="author">
+Edward Kerman
+</h3>
+
+<h3 class="date">2022-02-18</h3>
+<p class="terms">
+  
+  
+  Categories: <a href="/categories/academic">Academic</a> <a href="/categories/%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%A6">物理化学</a> 
+  
+  
+  
+  Tags: <a href="/tags/%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%A6">物理化学</a> <a href="/tags/%E7%83%AD%E5%8A%9B%E5%AD%A6">热力学</a> <a href="/tags/%E5%85%A5%E9%97%A8">入门</a> 
+  
+  
+</p>
+</div>
+
+<div class="article">
+<!-- \(
+  \def\d{{\mathrm d}}
+	\def\B{{\mathrm B}}
+	\def\A{{\mathrm A}}
+	\def\m{{\mathrm m}}
+	\def\align #1{{\begin{align*} #1 \end{align*}}}
+	\def\f #1#2{{\frac{\partial  #1}{\partial  #2}}}
+	\def\l #1{{\left( #1\right)}}
+	\def\red #1{{\color{red}{ #1}}}
+	\def\green #1{{\color{green}{ #1}}}
+	\def\blue #1{{\color{blue}{ #1}}}
+	\def\bm #1{{\boldsymbol{ #1}}}
+\)  -->
+<h2 id="高斯积分">高斯积分</h2>
+<p>$$
+\align{\int_0^\infty e^{-\lambda x^2}\d x&amp;=\frac12\sqrt\frac{\pi}{\lambda}\\\int_0^\infty xe^{-\lambda x^2}\d x&amp;=\frac1{2\lambda}\\\int_0^\infty x^2e^{-\lambda x^2}\d x&amp;=\frac14\sqrt\frac{\pi}{\lambda^3}}
+$$</p>
+<h2 id="偏导数">偏导数</h2>
+<p>当你知道$f=f(x,y)=f(x,y(x,z))$时：
+$$
+\align{\d f&amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\d y\\&amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\left[\l{\f{y}{x}}_z\d x+\l{\f{y}{z}}_x\d z\right]\\&amp;=\left[\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z\right]\d x+\l{\f{f}{y}}_x\l{\f{y}{z}}_x\d z}
+$$
+此时，根据偏导数的定义得到<strong>性质1</strong>：
+$$
+\l{\f{f}{x}}_z=\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z
+$$
+它有什么用呢？考虑下面一个例子：
+$$
+\align{\d f&amp;=\lf fx_y\d x+\lf fy_x\d y\\\lf fx_z&amp;=\lf fx_y+\lf fy_x\lf yx_z}
+$$
+直接把$\d x$除过去是很爽，但以前总会心有芥蒂——为啥出过去就自动$z$不变了？现在我们有了完美的解答——把$\d y$进一步用$x,z$表示出来即可。</p>
+<p>同时，不难知道<strong>性质2</strong>：
+$$
+\l{\f{x}{y}}_z=\frac1{\l{\f{y}{x}}_z}
+$$</p>
+<p>我们继续研究$x,y,z$的关系，知道：
+$$
+x=x(y,z)=x\left[y(x,z),z\right]
+$$
+那么写出全微分：
+$$
+\align{\d x&amp;=\lf{x}{y}_z\d y+\lf{x}{z}_y\d z\\&amp;=\lf{x}{y}_z\left[\lf{y}{x}_z\d x+\lf{y}{z}_x\d z\right]+\lf{x}{z}_y\d z\\&amp;=\left[\lf{x}{y}_z\lf{y}{x}_z\right]\d x+\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z}
+$$
+根据<strong>性质2</strong>，得到<strong>性质3</strong>：
+$$
+\align{\d x&amp;=\d x+\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z\\0&amp;=\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z\\\lf{x}{z}_y&amp;=-\lf{x}{y}_z\lf{y}{z}_x}
+$$</p>
+<p>结合<strong>性质2</strong>和<strong>性质3</strong>，不难得到<strong>欧拉循环求导关系式</strong>：
+$$
+\lf{x}{y}_z\lf{y}{z}_x\lf{z}{x}_y=\red{-1}
+$$</p>
+<p>上面的方法思路比较顺滑，但如果你想秒掉：
+$$
+\d z=\lf{z}{x}_y\d x+\lf{z}{y}_x\d y
+$$
+令$\d z=0$，得：
+$$
+\align{\lf{z}{x}_y\d x+\lf{z}{y}_x\d y&amp;=0\\-\lf{x}{y}_z\lf{y}{z}_x&amp;=\lf{x}{z}_y\qquad（使用性质一和性质二，得性质三）\\\lf{x}{y}_z\lf{y}{z}_x\lf{z}{x}_y&amp;=\red{-1}}
+$$</p>
+<h2 id="legendre变换">Legendre变换</h2>
+<p>在符合直觉的关系式中，作为独立变量的往往是广度量（$U，V,S,N$），但这些量一般难以测量，如何使用强度量（$T,p,\mu$）来不损失信息地表示各种关系呢？</p>
+<p>假设我们有一个简单的函数$y=y(x)$（比如$y={x^2}/4$），它在$x$处导数为$p$。最简单的方法是通过一些变换得到这样一个函数：
+$$
+y=y(p)
+$$
+然而，稍加思索即可发现这样做无论如何都会在数学上牺牲掉一些信息——关系$y=y(p)$是一个一阶微分方程，而它的积分给出的结果跟$y=y(x)$差一个待定的积分常数。下面的几个函数都满足$y=y(p)		$：</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0k446w4rsj20k00cy3z6.jpg" alt="image-20220323205820661" style="zoom:50%;" /></p>
+<p>回看刚才的表示，问题应该处在没有使用切线的斜率$\phi$。有趣的是，当你作出大量切线时，你会发现$y=y(x)$是一族切线的包络线。这有一个要求，就是该函数必须是凸函数，否则$\phi(p)$不是单值函数。</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0k4fdk1bej20k00cymya.jpg" alt="image-20220323210905009" style="zoom:50%;" /></p>
+<p>$\phi$的表达式也很容易得到：
+$$
+\phi(x)=f(x)-xp
+$$</p>
+<p>对于一个多元函数：
+$$
+y=y(x_0,x_1,\cdots,x_n)
+$$
+我们对其中$x_0,x_1,\cdots,x_i$做Legendre变换，记作$y(p_0,\cdots,p_i)$（略去剩下的$x$），显然有：
+$$
+y(p_0,\cdots,p_i)=y(x_0,x_1,\cdots,x_n)-\sum_{j=0}^{i}\f y{x_j}x_j
+$$</p>
+
+</div>
+</main>
+
+<section class="appendix">
+
+
+<div>
+  <div class="side side-left"><h3>Author&#39;s bio</h3></div>
+  <div>
+
+
+
+
+
+<div>Edward Kerman——化竞菜鸡，舟厨，ksp爱好者，花样滑冰云观众。</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Reuse</h3></div>
+  Text and figures are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution CC BY 4.0</a>.
+</div>
+
+
+
+<div>
+  <div class="side side-left"><h3>Suggest changes</h3></div>
+  
+  
+  
+    
+    
+  
+  If you find any mistakes (including typos) or want to suggest changes, please feel free to <a href="https://github.com/MJ23333/b/edit/master/content/post/wlhx/%e4%b8%80%e4%ba%9b%e6%95%b0%e5%ad%a6.md" id="edit-link">edit the source file of this page on Github and create a pull request.</a>
+</div>
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Citation</h3></div>
+  <p>For attribution, please cite this work as</p>
+  <pre><code class="no-highlight">Edward Kerman (2022). 一些数学. Edward Kerman&#39;s blog. /post/2022/02/18/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/</code></pre>
+  <p>BibTeX citation</p>
+  <pre><code class="no-highlight">@misc{
+  title = "一些数学",
+  author = "Edward Kerman",
+  year = "2022",
+  journal = "Edward Kerman&#39;s blog",
+  note = "/post/2022/02/18/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/"
+}</code></pre>
+</div>
+
+</section>
+
+
+
+<nav class="post-nav">
+  <span class="nav-next">&larr; <a href="/post/2022/02/18/%E5%88%86%E5%B8%83/" title=Next&#32;post&#32;(older)>分布</a></span>
+  &hercon;
+  <span class="nav-prev"><a href="/post/2022/02/28/%E5%8C%96%E5%AD%A6%E4%B8%AD%E7%9A%84%E5%A4%9A%E9%9D%A2%E4%BD%93/" title=Previous&#32;post&#32;(newer)>化学中的多面体</a> &rarr;</span>
+</nav>
+
+
+
+
+
+</div>
+
+
+  <footer>
+  <script async src="//yihui.org/js/center-img.js"></script>
+
+			<script type="text/x-mathjax-config">
+				MathJax.Hub.Config({
+					extensions: ["tex2jax.js"],
+					jax: ["input/TeX", "output/HTML-CSS"],
+					TeX: {
+						extensions: ["mhchem.js"],
+						Macros: {
+								d: "{\\mathrm d}",
+								B: "{\\mathrm B}",
+								A: "{\\mathrm A}",
+								m: "{\\mathrm m}",
+								D: "{\\Delta}",
+								Ek: "{E_{\\mathrm k}}",
+								Ep: "{E_{\\mathrm p}}",
+								K: "{\\space\\mathrm K}",
+								J: "{\\space\\mathrm J}",
+								kJ: "{\\space\\mathrm {kJ}}",
+								eV: "{\\space\\mathrm {eV}}",
+								mol: "{\\space\\mathrm {mol}}",
+								kjm: "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
+								align: ["{\\begin{align*} #1 \\end{align*}}",1],
+								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
+								l: ["{\\left( #1\\right)}",1],
+								lf: ["{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",2],
+								red: ["{\\color{red}{ #1}}",1],
+								green: ["{\\color{green}{ #1}}",1],
+								blue: ["{\\color{blue}{ #1}}",1],
+								bm: ["{\\boldsymbol{ #1}}",1]
+						}
+					},
+					tex2jax: {
+						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+						processEscapes: true
+					},
+					CommonHTML: { linebreaks: { automatic: true } },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+         	SVG: { linebreaks: { automatic: true } }
+				});
+			</script>
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+
+
+
+
+
+  <div class="footer">
+  
+  <ul class="copyright">
+    <li>© Edward Kerman 2020-2022</li>
+  </ul>
+  
+  <ul>
+    
+    <li class="optional">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    <li class="optional">
+      <a href="/tags/">Tags</a>
+    </li>
+    
+    <li id="menu-edit">
+      <a href="#">Suggest an edit</a>
+    </li>
+    
+    <li>
+      <a href="#">Back to top</a>
+    </li>
+    
+  </ul>
+  </div>
+  
+  </footer>
+  <script async src="/js/features.js" data-page-features="[null,[&#34;&#43;sidenotes&#34;],null]"></script>
+  </body>
+</html>
+

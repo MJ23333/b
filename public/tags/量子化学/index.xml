@@ -6,7 +6,53 @@
     <description>Recent content in 量子化学 on Edward Kerman&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>原子结构</title>
+      <link>/post/2022/03/21/%E5%8E%9F%E5%AD%90%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Mon, 21 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/03/21/%E5%8E%9F%E5%AD%90%E7%BB%93%E6%9E%84/</guid>
+      <description>旧量子论 Bohr的氢原子模型 两个假设：
+ 在氢原子中，电子围绕著原子核进行圆周运动。 在轨道中运动的电子的角动量的大小$L$被量子化为正整数乘以$\hbar$，即$L=n\hbar$。  根据圆周运动和库仑定律： $$ r=\frac1{4\pi\varepsilon_0}\frac{e^2}{r^2} $$
+另外，圆周运动的角动量大小是半径乘以动量，结合假设2： $$ L=rm_ev=n\hbar\\
+v=\frac{n\hbar}{rm_e} $$
+得到： $$ r=\frac{4\pi\varepsilon_0\hbar^2}{m_ee^2}n^2 $$
+原子轨道 量子数 描述轨道的都为整数，$n\in[1,+\infty)$，$l\in\red{[0,n-1]}$，$m_l\in[-l,l]$（事实上$m_l$是轨道角动量沿某指定轴的射影）。
+描述电子还需要自旋角动量，其值为$s=\frac12$，但由于角动量需要方向，故使用磁自旋角动量$m_s$，取值为$\frac12$或$-\frac12$（事实上$m_s$是自旋$s=1/2$沿某指定轴的射影）。
+波函数的径向部分 注意s轨道在$r=0$有确定的有限值，而其他轨道在$r=0$时值为0。
+径向节点数：$n-l$
+径向分布函数 我们想要知道在距离原子核$r$找到电子的概率，即在一层球壳找到电子的概率，因此还要乘上表面积，得到径向分布函数： $$ RDS=4\pi r^2R(r)^2 $$ 可以发现$RDS\ge0$
+波函数的角部分 学习径向分布函数的经验，我们使用$A(\theta,\phi)^2$表示在某个方向找到电子的概率，但在画图时我们习惯根据原来的$A(\theta,\phi)$来着色。
+轨道的能量 对于类氢原子（不考虑电子间作用）： $$ E=R\frac{Z^2}{n^2} $$ 对于所有原子，$n$越大，能量越相近。
+更多的角动量 轨道角动量： $$ L_O=\l{\sqrt{l(l+1)}}\hbar $$ 其中关于某指定z轴的投影（分量）为$m_l\hbar$。
+自旋角动量： $$ L_{S}=\l{\sqrt{s(s+1)}}\hbar $$ 同样，z方向的分量为$m_s\hbar$。
+我们可以揉在一起，用总角动量来表示： $$ L=\l{\sqrt{j(j+1)}}\hbar $$ 其中总角动量量子数$j=|l\pm s|$。而它z方向的分量为$m_j\hbar$，其中$m_j=-j,-j+1,\cdots,j-1,j$，共$(2j+1)$个值。注意不同$j$对应的轨道能量由微弱不等（如$3\mathrm p_{3/2}$和$3\mathrm p_{1/2}$）
+多电子原子 Slater规则 由于类氢原子的所有$n$相等的轨道都是简并的，我们要对他打几个补丁：
+ 分组：s、p一组，d、f单独一组 更高组的对$\sigma$没有影响 对于n,p电子——同组0.35（1s的0.3），次组0.85，再之前1 对于d,f电子——同组0.35，之前1。  排布相关规则 Hund第一规则：先平行填入简并轨道； Pauli不相容原理：同一原子的两个电子不可能有一样的四个量子数。</description>
+    </item>
+    
+    <item>
+      <title>一些量子力学结论</title>
+      <link>/post/2022/03/19/%E4%B8%80%E4%BA%9B%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%BB%93%E8%AE%BA/</link>
+      <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/03/19/%E4%B8%80%E4%BA%9B%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%BB%93%E8%AE%BA/</guid>
+      <description>旧量子论 光电效应 $$ \frac12mv^2=h\nu-\Phi $$ 其中$\Phi$为脱出功（功函）。
+Bohr的氢原子模型 两个假设：
+ 在氢原子中，电子围绕著原子核进行圆周运动。 在轨道中运动的电子的角动量的大小$L$被量子化为正整数乘以约化普朗克常数$\hbar$。  根据圆周运动和库仑定律： $$ r=\frac1{4\pi\varepsilon_0}\frac{e^2}{r^2} $$
+另外，圆周运动的角动量大小是半径乘以动量，结合假设2： $$ L=rm_ev=n\hbar\\
+v=\frac{n\hbar}{rm_e} $$
+得到： $$ r=\frac{4\pi\varepsilon_0\hbar^2}{m_ee^2}n^2 $$
+波粒关系 de Broglie和Einstein关系 对于实物粒子和光子都适用： $$ E=h\nu=hc\overline\nu=\frac{hc}\lambda\\
+\lambda=\frac h p $$
+激发光谱 外界给粒子能量 → 电子跃迁到激发态 → 回落到基态 → 发光
+不确定性原理 $$ \Delta x\Delta p_x\ge\frac\hbar2 $$
+简单的量子力学 薛定谔方程 $$ \left[-\frac{\hbar^2}{2m}\nabla^2+V\right]\psi(x,y,z)=E\psi(x,y,z) $$
+一维势箱 一维势箱外$V=\infty$（显然此时$\psi=0$），势箱内$V=0$，带入薛定谔方程： $$ \frac{\hbar^2}{2m}\frac{\d^2\psi(x)}{\d x^2}+E\psi(x)=0 $$ 我们把常数搞到一块： $$ k^2=\frac{2mE}{\hbar^2}\\
+\frac{\d^2\psi(x)}{\d x^2}+k^2\psi(x)=0 $$ 联想我另一个博客里写的求解简谐振动的方法，通解为： $$ \psi(x)=A\cos(kx)+B\sin(kx) $$ 接着带入边界条件：$\psi(0)=0$，显然$A=0$，得到： $$ \psi(x)=B\sin(kx) $$ 同时，让另一个边界$\psi(l)=0$，那么： $$ k=\frac{n\pi}{l} $$ 带回$E$： $$ E=\frac{n^2h^2}{8ml^2}\qquad n=1,2,3,\cdots $$ 注意，$n=0$无法满足归一化条件。此时最低可能能量为$n=1$时的$E$，称为零点能。</description>
+    </item>
+    
     <item>
       <title>简谐振动</title>
       <link>/post/2022/03/03/%E7%AE%80%E8%B0%90%E6%8C%AF%E5%8A%A8/</link>
@@ -14,7 +60,8 @@
       
       <guid>/post/2022/03/03/%E7%AE%80%E8%B0%90%E6%8C%AF%E5%8A%A8/</guid>
       <description>简谐运动 我们知道简谐运动的一般运动方程： $$ m\frac{\mathrm d^2x}{\mathrm d^2t}=-kx $$ 我们把常数搞到一起： $$ \frac{\mathrm d^2x}{\mathrm d^2t}+\omega^2x\text{，其中}\omega=\sqrt{\frac{k}{m}} $$ 二阶导竟然还可以等于自己乘上一个常数，猜测这是怎么导都稳得一批的指数函数$Ae^{\lambda t}$，那么： $$ Ae^{\lambda x}\left(\lambda^2+\omega^2\right)=0 $$ 那么： $$ \lambda=\pm i\omega $$ 所以有这么个通解（$A_1,A_2,A$是复常数）： $$ x(t)=A_1e^{i\omega t}+A_2e^{-i\omega t}=Ae^{i\omega t} $$ 其中$A$是一个复数，称为复振幅，$A$的模长$|A|$就是振幅，幅角的相反数$\phi_0=-\mathrm{arg}(A)$就是初相位。
-我们希望$x(t)$是个实数，那么它应该等于它的复共轭： $$ A_1e^{i\omega t}+A_2e^{-i\omega t}=A^_2e^{i\omega t}+A^_1e^{-i\omega t} $$ 得到： $$ A_1=A^*_2 $$ 那我们写$A_1=ae^{i\phi}$，$A_2=ae^{-i\phi}$，得到： $$ x(t)=a\left[e^{i(\omega t+\phi)}+e^{-i(\omega t+\phi)}\right] $$ 套入欧拉公式： $$ x(t)=2a\cos(\omega t+\phi)=x_0\cos(\omega t+\phi) $$</description>
+我们希望$x(t)$是个实数，那么它应该等于它的复共轭： $$ A_1e^{i\omega t}+A_2e^{-i\omega t}=A_2^*e^{i\omega t}+A_1^*e^{-i\omega t} $$
+得到： $$ A_1=A^*_2 $$ 那我们写$A_1=ae^{i\phi}$，$A_2=ae^{-i\phi}$，得到： $$ x(t)=a\left[e^{i(\omega t+\phi)}+e^{-i(\omega t+\phi)}\right] $$ 套入欧拉公式： $$ x(t)=2a\cos(\omega t+\phi)=x_0\cos(\omega t+\phi) $$</description>
     </item>
     
     <item>

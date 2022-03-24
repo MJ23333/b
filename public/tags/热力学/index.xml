@@ -8,6 +8,29 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 18 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E7%83%AD%E5%8A%9B%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>一些数学</title>
+      <link>/post/2022/02/18/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/</link>
+      <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/02/18/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/</guid>
+      <description>高斯积分 $$ \align{\int_0^\infty e^{-\lambda x^2}\d x&amp;amp;=\frac12\sqrt\frac{\pi}{\lambda}\\\int_0^\infty xe^{-\lambda x^2}\d x&amp;amp;=\frac1{2\lambda}\\\int_0^\infty x^2e^{-\lambda x^2}\d x&amp;amp;=\frac14\sqrt\frac{\pi}{\lambda^3}} $$
+偏导数 当你知道$f=f(x,y)=f(x,y(x,z))$时： $$ \align{\d f&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\d y\\&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\left[\l{\f{y}{x}}_z\d x+\l{\f{y}{z}}_x\d z\right]\\&amp;amp;=\left[\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z\right]\d x+\l{\f{f}{y}}_x\l{\f{y}{z}}_x\d z} $$ 此时，根据偏导数的定义得到性质1： $$ \l{\f{f}{x}}_z=\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z $$ 它有什么用呢？考虑下面一个例子： $$ \align{\d f&amp;amp;=\lf fx_y\d x+\lf fy_x\d y\\\lf fx_z&amp;amp;=\lf fx_y+\lf fy_x\lf yx_z} $$ 直接把$\d x$除过去是很爽，但以前总会心有芥蒂——为啥出过去就自动$z$不变了？现在我们有了完美的解答——把$\d y$进一步用$x,z$表示出来即可。
+同时，不难知道性质2： $$ \l{\f{x}{y}}_z=\frac1{\l{\f{y}{x}}_z} $$
+我们继续研究$x,y,z$的关系，知道： $$ x=x(y,z)=x\left[y(x,z),z\right] $$ 那么写出全微分： $$ \align{\d x&amp;amp;=\lf{x}{y}_z\d y+\lf{x}{z}_y\d z\\&amp;amp;=\lf{x}{y}_z\left[\lf{y}{x}_z\d x+\lf{y}{z}_x\d z\right]+\lf{x}{z}_y\d z\\&amp;amp;=\left[\lf{x}{y}_z\lf{y}{x}_z\right]\d x+\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z} $$ 根据性质2，得到性质3： $$ \align{\d x&amp;amp;=\d x+\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z\\0&amp;amp;=\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z\\\lf{x}{z}_y&amp;amp;=-\lf{x}{y}_z\lf{y}{z}_x} $$</description>
+    </item>
+    
+    <item>
+      <title>分布</title>
+      <link>/post/2022/02/18/%E5%88%86%E5%B8%83/</link>
+      <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/02/18/%E5%88%86%E5%B8%83/</guid>
+      <description>麦克斯韦-玻尔兹曼统计 小刻也能轻松学懂的Maxwell分布
+基于热力学的简单推导 考虑一个系统，$T$恒定（比如和一个恒温热库交换热量），$\d V=\d N=0$。能级$\varepsilon$的简并度为$g_i$，对于两个确定状态$s_a,s_b$，由于系统的微观状态已经确定（仅1种），总系统的状态数就等于热库的微观状态数（下面的$U,S$都指热库）： $$ \frac{P(s_b)}{P(s_a)}=\frac{\Omega_b}{\Omega_a}=\frac{\exp\left(S_b/k\right)}{\exp\left(S_a/k\right)}=\exp\left(\frac {\Delta S}k\right) $$ 在$N,V,T$不变时，由热力学第一定律： $$ \d S=\frac1T\d U\\
+\Delta S=\frac {\Delta U}T $$ 带入，根据能量守恒换成系统在该状态的能量$E$ $$ \frac{P(s_b)}{P(s_a)}=\exp\left(\frac {\Delta U}{kT}\right)=\exp\left(\frac {-\Delta E}{kT}\right)=\frac{\exp\left(-E_b/kT\right)}{\exp\left(-E_a/kT\right)} $$ 那么： $$ P(s)=\frac{\exp\left(-E_s/kT\right)}Z\qquad Z=\sum_s\exp\left(-E_s/kT\right) $$ 注意现在是针对于特定状态$s$，如果想用能量或者速度之类的表示，应乘上相应的简并度，以能量为例： $$ P(\varepsilon_i)=\frac{g_i\exp\left(-\varepsilon_i/kT\right)}Z\qquad Z=\sum_jg_j\exp\left(-\varepsilon_j/kT\right) $$ 我们自然可以秒掉Maxwell分布，对$v_i$，$g_i=4\pi v_i^2$（不必在意具体值，比例正确即可）。假设能级连续： $$ f(v_i)=\frac{4\pi v_i^2\exp\l{-mv_i^2/kT}}{\int_0^\infty4\pi v^2\exp\l{-mv^2/kT}\d v} $$ 根据高斯积分（见《一些数学》）解得，整理： $$ f(v)=4\pi\left(\frac M{2\pi RT}\right)^{3/2}v^2e^{-Mv^2/2RT} $$</description>
+    </item>
+    
+    <item>
       <title>多组分热力学</title>
       <link>/post/2022/02/18/%E5%A4%9A%E7%BB%84%E5%88%86%E7%83%AD%E5%8A%9B%E5%AD%A6/</link>
       <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
@@ -47,7 +70,7 @@ $$ \mathrm dZ=\sum_{\mathrm B=1}^k\left(\frac{\partial Z}{\partial n_{\rm B}}\ri
 气体混合物 分压（Dalton分压定律）： $$ p_j=x_jp $$ 分体积（Amagat）： $$ V_j=x_jV $$
 气体动理论 压力 简单物理知识：$\mathbf p=m\mathbf v,\mathbf F=m\mathbf a$，那么$\mathbf F=\mathrm d\mathbf p/{\mathrm dt}$
 有一个方形容器，横截面积为$A$，容器壁平行于坐标平面。一个很短的时间$\Delta t$内一个分子在x方向上碰壁反弹（速率不变）的概率$P$为： $$ \mathrm P=\frac{Av_x\Delta t}{V} $$ 该分子“平均”（期望）作用力为： $$ F_x=\frac{2mv_x}{\Delta t}\times \frac{Av_x\Delta t}{V}=\frac{2mAv_x^2}{V} $$ 推广到一堆（$n\space \rm mol$）分子，我们用速率平方的平均值$\overline{v_x^2}$来表示，注意在速率平方后，我们多计算了一倍背道而驰的分子，所以要扣除： $$ F_x=\frac{2mA\overline{v_x^2}}{V}\times \frac12nN_A=\frac{nMA\overline{v_x^2}}{V} $$ 三个方向都是如此，即$\overline{v_x^2}=\frac13\overline{v^2}$，定义方均根速率： $$ v_{\rm rms}=\sqrt{\overline{v^2}} $$ 所以： $$ pV=\frac13nMv_{\rm rms}^2 $$ 开个挂，用理想气体状态方程带入，得到： $$ v_{\rm rms}=\sqrt{\frac{3RT}M} $$
-麦克斯韦-玻尔兹曼分布 由玻尔兹曼分布： $$ f(v)=Ke^{-\varepsilon/kT} $$ 容易得到： $$ f(v)=Ke^{-mv^2/2kT} $$ 我们可以发现不同$v$的概率是不一样的，但分解开的$v_x,v_y,v_z$却是均匀的，考虑分解$v$。 $$ f(v_x)=K_xe^{-mv_x^2/2kT} $$ 由于$v_x$取任意值的概率必定为一： $$ \int_{-\infty}^{\infty}f(v_x)\mathrm dv_x=1 $$ 积分得：$K_x=(m/2\pi kT)^{1/2}$，所以： $$ f(v_x)=\left(\frac{m}{2\pi kT}\right)^{1/2}e^{-mv_x^2/2kT} $$ 合体： $$ f(v_x)f(v_y)f(v_z)\mathrm dv_x\mathrm dv_y\mathrm dv_z=\left(\frac{m}{2\pi kT}\right)^{3/2}e^{-mv^2/2kT}\mathrm dv_x\mathrm dv_y\mathrm dv_z $$ 把这些转化为$\mathrm dv$，并$k\rightarrow R,m\rightarrow M$，推得： $$ f(v)=4\pi\left(\frac M{2\pi RT}\right)^{3/2}v^2e^{-Mv^2/2RT} $$ 可以计算方均根速率： $$ v_{\rm rms}^2=\int_0^{\infty}v^2f(v)\mathrm dv $$ 得到一样的结果： $$ v_{\rm rms}=\sqrt{\frac{3RT}M} $$ 其他速率：</description>
+麦克斯韦-玻尔兹曼分布 由玻尔兹曼分布： $$ f(v)=Ke^{-\varepsilon/kT} $$ 我们想计算不考虑方向时所有速率为$v$的分子，必须乘上球壳的体积，如此得到总概率： $$ f(v)\d v=Ke^{-mv^2/2kT}\times4\pi v^2\d v $$ 要让结果归一化，即： $$ 1=K\int_0^{\infty}e^{-mv^2/2kT}\times4\pi v^2\d v $$ 使用Mathematica积分解$K$：</description>
     </item>
     
     <item>
@@ -64,6 +87,7 @@ $$ \mathrm dZ=\sum_{\mathrm B=1}^k\left(\frac{\partial Z}{\partial n_{\rm B}}\ri
 状态方程：多组分均相系统（一般用得到的最复杂）： $$ T=f(p,V,n_1,n_2,\cdots) $$ 变化过程：等温（全程且等于环境温度）；等压（始态和终态相等且等于环境压力）；等容（全程）；绝热（绝热壁或反应太快而来不及交换）
 热：由于温度不同而传递的能量
 功：除了热以外的能量传递，以系统来看（国家标准），几种常见的：$F\mathrm dl,E\mathrm dQ,\color{red}{-}p_\color{red}{e}\mathrm dV,\gamma\mathrm dA$（最后一个是表面功），好好思考正负。
+各种能量的符号：动能$\Ek$，势能$\Ep$或$V$
 热一——能量守恒 $$ \mathrm dU=\delta Q+\delta W $$
 几种膨胀过程：自由：$0$；等外压：$-p_e\Delta V$；可逆膨胀：$-RT\ln\frac{V_2}{V_1}$
 可逆过程：系统和环境都完全复原：准静态过程；熔点、沸点的相变；可逆电池外加电动势与电池电动势相等；某些化学反应。可逆过程中系统是带善人（给的多得的少）
@@ -86,8 +110,19 @@ $$ \mathrm dZ=\sum_{\mathrm B=1}^k\left(\frac{\partial Z}{\partial n_{\rm B}}\ri
 卡诺定律  所有工作与同温热源与同温冷源之间的热机，其效率都不可能超过可逆热机
  假设如下的系统，其中左侧是任意热机：
 我们让任意热机驱动卡诺热机（效率为$\eta&#39;$）逆向运行，不难得到$T_{\rm h}$到$T_{\rm c}$的热量$Q_{\rm trans}$： $$ Q_{\rm trans}=\left(1-\eta\right)Q-\eta Q\left(\frac1{\eta&#39;}-1\right)=Q\left(1-\frac{\eta}{\eta&#39;}\right) $$ 此时没有其他变化，为了遵守克劳修斯说法，$Q$不能小于$0$，显然有： $$ \eta&#39;\ge\eta $$ 卡诺定律得证。假如左右都是可逆机，那么我可以将现有循环调转顺序，得到： $$ \eta\ge\eta&#39; $$ 综合一下： $$ \eta=\eta&#39; $$ 也就是说所有可逆热机的效率都是一样的。
-熵的概念 考虑可逆循环（在$p-V$图上画得出来的都是可逆循环，原因下面讲），我们可以给它沿可逆绝热线切片，每个切片做上下两条等温线，将每个切片转化为一个小卡诺循环，用我们在热一时留下的引子（$\rm R$代表可逆）： $$ \begin{equation*}\sum_i\left(\frac{\delta Q_i}{T_i}\right) _{\mathrm R}=0\end{equation*} $$ 推广到任意的可逆循环： $$ \oint\left(\frac{\delta Q}{T}\right)_{\rm R}=0 $$
+熵的概念 考虑可逆循环（在$p-V$图上画得出来的都是可逆循环，原因下面讲），我们可以给它沿可逆绝热线切片，每个切片做上下两条等温线，将每个切片转化为一个小卡诺循环：
+用我们在热一时留下的引子，即$Q_{\rm c}/{T_{\rm c}}+{Q_{\rm h}}/{T_{\rm h}}=0$（$\rm R$代表可逆）： $$ \begin{equation*}\sum_i\left(\frac{\delta Q_i}{T_i}\right) _{\mathrm R}=0\end{equation*} $$ 推广到任意的可逆循环： $$ \oint\left(\frac{\delta Q}{T}\right)_{\rm R}=0 $$
 假如我们在循环上取两个点，那么可以发现循环被切成了两个过程，根据上式： $$ \begin{equation*}\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R_1}=-\int_\color{red}{B}^\color{red}{A}\left(\frac{\delta Q}{T}\right)_{\rm R_2}\end{equation*} $$ 颠倒始末态，改变符号： $$ \begin{equation*}\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R_1}=\int_\color{red}{A}^\color{red}{B}\left(\frac{\delta Q}{T}\right)_{\rm R_2}\end{equation*} $$ 由于可逆循环是任意的，我们发现$\int_A^B\left({\delta Q}/{T}\right)_{\rm R}$的值只于始末状态有关，与具体途径无关，是个状态函数，我们叫它熵： $$ \Delta S=\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R} $$</description>
+    </item>
+    
+    <item>
+      <title>电化学</title>
+      <link>/post/2022/02/18/%E7%94%B5%E5%8C%96%E5%AD%A6/</link>
+      <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/02/18/%E7%94%B5%E5%8C%96%E5%AD%A6/</guid>
+      <description>参比电极 $$\ce{AgCl(s) + e- -&amp;gt; Ag(s) + Cl-(aq)}\\\ce{Hg2Cl2(s) + 2e- -&amp;gt; 2Hg(s) + 2Cl-(aq)}$$
+循环伏安法 加入惰性电解质（分析物浓度太低，加大电导率）。</description>
     </item>
     
   </channel>

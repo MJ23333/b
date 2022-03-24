@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/custom.css" />
-    <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
-<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
 <link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
-<link href="http://fonts.cdnfonts.com/css/operator-mono" rel="stylesheet">
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 <meta name="twitter:card" content="summary"/>
@@ -27,6 +28,7 @@
 状态方程：多组分均相系统（一般用得到的最复杂）： $$ T=f(p,V,n_1,n_2,\cdots) $$ 变化过程：等温（全程且等于环境温度）；等压（始态和终态相等且等于环境压力）；等容（全程）；绝热（绝热壁或反应太快而来不及交换）
 热：由于温度不同而传递的能量
 功：除了热以外的能量传递，以系统来看（国家标准），几种常见的：$F\mathrm dl,E\mathrm dQ,\color{red}{-}p_\color{red}{e}\mathrm dV,\gamma\mathrm dA$（最后一个是表面功），好好思考正负。
+各种能量的符号：动能$\Ek$，势能$\Ep$或$V$
 热一——能量守恒 $$ \mathrm dU=\delta Q&#43;\delta W $$
 几种膨胀过程：自由：$0$；等外压：$-p_e\Delta V$；可逆膨胀：$-RT\ln\frac{V_2}{V_1}$
 可逆过程：系统和环境都完全复原：准静态过程；熔点、沸点的相变；可逆电池外加电动势与电池电动势相等；某些化学反应。可逆过程中系统是带善人（给的多得的少）
@@ -93,6 +95,19 @@ Edward Kerman
 </div>
 
 <div class="article">
+<!-- \(
+  \def\d{{\mathrm d}}
+	\def\B{{\mathrm B}}
+	\def\A{{\mathrm A}}
+	\def\m{{\mathrm m}}
+	\def\align #1{{\begin{align*} #1 \end{align*}}}
+	\def\f #1#2{{\frac{\partial  #1}{\partial  #2}}}
+	\def\l #1{{\left( #1\right)}}
+	\def\red #1{{\color{red}{ #1}}}
+	\def\green #1{{\color{green}{ #1}}}
+	\def\blue #1{{\color{blue}{ #1}}}
+	\def\bm #1{{\boldsymbol{ #1}}}
+\) -->
 <h2 id="第零定律温度">第零定律——温度</h2>
 <p><strong>表述</strong>：如果A、B同时和C热平衡，那么A、B彼此也热平衡</p>
 <p><strong>温度</strong>：两个热平衡的系统所拥有的的共同性质</p>
@@ -111,6 +126,7 @@ $$
 <strong>变化过程</strong>：等温（全程且等于环境温度）；等压（始态和终态相等且等于环境压力）；等容（全程）；绝热（绝热壁或反应太快而来不及交换）</p>
 <p><strong>热</strong>：由于温度不同而传递的能量</p>
 <p><strong>功</strong>：除了热以外的能量传递，以<strong>系统</strong>来看（国家标准），几种常见的：$F\mathrm dl,E\mathrm dQ,\color{red}{-}p_\color{red}{e}\mathrm dV,\gamma\mathrm dA$（最后一个是表面功），好好思考正负。</p>
+<p><strong>各种能量的符号</strong>：动能$\Ek$，势能$\Ep$或$V$</p>
 <h2 id="热一能量守恒">热一——能量守恒</h2>
 <p>$$
 \mathrm dU=\delta Q+\delta W
@@ -142,33 +158,36 @@ U=U(T)\\H=H(T)
 $$
 也可以知道$C_V,C_p$也只是温度的函数</p>
 <h3 id="求理想气体的热容关系">求理想气体的热容关系</h3>
-<p>考虑$U=U(T,V)$和$V=(T,p)$，那么：
-$$\begin{align*}\mathrm dU&amp;=\left(\frac{\partial U}{\partial T}\right)_{V}\mathrm dT+\left(\frac{\partial U}{\partial V}\right)_{T}\color{green}{\mathrm dV}\\\mathrm dV&amp;=\color{green}{\left(\frac{\partial V}{\partial T}\right)_{p}\mathrm dT+\left(\frac{\partial V}{\partial p}\right)_{T}\mathrm dp}\end{align*}$$
-带入整理：
+<p>因为$U=U(T,V)=U(T,V(T,p))$，知道（推理见《一些数学》）：
 $$
-\begin{align*}\mathrm dU=\left(\frac{\partial V}{\partial p}\right)_{T}\mathrm dp+\left[\left(\frac{\partial U}{\partial V}\right)_{T}\left(\frac{\partial V}{\partial T}\right)_{p}+\left(\frac{\partial U}{\partial T}\right)_{V}\right]\mathrm dT\end{align*}
-$$
-又因为$U=U(T,V)=U(T,V(T,p))$，知道：
-$$
-\mathrm dU=\left(\frac{\partial U}{\partial T}\right)_{p}\mathrm dT+\left(\frac{\partial U}{\partial p}\right)_{T}{\mathrm dp}
-$$
-对比两个式子：
-$$
-\left(\frac{\partial U}{\partial T}\right)_{p}=\color{blue}{\left(\frac{\partial U}{\partial V}\right)_{T}\left(\frac{\partial V}{\partial T}\right)_{p}+\left(\frac{\partial U}{\partial T}\right)_{V}}
+\l{\f{U}{T}}_p=\l{\f{U}{T}}_V+\l{\f{U}{V}}_T\l{\f{V}{T}}_p
 $$
 扯回问题：
 $$
-C_p-C_V=\left(\frac{\partial (U+pV)}{\partial T}\right)_p-\left(\frac{\partial U}{\partial T}\right)_V=\color{blue}{{\left(\frac{\partial U}{\partial T}\right)_p}}+p\left(\frac{\partial V}{\partial T}\right)_p-\left(\frac{\partial U}{\partial T}\right)_V
-$$
-带入：
-$$
-C_p-C_V=\left[\left(\frac{\partial U}{\partial V}\right)_{T}+p\right]\left(\frac{\partial V}{\partial T}\right)_p
+\align{C_p-C_V&amp;=\l{\f{(U+pV)}{T}}_p-\l{\f{U}{T}}_V\\&amp;=\l{\f{U}{T}}_p+p\l{\f{V}{T}}_p-\l{\f{U}{T}}_V\\&amp;=\left[\l{\f{U}{V}}_T+p\right]\l{\f{V}{T}}_p}
 $$
 因为是理想气体：
 $$
 \begin{align*}C_p-C_V&amp;=\left(\frac{\partial (pV)}{\partial T}\right)_p=\left(\frac{\partial (nRT)}{\partial T}\right)_p=nR\\C_{p,\rm m}-C_{V,\rm m}&amp;=R\end{align*}
+$$
+<b>补充</b>：单原子理想气体$C_{V,\rm m}=(3/2)R$，双原子理想气体$C_{V,\rm m}=(5/2)R$（高温下考虑振动$C_{V,\rm m}=(7/2)R$）</p>
+<p>如果我们想得到更普适的表达式怎么办呢？建议先看看热二再接着读下面的部分。</p>
+<p>首先定义膨胀系数和等温压缩系数：
+$$
+\align{\alpha&amp;=\frac1V\lf VT_p\\\kappa_T&amp;=-\frac1V\lf Vp_T}
+$$
+我们已经得到：
+$$
+\align{C_p-C_V&amp;=\left[\l{\f{U}{V}}_T+p\right]\l{\f{V}{T}}_p\\&amp;=\left[\l{\f{U}{V}}_T+p\right]V\alpha}
+$$
+带入$\d A=-S\d T-p\d V$，又知道$A=U-TS$：
+$$
+\align{\l{\f{U}{V}}_T+p&amp;=\l{\f{U}{V}}_T-\lf AV_T\\&amp;=T\lf SV_T}
+$$
+由Maxwell和循环求导公式：
+$$
+\align{C_p-C_V&amp;=\lf pT_VTV\alpha\\&amp;=\frac{\alpha^2TV}{\kappa_T}}
 $$</p>
-<p>补充：单原子理想气体$C_{V,\rm m}=(3/2)R$，双原子理想气体$C_{V,\rm m}=(5/2)R$（高温下考虑振动$C_{V,\rm m}=(7/2)R$）</p>
 <h3 id="绝热过程">绝热过程</h3>
 <p>因为$Q=0$，所以$\mathrm dU=\delta W$，对于理想气体（<strong>重要</strong>）
 $$
@@ -182,22 +201,22 @@ $$
 $$
 \begin{gather*}\ln T+\frac{nR}{C_V}\ln V=C\\TV^{\gamma-1}=C\end{gather*}
 $$
-使用理想气体状态方程（这里$n,R$为常数）：
+使用理想气体状态方程（这里$n,R$为常数，丢到$C$中）：
 $$
 \begin{gather*}pV^{\gamma}=C\\p^{1-\gamma}V^{\gamma}=C\end{gather*}
 $$
-多方过程：
+多方过程（介于等温和绝热之间）：
 $$
 pV^n=C\qquad(1&gt;n&gt;\gamma)
 $$</p>
-<p><strong>画出p-V图，绝热过程坡度最陡，等温可逆过程最平缓</strong></p>
+<p>画出p-V图，绝热过程坡度<b>最陡</b>，等温可逆过程<b>最平缓</b></p>
 <h2 id="carnot循环">Carnot循环</h2>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1gzhykhnrm9j20ig0bzq3j.jpg" alt="Carnot Cycle - Chemistry LibreTexts"></p>
 <p>I、III<strong>等温可逆</strong>，II、IV<strong>绝热可逆</strong></p>
 <h3 id="做功">做功</h3>
-<p>I、III：等温可逆：
+<p>I、III：等温可逆，对于理想气体，$\Delta U=0$：
 $$
-\begin{gather*}W_1=-Q_{\rm h}=-nRT_{\rm h}\ln\frac{V_2}{V_1}\\W_3=-Q_{\rm c}=-nRT_{\rm c}\ln\frac{V_4}{V_3}\end{gather*}
+\begin{gather*}W_1=-nRT_{\rm h}\ln\frac{V_2}{V_1}=-Q_{\rm h}\\W_3=-nRT_{\rm c}\ln\frac{V_4}{V_3}=-Q_{\rm c}\end{gather*}
 $$
 II、IV：绝热可逆（认为热容不变）：
 $$
@@ -213,7 +232,7 @@ $$
 $$
 发现：
 $$
-\frac{V_1}{V_2}=\frac{V_4}{V_3}
+\frac{V_1}{V_2}=\frac{V_\red 4}{V_\red 3}
 $$
 带入：
 $$
@@ -259,6 +278,7 @@ $$</p>
 <p><strong>标准态</strong>：$100\rm kPa$，还有浓度等要求，但<strong>不规定</strong>温度，但无特殊说明默认$298\rm K$。</p>
 <h3 id="hess定律">Hess定律</h3>
 <p>只对<strong>等压</strong>或<strong>等容</strong>过程有效，加加减减，随时检查，小心全部消去的情况。</p>
+<p><strong>小贴士</strong>：首先找到含最终方程式中出现的物质的方程式，一般一个物质只对应一个，接着找该方程式中的其他物质，若仅有另一个方程含有该物质，则进一步判断方向和数量，依次排除（造访过一次的方程标记上相应的系数及正负）。</p>
 <h3 id="几种焓变">几种焓变</h3>
 <p><strong>生成焓</strong>：定义<strong>最稳定</strong>单质（石墨、白磷）$\Delta_{\rm f}H_{\mathrm m}^{\ominus}=0$，对于化学反应：
 $$
@@ -268,11 +288,14 @@ $$</p>
 <p><strong>标准摩尔离子生成焓</strong>：定义$\Delta_{\rm f}H_{\mathrm m}^{\ominus}\{\ce{H+}(\infty\space\rm aq)\}=0$，关系如下：
 $$
 \Delta_{\rm sol}H_{\mathrm m}^{\ominus}=\Delta_{\rm f}H_{\mathrm m}^{\ominus}\{\ce{H+}(\infty\space\rm aq)\}+\Delta_{\rm f}H_{\mathrm m}^{\ominus}\{\ce{Cl-}(\infty\space\rm aq)\}-\Delta_{\rm f}H_{\mathrm m}^{\ominus}\{\ce{HCl(g)}\}
-$$</p>
-<p><strong>标准摩尔燃烧焓</strong>：也是反着用，注意室温下$\color{red}{\ce{H2O(l),SO2(g),N2(g),HCl(aq),Ag(s)}}$</p>
+$$
+注意溶液中的标准状态是$1\rm M$下，但表现出无限稀释的行为（**没有溶质-溶质作用**，参考理想气体的定义）。</p>
+<p><strong>标准摩尔燃烧焓</strong>：也是<strong>反着用</strong>，注意室温下$\color{red}{\ce{H2O(l),SO2(g),N2(g),HCl(aq),Ag(s)}}$</p>
+<p>更多：</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0ivor94fwj20qc0n80v5.jpg" alt="image-20220322192108869" style="zoom:50%;" /></p>
 <h3 id="溶解热和稀释热">溶解热和稀释热</h3>
-<p>积分___：总效应，直接测量，一般为曲线（斜率降低）</p>
-<p>微分___：在大量给定浓度的溶液中再加入$1\rm mol$物质的热效应（积分溶解热的斜率）：
+<p>积分____热：总效应，直接测量，一般为曲线（斜率降低）</p>
+<p>微分____热：在大量给定浓度的溶液中再加入$1\rm mol$物质的热效应（积分溶解热的斜率）：
 $$
 \left(\frac{\partial(\Delta_{\rm sol}H)}{\partial n_{\rm B}}\right)_{T,p,n_A}
 $$</p>
@@ -376,12 +399,23 @@ $$
 								B: "{\\mathrm B}",
 								A: "{\\mathrm A}",
 								m: "{\\mathrm m}",
+								D: "{\\Delta}",
+								Ek: "{E_{\\mathrm k}}",
+								Ep: "{E_{\\mathrm p}}",
+								K: "{\\space\\mathrm K}",
+								J: "{\\space\\mathrm J}",
+								kJ: "{\\space\\mathrm {kJ}}",
+								eV: "{\\space\\mathrm {eV}}",
+								mol: "{\\space\\mathrm {mol}}",
+								kjm: "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
 								align: ["{\\begin{align*} #1 \\end{align*}}",1],
 								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
 								l: ["{\\left( #1\\right)}",1],
+								lf: ["{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",2],
 								red: ["{\\color{red}{ #1}}",1],
 								green: ["{\\color{green}{ #1}}",1],
-								blue: ["{\\color{blue}{ #1}}",1]
+								blue: ["{\\color{blue}{ #1}}",1],
+								bm: ["{\\boldsymbol{ #1}}",1]
 						}
 					},
 					tex2jax: {

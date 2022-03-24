@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link rel="stylesheet" href="/css/custom.css" />
-    <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
-<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
 <link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
-<link href="http://fonts.cdnfonts.com/css/operator-mono" rel="stylesheet">
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 <meta name="twitter:card" content="summary"/>
@@ -26,7 +27,7 @@
 气体混合物 分压（Dalton分压定律）： $$ p_j=x_jp $$ 分体积（Amagat）： $$ V_j=x_jV $$
 气体动理论 压力 简单物理知识：$\mathbf p=m\mathbf v,\mathbf F=m\mathbf a$，那么$\mathbf F=\mathrm d\mathbf p/{\mathrm dt}$
 有一个方形容器，横截面积为$A$，容器壁平行于坐标平面。一个很短的时间$\Delta t$内一个分子在x方向上碰壁反弹（速率不变）的概率$P$为： $$ \mathrm P=\frac{Av_x\Delta t}{V} $$ 该分子“平均”（期望）作用力为： $$ F_x=\frac{2mv_x}{\Delta t}\times \frac{Av_x\Delta t}{V}=\frac{2mAv_x^2}{V} $$ 推广到一堆（$n\space \rm mol$）分子，我们用速率平方的平均值$\overline{v_x^2}$来表示，注意在速率平方后，我们多计算了一倍背道而驰的分子，所以要扣除： $$ F_x=\frac{2mA\overline{v_x^2}}{V}\times \frac12nN_A=\frac{nMA\overline{v_x^2}}{V} $$ 三个方向都是如此，即$\overline{v_x^2}=\frac13\overline{v^2}$，定义方均根速率： $$ v_{\rm rms}=\sqrt{\overline{v^2}} $$ 所以： $$ pV=\frac13nMv_{\rm rms}^2 $$ 开个挂，用理想气体状态方程带入，得到： $$ v_{\rm rms}=\sqrt{\frac{3RT}M} $$
-麦克斯韦-玻尔兹曼分布 由玻尔兹曼分布： $$ f(v)=Ke^{-\varepsilon/kT} $$ 容易得到： $$ f(v)=Ke^{-mv^2/2kT} $$ 我们可以发现不同$v$的概率是不一样的，但分解开的$v_x,v_y,v_z$却是均匀的，考虑分解$v$。 $$ f(v_x)=K_xe^{-mv_x^2/2kT} $$ 由于$v_x$取任意值的概率必定为一： $$ \int_{-\infty}^{\infty}f(v_x)\mathrm dv_x=1 $$ 积分得：$K_x=(m/2\pi kT)^{1/2}$，所以： $$ f(v_x)=\left(\frac{m}{2\pi kT}\right)^{1/2}e^{-mv_x^2/2kT} $$ 合体： $$ f(v_x)f(v_y)f(v_z)\mathrm dv_x\mathrm dv_y\mathrm dv_z=\left(\frac{m}{2\pi kT}\right)^{3/2}e^{-mv^2/2kT}\mathrm dv_x\mathrm dv_y\mathrm dv_z $$ 把这些转化为$\mathrm dv$，并$k\rightarrow R,m\rightarrow M$，推得： $$ f(v)=4\pi\left(\frac M{2\pi RT}\right)^{3/2}v^2e^{-Mv^2/2RT} $$ 可以计算方均根速率： $$ v_{\rm rms}^2=\int_0^{\infty}v^2f(v)\mathrm dv $$ 得到一样的结果： $$ v_{\rm rms}=\sqrt{\frac{3RT}M} $$ 其他速率："/>
+麦克斯韦-玻尔兹曼分布 由玻尔兹曼分布： $$ f(v)=Ke^{-\varepsilon/kT} $$ 我们想计算不考虑方向时所有速率为$v$的分子，必须乘上球壳的体积，如此得到总概率： $$ f(v)\d v=Ke^{-mv^2/2kT}\times4\pi v^2\d v $$ 要让结果归一化，即： $$ 1=K\int_0^{\infty}e^{-mv^2/2kT}\times4\pi v^2\d v $$ 使用Mathematica积分解$K$："/>
 
 
   </head>
@@ -138,27 +139,27 @@ $$</p>
 $$
 f(v)=Ke^{-\varepsilon/kT}
 $$
-容易得到：
+我们想计算不考虑方向时所有速<strong>率</strong>为$v$的分子，必须乘上球壳的体积，如此得到总概率：
 $$
-f(v)=Ke^{-mv^2/2kT}
+f(v)\d v=Ke^{-mv^2/2kT}\times4\pi v^2\d v
 $$
-我们可以发现不同$v$的概率是不一样的，但分解开的$v_x,v_y,v_z$却是均匀的，考虑分解$v$。
+要让结果归一化，即：
 $$
-f(v_x)=K_xe^{-mv_x^2/2kT}
+1=K\int_0^{\infty}e^{-mv^2/2kT}\times4\pi v^2\d v
 $$
-由于$v_x$取任意值的概率必定为一：
+使用Mathematica积分解$K$：</p>
+<pre><code class="language-mathematica">a = Integrate[E^(-m v^2/(2 kT))  4 Pi v^2, {v, 0, +Infinity}]
+Solve[b (2 Sqrt[2] \[Pi]^(3/2))/(m/kT)^(3/2) == 1, b]
+</code></pre>
+<p>解得：
 $$
-\int_{-\infty}^{\infty}f(v_x)\mathrm dv_x=1
+K=\l{\frac m{2\pi kT}}^{2/3}
 $$
-积分得：$K_x=(m/2\pi kT)^{1/2}$，所以：
+带入表达式：
 $$
-f(v_x)=\left(\frac{m}{2\pi kT}\right)^{1/2}e^{-mv_x^2/2kT}
+f(v)\d v=4\pi v^2\d v\left(\frac M{2\pi RT}\right)^{3/2}e^{-mv^2/2kT}
 $$
-合体：
-$$
-f(v_x)f(v_y)f(v_z)\mathrm dv_x\mathrm dv_y\mathrm dv_z=\left(\frac{m}{2\pi kT}\right)^{3/2}e^{-mv^2/2kT}\mathrm dv_x\mathrm dv_y\mathrm dv_z
-$$
-把这些转化为$\mathrm dv$，并$k\rightarrow R,m\rightarrow M$，推得：
+消去$\d v$，重排，并用$R,M$代换：
 $$
 f(v)=4\pi\left(\frac M{2\pi RT}\right)^{3/2}v^2e^{-Mv^2/2RT}
 $$
@@ -166,16 +167,20 @@ $$
 $$
 v_{\rm rms}^2=\int_0^{\infty}v^2f(v)\mathrm dv
 $$
-得到一样的结果：
+同样利用Mathematica：</p>
+<pre><code class="language-mathematica">f[z_] = 4 Pi (m/(2 Pi k T))^(3/2) z^2 E^(-m z^2/2 k T)
+Integrate[v^2 f[v], {v, 0, +Infinity}]
+</code></pre>
+<p>解得一样的结果：
 $$
 v_{\rm rms}=\sqrt{\frac{3RT}M}
 $$
 其他速率：</p>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1gzgtku2flqj20pa0f4q3r.jpg" alt="image-20220217211640752" style="zoom:50%;" /></p>
 <h3 id="碰撞">碰撞</h3>
-<p>设其他分子不动（就算动了也很均匀），一个分子的碰撞截面为$\sigma$，分子个数密度$\mathcal N=N/V$，那么碰撞频率：
+<p>设其他分子不动（就算动了也很均匀），一个分子的碰撞截面为$\sigma$，分子个数密度$\mathscr N=N/V$，那么碰撞频率：
 $$
-z=\sigma v_{\rm rel}\mathcal N=\frac{\sigma v_{\rm rel}p}{kT}
+z=\sigma v_{\rm rel}\mathscr N=\frac{\sigma v_{\rm rel}p}{kT}
 $$
 平均自由程$\lambda$（两次碰撞之间的距离）：
 $$
@@ -288,12 +293,23 @@ $$
 								B: "{\\mathrm B}",
 								A: "{\\mathrm A}",
 								m: "{\\mathrm m}",
+								D: "{\\Delta}",
+								Ek: "{E_{\\mathrm k}}",
+								Ep: "{E_{\\mathrm p}}",
+								K: "{\\space\\mathrm K}",
+								J: "{\\space\\mathrm J}",
+								kJ: "{\\space\\mathrm {kJ}}",
+								eV: "{\\space\\mathrm {eV}}",
+								mol: "{\\space\\mathrm {mol}}",
+								kjm: "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
 								align: ["{\\begin{align*} #1 \\end{align*}}",1],
 								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
 								l: ["{\\left( #1\\right)}",1],
+								lf: ["{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",2],
 								red: ["{\\color{red}{ #1}}",1],
 								green: ["{\\color{green}{ #1}}",1],
-								blue: ["{\\color{blue}{ #1}}",1]
+								blue: ["{\\color{blue}{ #1}}",1],
+								bm: ["{\\boldsymbol{ #1}}",1]
 						}
 					},
 					tex2jax: {
@@ -310,6 +326,15 @@ $$
 
 
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js" integrity="sha512-BNc7saQYlxCL10lykUYhFBcnzdKMnjx5fp5s5wPucDyZ7rKNwCoqJh1GwEAIhuePEK4WM9askJBRsu7ma0Rzvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/languages/mathematica.min.js" integrity="sha512-6wzJjl3s4TzZd+SY558JUQh3vjollhFGSYwH1956QoLlBbnW+4JP5AZy2xmnCNeVwJTlw7mv66g/Z1ZhF4rsLQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/languages/go.min.js" integrity="sha512-5FrrCMl+OdDp4V0/+Og+q950cGMbPLR0D9o3rE0d9e7VYfGkci4zIrwqTXQOvv5Oo4ZhMaZGwZHXH2uKxfe+iw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/languages/cpp.min.js" integrity="sha512-1o9A00YkjPocGor6LsozqYnO4CXzIXgrNZw87wYOJSLYMYBtASu4hl1gALrMlwHs6oXDFAJl2BQEpUTseGyKJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+hljs.configure({languages: []});
+hljs.initHighlightingOnLoad();
+</script>
 
 
   <div class="footer">

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>非水溶剂 on Edward Kerman&#39;s blog</title>
+    <link>/tags/%E9%9D%9E%E6%B0%B4%E6%BA%B6%E5%89%82/</link>
+    <description>Recent content in 非水溶剂 on Edward Kerman&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 23 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E9%9D%9E%E6%B0%B4%E6%BA%B6%E5%89%82/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>非水溶剂</title>
+      <link>/post/2022/03/23/%E9%9D%9E%E6%B0%B4%E6%BA%B6%E5%89%82/</link>
+      <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/03/23/%E9%9D%9E%E6%B0%B4%E6%BA%B6%E5%89%82/</guid>
+      <description>分类  质子溶剂：$\ce{HF, H2 SO4 , MeOH}$; 非质子溶剂：$\ce{N2O4 , BrF3}$ ; 配位溶剂：$\ce{MeCN, Et2O, Me2CO}$.  相对介电常数 若在两个元电荷之间放入某种材料，它们的库伦作用会发生改变： $$ 库伦势能=\frac{e^2}{4\pi\varepsilon_0\varepsilon_rr} $$ 对于水，$\varepsilon_r=78$，与真空相比，两个点电荷之间的力明显减小，离子被很好地分离。
+溶剂转移 对于卤素离子，氢键对于溶剂化十分重要（酰胺、醇√）
+拉平和区分 酸性溶剂中酸性不能超过质子化的溶剂，碱性也不能超过去质子的溶剂。故碱性溶剂对酸有拉平作用（都是强酸），反之亦然。例：液氨中超强酸和$\ce{NH4+}$的效果一样。
+而酸性溶剂不利于酸的解离，故酸性溶剂中的酸被区分开，碱性中碱被区分开。例：硫酸中$\ce{HClO4}$显两性，而$\ce{HNO3}$显露碱性。
+ 对Brønsted酸碱更广义的定义：在自电离溶剂中，酸是产生溶剂阳离子的物质，碱是产生溶剂阴离子的物质
+ 比如在$\ce{N2O4}$溶剂中，$\ce{[NO]ClO4}$表现为酸，$\ce{NaNO3}$表现为碱： $$ \ce{N2O4 -&amp;gt; NO+ + NO3^{-}} $$
+一些例子 $\ce{SO2}$ 极性非质子，很难自耦电离，很适合合成一些多中心阳离子，如：$\ce{[Se]4^{2+},[Se]8^{2+},I3+,I5+}$。
+液氨 液氨的相对介电常数小于水，在大多数时候它不那么能溶解离子化合物，例外的有包含$\ce{NH4+,I-,NO3-}$的各种盐，如$\ce{AgI}$。它还可以翻转一些反映的方向： $$ \ce{2AgCl + Ba(NO3)2 -&amp;gt; 2AgNO3 + BaCl2}\\
+\ce{AgCl + KNO3 -&amp;gt; AgNO3 + KCl} $$ 相反，大多数有机物在液氨中溶解度更大。
+在水中，由于氢键，$\ce{OH-,H3O+}$比其他离子更容易移动，但在$\ce{NH3(l)}$中$\ce{NH2-,NH4+}$移动速度和其他离子差不多。
+液氨对酸有拉平作用——$\ce{H2NSO3H}$在液氨中表现为二元酸，有$\ce{K2[HNSO3]}$。
+液氨中的s区金属：随着浓度上升电导率先减后增：出溶剂化电子 → 结合回去 → 表现得像金属；顺磁性降低： $$ \left\{\begin{align*}&amp;amp;\ce{2M+(solv) + 2e^{-}(solv) &amp;lt;=&amp;gt; M2(solv)}\\&amp;amp;\ce{M(solv) + e^{-}(solv) &amp;lt;=&amp;gt; M^{-}(solv)} \end{align*}\right.</description>
+    </item>
+    
+  </channel>
+</rss>
