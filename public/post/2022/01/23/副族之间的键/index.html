@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-Hans-CN" >
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,9 +15,19 @@
 
 
 <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
-<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  
+  
+  pangu.spacingElementByTagName('p');
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    pangu.autoSpacingPage();
+  });
+</script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="副族之间的键"/>
 <meta name="twitter:description" content="引入 在研究主族元素化学时，等电子原理是非常好用的手段（如BN-C）等等，但等电子原理在处理副族时遇到了困难——副族金属倾向于18电子而非8电子。怎么办呢？一个巧妙的办法是作差——看还缺几个电子来达到满壳层。
@@ -46,7 +56,6 @@ Co(CO)4(AuPPh3)等不用多说，甚至有Ti(CO)6(AuPEt3)-（Ti七配位）
  &#160;&#x21a9;&#xfe0e;
  &#160;&#x21a9;&#xfe0e;
    "/>
-
 
   </head>
   <body>
@@ -248,10 +257,19 @@ Edward Kerman
 						extensions: ["mhchem.js"],
 						Macros: {
 								d: "{\\mathrm d}",
+								p: "{\\mathrm p}",
+								pKa: "{\\mathrm{p}K_{a}}",
+								Ka: "{K_{a}}",
+								pH: "{\\mathrm{pH}}",
+								H: "{\\left\[\\ce{H+}\\right\]}",
+								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
 								B: "{\\mathrm B}",
 								A: "{\\mathrm A}",
+								C: "{\\mathrm C}",
+								r: "{\\mathrm r}",
 								m: "{\\mathrm m}",
 								D: "{\\Delta}",
+								o: "{\\ominus}",
 								Ek: "{E_{\\mathrm k}}",
 								Ep: "{E_{\\mathrm p}}",
 								K: "{\\space\\mathrm K}",
@@ -276,7 +294,7 @@ Edward Kerman
 						processEscapes: true
 					},
 					CommonHTML: { linebreaks: { automatic: true } },
-  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
          	SVG: { linebreaks: { automatic: true } }
 				});
 			</script>

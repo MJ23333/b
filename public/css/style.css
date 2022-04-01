@@ -14,6 +14,24 @@ main {
   display: block;
   hyphens: auto;
 }
+html hanla:after {
+	content: " ";
+	display: inline;
+	font-family: Arial;
+	font-size: 0.89em;
+}
+
+html code hanla,
+html pre hanla,
+html kbd hanla,
+html samp hanla {
+display: none;
+}
+
+html ol > hanla,
+html ul > hanla {
+display: none;
+}
 .list main {
   display: flex;
   flex-wrap: wrap;

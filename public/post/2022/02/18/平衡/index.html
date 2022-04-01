@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN" >
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> 平衡 | Edward Kerman&#39;s blog</title>
+    
+    <link rel="icon" type="image/png" href="/icons/Hi-Res.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  
+  
+  pangu.spacingElementByTagName('p');
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    pangu.autoSpacingPage();
+  });
+</script>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="平衡"/>
+<meta name="twitter:description" content="平衡常数 因为有： $$ \d G=-S\d T&#43;V\d p&#43;\sum_\C \mu_\C\d n_\C $$ 定义反应进度$\xi$： $$ \d \xi=\frac{\d n_\C}{\nu_\C} $$ 则： $$ \d G=-S\d T&#43;V\d p&#43;\sum_\C \mu_\C\nu_\C\d \xi $$ 那么： $$ \D_\r G=\lf{G}{\xi}_{p,T}=\sum_\C\nu_\C\mu_\C $$ 注意此处的$\D$指的是微分。根据热二，自发反应的方向是$G$减小的方向，因此可通过$\D_\r G$来判断反应的方向。
+在标准情况下： $$ \D_\r G^\o=\sum_\C\nu_\C\mu^\o_\C $$ 而在非标准情况下： $$ \align{\D_\r G&amp;=\sum_\C\nu_\C\l{\mu_\C^\o &#43; RT\ln a_\C}\\ &amp;=\D_\r G^\o&#43;RT\ln\prod_{\C}a_\C^{\nu_\C}} $$ 定义反应商$Q$，注意反应物的$\nu_\C&lt;0$，生成物的$\nu_\C&gt;0$： $$ Q=\prod_{\C}a_\C^{\nu_\C}=\frac{产物的活度}{反应物的活度} $$ 那么： $$ \D_\r G=\D_\r G^\o&#43;RT\ln Q $$ 我们用习惯量替换活度（都要除以标准量，得到的是无单位的比值）：
+可以发现纯固纯液的$a=1$，因此不出现在反应商中。
+在平衡时，$G$的斜率$\D_\r G=0$，定义此时的$Q$为平衡常数$K$： $$ \D_\r G^\o=-RT\ln K $$"/>
+
+  </head>
+  <body>
+
+    <nav class="menu">
+    <ul>
+      <li class="left">
+        <a href="/"><span>Edward Kerman&#39;s blog</span></a>
+      </li>
+      
+      <li>
+        <a href="/">Home</a>
+      </li>
+      
+      <li>
+        <a href="/about/">About</a>
+      </li>
+      
+      <li>
+        <a href="/sitemap/">Sitemap</a>
+      </li>
+      
+      <li id="menu-search">
+        <a href="/#">Search</a>
+      </li>
+      
+      <li>
+        <a href="/index.xml">Subscribe</a>
+      </li>
+      
+    </ul>
+    </nav>
+		
+
+
+<div class="container single">
+<main>
+
+<div class="article-meta">
+<h1><span class="title">平衡</span></h1>
+
+<h3 class="author">
+Edward Kerman
+</h3>
+
+<h3 class="date">2022-02-18</h3>
+<p class="terms">
+  
+  
+  Categories: <a href="/categories/academic">Academic</a> <a href="/categories/%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%A6">物理化学</a> 
+  
+  
+  
+  Tags: <a href="/tags/%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%A6">物理化学</a> <a href="/tags/%E7%83%AD%E5%8A%9B%E5%AD%A6">热力学</a> <a href="/tags/%E5%85%A5%E9%97%A8">入门</a> 
+  
+  
+</p>
+</div>
+
+<div class="article">
+<!-- \(
+  \def\d{{\mathrm d}}
+	\def\B{{\mathrm B}}
+	\def\A{{\mathrm A}}
+	\def\D{{\Delta}}
+	\def\m{{\mathrm m}}
+	\def\align #1{{\begin{align*} #1 \end{align*}}}
+	\def\f #1#2{{\frac{\partial  #1}{\partial  #2}}}
+	\def\lf #1#2{{\left(\frac{\partial  #1}{\partial  #2}\right)}}
+	\def\l #1{{\left( #1\right)}}
+	\def\red #1{{\color{red}{ #1}}}
+	\def\green #1{{\color{green}{ #1}}}
+	\def\blue #1{{\color{blue}{ #1}}}
+\) -->
+<h2 id="平衡常数">平衡常数</h2>
+<p>因为有：
+$$
+\d G=-S\d T+V\d p+\sum_\C \mu_\C\d n_\C
+$$
+定义反应进度$\xi$：
+$$
+\d \xi=\frac{\d n_\C}{\nu_\C}
+$$
+则：
+$$
+\d G=-S\d T+V\d p+\sum_\C \mu_\C\nu_\C\d \xi
+$$
+那么：
+$$
+\D_\r G=\lf{G}{\xi}_{p,T}=\sum_\C\nu_\C\mu_\C
+$$
+注意此处的$\D$指的是<b>微分</b>。根据热二，自发反应的方向是$G$减小的方向，因此可通过$\D_\r G$来判断反应的方向。</p>
+<p>在标准情况下：
+$$
+\D_\r G^\o=\sum_\C\nu_\C\mu^\o_\C
+$$
+而在非标准情况下：
+$$
+\align{\D_\r G&amp;=\sum_\C\nu_\C\l{\mu_\C^\o + RT\ln a_\C}\\ &amp;=\D_\r G^\o+RT\ln\prod_{\C}a_\C^{\nu_\C}}
+$$
+定义反应商$Q$，注意反应物的$\nu_\C&lt;0$，生成物的$\nu_\C&gt;0$：
+$$
+Q=\prod_{\C}a_\C^{\nu_\C}=\frac{产物的活度}{反应物的活度}
+$$
+那么：
+$$
+\D_\r G=\D_\r G^\o+RT\ln Q
+$$
+我们用习惯量替换活度（都要除以标准量，得到的是无单位的<b>比值</b>）：</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0ublb65y3j20o0096gm9.jpg" alt="image-20220401165238358" style="zoom:60%;" /></p>
+<p>可以发现纯固纯液的$a=1$，因此不出现在反应商中。</p>
+<p>在平衡时，$G$的斜率$\D_\r G=0$，定义此时的$Q$为平衡常数$K$：
+$$
+\D_\r G^\o=-RT\ln K
+$$</p>
+
+</div>
+</main>
+
+<section class="appendix">
+
+
+<div>
+  <div class="side side-left"><h3>Author&#39;s bio</h3></div>
+  <div>
+
+
+
+
+
+<div>Edward Kerman——化竞菜鸡，舟厨，ksp爱好者，花样滑冰云观众。</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Reuse</h3></div>
+  Text and figures are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution CC BY 4.0</a>.
+</div>
+
+
+
+<div>
+  <div class="side side-left"><h3>Suggest changes</h3></div>
+  
+  
+  
+    
+    
+  
+  If you find any mistakes (including typos) or want to suggest changes, please feel free to <a href="https://github.com/MJ23333/b/edit/master/content/post/wlhx/%e5%b9%b3%e8%a1%a1.md" id="edit-link">edit the source file of this page on Github and create a pull request.</a>
+</div>
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Citation</h3></div>
+  <p>For attribution, please cite this work as</p>
+  <pre><code class="no-highlight">Edward Kerman (2022). 平衡. Edward Kerman&#39;s blog. /post/2022/02/18/%E5%B9%B3%E8%A1%A1/</code></pre>
+  <p>BibTeX citation</p>
+  <pre><code class="no-highlight">@misc{
+  title = "平衡",
+  author = "Edward Kerman",
+  year = "2022",
+  journal = "Edward Kerman&#39;s blog",
+  note = "/post/2022/02/18/%E5%B9%B3%E8%A1%A1/"
+}</code></pre>
+</div>
+
+</section>
+
+
+
+<nav class="post-nav">
+  <span class="nav-next">&larr; <a href="/post/2022/02/18/%E6%B0%94%E4%BD%93/" title=Next&#32;post&#32;(older)>气体</a></span>
+  &hercon;
+  <span class="nav-prev"><a href="/post/2022/02/18/%E5%A4%9A%E7%BB%84%E5%88%86%E7%83%AD%E5%8A%9B%E5%AD%A6/" title=Previous&#32;post&#32;(newer)>多组分热力学</a> &rarr;</span>
+</nav>
+
+
+
+
+
+</div>
+
+
+  <footer>
+  <script async src="//yihui.org/js/center-img.js"></script>
+
+			<script type="text/x-mathjax-config">
+				MathJax.Hub.Config({
+					extensions: ["tex2jax.js"],
+					jax: ["input/TeX", "output/HTML-CSS"],
+					TeX: {
+						extensions: ["mhchem.js"],
+						Macros: {
+								d: "{\\mathrm d}",
+								p: "{\\mathrm p}",
+								pKa: "{\\mathrm{p}K_{a}}",
+								Ka: "{K_{a}}",
+								pH: "{\\mathrm{pH}}",
+								H: "{\\left\[\\ce{H+}\\right\]}",
+								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
+								B: "{\\mathrm B}",
+								A: "{\\mathrm A}",
+								C: "{\\mathrm C}",
+								r: "{\\mathrm r}",
+								m: "{\\mathrm m}",
+								D: "{\\Delta}",
+								o: "{\\ominus}",
+								Ek: "{E_{\\mathrm k}}",
+								Ep: "{E_{\\mathrm p}}",
+								K: "{\\space\\mathrm K}",
+								J: "{\\space\\mathrm J}",
+								kJ: "{\\space\\mathrm {kJ}}",
+								eV: "{\\space\\mathrm {eV}}",
+								mol: "{\\space\\mathrm {mol}}",
+								kjm: "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
+								align: ["{\\begin{align*} #1 \\end{align*}}",1],
+								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
+								l: ["{\\left( #1\\right)}",1],
+								lf: ["{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",2],
+								red: ["{\\color{red}{ #1}}",1],
+								green: ["{\\color{green}{ #1}}",1],
+								blue: ["{\\color{blue}{ #1}}",1],
+								bm: ["{\\boldsymbol{ #1}}",1]
+						}
+					},
+					tex2jax: {
+						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+						processEscapes: true
+					},
+					CommonHTML: { linebreaks: { automatic: true } },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
+         	SVG: { linebreaks: { automatic: true } }
+				});
+			</script>
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+
+
+
+
+
+  <div class="footer">
+  
+  <ul class="copyright">
+    <li>© Edward Kerman 2020-2022</li>
+  </ul>
+  
+  <ul>
+    
+    <li class="optional">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    <li class="optional">
+      <a href="/tags/">Tags</a>
+    </li>
+    
+    <li id="menu-edit">
+      <a href="#">Suggest an edit</a>
+    </li>
+    
+    <li>
+      <a href="#">Back to top</a>
+    </li>
+    
+  </ul>
+  </div>
+  
+  </footer>
+  <script async src="/js/features.js" data-page-features="[null,[&#34;&#43;sidenotes&#34;],null]"></script>
+  </body>
+</html>
+

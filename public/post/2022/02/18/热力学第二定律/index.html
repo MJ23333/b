@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-Hans-CN" >
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,9 +15,19 @@
 
 
 <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
-<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  
+  
+  pangu.spacingElementByTagName('p');
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    pangu.autoSpacingPage();
+  });
+</script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="热力学第二定律"/>
 <meta name="twitter:description" content="自发变化的特征：一个自发变化发生之后，不可能使系统和环境都恢复到原来的状态而不留下任何影响，也就是说自发变化具有方向性。
@@ -32,7 +42,6 @@
 熵的概念 考虑可逆循环（在$p-V$图上画得出来的都是可逆循环，原因下面讲），我们可以给它沿可逆绝热线切片，每个切片做上下两条等温线，将每个切片转化为一个小卡诺循环：
 用我们在热一时留下的引子，即$Q_{\rm c}/{T_{\rm c}}&#43;{Q_{\rm h}}/{T_{\rm h}}=0$（$\rm R$代表可逆）： $$ \begin{equation*}\sum_i\left(\frac{\delta Q_i}{T_i}\right) _{\mathrm R}=0\end{equation*} $$ 推广到任意的可逆循环： $$ \oint\left(\frac{\delta Q}{T}\right)_{\rm R}=0 $$
 假如我们在循环上取两个点，那么可以发现循环被切成了两个过程，根据上式： $$ \begin{equation*}\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R_1}=-\int_\color{red}{B}^\color{red}{A}\left(\frac{\delta Q}{T}\right)_{\rm R_2}\end{equation*} $$ 颠倒始末态，改变符号： $$ \begin{equation*}\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R_1}=\int_\color{red}{A}^\color{red}{B}\left(\frac{\delta Q}{T}\right)_{\rm R_2}\end{equation*} $$ 由于可逆循环是任意的，我们发现$\int_A^B\left({\delta Q}/{T}\right)_{\rm R}$的值只于始末状态有关，与具体途径无关，是个状态函数，我们叫它熵： $$ \Delta S=\int_A^B\left(\frac{\delta Q}{T}\right)_{\rm R} $$"/>
-
 
   </head>
   <body>
@@ -456,10 +465,19 @@ $$</p>
 						extensions: ["mhchem.js"],
 						Macros: {
 								d: "{\\mathrm d}",
+								p: "{\\mathrm p}",
+								pKa: "{\\mathrm{p}K_{a}}",
+								Ka: "{K_{a}}",
+								pH: "{\\mathrm{pH}}",
+								H: "{\\left\[\\ce{H+}\\right\]}",
+								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
 								B: "{\\mathrm B}",
 								A: "{\\mathrm A}",
+								C: "{\\mathrm C}",
+								r: "{\\mathrm r}",
 								m: "{\\mathrm m}",
 								D: "{\\Delta}",
+								o: "{\\ominus}",
 								Ek: "{E_{\\mathrm k}}",
 								Ep: "{E_{\\mathrm p}}",
 								K: "{\\space\\mathrm K}",
@@ -484,7 +502,7 @@ $$</p>
 						processEscapes: true
 					},
 					CommonHTML: { linebreaks: { automatic: true } },
-  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
          	SVG: { linebreaks: { automatic: true } }
 				});
 			</script>

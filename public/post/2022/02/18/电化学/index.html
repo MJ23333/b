@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-Hans-CN" >
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,14 +15,23 @@
 
 
 <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
-<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  
+  
+  pangu.spacingElementByTagName('p');
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    pangu.autoSpacingPage();
+  });
+</script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="电化学"/>
 <meta name="twitter:description" content="参比电极 $$\ce{AgCl(s) &#43; e- -&gt; Ag(s) &#43; Cl-(aq)}\\\ce{Hg2Cl2(s) &#43; 2e- -&gt; 2Hg(s) &#43; 2Cl-(aq)}$$
 循环伏安法 加入惰性电解质（分析物浓度太低，加大电导率）。"/>
-
 
   </head>
   <body>
@@ -153,7 +162,7 @@ Edward Kerman
 
 
 <nav class="post-nav">
-  <span class="nav-next">&larr; <a href="/post/2022/01/25/%E9%A9%AC%E5%BE%B7%E9%9A%86%E5%B8%B8%E6%95%B0%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E6%89%AB%E9%9B%B7/" title=Next&#32;post&#32;(older)>马德隆常数计算方法扫雷</a></span>
+  <span class="nav-next">&larr; <a href="/post/2022/02/18/%E7%9B%B8%E5%8F%98/" title=Next&#32;post&#32;(older)>相变</a></span>
   &hercon;
   <span class="nav-prev"><a href="/post/2022/02/18/%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%AE%9A%E5%BE%8B/" title=Previous&#32;post&#32;(newer)>热力学第二定律</a> &rarr;</span>
 </nav>
@@ -176,10 +185,19 @@ Edward Kerman
 						extensions: ["mhchem.js"],
 						Macros: {
 								d: "{\\mathrm d}",
+								p: "{\\mathrm p}",
+								pKa: "{\\mathrm{p}K_{a}}",
+								Ka: "{K_{a}}",
+								pH: "{\\mathrm{pH}}",
+								H: "{\\left\[\\ce{H+}\\right\]}",
+								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
 								B: "{\\mathrm B}",
 								A: "{\\mathrm A}",
+								C: "{\\mathrm C}",
+								r: "{\\mathrm r}",
 								m: "{\\mathrm m}",
 								D: "{\\Delta}",
+								o: "{\\ominus}",
 								Ek: "{E_{\\mathrm k}}",
 								Ep: "{E_{\\mathrm p}}",
 								K: "{\\space\\mathrm K}",
@@ -204,7 +222,7 @@ Edward Kerman
 						processEscapes: true
 					},
 					CommonHTML: { linebreaks: { automatic: true } },
-  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
          	SVG: { linebreaks: { automatic: true } }
 				});
 			</script>

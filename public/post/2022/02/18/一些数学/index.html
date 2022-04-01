@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-Hans-CN" >
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,16 +15,31 @@
 
 
 <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
-<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  
+  
+  pangu.spacingElementByTagName('p');
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    pangu.autoSpacingPage();
+  });
+</script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="一些数学"/>
-<meta name="twitter:description" content="偏导数 当你知道$f=f(x,y)=f(x,y(x,z))$时： $$ \align{\d f&amp;=\l{\f{f}{x}}_y\d x&#43;\l{\f{f}{y}}_x\d y\\&amp;=\l{\f{f}{x}}_y\d x&#43;\l{\f{f}{y}}_x\left[\l{\f{y}{x}}_z\d x&#43;\l{\f{y}{z}}_x\d z\right]\\&amp;=\left[\l{\f{f}{x}}_y&#43;\l{\f{f}{y}}_x\l{\f{y}{x}}_z\right]\d x&#43;\l{\f{f}{y}}_x\l{\f{y}{z}}_x\d z} $$ 此时，根据偏导数的定义得到性质1： $$ \l{\f{f}{x}}_z=\l{\f{f}{x}}_y&#43;\l{\f{f}{y}}_x\l{\f{y}{x}}_z $$ 它有什么用呢？考虑下面一个例子： $$ \align{\d f&amp;=\lf fx_y\d x&#43;\lf fy_x\d y\\\lf fx_z&amp;=\lf fx_y&#43;\lf fy_x\lf yx_z} $$ 直接把$\d x$除过去是很爽，但以前总会心有芥蒂——为啥出过去就自动$z$不变了？现在我们有了完美的解答——把$\d y$进一步用$x,z$表示出来即可。
-我们进一步推广，对于$f=f(u(x,y),v(x,y))$，如法炮制，得到： $$ \f fx=\f fu\f ux&#43;\f fv\f vx $$ 其实这是复合函数偏导的链式法则。
+<meta name="twitter:description" content="简单微分 $$ (\sin x)&#39;=\cos x\\
+(\cos x)&#39;=-\sin x\\
+(a^x)&#39;=a^x\ln a\\
+(\log a)&#39;=\frac{x\ln a}\\
+(uv)&#39;=u&rsquo;v&#43;v&rsquo;u\\
+(\frac uv)&#39;=\frac{u&rsquo;v-v&rsquo;u}{v^2} $$
+偏导数 当你知道$f=f(x,y)=f(x,y(x,z))$时： $$ \align{\d f&amp;=\l{\f{f}{x}}_y\d x&#43;\l{\f{f}{y}}_x\d y\\&amp;=\l{\f{f}{x}}_y\d x&#43;\l{\f{f}{y}}_x\left[\l{\f{y}{x}}_z\d x&#43;\l{\f{y}{z}}_x\d z\right]\\&amp;=\left[\l{\f{f}{x}}_y&#43;\l{\f{f}{y}}_x\l{\f{y}{x}}_z\right]\d x&#43;\l{\f{f}{y}}_x\l{\f{y}{z}}_x\d z} $$ 此时，根据偏导数的定义得到性质1： $$ \l{\f{f}{x}}_z=\l{\f{f}{x}}_y&#43;\l{\f{f}{y}}_x\l{\f{y}{x}}_z $$ 它有什么用呢？考虑下面一个例子： $$ \align{\d f&amp;=\lf fx_y\d x&#43;\lf fy_x\d y\\\lf fx_z&amp;=\lf fx_y&#43;\lf fy_x\lf yx_z} $$ 直接把$\d x$除过去是很爽，但以前总会心有芥蒂——为啥出过去就自动$z$不变了？现在我们有了完美的解答——把$\d y$进一步用$x,z$表示出来即可。
+我们进一步推广，对于$f=f(u(x,y),v(x,y))$，如法炮制，得到： $$ \f fx=\f fu\f ux&#43;\f fv\f vx $$ 其实就是复合函数偏导的链式法则。
 同时，不难知道性质2： $$ \l{\f{x}{y}}_z=\frac1{\l{\f{y}{x}}_z} $$
 我们继续研究$x,y,z$的关系，知道： $$ x=x(y,z)=x\left[y(x,z),z\right] $$ 那么写出全微分： $$ \align{\d x&amp;=\lf{x}{y}_z\d y&#43;\lf{x}{z}_y\d z\\&amp;=\lf{x}{y}_z\left[\lf{y}{x}_z\d x&#43;\lf{y}{z}_x\d z\right]&#43;\lf{x}{z}_y\d z\\&amp;=\left[\lf{x}{y}_z\lf{y}{x}_z\right]\d x&#43;\left[\lf{x}{y}_z\lf{y}{z}_x&#43;\lf{x}{z}_y\right]\d z} $$ 根据性质2，得到性质3： $$ \align{\d x&amp;=\d x&#43;\left[\lf{x}{y}_z\lf{y}{z}_x&#43;\lf{x}{z}_y\right]\d z\\0&amp;=\left[\lf{x}{y}_z\lf{y}{z}_x&#43;\lf{x}{z}_y\right]\d z\\\lf{x}{z}_y&amp;=-\lf{x}{y}_z\lf{y}{z}_x} $$"/>
-
 
   </head>
   <body>
@@ -98,7 +113,16 @@ Edward Kerman
 	\def\blue #1{{\color{blue}{ #1}}}
 	\def\bm #1{{\boldsymbol{ #1}}}
 \)  -->
-<h2 id="偏导数">偏导数</h2>
+<h2 id="简单微分">简单微分</h2>
+<p>$$
+(\sin x)'=\cos x\\<br>
+(\cos x)'=-\sin x\\<br>
+(a^x)'=a^x\ln a\\<br>
+(\log a)'=\frac{x\ln a}\\<br>
+(uv)'=u&rsquo;v+v&rsquo;u\\<br>
+(\frac uv)'=\frac{u&rsquo;v-v&rsquo;u}{v^2}
+$$</p>
+<h3 id="偏导数">偏导数</h3>
 <p>当你知道$f=f(x,y)=f(x,y(x,z))$时：
 $$
 \align{\d f&amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\d y\\&amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\left[\l{\f{y}{x}}_z\d x+\l{\f{y}{z}}_x\d z\right]\\&amp;=\left[\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z\right]\d x+\l{\f{f}{y}}_x\l{\f{y}{z}}_x\d z}
@@ -116,7 +140,7 @@ $$
 $$
 \f fx=\f fu\f ux+\f fv\f vx
 $$
-其实这是复合函数偏导的<b>链式法则</b>。</p>
+其实就是复合函数偏导的<b>链式法则</b>。</p>
 <p>同时，不难知道<strong>性质2</strong>：
 $$
 \l{\f{x}{y}}_z=\frac1{\l{\f{y}{x}}_z}
@@ -145,6 +169,47 @@ $$
 $$
 \align{\lf{z}{x}_y\d x+\lf{z}{y}_x\d y&amp;=0\\-\lf{x}{y}_z\lf{y}{z}_x&amp;=\lf{x}{z}_y\qquad（使用性质一和性质二，得性质三）\\\lf{x}{y}_z\lf{y}{z}_x\lf{z}{x}_y&amp;=\red{-1}}
 $$</p>
+<h3 id="隐函数的求导">隐函数的求导</h3>
+<p>对于一个方程$F(x,y,z)=0$，，有：
+$$
+\f zx=-\frac{\partial F/\partial x}{\partial F/\partial z}
+$$</p>
+<h2 id="简单积分">简单积分</h2>
+<p>$$
+\align{\int \frac1x\d x&amp;=\ln|x| + C\\\int x^\mu\d x&amp;=\frac{x^{\mu+1}}{\mu+1}+C\\\int e^x\d x&amp;=e^x+C\\\int \cos x\d x&amp;=\sin x + C\\\int\sin x&amp;=-\cos x+C\\\int \ln x&amp;=-x+x\ln x\\\int_0^\infty e^{-\lambda x^2}\d x&amp;=\frac12\sqrt\frac{\pi}{\lambda}\\\int_0^\infty xe^{-\lambda x^2}\d x&amp;=\frac1{2\lambda}\\\int_0^\infty x^2e^{-\lambda x^2}\d x&amp;=\frac14\sqrt\frac{\pi}{\lambda^3}}
+$$</p>
+<h3 id="换元积分法">换元积分法</h3>
+<p>设$f(x)$为可积函数，$g=g(x)$为连续可导函数，则有：
+$$
+\int_\alpha^\beta f(g)g'\d x=\int_{g(\alpha)}^{g(\beta)}f(g)\d g
+$$</p>
+<p>设$f(x)$为可积函数，$x=x(g)$为连续可导函数，则有：
+$$
+\int_\alpha^\beta f(x)\d x=\int_{x^{-1}(\alpha)}^{x^{-1}(\beta)}f(x(g))x'\d g
+$$</p>
+<h2 id="微分方程">微分方程</h2>
+<h3 id="分离变量法">分离变量法</h3>
+<p>假如可以得到：
+$$
+h(y)\d y=g(x)\d x\\<br>
+h(y)\frac{\d y}{\d x}=g(x)
+$$
+两边对$x$积分：
+$$
+\int_{x_1}^{x_2}h(y)\frac{\d y}{\d x}\d x=\int_{x_1}^{x_2}g(x)\d x\\<br>
+$$
+利用换元积分法：
+$$
+\int_{y(x_1)}^{y(x_2)}h(y)\d y=\int_{x_1}^{x_2}g(x)\d x+C
+$$</p>
+<h2 id="级数展开">级数展开</h2>
+<h3 id="泰勒级数">泰勒级数</h3>
+<p>使用$f(a)$表示$f(x)$：
+$$
+f(x)=\sum_0^{\infty}\frac1{!n}\l{\frac{\d^nf}{\d x^n}}_a(x-a)^n
+$$</p>
+<h3 id="麦克劳林级数">麦克劳林级数</h3>
+<p>泰勒级数在$a=0$的特殊情况：</p>
 <h2 id="legendre变换">Legendre变换</h2>
 <p>在符合直觉的关系式中，作为独立变量的往往是广度量（$U，V,S,N$），但这些量一般难以测量，如何使用强度量（$T,p,\mu$）来不损失信息地表示各种关系呢？</p>
 <p>假设我们有一个简单的函数$y=y(x)$（比如$y={x^2}/4$），它在$x$处导数为$p$。最简单的方法是通过一些变换得到这样一个函数：
@@ -153,11 +218,11 @@ y=y(p)
 $$
 然而，稍加思索即可发现这样做无论如何都会在数学上牺牲掉一些信息——关系$y=y(p)$是一个一阶微分方程，而它的积分给出的结果跟$y=y(x)$差一个待定的积分常数。下面的几个函数都满足$y=y(p)		$：</p>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0k446w4rsj20k00cy3z6.jpg" alt="image-20220323205820661" style="zoom:50%;" /></p>
-<p>回看刚才的表示，问题应该处在没有使用切线的斜率$\phi$。有趣的是，当你作出大量切线时，你会发现$y=y(x)$是一族切线的包络线。这有一个要求，就是该函数必须是凸函数，否则$\phi(p)$不是单值函数。</p>
+<p>回看刚才的表示，问题应该处在没有使用切线的斜率$\psi$。有趣的是，当你作出大量切线时，你会发现$y=y(x)$是一族切线的包络线。这有一个要求，就是该函数必须是凸函数，否则$\psi(p)$不是单值函数。</p>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0k4fdk1bej20k00cymya.jpg" alt="image-20220323210905009" style="zoom:50%;" /></p>
-<p>$\phi$的表达式也很容易根据定义得到：
+<p>$\psi$的表达式也很容易根据定义得到：
 $$
-\phi(x)=f(x)-xp
+\psi(x)=f(x)-xp
 $$</p>
 <p>对于一个多元函数：
 $$
@@ -166,15 +231,6 @@ $$
 我们对其中$x_0,x_1,\cdots,x_i$做Legendre变换，记作$y(p_0,\cdots,p_i)$（略去剩下的$x$），显然有：
 $$
 y(p_0,\cdots,p_i)=y(x_0,x_1,\cdots,x_n)-\sum_{j=0}^{i}\f y{x_j}x_j
-$$</p>
-<h2 id="隐函数的求导">隐函数的求导</h2>
-<p>对于一个方程$F(x,y,z)=0$，，有：
-$$
-\f zx=-\frac{\partial F/\partial x}{\partial F/\partial z}
-$$</p>
-<h2 id="高斯积分">高斯积分</h2>
-<p>$$
-\align{\int_0^\infty e^{-\lambda x^2}\d x&amp;=\frac12\sqrt\frac{\pi}{\lambda}\\\int_0^\infty xe^{-\lambda x^2}\d x&amp;=\frac1{2\lambda}\\\int_0^\infty x^2e^{-\lambda x^2}\d x&amp;=\frac14\sqrt\frac{\pi}{\lambda^3}}
 $$</p>
 
 </div>
@@ -265,10 +321,19 @@ $$</p>
 						extensions: ["mhchem.js"],
 						Macros: {
 								d: "{\\mathrm d}",
+								p: "{\\mathrm p}",
+								pKa: "{\\mathrm{p}K_{a}}",
+								Ka: "{K_{a}}",
+								pH: "{\\mathrm{pH}}",
+								H: "{\\left\[\\ce{H+}\\right\]}",
+								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
 								B: "{\\mathrm B}",
 								A: "{\\mathrm A}",
+								C: "{\\mathrm C}",
+								r: "{\\mathrm r}",
 								m: "{\\mathrm m}",
 								D: "{\\Delta}",
+								o: "{\\ominus}",
 								Ek: "{E_{\\mathrm k}}",
 								Ep: "{E_{\\mathrm p}}",
 								K: "{\\space\\mathrm K}",
@@ -293,7 +358,7 @@ $$</p>
 						processEscapes: true
 					},
 					CommonHTML: { linebreaks: { automatic: true } },
-  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
          	SVG: { linebreaks: { automatic: true } }
 				});
 			</script>

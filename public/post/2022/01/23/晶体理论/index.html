@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-Hans-CN" >
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,9 +15,19 @@
 
 
 <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
-<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  
+  
+  pangu.spacingElementByTagName('p');
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    pangu.autoSpacingPage();
+  });
+</script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="晶体理论"/>
 <meta name="twitter:description" content="配位数规则 配位数规则：4→6→8→12
@@ -29,7 +39,6 @@ GoldSchmidt半径 随着$r_正$上升，先后出现：仅负离子相切→正�
 简要介绍马德隆常数的计算：
 对于NaCl来讲，不难发现： $$ M = \sum_{i,j,k=-\infty}^{\infty}{{\color{red}{(-1)^{i&#43;j&#43;k}}} \over { (i^2 &#43; j^2 &#43; k^2)^{1/2}}} $$ 红色部分巧妙地控制吸引和排斥，**注意$i=j=k=0$的情况不在计算之中**。
 注意到此数列是条件收敛的，一般有两种逼近策略，第一种： $$ \lim_{N \to \infty} \sum_{i^2&#43;j^2&#43;k^2 &lt; N} {{(-1)^{i&#43;j&#43;k}} \over { (i^2 &#43; j^2 &#43; k^2)^{1/2}}} $$ 这种方法相当简单，我们用$C_3(n)$代表将$n$写成三个平方和的方法数量，易得（$i^2&#43;j^2&#43;k^2$必定是整数）： $$ \sum^\infty_{n=1}\frac{(-1)^nC_3(n)}{\sqrt{n}} $$ 因此我们常常看到如此的序列： $$ M=-6&#43;12/{\sqrt {2}}-8/{\sqrt {3}}&#43;6/2-24/{\sqrt {5}}&#43;\dotsb =-1.74756\dots $$ 然而这个数列是发散的（证明单独成blog），这种方法也是不好。"/>
-
 
   </head>
   <body>
@@ -363,10 +372,19 @@ $$
 						extensions: ["mhchem.js"],
 						Macros: {
 								d: "{\\mathrm d}",
+								p: "{\\mathrm p}",
+								pKa: "{\\mathrm{p}K_{a}}",
+								Ka: "{K_{a}}",
+								pH: "{\\mathrm{pH}}",
+								H: "{\\left\[\\ce{H+}\\right\]}",
+								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
 								B: "{\\mathrm B}",
 								A: "{\\mathrm A}",
+								C: "{\\mathrm C}",
+								r: "{\\mathrm r}",
 								m: "{\\mathrm m}",
 								D: "{\\Delta}",
+								o: "{\\ominus}",
 								Ek: "{E_{\\mathrm k}}",
 								Ep: "{E_{\\mathrm p}}",
 								K: "{\\space\\mathrm K}",
@@ -391,7 +409,7 @@ $$
 						processEscapes: true
 					},
 					CommonHTML: { linebreaks: { automatic: true } },
-  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
          	SVG: { linebreaks: { automatic: true } }
 				});
 			</script>

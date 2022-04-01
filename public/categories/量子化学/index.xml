@@ -14,7 +14,7 @@
       
       <guid>/post/2022/03/21/%E5%8E%9F%E5%AD%90%E7%BB%93%E6%9E%84/</guid>
       <description>旧量子论 Bohr的氢原子模型 两个假设：
- 在氢原子中，电子围绕著原子核进行圆周运动。 在轨道中运动的电子的角动量的大小$L$被量子化为正整数乘以$\hbar$，即$L=n\hbar$。  根据圆周运动和库仑定律： $$ r=\frac1{4\pi\varepsilon_0}\frac{e^2}{r^2} $$
+ 在氢原子中，电子围绕著原子核进行圆周运动。 在轨道中运动的电子的角动量的大小$L$被量子化为正整数乘以$\hbar$，即$L=n\hbar$。  根据圆周运动和库仑定律： $$ m_e\frac{v^2}r=\frac1{4\pi\varepsilon_0}\frac{e^2}{r^2} $$
 另外，圆周运动的角动量大小是半径乘以动量，结合假设2： $$ L=rm_ev=n\hbar\\
 v=\frac{n\hbar}{rm_e} $$
 得到： $$ r=\frac{4\pi\varepsilon_0\hbar^2}{m_ee^2}n^2 $$

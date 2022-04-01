@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-Hans-CN" >
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,9 +15,19 @@
 
 
 <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
-<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  
+  
+  pangu.spacingElementByTagName('p');
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    pangu.autoSpacingPage();
+  });
+</script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="无机结构化学"/>
 <meta name="twitter:description" content="影响配位数的因素  半径比（永远小 : 大） 共价键成分（ZnS等，一般比半径比预测的低） 电荷（BiF3=CaF2 &#43; NaCl） 外因：温度（T升高CN下降（热振动加剧）例：高温CsCl岩盐）、压力（p升高，堆积效应升高且热运动下降，CN升高（高压RbCl变CsCl））  小贴士：各物质配位数之和（配位数×原子数）相等，你可以使用十字交叉
@@ -51,7 +61,6 @@ S4(NH)4 S4N4 As4S4 (NPCl2)n
 金属键 纯金属：能带理论！ 金属的堆积方式（hcp、ccp，谁是谁？）
 小心金属-金属存在共价性！（Zn）
 小心次级配位（第二远的离子的配位）：如K、Na bcc（8&#43;6=14&gt;12）"/>
-
 
   </head>
   <body>
@@ -332,10 +341,19 @@ Edward Kerman
 						extensions: ["mhchem.js"],
 						Macros: {
 								d: "{\\mathrm d}",
+								p: "{\\mathrm p}",
+								pKa: "{\\mathrm{p}K_{a}}",
+								Ka: "{K_{a}}",
+								pH: "{\\mathrm{pH}}",
+								H: "{\\left\[\\ce{H+}\\right\]}",
+								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
 								B: "{\\mathrm B}",
 								A: "{\\mathrm A}",
+								C: "{\\mathrm C}",
+								r: "{\\mathrm r}",
 								m: "{\\mathrm m}",
 								D: "{\\Delta}",
+								o: "{\\ominus}",
 								Ek: "{E_{\\mathrm k}}",
 								Ep: "{E_{\\mathrm p}}",
 								K: "{\\space\\mathrm K}",
@@ -360,7 +378,7 @@ Edward Kerman
 						processEscapes: true
 					},
 					CommonHTML: { linebreaks: { automatic: true } },
-  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
          	SVG: { linebreaks: { automatic: true } }
 				});
 			</script>

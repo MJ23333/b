@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-Hans-CN" >
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,9 +15,19 @@
 
 
 <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
-<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  
+  
+  pangu.spacingElementByTagName('p');
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    pangu.autoSpacingPage();
+  });
+</script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="常见晶体"/>
 <meta name="twitter:description" content="晶体结构初步 除了典型的金属具有金属键以外，d区元素的氧、硫化物也有一定的金属性，如ReO3（红色金属光泽）、FeS2（愚人金）。金属键让金属具有延（拉长）展（压扁）性（不活泼金属较好）。
@@ -28,7 +38,9 @@
 金属的结构 注意只有Po为简单立方堆积
 规律：sp电子数少（IA）为A2，中（IIA）为A3，多（Al）为A1
 A1的延展性高于A3：金属晶体沿密度最高的原子层方向滑动（密堆积），而A1在4条体对角线方向都是密堆积。
-合金 置换型（固溶体、混合物、不改变原有结构）：半径相差小；单质晶体结构相似；电负性相似（否则形成化合物）。例：Cu-Ni；Cu-Zn（α-黄铜）
+合金 Fe3C：
+注意：螺旋上升的八面体：实际为$\ce{Fe_{6\times\frac13}C}$
+置换型（固溶体、混合物、不改变原有结构）：半径相差小；单质晶体结构相似；电负性相似（否则形成化合物）。例：Cu-Ni；Cu-Zn（α-黄铜）
 填隙型（整比：化合物；非整比：固溶体；不改变原有结构）：金属和小原子（B、C、N等）；半径判断（最大填入八面体而不影响原有堆积——0.732）
 金属互化物（原有结构改变）：β-黄铜、MgZn2、Cu3Au、NaTl、Na5Zn21、A3B（A15型）……
 MgZn2：（注意Mg的14面体配位）
@@ -66,10 +78,7 @@ C3投影图的无敌画法（最好分层画）：分数坐标转换——
 缺陷 形成缺陷，$\Delta H&gt;0,\Delta S&gt;0$，高温、晶体较大时有利（状态数（W）更多，熵增更大）
 几种类型 本征缺陷 Schottky缺陷：粒子按化学计量比成对消失，在高配位结构（离子、金属等）中多见（MO一氧化物）
 Frenkel缺陷：一种粒子移动到空隙（位置改变）例：AgCl中Ag（Oh→Td）；PbF2的F（Td→Oh），在低配为结构中较多——空隙较多较大
-原子互换缺陷：两个不同粒子交换位置（二元离子中不多），如反式尖晶石
-上面都不改变化学式，离子强，高配位——Schottky；共价强，低配位——Frenkel。
-外赋缺陷 掺入杂质——电荷相等、大小相似；不能太多；掺杂通常改变固体电子结构（NP结、ZrO2中掺入CaO导电）"/>
-
+原子互换缺陷：两个不同粒子交换位置（二元离子中不多），如反式尖晶石"/>
 
   </head>
   <body>
@@ -145,6 +154,9 @@ Edward Kerman
 <p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gyt7j4kqvgj311m0se77w.jpg" alt="image-20220128110554687"></p>
 <h2 id="合金">合金</h2>
 <p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gythyeoa47j30u80783zg.jpg" alt="image-20220128170635653"></p>
+<p>Fe3C：</p>
+<p>注意：螺旋上升的八面体：实际为$\ce{Fe_{6\times\frac13}C}$</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0srncl676j20io0jg0ty.jpg" alt="image-20220331083701004" style="zoom:50%;" /></p>
 <p><strong>置换型（固溶体、混合物、不改变原有结构）</strong>：半径相差小；单质晶体结构相似；电负性相似（否则形成化合物）。例：Cu-Ni；Cu-Zn（α-黄铜）</p>
 <p><strong>填隙型（整比：化合物；非整比：固溶体；不改变原有结构）</strong>：金属和小原子（B、C、N等）；半径判断（最大填入八面体而不影响原有堆积——0.732）</p>
 <p><strong>金属互化物（原有结构改变）</strong>：β-黄铜、MgZn2、Cu3Au、NaTl、Na5Zn21、A3B（A15型）……</p>
@@ -327,10 +339,19 @@ Edward Kerman
 						extensions: ["mhchem.js"],
 						Macros: {
 								d: "{\\mathrm d}",
+								p: "{\\mathrm p}",
+								pKa: "{\\mathrm{p}K_{a}}",
+								Ka: "{K_{a}}",
+								pH: "{\\mathrm{pH}}",
+								H: "{\\left\[\\ce{H+}\\right\]}",
+								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
 								B: "{\\mathrm B}",
 								A: "{\\mathrm A}",
+								C: "{\\mathrm C}",
+								r: "{\\mathrm r}",
 								m: "{\\mathrm m}",
 								D: "{\\Delta}",
+								o: "{\\ominus}",
 								Ek: "{E_{\\mathrm k}}",
 								Ep: "{E_{\\mathrm p}}",
 								K: "{\\space\\mathrm K}",
@@ -355,7 +376,7 @@ Edward Kerman
 						processEscapes: true
 					},
 					CommonHTML: { linebreaks: { automatic: true } },
-  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
          	SVG: { linebreaks: { automatic: true } }
 				});
 			</script>

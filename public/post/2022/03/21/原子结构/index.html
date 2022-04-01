@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-Hans-CN" >
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,13 +15,23 @@
 
 
 <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
-<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  
+  
+  pangu.spacingElementByTagName('p');
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    pangu.autoSpacingPage();
+  });
+</script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="原子结构"/>
 <meta name="twitter:description" content="旧量子论 Bohr的氢原子模型 两个假设：
- 在氢原子中，电子围绕著原子核进行圆周运动。 在轨道中运动的电子的角动量的大小$L$被量子化为正整数乘以$\hbar$，即$L=n\hbar$。  根据圆周运动和库仑定律： $$ r=\frac1{4\pi\varepsilon_0}\frac{e^2}{r^2} $$
+ 在氢原子中，电子围绕著原子核进行圆周运动。 在轨道中运动的电子的角动量的大小$L$被量子化为正整数乘以$\hbar$，即$L=n\hbar$。  根据圆周运动和库仑定律： $$ m_e\frac{v^2}r=\frac1{4\pi\varepsilon_0}\frac{e^2}{r^2} $$
 另外，圆周运动的角动量大小是半径乘以动量，结合假设2： $$ L=rm_ev=n\hbar\\
 v=\frac{n\hbar}{rm_e} $$
 得到： $$ r=\frac{4\pi\varepsilon_0\hbar^2}{m_ee^2}n^2 $$
@@ -37,7 +47,6 @@ v=\frac{n\hbar}{rm_e} $$
 我们可以揉在一起，用总角动量来表示： $$ L=\l{\sqrt{j(j&#43;1)}}\hbar $$ 其中总角动量量子数$j=|l\pm s|$。而它z方向的分量为$m_j\hbar$，其中$m_j=-j,-j&#43;1,\cdots,j-1,j$，共$(2j&#43;1)$个值。注意不同$j$对应的轨道能量由微弱不等（如$3\mathrm p_{3/2}$和$3\mathrm p_{1/2}$）
 多电子原子 Slater规则 由于类氢原子的所有$n$相等的轨道都是简并的，我们要对他打几个补丁：
  分组：s、p一组，d、f单独一组 更高组的对$\sigma$没有影响 对于n,p电子——同组0.35（1s的0.3），次组0.85，再之前1 对于d,f电子——同组0.35，之前1。  排布相关规则 Hund第一规则：先平行填入简并轨道； Pauli不相容原理：同一原子的两个电子不可能有一样的四个量子数。"/>
-
 
   </head>
   <body>
@@ -120,7 +129,7 @@ Edward Kerman
 </ol>
 <p>根据圆周运动和库仑定律：
 $$
-r=\frac1{4\pi\varepsilon_0}\frac{e^2}{r^2}
+m_e\frac{v^2}r=\frac1{4\pi\varepsilon_0}\frac{e^2}{r^2}
 $$</p>
 <p>另外，圆周运动的角动量大小是半径乘以动量，结合假设2：
 $$
@@ -199,10 +208,10 @@ $$</p>
 $$
 E=\sum\frac{N(N-1)}{2}K
 $$
-其中$N$是自旋平行的电子数。<strong>另一种解释</strong>是O的一个轨道中挤入两个自旋反平行的电子排斥上升，使得一个电子更易失去。</p>
+其中$N$是自旋平行的电子数。<strong>另一种解释</strong>是O的一个轨道中挤入两个自旋反平行的电子排斥上升，使得一个电子更易失去（即成对能）。</p>
 <h3 id="电子亲和能">电子亲和能</h3>
 <p>$$
-\ce{Y(g) + e- -&gt; Y-(g)}\qquad EA=\red-\D_{\rm EA} U(0\K)=\red-\D_{\rm EA} H(298\K)
+\ce{Y(g) + e- -&gt; Y^{-}(g)}\qquad EA=\red-\D_{\rm EA} U(0\K)=\red-\D_{\rm EA} H(298\K)
 $$</p>
 <p>由于存在原子核的吸引和已经存在的电子的排斥，$EA$可正可负</p>
 
@@ -294,10 +303,19 @@ $$</p>
 						extensions: ["mhchem.js"],
 						Macros: {
 								d: "{\\mathrm d}",
+								p: "{\\mathrm p}",
+								pKa: "{\\mathrm{p}K_{a}}",
+								Ka: "{K_{a}}",
+								pH: "{\\mathrm{pH}}",
+								H: "{\\left\[\\ce{H+}\\right\]}",
+								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
 								B: "{\\mathrm B}",
 								A: "{\\mathrm A}",
+								C: "{\\mathrm C}",
+								r: "{\\mathrm r}",
 								m: "{\\mathrm m}",
 								D: "{\\Delta}",
+								o: "{\\ominus}",
 								Ek: "{E_{\\mathrm k}}",
 								Ep: "{E_{\\mathrm p}}",
 								K: "{\\space\\mathrm K}",
@@ -322,7 +340,7 @@ $$</p>
 						processEscapes: true
 					},
 					CommonHTML: { linebreaks: { automatic: true } },
-  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
          	SVG: { linebreaks: { automatic: true } }
 				});
 			</script>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-Hans-CN" >
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,9 +15,19 @@
 
 
 <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
-<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  
+  
+  pangu.spacingElementByTagName('p');
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    pangu.autoSpacingPage();
+  });
+</script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="化学中的多面体"/>
 <meta name="twitter:description" content="基础 $$ F&#43;V=E&#43;2 $$
@@ -29,7 +39,7 @@ Oh或立方体每条边二分之一切角得到立方八面体（三角二十面
 化学中的四面体 主族 1.$\ce{Mg4OBr6(OR)4}$：
 2.$\ce{Ge4Br4S6}$——$\ce{P4S4O6}$
 3.注意一组数据：
-原因：形成d-pπ键：π58（注意F与O的相似性）
+原因：形成d-pπ键：$\pi_5^8$（注意F与O的相似性）
 4.$\ce{BaGe2、NaSn、NaPb}$等物质的负离子（都是负一价的IVA）结构——$\ce{A4^{4-}}$，与P4相似→香蕉键
 5.$\ce{C4R4}$（大集团保护），也有香蕉键
 6.$\ce{Li4(CH3)4}$晶体
@@ -40,19 +50,19 @@ Oh或立方体每条边二分之一切角得到立方八面体（三角二十面
 5.$\ce{Ni4[CNCMe3]7}$→催化乙炔成苯（异腈配体！阴间）
 晶体的四面体 注意bcc中变形四面体的位点（12个）→(0.5,0.25,0)……，如$\ce{K3C60}$的结构：
 硅酸盐 都是$\ce{[SiO4]}$共顶点连接的——减小电荷排斥
-1.与$\ce{[Si3O6]^{6-}}$相比，$\ce{[Si3O8(OH)]^{5-}}$存在链内的氢键（三个四面体一组）：
+1.与$\ce{[Si3O9]^{6-}}$相比，$\ce{[Si3O8(OH)]^{5-}}$存在链内的氢键（三个四面体一组）：
 2.一个六边形组成的硅酸盐层——$\ce{[Si2O5]^{2n-}_n}$，一般情况：Td-Oh(金属)-Td层
 3.长石：四元环→链→链之间公用顶点相连：$\ce{[AlSi3O_{16\times\frac12}]^{-}}$，其中一层的形状（角度为Si-O-Si）：
 对称性最高的透长石：
-八面体 主族 1.$\ce{{Sn6[Cr(CO)5]6}^{2-}}$：八面体，与$\ce{B6H6^{2-}}$类似
+八面体 主族 1.$\ce{{Sn6[Cr(CO)5]6}^{2-}}$：认为是$\ce{Sn6^2-}$作为配体，与$\ce{B6H6^{2-}}$类似
 2.$\ce{KAl(SO4)2·12H2O}$ →$\ce{[K(H2O)6][Al(H2O)6](SO4)2}$
 过渡金属 配合物略
 原子簇化合物：后过渡元素仍然符合$\ce{B6H6^{2-}}$
 原子簇中的化学键 注意μ3以上（面桥及以上）的物种给出所有的孤对电子。
-思想——每成一根键，两个原子各感受到两个电子，相当于凭空多出来两个电子，成键数（g为价电子数）： $$ b=(18n_1&#43;8n_2-g)/2 $$ 三中心电子键：3条边，2个键价；两中心正常键：1条边，1个键价；三中心和两中心不共用一条边： $$ \begin{align*}2s&#43;y&amp;=b\\3s&#43;y&amp;=\text{多边形边数（前提是多中性的三角形不共边）}\end{align*} $$ 硼烷：**s**（3c-2e B-B-B）、**t**（3c-2e B-H-B）、**y**（B-B）、**x**(BH2基团)——可以共振
+思想——每成一根键，两个原子各感受到两个电子，相当于凭空多出来两个电子，成键数（g为价电子数）： $$ b=(18n_1&#43;8n_2-g)/2 $$ 三中心电子键：3条边，2个键价；两中心正常键：1条边，1个键价；三中心和两中心不共用一条边： $$ \begin{align*}2s&#43;y&amp;=b\\3s&#43;y&amp;=\text{多边形边数（前提是多中性的三角形不共边）}\end{align*} $$ 硼烷：s（3c-2e B-H-B）、t（3c-2e B-B-B）、y（B-B）、x(BH2基团)——可以共振
 styx（0430），b=11，正好符合（3c-2e键的键价数=2）
 戒律——3c-2e的边不能有2c-2e的
-[Au6Ni12(CO)24]2-：（Au-Au-Au 3c-2e）
+$\ce{[Au6Ni12(CO)24]^2-}$：（Au-Au-Au 3c-2e）
 新方法——相同键价数→相似结构！比等瓣相似还简单（如b=11→$\ce{B6H6^{2-}}$）：
 晶体 注意bcc中的假Oh：
 $\ce{AuCu3}$——Au顶点，Cu面心
@@ -62,7 +72,6 @@ $\ce{K2Na[Co(NO2)6]}$：一起堆出来的CsCl超结构
 NiAs：Oh共面（所以纯离子型的不会采用）
 多酸化学 欣赏、数原子数：（分层、对称性）
 其他正多边形 晶体中的立方体 1."/>
-
 
   </head>
   <body>
@@ -148,7 +157,7 @@ $$</p>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1gzldhq1uaqj20fy0de0t8.jpg" alt="image-20220221194758121" style="zoom:50%;" /></p>
 <p>3.注意一组数据：</p>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1gzldkexlinj218k05ywfa.jpg" alt="image-20220221195033442"></p>
-<p>原因：形成d-pπ键：π58（注意F与O的相似性）</p>
+<p>原因：形成d-pπ键：$\pi_5^8$（注意F与O的相似性）</p>
 <p>4.$\ce{BaGe2、NaSn、NaPb}$等物质的负离子（都是负一价的IVA）结构——$\ce{A4^{4-}}$，与P4相似→香蕉键</p>
 <p>5.$\ce{C4R4}$（大集团保护），也有香蕉键</p>
 <p>6.$\ce{Li4(CH3)4}$晶体</p>
@@ -167,7 +176,7 @@ $$</p>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1gzleix7sj1j20ha0hwt9n.jpg" alt="image-20220221202343329" style="zoom:33%;" /></p>
 <h3 id="硅酸盐">硅酸盐</h3>
 <p>都是$\ce{[SiO4]}$共顶点连接的——减小电荷排斥</p>
-<p>1.与$\ce{[Si3O6]^{6-}}$相比，$\ce{[Si3O8(OH)]^{5-}}$存在链内的氢键（三个四面体一组）：</p>
+<p>1.与$\ce{[Si3O9]^{6-}}$相比，$\ce{[Si3O8(OH)]^{5-}}$存在链内的氢键（三个四面体一组）：</p>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1gzlespsxpgj20rg0ocdh7.jpg" alt="image-20220221203308311" style="zoom:33%;" /></p>
 <p>2.一个六边形组成的硅酸盐层——$\ce{[Si2O5]^{2n-}_n}$，一般情况：Td-Oh(金属)-Td层</p>
 <p>3.长石：四元环→链→链之间公用顶点相连：$\ce{[AlSi3O_{16\times\frac12}]^{-}}$，其中一层的形状（角度为Si-O-Si）：</p>
@@ -176,7 +185,7 @@ $$</p>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1gzlf1g91vaj20ks0mmtbb.jpg" alt="image-20220221204125937" style="zoom:33%;" /></p>
 <h2 id="八面体">八面体</h2>
 <h3 id="主族-1">主族</h3>
-<p>1.$\ce{{Sn6[Cr(CO)5]6}^{2-}}$：八面体，与$\ce{B6H6^{2-}}$类似</p>
+<p>1.$\ce{{Sn6[Cr(CO)5]6}^{2-}}$：认为是$\ce{Sn6^2-}$作为配体，与$\ce{B6H6^{2-}}$类似</p>
 <p>2.$\ce{KAl(SO4)2·12H2O}$ →$\ce{[K(H2O)6][Al(H2O)6](SO4)2}$</p>
 <h3 id="过渡金属">过渡金属</h3>
 <p>配合物略</p>
@@ -192,12 +201,12 @@ $$
 $$
 \begin{align*}2s+y&amp;=b\\3s+y&amp;=\text{多边形边数（前提是多中性的三角形不共边）}\end{align*}
 $$
-硼烷：**s**（3c-2e B-B-B）、**t**（3c-2e B-H-B）、**y**（B-B）、**x**(BH2基团)——可以共振</p>
+硼烷：<b>s</b>（3c-2e B-H-B）、<b>t</b>（3c-2e B-B-B）、<b>y</b>（B-B）、<b>x</b>(BH2基团)——可以共振</p>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1gzmi8ji6sdj20b60auglw.jpg" alt="截屏2022-02-22 下午7.17.26" style="zoom:33%;" /></p>
 <p>styx（0430），b=11，正好符合（3c-2e键的键价数=2）</p>
 <p>戒律——3c-2e的边不能有2c-2e的</p>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1gzmiiq7ftbj20re12udib.jpg" alt="image-20220222192727459" style="zoom: 50%;" /></p>
-<p>[Au6Ni12(CO)24]2-：（Au-Au-Au 3c-2e）</p>
+<p>$\ce{[Au6Ni12(CO)24]^2-}$：（Au-Au-Au 3c-2e）</p>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1gzmixzgz0kj20ly0magmy.jpg" alt="image-20220222194209800" style="zoom:33%;" /></p>
 <p>新方法——相同键价数→相似结构！比等瓣相似还简单（如b=11→$\ce{B6H6^{2-}}$）：</p>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1gzmj6k07dej215w0nsgo6.jpg" alt="image-20220222195023715"></p>
@@ -472,10 +481,19 @@ $$
 						extensions: ["mhchem.js"],
 						Macros: {
 								d: "{\\mathrm d}",
+								p: "{\\mathrm p}",
+								pKa: "{\\mathrm{p}K_{a}}",
+								Ka: "{K_{a}}",
+								pH: "{\\mathrm{pH}}",
+								H: "{\\left\[\\ce{H+}\\right\]}",
+								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
 								B: "{\\mathrm B}",
 								A: "{\\mathrm A}",
+								C: "{\\mathrm C}",
+								r: "{\\mathrm r}",
 								m: "{\\mathrm m}",
 								D: "{\\Delta}",
+								o: "{\\ominus}",
 								Ek: "{E_{\\mathrm k}}",
 								Ep: "{E_{\\mathrm p}}",
 								K: "{\\space\\mathrm K}",
@@ -500,7 +518,7 @@ $$
 						processEscapes: true
 					},
 					CommonHTML: { linebreaks: { automatic: true } },
-  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
          	SVG: { linebreaks: { automatic: true } }
 				});
 			</script>

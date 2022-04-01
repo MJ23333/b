@@ -49,7 +49,7 @@ $C_{nh}$群 $C_n+\sigma_h$，每层是压扁了的上下不等风扇（无$\sigm
 $D_{n}$群 $C_n+C_2\perp C_n$。很多$D_n$看似$S_{2n}$，但无法对称上去——上下**相等**的风扇
 $D_{nh}$群 $C_n+C_2\perp C_n+\sigma_h$，同时又有$\sigma_\red{v}$（镜面和旋转轴组合出另一个镜面），**重叠**的上下**相等**风扇。
 $D_{nd}$群 $C_n+C_2\perp C_n+n\sigma_d$，完美交错的上下相等风扇。同时包含$S_{2n}$，独立对称元素必然有$nC_2,n\sigma_d$，当$n$为奇数，$S_{2n}$被拆开，独立对称元素加上$C_n,i$，当$n$为偶数，$S_{2n}$为一个独立对称元素。
- 补充：$S_n$的等价情况（按$n$分类）——奇数：$C_n,i$；偶数但非$4$的倍数：$C_{n/2},\sigma_h$；$4$的倍数：**独立对称元素**（$S_{n},C_{n/2}$同时存在（由于分子没有$C_n$故不能写出））。
+ 补充：$S_n$的等价情况（按$n$分类）——奇数：$C_n,i$；偶数但非$4$的倍数：$C_{n/2},\sigma_h$；$4$的倍数：独立对称元素（$S_{n},C_{n/2}$同时存在（由于分子没有$C_n$故不能写出））。
  $S_{4}$群 仅含$S_4$，多为$D_{2d}$被新加入的元素破坏对称性（风扇化），比如1,3,5,7-四甲基环辛四烯
 $C_{3i}$群 其实也就是$S_6$群，破坏了对称性的$D_{3d}$（风扇化）。注意看似$D_{3d}$的[6,5]-冠烷1：
 $T$系列 带$T$的都有$4C_3,3C_2(\text{or} S_4)$：
@@ -68,8 +68,14 @@ $I$系列 正十二面体(12)，正二十面体(20)，二者合体$\ce{C_60}$(12
       <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>/post/2022/02/18/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/</guid>
-      <description>偏导数 当你知道$f=f(x,y)=f(x,y(x,z))$时： $$ \align{\d f&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\d y\\&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\left[\l{\f{y}{x}}_z\d x+\l{\f{y}{z}}_x\d z\right]\\&amp;amp;=\left[\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z\right]\d x+\l{\f{f}{y}}_x\l{\f{y}{z}}_x\d z} $$ 此时，根据偏导数的定义得到性质1： $$ \l{\f{f}{x}}_z=\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z $$ 它有什么用呢？考虑下面一个例子： $$ \align{\d f&amp;amp;=\lf fx_y\d x+\lf fy_x\d y\\\lf fx_z&amp;amp;=\lf fx_y+\lf fy_x\lf yx_z} $$ 直接把$\d x$除过去是很爽，但以前总会心有芥蒂——为啥出过去就自动$z$不变了？现在我们有了完美的解答——把$\d y$进一步用$x,z$表示出来即可。
-我们进一步推广，对于$f=f(u(x,y),v(x,y))$，如法炮制，得到： $$ \f fx=\f fu\f ux+\f fv\f vx $$ 其实这是复合函数偏导的链式法则。
+      <description>简单微分 $$ (\sin x)&#39;=\cos x\\
+(\cos x)&#39;=-\sin x\\
+(a^x)&#39;=a^x\ln a\\
+(\log a)&#39;=\frac{x\ln a}\\
+(uv)&#39;=u&amp;rsquo;v+v&amp;rsquo;u\\
+(\frac uv)&#39;=\frac{u&amp;rsquo;v-v&amp;rsquo;u}{v^2} $$
+偏导数 当你知道$f=f(x,y)=f(x,y(x,z))$时： $$ \align{\d f&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\d y\\&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\left[\l{\f{y}{x}}_z\d x+\l{\f{y}{z}}_x\d z\right]\\&amp;amp;=\left[\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z\right]\d x+\l{\f{f}{y}}_x\l{\f{y}{z}}_x\d z} $$ 此时，根据偏导数的定义得到性质1： $$ \l{\f{f}{x}}_z=\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z $$ 它有什么用呢？考虑下面一个例子： $$ \align{\d f&amp;amp;=\lf fx_y\d x+\lf fy_x\d y\\\lf fx_z&amp;amp;=\lf fx_y+\lf fy_x\lf yx_z} $$ 直接把$\d x$除过去是很爽，但以前总会心有芥蒂——为啥出过去就自动$z$不变了？现在我们有了完美的解答——把$\d y$进一步用$x,z$表示出来即可。
+我们进一步推广，对于$f=f(u(x,y),v(x,y))$，如法炮制，得到： $$ \f fx=\f fu\f ux+\f fv\f vx $$ 其实就是复合函数偏导的链式法则。
 同时，不难知道性质2： $$ \l{\f{x}{y}}_z=\frac1{\l{\f{y}{x}}_z} $$
 我们继续研究$x,y,z$的关系，知道： $$ x=x(y,z)=x\left[y(x,z),z\right] $$ 那么写出全微分： $$ \align{\d x&amp;amp;=\lf{x}{y}_z\d y+\lf{x}{z}_y\d z\\&amp;amp;=\lf{x}{y}_z\left[\lf{y}{x}_z\d x+\lf{y}{z}_x\d z\right]+\lf{x}{z}_y\d z\\&amp;amp;=\left[\lf{x}{y}_z\lf{y}{x}_z\right]\d x+\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z} $$ 根据性质2，得到性质3： $$ \align{\d x&amp;amp;=\d x+\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z\\0&amp;amp;=\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z\\\lf{x}{z}_y&amp;amp;=-\lf{x}{y}_z\lf{y}{z}_x} $$</description>
     </item>

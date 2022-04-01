@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-Hans-CN" >
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,9 +15,19 @@
 
 
 <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
-<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  
+  
+  pangu.spacingElementByTagName('p');
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    pangu.autoSpacingPage();
+  });
+</script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="波函数及数学基础"/>
 <meta name="twitter:description" content="薛定谔方程复习 具体推导见前一篇 blog。 $$ \color{red}{\hat H}\psi=E\psi $$
@@ -33,7 +43,6 @@
 考虑一个位势$V(x)$为$0$的自由粒子，那它的不含时薛定谔方程为： $$-\frac{\hbar^2}{2m}\frac{\partial ^2}{\partial x^2}\psi(x)=E\psi(x)$$ 我们可以解出一个平面波： $$\psi_k(x)=e^{i\color{red}{k}x}$$ $k$是前文提到过的波数。稍加改写：（de Broglie） $$\psi_k(x)=e^{i\color{red}{p}x/\color{red}{\hbar}}$$ 有丶东西，我们求其关于空间位置的偏导数： $$\color{red}{\frac{\partial}{\partial x}\psi_k(x)}=\frac{ip}{\hbar}e^{i{p}x/{\hbar}}=\color{red}{\frac{i}{\hbar}}\color{blue}{p\psi_k}$$ 我们倒一下： $$\color{red}{{\frac \hbar i}\frac{\partial}{\partial x}\psi_k(x)}=\color{blue}{p\psi_k}$$
 可见$\psi_k$被$p$作用得到效果与被算符${\frac \hbar i}\frac{\partial}{\partial x}$作用得到的相同，我们把这个算子命名为动量算符$\hat p$，也就是说：动量算符的本征函数是自由粒子的波函数$\psi_k$，本征值为动量$p$（与上文呼应）：
 $$\hat p=\frac{\hbar}i\frac{\partial}{\partial x}$$"/>
-
 
   </head>
   <body>
@@ -223,10 +232,19 @@ $$\color{red}{{\frac \hbar i}\frac{\partial}{\partial x}\psi_k(x)}=\color{blue}{
 						extensions: ["mhchem.js"],
 						Macros: {
 								d: "{\\mathrm d}",
+								p: "{\\mathrm p}",
+								pKa: "{\\mathrm{p}K_{a}}",
+								Ka: "{K_{a}}",
+								pH: "{\\mathrm{pH}}",
+								H: "{\\left\[\\ce{H+}\\right\]}",
+								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
 								B: "{\\mathrm B}",
 								A: "{\\mathrm A}",
+								C: "{\\mathrm C}",
+								r: "{\\mathrm r}",
 								m: "{\\mathrm m}",
 								D: "{\\Delta}",
+								o: "{\\ominus}",
 								Ek: "{E_{\\mathrm k}}",
 								Ep: "{E_{\\mathrm p}}",
 								K: "{\\space\\mathrm K}",
@@ -251,7 +269,7 @@ $$\color{red}{{\frac \hbar i}\frac{\partial}{\partial x}\psi_k(x)}=\color{blue}{
 						processEscapes: true
 					},
 					CommonHTML: { linebreaks: { automatic: true } },
-  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
          	SVG: { linebreaks: { automatic: true } }
 				});
 			</script>

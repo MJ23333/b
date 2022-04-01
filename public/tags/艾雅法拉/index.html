@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-Hans-CN" >
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,14 +15,23 @@
 
 
 <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
-<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  
+  
+  pangu.spacingElementByTagName('p');
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    pangu.autoSpacingPage();
+  });
+</script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="艾雅法拉"/>
 <meta name="twitter:description" content="A website built through Hugo with the hugo-prose theme.
 "/>
-
 
   </head>
   <body>
@@ -97,7 +106,7 @@
       
       
       艾雅法拉的种族是卡普里尼（Caprinae），也就是羊亚科。鉴于艾雅法拉所属羊亚科主要分布在高原山地地区，而奥地利1的确 70% 为高原山地，而European mouflon（Ovis aries musimon）在奥地利刚好分布广泛2，我们不妨认为艾雅法拉属于European mouflon。
-艾雅法拉（Eyjafjalla）的名字来源于冰岛南部的Eyjafjöll火山，该火山完全被名 &hellip;
+艾雅法拉（Eyjafjalla ）的名字来源于冰岛南部的Eyjafjöll火山，该火山完全被名 &hellip;
       <a href="/post/2020/07/30/%E5%B9%B2%E5%91%98%E8%80%83%E6%8D%AE%E8%89%BE%E9%9B%85%E6%B3%95%E6%8B%89/" class="more" title=Read&#32;More>Read More &rarr;</a>
     </div>
     </td>
@@ -129,10 +138,19 @@
 						extensions: ["mhchem.js"],
 						Macros: {
 								d: "{\\mathrm d}",
+								p: "{\\mathrm p}",
+								pKa: "{\\mathrm{p}K_{a}}",
+								Ka: "{K_{a}}",
+								pH: "{\\mathrm{pH}}",
+								H: "{\\left\[\\ce{H+}\\right\]}",
+								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
 								B: "{\\mathrm B}",
 								A: "{\\mathrm A}",
+								C: "{\\mathrm C}",
+								r: "{\\mathrm r}",
 								m: "{\\mathrm m}",
 								D: "{\\Delta}",
+								o: "{\\ominus}",
 								Ek: "{E_{\\mathrm k}}",
 								Ep: "{E_{\\mathrm p}}",
 								K: "{\\space\\mathrm K}",
@@ -157,7 +175,7 @@
 						processEscapes: true
 					},
 					CommonHTML: { linebreaks: { automatic: true } },
-  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
          	SVG: { linebreaks: { automatic: true } }
 				});
 			</script>

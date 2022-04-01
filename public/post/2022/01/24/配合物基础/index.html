@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-Hans-CN" >
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,19 +15,25 @@
 
 
 <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
-<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  
+  
+  pangu.spacingElementByTagName('p');
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    pangu.autoSpacingPage();
+  });
+</script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="配合物基础"/>
-<meta name="twitter:description" content="简单的热力学 逐级稳定常数$K_n$随着$n$增大而减小。
-配位反应一般$\D H&lt;0,\D S&gt;0$（对溶剂分子的作用减小）。
-稳定性 一般越小、电荷越高、HSAB联系好的稳定。
-在水溶液中H-H不如S-S，因为水是硬的，在配位以前就已经存在不错的溶剂化作用。
-螯合 对于较大的金属（d区），五元环比六元环稳定
-解释 焓方面：
- 减小静电排斥：在从两个单齿配体变为一个双齿配体时，带$\delta^-$的供体原子之间的静电排斥减少； 去溶剂化效应：在配合物形成时破坏配体 - H2O 氢键相互作用——这种氢键相互作用对于例如 NH3 比对于 en 更大； $\ce{CH2CH2}$桥在二齿或多齿配体中的诱导效应，增加了配体相对于相应的单齿配体的供体强度。  熵方面：进少量多齿配体出大量单齿"/>
-
+<meta name="twitter:description" content="异构现象 神奇的表格：
+           $\ce{Ma2b2cd}$ 6&#43;2 $\ce{M(AA)b2c2}$ 3&#43;1   $\ce{Ma2b2c2}$ 5&#43;1 $\ce{M(AA)b2cd}$ 4&#43;2   $\ce{Ma3bcd}$ 4&#43;1 $\ce{M(AA)b3c}$ 2&#43;0   $\ce{Ma3b2c}$ 3&#43;0 $\ce{M(AA)2b2}$ 2&#43;1   $\ce{Ma3b3}$ 2&#43;0 $\ce{M(AA)3}$ 1&#43;1   $\ce{Ma4bc}$ 2&#43;0 $\ce{M(AB)2cd}$ 6&#43;5   $\ce{Ma4b2}$ 2&#43;0 $\ce{M(AB)3}$ 2&#43;2   $\ce{M(AA)2bc}$ 2&#43;1 $\ce{M(AB)2c2}$ 5&#43;3    杂化轨道 根据是否有足够的d轨道判断内轨型或外轨型。
+晶体场理论 是一种静电模型——仅考虑负电荷配体与轨道中电子的排斥。
+八面体场 $d_{\rm x^2-y^2},d_{\rm z^2}$的轨道能相对上升。而两组简并轨道的能差为$\D_{\rm o}$，但要保证轨道能差之和为0。"/>
 
   </head>
   <body>
@@ -88,22 +94,129 @@ Edward Kerman
 </div>
 
 <div class="article">
+<h2 id="异构现象">异构现象</h2>
+<p>神奇的表格：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\ce{Ma2b2cd}$</td>
+<td>6+2</td>
+<td>$\ce{M(AA)b2c2}$</td>
+<td>3+1</td>
+</tr>
+<tr>
+<td>$\ce{Ma2b2c2}$</td>
+<td>5+1</td>
+<td>$\ce{M(AA)b2cd}$</td>
+<td>4+2</td>
+</tr>
+<tr>
+<td>$\ce{Ma3bcd}$</td>
+<td>4+1</td>
+<td>$\ce{M(AA)b3c}$</td>
+<td>2+0</td>
+</tr>
+<tr>
+<td>$\ce{Ma3b2c}$</td>
+<td>3+0</td>
+<td>$\ce{M(AA)2b2}$</td>
+<td>2+1</td>
+</tr>
+<tr>
+<td>$\ce{Ma3b3}$</td>
+<td>2+0</td>
+<td>$\ce{M(AA)3}$</td>
+<td>1+1</td>
+</tr>
+<tr>
+<td>$\ce{Ma4bc}$</td>
+<td>2+0</td>
+<td>$\ce{M(AB)2cd}$</td>
+<td>6+5</td>
+</tr>
+<tr>
+<td>$\ce{Ma4b2}$</td>
+<td>2+0</td>
+<td>$\ce{M(AB)3}$</td>
+<td>2+2</td>
+</tr>
+<tr>
+<td>$\ce{M(AA)2bc}$</td>
+<td>2+1</td>
+<td>$\ce{M(AB)2c2}$</td>
+<td>5+3</td>
+</tr>
+</tbody>
+</table>
+<h2 id="杂化轨道">杂化轨道</h2>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0pevrfwfaj21ic0osagx.jpg" alt="image-20220328105836846"></p>
+<p>根据是否有足够的d轨道判断内轨型或外轨型。</p>
+<h2 id="晶体场理论">晶体场理论</h2>
+<p>是一种<b>静电模型</b>——仅考虑负电荷配体与轨道中电子的排斥。</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0pkswo3xoj216k0tsq5j.jpg" alt="image-20220328142330219"></p>
+<h3 id="八面体场">八面体场</h3>
+<p>$d_{\rm x^2-y^2},d_{\rm z^2}$的轨道能相对上升。而两组简并轨道的能差为$\D_{\rm o}$，但要保证轨道能差之和为0。</p>
+<p><b>t、e的区分</b>——三重简并：t；双重简并：e。</p>
+<p><b>光谱化学序列</b>：周期最重要，越小越好；周期相同族数越小越好：</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0pfvbv9mij20re03sglx.jpg" alt="image-20220328113250416" style="zoom: 50%;" /></p>
+<p>对于金属而言：</p>
+<ol>
+<li>同一元素，价态越高分裂能越大：半径更小，静电作用更强</li>
+<li>同族同价态，周期越高分裂能越大：轨道延展更广，静电作用更强</li>
+<li>同周期同价态，变化不规则</li>
+</ol>
+<p><b>高低自旋</b>：对比成对能（P）<b>差</b>和分裂能（$\D_o$）<b>差</b></p>
+<blockquote>
+<p><b>J-T定理</b>：稳定性和简并性不可能同时存在，除非分子是线性分子</p>
+</blockquote>
+<p>J-T畸变导致平面上的四个配体与中心金属作用增强。</p>
+<p>注意，跃迁的通用符号为：$[高能态]\leftarrow[低能态]$，描述时请一并写出没有占据的轨道：$t_{2g}^2e_g^0$</p>
+<h3 id="四面体">四面体</h3>
+<p>排斥作用较强的是：$d_{\rm xy},d_{\rm yz},d_{\rm xz}$，与Oh相反，且作用都较弱（没有正好相对的，因此四面体配合物是<b>高自旋</b>）。不用g、u。</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0pi0095dij20sk0pcdgr.jpg" alt="image-20220328124631600" style="zoom:50%;" /></p>
+<h3 id="正方形">正方形</h3>
+<p>当四配位配合物聚有较大的的分裂能时，低自旋的正方形配位占优（如强场配体、较高周期的中心金属）。注意$\ce{NiCl4^{2-}}$为四面体，然而相关的$\ce{Pd,Pt}$却是四边形。</p>
+<h2 id="分子轨道">分子轨道</h2>
+<p>注意对轨道的简化：</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0pkxup9zij20u0171acu.jpg" alt="image-20220328142815561" style="zoom:50%;" /></p>
+<p>将轨道对应于成键反键——$t_{2g}$为成键轨道而$e_g$为反键轨道。</p>
+<p>注意$\ce{[TaMe6]^{-},[ZrMe6]2-}$为三棱柱$D_{3h}$，$\ce{[MoMe6]，[WMe6]}$为畸变三棱柱$C_{3v}$，一般需要很小的σ-给予体或刚性螯合配体。</p>
+<h2 id="配位场理论">配位场理论</h2>
+<p>磁性质：唯自旋磁矩：
+$$
+\mu=\sqrt{N(N+2)}\mu_\B
+$$
+其中$N$为未成对电子数，$\mu_\B=e\hbar/2m$为玻尔磁子。</p>
+<p>唯自旋磁矩不那么准确时，存在轨道角动量——存在未充满轨道，主要为低自旋$d^5$和高自旋$3d^6,3d^7$。</p>
+<h3 id="电荷转移跃迁">电荷转移跃迁</h3>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0pocp1zhnj20iy0lydh3.jpg" alt="image-20220328162619153" style="zoom:50%;" /></p>
+<p>当金属处于高氧化态且配体具有非键电子——<b>LMCT</b>；当金属处于低氧化态且配体具有低能受体轨道——<b>MLCT</b>。</p>
 <h2 id="简单的热力学">简单的热力学</h2>
 <p>逐级稳定常数$K_n$随着$n$增大而减小。</p>
-<p>配位反应一般$\D H&lt;0,\D S&gt;0$（对溶剂分子的作用减小）。</p>
+<p>配位反应一般$\D H&lt;0,\D S&gt;0$（对溶剂分子的作用减小）。例外情况：1. 高低自旋改变$\ce{[Fe(bpy)2(OH2)2]2+ -&gt; [Fe(bpy)3]2+}$；2.配位数改变（$\ce{[HgCl2(OH2)4]-&gt; [HgCl3(OH2)]-}$）</p>
 <h3 id="稳定性">稳定性</h3>
 <p>一般越小、电荷越高、HSAB联系好的稳定。</p>
 <p>在水溶液中H-H不如S-S，因为水是硬的，在配位以前就已经存在不错的溶剂化作用。</p>
-<h2 id="螯合">螯合</h2>
+<h2 id="螯合与大环">螯合与大环</h2>
 <p>对于较大的金属（d区），五元环比六元环稳定</p>
-<h3 id="解释">解释</h3>
+<h3 id="螯合">螯合</h3>
 <p><b>焓方面</b>：</p>
 <ol>
 <li><b>减小静电排斥</b>：在从两个单齿配体变为一个双齿配体时，带$\delta^-$的供体原子之间的静电排斥减少；</li>
-<li><b>去溶剂化效应</b>：在配合物形成时破坏配体 - H2O 氢键相互作用——这种氢键相互作用对于例如 NH3 比对于 en 更大；</li>
+<li><b>去溶剂化效应</b>：在配合物形成时破坏配体 - $\ce{H2O}$ 氢键相互作用——这种氢键相互作用对于 $\ce{NH3}$ 比对于 en 更大，因此焓变方面单齿的$\ce{NH3}$更不利；</li>
 <li><b>$\ce{CH2CH2}$桥在二齿或多齿配体中的诱导效应</b>，增加了配体相对于相应的单齿配体的供体强度。</li>
 </ol>
 <p><b>熵方面</b>：进少量多齿配体出大量单齿</p>
+<h3 id="大环效应">大环效应</h3>
+<p>配体预先成环，配位时不会引入新的张力。</p>
 
 </div>
 </main>
@@ -193,10 +306,19 @@ Edward Kerman
 						extensions: ["mhchem.js"],
 						Macros: {
 								d: "{\\mathrm d}",
+								p: "{\\mathrm p}",
+								pKa: "{\\mathrm{p}K_{a}}",
+								Ka: "{K_{a}}",
+								pH: "{\\mathrm{pH}}",
+								H: "{\\left\[\\ce{H+}\\right\]}",
+								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
 								B: "{\\mathrm B}",
 								A: "{\\mathrm A}",
+								C: "{\\mathrm C}",
+								r: "{\\mathrm r}",
 								m: "{\\mathrm m}",
 								D: "{\\Delta}",
+								o: "{\\ominus}",
 								Ek: "{E_{\\mathrm k}}",
 								Ep: "{E_{\\mathrm p}}",
 								K: "{\\space\\mathrm K}",
@@ -221,7 +343,7 @@ Edward Kerman
 						processEscapes: true
 					},
 					CommonHTML: { linebreaks: { automatic: true } },
-  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
          	SVG: { linebreaks: { automatic: true } }
 				});
 			</script>

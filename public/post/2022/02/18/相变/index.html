@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN" >
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> 相变 | Edward Kerman&#39;s blog</title>
+    
+    <link rel="icon" type="image/png" href="/icons/Hi-Res.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  
+  
+  pangu.spacingElementByTagName('p');
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    pangu.autoSpacingPage();
+  });
+</script>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="相变"/>
+<meta name="twitter:description" content="相律 对于有$C$各组分、$P$个相的系统，使用$p、V$以及每个相中组份的摩尔分数，那么强度变量的总数为：$CP&#43;2$个。由于摩尔分数总和为1，总数变为$CP-P&#43;2$。又因为组分在所有相里的$\mu$相等，总数变为$CP-C(P-1)-P&#43;2=C-P&#43;2$，因此得到Gibbs相律： $$ F=C-P&#43;2 $$
+稳定性与条件的关系 根据以下两个关系（重要）： $$ \lf \mu T_p=-S_\m\\
+\lf \mu p_T=V_\m $$ 对于不同的相： $$ S_\m({\rm g})&gt;S_\m({\rm l})&gt;S_\m({\rm s})\\
+V_\m({\rm g})&gt;V_\m({\rm l})&gt;V_\m({\rm s}) $$
+压力对液体蒸气压的影响 通过惰性气体或使用只对液体有影响的活塞加（总）压可以增大蒸气压。
+等温，全程平衡，化学势相等（$p_{\rm tot}$为总压，$p^*$为原蒸气压，$p$为现蒸气压）： $$ V_\m({\rm l})\d p_{\rm tot}=\frac{RT}p\d p $$ 设压力增大了$\D p$，原来总压就是$p^*$，现总压为$p^*&#43;\D p$，积分（加入$&#39;$防止混淆）： $$ \int_{p*}^{p^*&#43;\D p} V_\m({\rm l})\d p&#39;=RT\int_{p*}^{p}\frac{RT}{p&#39;&#39;}\d p&#39;&#39; $$ 得到结果： $$ V_\m({\rm l})\D p=RT\ln{\frac{p}{p*}}\\
+\ln{\frac{p}{p*}}=\frac{V_\m({\rm l})\D p}{RT}\\
+p=p^*\exp\left[{\frac{V_\m({\rm l})\D p}{RT}}\right] $$ 该结果未考虑惰性气体的溶解。
+相界线的位置 根据定义： $$ \d \mu_\alpha=\d \mu_\beta\\
+-S_\m(\alpha)\d T&#43;V_\m(\alpha)\d p=-S_\m(\beta)\d T&#43;V_\m(\beta)\d p\\"/>
+
+  </head>
+  <body>
+
+    <nav class="menu">
+    <ul>
+      <li class="left">
+        <a href="/"><span>Edward Kerman&#39;s blog</span></a>
+      </li>
+      
+      <li>
+        <a href="/">Home</a>
+      </li>
+      
+      <li>
+        <a href="/about/">About</a>
+      </li>
+      
+      <li>
+        <a href="/sitemap/">Sitemap</a>
+      </li>
+      
+      <li id="menu-search">
+        <a href="/#">Search</a>
+      </li>
+      
+      <li>
+        <a href="/index.xml">Subscribe</a>
+      </li>
+      
+    </ul>
+    </nav>
+		
+
+
+<div class="container single">
+<main>
+
+<div class="article-meta">
+<h1><span class="title">相变</span></h1>
+
+<h3 class="author">
+Edward Kerman
+</h3>
+
+<h3 class="date">2022-02-18</h3>
+<p class="terms">
+  
+  
+  Categories: <a href="/categories/academic">Academic</a> <a href="/categories/%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%A6">物理化学</a> 
+  
+  
+  
+  Tags: <a href="/tags/%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%A6">物理化学</a> <a href="/tags/%E7%83%AD%E5%8A%9B%E5%AD%A6">热力学</a> <a href="/tags/%E5%85%A5%E9%97%A8">入门</a> 
+  
+  
+</p>
+</div>
+
+<div class="article">
+<h2 id="相律">相律</h2>
+<p>对于有$C$各组分、$P$个相的系统，使用$p、V$以及每个相中组份的摩尔分数，那么强度变量的总数为：$CP+2$个。由于摩尔分数总和为1，总数变为$CP-P+2$。又因为组分在所有相里的$\mu$相等，总数变为$CP-C(P-1)-P+2=C-P+2$，因此得到Gibbs相律：
+$$
+F=C-P+2
+$$</p>
+<h2 id="稳定性与条件的关系">稳定性与条件的关系</h2>
+<p>根据以下两个关系（重要）：
+$$
+\lf \mu T_p=-S_\m\\<br>
+\lf \mu p_T=V_\m
+$$
+对于不同的相：
+$$
+S_\m({\rm g})&gt;S_\m({\rm l})&gt;S_\m({\rm s})\\<br>
+V_\m({\rm g})&gt;V_\m({\rm l})&gt;V_\m({\rm s})
+$$</p>
+<h3 id="压力对液体蒸气压的影响">压力对液体蒸气压的影响</h3>
+<p>通过惰性气体或使用只对液体有影响的活塞加（总）压可以增大蒸气压。</p>
+<p><b>等温</b>，全程平衡，化学势相等（$p_{\rm tot}$为总压，$p^*$为原蒸气压，$p$为现蒸气压）：
+$$
+V_\m({\rm l})\d p_{\rm tot}=\frac{RT}p\d p
+$$
+设压力增大了$\D p$，原来总压就是$p^*$，现总压为$p^*+\D p$，积分（加入$'$防止混淆）：
+$$
+\int_{p*}^{p^*+\D p} V_\m({\rm l})\d p'=RT\int_{p*}^{p}\frac{RT}{p''}\d p''
+$$
+得到结果：
+$$
+V_\m({\rm l})\D p=RT\ln{\frac{p}{p*}}\\<br>
+\ln{\frac{p}{p*}}=\frac{V_\m({\rm l})\D p}{RT}\\<br>
+p=p^*\exp\left[{\frac{V_\m({\rm l})\D p}{RT}}\right]
+$$
+该结果未考虑惰性气体的溶解。</p>
+<h2 id="相界线的位置">相界线的位置</h2>
+<p>根据定义：
+$$
+\d \mu_\alpha=\d \mu_\beta\\<br>
+-S_\m(\alpha)\d T+V_\m(\alpha)\d p=-S_\m(\beta)\d T+V_\m(\beta)\d p\\<br>
+\frac{\d p}{\d T}=\frac{\D_{\rm trs}S}{\D_{\rm trs}V}
+$$
+这就是<b>克拉贝龙方程</b>，由于相界线上是可逆的：
+$$
+\frac{\d p}{\d T}=\frac{\D_{\rm trs}H}{T\D_{\rm trs}V}
+$$</p>
+<p>对于与气体相关的相界线，可以加上理想气体近似，并忽略另一项的$V_\m$：
+$$
+\frac{\d p}{\d T}=\frac{p\D_{\rm trs}H}{RT^2}\\<br>
+\frac{\d \ln p}{\d T}=\frac{\D_{\rm trs}H}{RT^2}
+$$
+这是克劳修斯-克拉贝龙方程，它的积分形式为：
+$$
+\ln\frac p{p*}=\red-\frac{\D_{\rm trs}H}{R}\l{\frac1T-\frac1{T^*}}
+$$</p>
+
+</div>
+</main>
+
+<section class="appendix">
+
+
+<div>
+  <div class="side side-left"><h3>Author&#39;s bio</h3></div>
+  <div>
+
+
+
+
+
+<div>Edward Kerman——化竞菜鸡，舟厨，ksp爱好者，花样滑冰云观众。</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Reuse</h3></div>
+  Text and figures are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution CC BY 4.0</a>.
+</div>
+
+
+
+<div>
+  <div class="side side-left"><h3>Suggest changes</h3></div>
+  
+  
+  
+    
+    
+  
+  If you find any mistakes (including typos) or want to suggest changes, please feel free to <a href="https://github.com/MJ23333/b/edit/master/content/post/wlhx/%e7%9b%b8%e5%8f%98.md" id="edit-link">edit the source file of this page on Github and create a pull request.</a>
+</div>
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Citation</h3></div>
+  <p>For attribution, please cite this work as</p>
+  <pre><code class="no-highlight">Edward Kerman (2022). 相变. Edward Kerman&#39;s blog. /post/2022/02/18/%E7%9B%B8%E5%8F%98/</code></pre>
+  <p>BibTeX citation</p>
+  <pre><code class="no-highlight">@misc{
+  title = "相变",
+  author = "Edward Kerman",
+  year = "2022",
+  journal = "Edward Kerman&#39;s blog",
+  note = "/post/2022/02/18/%E7%9B%B8%E5%8F%98/"
+}</code></pre>
+</div>
+
+</section>
+
+
+
+<nav class="post-nav">
+  <span class="nav-next">&larr; <a href="/post/2022/02/18/%E7%9B%B8%E5%9B%BE/" title=Next&#32;post&#32;(older)>相图</a></span>
+  &hercon;
+  <span class="nav-prev"><a href="/post/2022/02/18/%E7%94%B5%E5%8C%96%E5%AD%A6/" title=Previous&#32;post&#32;(newer)>电化学</a> &rarr;</span>
+</nav>
+
+
+
+
+
+</div>
+
+
+  <footer>
+  <script async src="//yihui.org/js/center-img.js"></script>
+
+			<script type="text/x-mathjax-config">
+				MathJax.Hub.Config({
+					extensions: ["tex2jax.js"],
+					jax: ["input/TeX", "output/HTML-CSS"],
+					TeX: {
+						extensions: ["mhchem.js"],
+						Macros: {
+								d: "{\\mathrm d}",
+								p: "{\\mathrm p}",
+								pKa: "{\\mathrm{p}K_{a}}",
+								Ka: "{K_{a}}",
+								pH: "{\\mathrm{pH}}",
+								H: "{\\left\[\\ce{H+}\\right\]}",
+								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
+								B: "{\\mathrm B}",
+								A: "{\\mathrm A}",
+								C: "{\\mathrm C}",
+								r: "{\\mathrm r}",
+								m: "{\\mathrm m}",
+								D: "{\\Delta}",
+								o: "{\\ominus}",
+								Ek: "{E_{\\mathrm k}}",
+								Ep: "{E_{\\mathrm p}}",
+								K: "{\\space\\mathrm K}",
+								J: "{\\space\\mathrm J}",
+								kJ: "{\\space\\mathrm {kJ}}",
+								eV: "{\\space\\mathrm {eV}}",
+								mol: "{\\space\\mathrm {mol}}",
+								kjm: "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
+								align: ["{\\begin{align*} #1 \\end{align*}}",1],
+								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
+								l: ["{\\left( #1\\right)}",1],
+								lf: ["{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",2],
+								red: ["{\\color{red}{ #1}}",1],
+								green: ["{\\color{green}{ #1}}",1],
+								blue: ["{\\color{blue}{ #1}}",1],
+								bm: ["{\\boldsymbol{ #1}}",1]
+						}
+					},
+					tex2jax: {
+						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+						processEscapes: true
+					},
+					CommonHTML: { linebreaks: { automatic: true } },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
+         	SVG: { linebreaks: { automatic: true } }
+				});
+			</script>
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+
+
+
+
+
+  <div class="footer">
+  
+  <ul class="copyright">
+    <li>© Edward Kerman 2020-2022</li>
+  </ul>
+  
+  <ul>
+    
+    <li class="optional">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    <li class="optional">
+      <a href="/tags/">Tags</a>
+    </li>
+    
+    <li id="menu-edit">
+      <a href="#">Suggest an edit</a>
+    </li>
+    
+    <li>
+      <a href="#">Back to top</a>
+    </li>
+    
+  </ul>
+  </div>
+  
+  </footer>
+  <script async src="/js/features.js" data-page-features="[null,[&#34;&#43;sidenotes&#34;],null]"></script>
+  </body>
+</html>
+

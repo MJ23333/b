@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-Hans-CN" >
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,9 +15,19 @@
 
 
 <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
-<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  
+  
+  pangu.spacingElementByTagName('p');
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    pangu.autoSpacingPage();
+  });
+</script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="分子结构"/>
 <meta name="twitter:description" content="一些命名 中心对称——$\rm \red g$，反对称$\rm \red u$（我恨德语）。因此对于成键轨道：$\sigma_\red{\rm g},\pi_\red{\rm u},\delta_\red{\rm g}$，注意$\rm g,u$的仅说法在两边相等的（如同核双原子分子）轨道中使用（不然哪来的中心对称）。
@@ -31,7 +41,6 @@ CO的MO简化图：注意LUMO是σ，在C上波瓣大，HOMO是个$\pi^*$，也�
 电负性 Pauling电负性 一开始使用如下公式估算键能1： $$ \ce{$BE$(X-Y)=\frac12[$BE$(X-X)$&#43;BE$(Y-Y)]} $$ 然而有时该预测差异较大（如HF），根据Pauling最爱的VB，此处的贡献应来自离子性成键。于是他定义了第一种电负性： $$ \D\chi^{\rm P}=\chi^{\rm P}(\ce Y)-\chi^{\rm P}(\ce X)=\sqrt{\D BE} $$ 其中$\D BE=BE_{实际}-BE_{预测}$，单位是$\eV$。
 Mulliken电负性 十分有趣，单独成文。
 Allred-Rochow电负性 根据$Z_{\rm eff}$进行定义，与Pauling尺度关系如下： $$ \chi^{\rm AR}=\l{3590&#43;\frac{Z_{\rm eff}}{r_{\rm cov}^2}}&#43;0.744 $$ 其中$r_{\rm cov}$的单位是$\space\rm pm$。"/>
-
 
   </head>
   <body>
@@ -277,10 +286,19 @@ $$
 						extensions: ["mhchem.js"],
 						Macros: {
 								d: "{\\mathrm d}",
+								p: "{\\mathrm p}",
+								pKa: "{\\mathrm{p}K_{a}}",
+								Ka: "{K_{a}}",
+								pH: "{\\mathrm{pH}}",
+								H: "{\\left\[\\ce{H+}\\right\]}",
+								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
 								B: "{\\mathrm B}",
 								A: "{\\mathrm A}",
+								C: "{\\mathrm C}",
+								r: "{\\mathrm r}",
 								m: "{\\mathrm m}",
 								D: "{\\Delta}",
+								o: "{\\ominus}",
 								Ek: "{E_{\\mathrm k}}",
 								Ep: "{E_{\\mathrm p}}",
 								K: "{\\space\\mathrm K}",
@@ -305,7 +323,7 @@ $$
 						processEscapes: true
 					},
 					CommonHTML: { linebreaks: { automatic: true } },
-  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
          	SVG: { linebreaks: { automatic: true } }
 				});
 			</script>

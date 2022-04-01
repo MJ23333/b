@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-Hans-CN" >
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,9 +15,19 @@
 
 
 <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
-<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  
+  
+  pangu.spacingElementByTagName('p');
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    pangu.autoSpacingPage();
+  });
+</script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="分子对称性"/>
 <meta name="twitter:description" content="矩阵 在神经网络中，矩阵的意义大多是代数上的，仅作为中计算的简化方法：$\bm C=\bm A\bm B$，那么$C_{i,j}=\bm A_{i,:}\cdot\bm B_{:,j}$（注意，$\bm A_{i,:}$表示矩阵的第$i$行构成的向量）
@@ -37,7 +47,7 @@ $C_{nh}$群 $C_n&#43;\sigma_h$，每层是压扁了的上下不等风扇（无$\
 $D_{n}$群 $C_n&#43;C_2\perp C_n$。很多$D_n$看似$S_{2n}$，但无法对称上去——上下**相等**的风扇
 $D_{nh}$群 $C_n&#43;C_2\perp C_n&#43;\sigma_h$，同时又有$\sigma_\red{v}$（镜面和旋转轴组合出另一个镜面），**重叠**的上下**相等**风扇。
 $D_{nd}$群 $C_n&#43;C_2\perp C_n&#43;n\sigma_d$，完美交错的上下相等风扇。同时包含$S_{2n}$，独立对称元素必然有$nC_2,n\sigma_d$，当$n$为奇数，$S_{2n}$被拆开，独立对称元素加上$C_n,i$，当$n$为偶数，$S_{2n}$为一个独立对称元素。
- 补充：$S_n$的等价情况（按$n$分类）——奇数：$C_n,i$；偶数但非$4$的倍数：$C_{n/2},\sigma_h$；$4$的倍数：**独立对称元素**（$S_{n},C_{n/2}$同时存在（由于分子没有$C_n$故不能写出））。
+ 补充：$S_n$的等价情况（按$n$分类）——奇数：$C_n,i$；偶数但非$4$的倍数：$C_{n/2},\sigma_h$；$4$的倍数：独立对称元素（$S_{n},C_{n/2}$同时存在（由于分子没有$C_n$故不能写出））。
  $S_{4}$群 仅含$S_4$，多为$D_{2d}$被新加入的元素破坏对称性（风扇化），比如1,3,5,7-四甲基环辛四烯
 $C_{3i}$群 其实也就是$S_6$群，破坏了对称性的$D_{3d}$（风扇化）。注意看似$D_{3d}$的[6,5]-冠烷1：
 $T$系列 带$T$的都有$4C_3,3C_2(\text{or} S_4)$：
@@ -48,7 +58,6 @@ $O$系列 都有$4C_3,3C_4,6C_2$
 $O$群：与$T$群一样是风扇化的$O_h$（大多为甲基等扭转）。
 $O_h$群：存在垂直于$C_4$的$\sigma_h$——大多为正八面体或立方体。
 $I$系列 正十二面体(12)，正二十面体(20)，二者合体$\ce{C_60}$(12&#43;20=32)。"/>
-
 
   </head>
   <body>
@@ -159,7 +168,7 @@ $$</p>
 <h3 id="d_nd群">$D_{nd}$群</h3>
 <p>$C_n+C_2\perp C_n+n\sigma_d$，完美<strong>交错</strong>的上下<strong>相等</strong>风扇。同时包含$S_{2n}$，独立对称元素必然有$nC_2,n\sigma_d$，当$n$为奇数，$S_{2n}$被拆开，独立对称元素加上$C_n,i$，当$n$为偶数，$S_{2n}$为一个独立对称元素。</p>
 <blockquote>
-<p><strong>补充</strong>：$S_n$的等价情况（按$n$分类）——奇数：$C_n,i$；偶数但非$4$的倍数：$C_{n/2},\sigma_h$；$4$的倍数：**独立对称元素**（$S_{n},C_{n/2}$同时存在（由于分子没有$C_n$故不能写出））。</p>
+<p><strong>补充</strong>：$S_n$的等价情况（按$n$分类）——奇数：$C_n,i$；偶数但非$4$的倍数：$C_{n/2},\sigma_h$；$4$的倍数：<b>独立对称元素</b>（$S_{n},C_{n/2}$同时存在（由于分子没有$C_n$故不能写出））。</p>
 </blockquote>
 <h3 id="s_4群">$S_{4}$群</h3>
 <p>仅含$S_4$，多为$D_{2d}$被新加入的元素破坏对称性（风扇化），比如1,3,5,7-四甲基环辛四烯</p>
@@ -277,10 +286,19 @@ $$</p>
 						extensions: ["mhchem.js"],
 						Macros: {
 								d: "{\\mathrm d}",
+								p: "{\\mathrm p}",
+								pKa: "{\\mathrm{p}K_{a}}",
+								Ka: "{K_{a}}",
+								pH: "{\\mathrm{pH}}",
+								H: "{\\left\[\\ce{H+}\\right\]}",
+								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
 								B: "{\\mathrm B}",
 								A: "{\\mathrm A}",
+								C: "{\\mathrm C}",
+								r: "{\\mathrm r}",
 								m: "{\\mathrm m}",
 								D: "{\\Delta}",
+								o: "{\\ominus}",
 								Ek: "{E_{\\mathrm k}}",
 								Ep: "{E_{\\mathrm p}}",
 								K: "{\\space\\mathrm K}",
@@ -305,7 +323,7 @@ $$</p>
 						processEscapes: true
 					},
 					CommonHTML: { linebreaks: { automatic: true } },
-  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
          	SVG: { linebreaks: { automatic: true } }
 				});
 			</script>

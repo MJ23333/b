@@ -6,7 +6,46 @@
     <description>Recent content in Posts on Edward Kerman&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>酸碱理论</title>
+      <link>/post/2022/03/29/%E9%85%B8%E7%A2%B1%E7%90%86%E8%AE%BA/</link>
+      <pubDate>Tue, 29 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/03/29/%E9%85%B8%E7%A2%B1%E7%90%86%E8%AE%BA/</guid>
+      <description>含氧酸 可以根据质子多少大致分为——水合酸 → 羟合酸 → 氧合酸；
+水合酸 一般为金属的水合离子，通常金属越小，电荷越高酸性越强，例外主要是因为共价性上升，正电荷离域，对质子的排斥更强，酸性上升（如p区金属，靠后的d区金属等）。
+氧合酸 Pauling规则（$n$为非羟基氧数）： $$ \pKa\approx8-5n\\
+\p K_{\mathrm{a}i}=\p K_{\mathrm{a}i-1}+5 $$ 异常情况：
+ $\ce{H2CO3,H2SO3}$存在不完全的溶解平衡酸性偏小 $\ce{H3PO3,HCOOH}$等H直接连在中心原子（一般为前三周期）上酸性偏大  聚合：碱性成环，酸性成链：
+Lewis酸碱性 $\ce{BX3}$共轭更重要，F最弱；$\ce{SiX4}$诱导更重要，F最强。
+二氧化硫既是Lewis酸也是Lewis碱，$\ce{CO2}$也是如此。1$\ce{Br2}$也可作Lewis酸，用$\sigma^*$接收孤对。
+注意Lewis酸碱在同一个分子中同时出现：
+  &amp;#160;&amp;#x21a9;&amp;#xfe0e;
+   </description>
+    </item>
+    
+    <item>
+      <title>分析化学</title>
+      <link>/post/2022/03/23/%E5%88%86%E6%9E%90%E5%8C%96%E5%AD%A6/</link>
+      <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/03/23/%E5%88%86%E6%9E%90%E5%8C%96%E5%AD%A6/</guid>
+      <description>酸碱滴定 分布系数，举一反三： $$ \delta_{\ce{H2PO4-}}=\frac{\H K_{a1}}{\H^2+\H K_{a1}+K_{a1}K_{a2}} $$ 通常与电荷守恒搭配使用。
+缓冲溶液： $$ \pH=\pKa\red{+}\lg{\frac{\c{A-}}{\c{HA}}} $$
+指示剂 指示剂的理论变色点为$\pH=\pKa$，此时： $$ \frac{\c{In-}}{\c{HIn}}=1 $$ 而$\pH=\pKa\pm1$为指示剂的变色范围。
+滴定曲线 准确公式，注意$V$为加入等浓度的强酸、强碱的体积比。 $$ \frac c{1+V}\frac{\H}{\Ka+\H}+\frac{K_w}{\H}=\H + \frac{cV}{1+V} $$ 此时待测物质的分析浓度为： $$ c_{\ce{HCl}}=\frac{c_{原}}{1+V} $$ 滴定剂的分析浓度为（一般为等浓度）： $$ c_{\ce{NaOH}}=\frac{Vc_{滴定剂}}{1+V}=\frac{Vc_{原}}{1+V} $$
+可以发现待滴定物浓度越高，酸性越强，突跃越大。
+终点误差 根据定义（ep为滴定终点），使用分析浓度定义（假设滴定剂和待测物的初始浓度一样）： $$ \begin{equation*}E_t=\frac{c^{\rm ep}_{\ce{NaOH}} - c^{\rm ep}_{\ce{HCl}}}{c^{\rm ep}_{\ce{HCl}}}=\frac{V-1}{V}\end{equation*} $$
+大可直接暴力计算——通过电荷守恒求出$c^{\rm ep}_{\ce{NaOH}}$（$\H$根据指示剂求出）。
+分步滴定 要求：$\pKa$相差（多元、多种）大于5。
+例子 配位滴定 注意，再次使用副反应系数代替分配系数（方便加减分母），副反应系数可针对配体、金属、指示剂等与之相关的计算：
+求和（一般题目上给出的$\alpha$默认包含自身的$1$，应减去）： $$ \alpha=\alpha_1+\alpha_2\red{-1}\\
+$$ 不同$\alpha$的计算，注意此处的配位是广义的，可以针对金属配位、配体质子化（以及1：1配合物中配体的相关计算）： $$ \alpha_{自身}=1\\
+\alpha_{第i级配位}=\beta_i\c{L}^i\qquad $$ 计算分配系数$\delta$： $$ \delta_{自己}=\frac1{1+\sum(\alpha-1)} $$
+以下计算仅假设滴定过程$\pH$不变（大多为缓冲溶液或直接给出中点$\pH$）。 首先算出滴定终点时的$\c M$，只需注意终点的定义时$\c{MIn}=\frac12c_M$： $$ \frac12=\frac1{1+K_{\ce{MIn}}\c{M}+\alpha_{\ce{InH}}-1} $$ 求出$\c M$后，列出关于M的物料守恒，即：分析浓度 = 分析浓度。 $$ \frac{c_{原}}{1+V}=\c M\frac{1+K_{\ce{MY}}\c Y}1 $$ 要求$\c Y$，写出分布系数： $$ \c Y=c_{\ce Y}\delta_{\ce Y}=\frac{Vc_{滴定剂}}{1+V}\frac{1}{1+\alpha_{\ce{YH}}-1+K_{\ce{MY}}\c M} $$ 带入表达式，得到关于$V$的方程，求解，游戏结束： $$ E_t=\frac{V-1}{V} $$</description>
+    </item>
+    
     <item>
       <title>非水溶剂</title>
       <link>/post/2022/03/23/%E9%9D%9E%E6%B0%B4%E6%BA%B6%E5%89%82/</link>
@@ -20,9 +59,9 @@
  对Brønsted酸碱更广义的定义：在自电离溶剂中，酸是产生溶剂阳离子的物质，碱是产生溶剂阴离子的物质
  比如在$\ce{N2O4}$溶剂中，$\ce{[NO]ClO4}$表现为酸，$\ce{NaNO3}$表现为碱： $$ \ce{N2O4 -&amp;gt; NO+ + NO3^{-}} $$
 一些例子 $\ce{SO2}$ 极性非质子，很难自耦电离，很适合合成一些多中心阳离子，如：$\ce{[Se]4^{2+},[Se]8^{2+},I3+,I5+}$。
-液氨 液氨的相对介电常数小于水，在大多数时候它不那么能溶解离子化合物，例外的有包含$\ce{NH4+,I-,NO3-}$的各种盐，如$\ce{AgI}$。它还可以翻转一些反映的方向： $$ \ce{2AgCl + Ba(NO3)2 -&amp;gt; 2AgNO3 + BaCl2}\\
+液氨 液氨的相对介电常数小于水，在大多数时候它不那么能溶解离子化合物，例外的有包含$\ce{NH4^{+},I^{-},NO3-}$的各种盐，如$\ce{AgI}$。它还可以翻转一些反映的方向： $$ \ce{2AgCl + Ba(NO3)2 -&amp;gt; 2AgNO3 + BaCl2}\\
 \ce{AgCl + KNO3 -&amp;gt; AgNO3 + KCl} $$ 相反，大多数有机物在液氨中溶解度更大。
-在水中，由于氢键，$\ce{OH-,H3O+}$比其他离子更容易移动，但在$\ce{NH3(l)}$中$\ce{NH2-,NH4+}$移动速度和其他离子差不多。
+在水中，由于氢键，$\ce{OH^{-},H3O+}$比其他离子更容易移动，但在$\ce{NH3(l)}$中$\ce{NH2^{-},NH4+}$移动速度和其他离子差不多。
 液氨对酸有拉平作用——$\ce{H2NSO3H}$在液氨中表现为二元酸，有$\ce{K2[HNSO3]}$。
 液氨中的s区金属：随着浓度上升电导率先减后增：出溶剂化电子 → 结合回去 → 表现得像金属；顺磁性降低： $$ \left\{\begin{align*}&amp;amp;\ce{2M+(solv) + 2e^{-}(solv) &amp;lt;=&amp;gt; M2(solv)}\\&amp;amp;\ce{M(solv) + e^{-}(solv) &amp;lt;=&amp;gt; M^{-}(solv)} \end{align*}\right.</description>
     </item>
@@ -45,7 +84,7 @@
       
       <guid>/post/2022/03/21/%E5%8E%9F%E5%AD%90%E7%BB%93%E6%9E%84/</guid>
       <description>旧量子论 Bohr的氢原子模型 两个假设：
- 在氢原子中，电子围绕著原子核进行圆周运动。 在轨道中运动的电子的角动量的大小$L$被量子化为正整数乘以$\hbar$，即$L=n\hbar$。  根据圆周运动和库仑定律： $$ r=\frac1{4\pi\varepsilon_0}\frac{e^2}{r^2} $$
+ 在氢原子中，电子围绕著原子核进行圆周运动。 在轨道中运动的电子的角动量的大小$L$被量子化为正整数乘以$\hbar$，即$L=n\hbar$。  根据圆周运动和库仑定律： $$ m_e\frac{v^2}r=\frac1{4\pi\varepsilon_0}\frac{e^2}{r^2} $$
 另外，圆周运动的角动量大小是半径乘以动量，结合假设2： $$ L=rm_ev=n\hbar\\
 v=\frac{n\hbar}{rm_e} $$
 得到： $$ r=\frac{4\pi\varepsilon_0\hbar^2}{m_ee^2}n^2 $$
@@ -176,7 +215,7 @@ $C_{nh}$群 $C_n+\sigma_h$，每层是压扁了的上下不等风扇（无$\sigm
 $D_{n}$群 $C_n+C_2\perp C_n$。很多$D_n$看似$S_{2n}$，但无法对称上去——上下**相等**的风扇
 $D_{nh}$群 $C_n+C_2\perp C_n+\sigma_h$，同时又有$\sigma_\red{v}$（镜面和旋转轴组合出另一个镜面），**重叠**的上下**相等**风扇。
 $D_{nd}$群 $C_n+C_2\perp C_n+n\sigma_d$，完美交错的上下相等风扇。同时包含$S_{2n}$，独立对称元素必然有$nC_2,n\sigma_d$，当$n$为奇数，$S_{2n}$被拆开，独立对称元素加上$C_n,i$，当$n$为偶数，$S_{2n}$为一个独立对称元素。
- 补充：$S_n$的等价情况（按$n$分类）——奇数：$C_n,i$；偶数但非$4$的倍数：$C_{n/2},\sigma_h$；$4$的倍数：**独立对称元素**（$S_{n},C_{n/2}$同时存在（由于分子没有$C_n$故不能写出））。
+ 补充：$S_n$的等价情况（按$n$分类）——奇数：$C_n,i$；偶数但非$4$的倍数：$C_{n/2},\sigma_h$；$4$的倍数：独立对称元素（$S_{n},C_{n/2}$同时存在（由于分子没有$C_n$故不能写出））。
  $S_{4}$群 仅含$S_4$，多为$D_{2d}$被新加入的元素破坏对称性（风扇化），比如1,3,5,7-四甲基环辛四烯
 $C_{3i}$群 其实也就是$S_6$群，破坏了对称性的$D_{3d}$（风扇化）。注意看似$D_{3d}$的[6,5]-冠烷1：
 $T$系列 带$T$的都有$4C_3,3C_2(\text{or} S_4)$：
@@ -215,7 +254,7 @@ Oh或立方体每条边二分之一切角得到立方八面体（三角二十面
 化学中的四面体 主族 1.$\ce{Mg4OBr6(OR)4}$：
 2.$\ce{Ge4Br4S6}$——$\ce{P4S4O6}$
 3.注意一组数据：
-原因：形成d-pπ键：π58（注意F与O的相似性）
+原因：形成d-pπ键：$\pi_5^8$（注意F与O的相似性）
 4.$\ce{BaGe2、NaSn、NaPb}$等物质的负离子（都是负一价的IVA）结构——$\ce{A4^{4-}}$，与P4相似→香蕉键
 5.$\ce{C4R4}$（大集团保护），也有香蕉键
 6.$\ce{Li4(CH3)4}$晶体
@@ -226,19 +265,19 @@ Oh或立方体每条边二分之一切角得到立方八面体（三角二十面
 5.$\ce{Ni4[CNCMe3]7}$→催化乙炔成苯（异腈配体！阴间）
 晶体的四面体 注意bcc中变形四面体的位点（12个）→(0.5,0.25,0)……，如$\ce{K3C60}$的结构：
 硅酸盐 都是$\ce{[SiO4]}$共顶点连接的——减小电荷排斥
-1.与$\ce{[Si3O6]^{6-}}$相比，$\ce{[Si3O8(OH)]^{5-}}$存在链内的氢键（三个四面体一组）：
+1.与$\ce{[Si3O9]^{6-}}$相比，$\ce{[Si3O8(OH)]^{5-}}$存在链内的氢键（三个四面体一组）：
 2.一个六边形组成的硅酸盐层——$\ce{[Si2O5]^{2n-}_n}$，一般情况：Td-Oh(金属)-Td层
 3.长石：四元环→链→链之间公用顶点相连：$\ce{[AlSi3O_{16\times\frac12}]^{-}}$，其中一层的形状（角度为Si-O-Si）：
 对称性最高的透长石：
-八面体 主族 1.$\ce{{Sn6[Cr(CO)5]6}^{2-}}$：八面体，与$\ce{B6H6^{2-}}$类似
+八面体 主族 1.$\ce{{Sn6[Cr(CO)5]6}^{2-}}$：认为是$\ce{Sn6^2-}$作为配体，与$\ce{B6H6^{2-}}$类似
 2.$\ce{KAl(SO4)2·12H2O}$ →$\ce{[K(H2O)6][Al(H2O)6](SO4)2}$
 过渡金属 配合物略
 原子簇化合物：后过渡元素仍然符合$\ce{B6H6^{2-}}$
 原子簇中的化学键 注意μ3以上（面桥及以上）的物种给出所有的孤对电子。
-思想——每成一根键，两个原子各感受到两个电子，相当于凭空多出来两个电子，成键数（g为价电子数）： $$ b=(18n_1+8n_2-g)/2 $$ 三中心电子键：3条边，2个键价；两中心正常键：1条边，1个键价；三中心和两中心不共用一条边： $$ \begin{align*}2s+y&amp;amp;=b\\3s+y&amp;amp;=\text{多边形边数（前提是多中性的三角形不共边）}\end{align*} $$ 硼烷：**s**（3c-2e B-B-B）、**t**（3c-2e B-H-B）、**y**（B-B）、**x**(BH2基团)——可以共振
+思想——每成一根键，两个原子各感受到两个电子，相当于凭空多出来两个电子，成键数（g为价电子数）： $$ b=(18n_1+8n_2-g)/2 $$ 三中心电子键：3条边，2个键价；两中心正常键：1条边，1个键价；三中心和两中心不共用一条边： $$ \begin{align*}2s+y&amp;amp;=b\\3s+y&amp;amp;=\text{多边形边数（前提是多中性的三角形不共边）}\end{align*} $$ 硼烷：s（3c-2e B-H-B）、t（3c-2e B-B-B）、y（B-B）、x(BH2基团)——可以共振
 styx（0430），b=11，正好符合（3c-2e键的键价数=2）
 戒律——3c-2e的边不能有2c-2e的
-[Au6Ni12(CO)24]2-：（Au-Au-Au 3c-2e）
+$\ce{[Au6Ni12(CO)24]^2-}$：（Au-Au-Au 3c-2e）
 新方法——相同键价数→相似结构！比等瓣相似还简单（如b=11→$\ce{B6H6^{2-}}$）：
 晶体 注意bcc中的假Oh：
 $\ce{AuCu3}$——Au顶点，Cu面心
@@ -256,8 +295,14 @@ NiAs：Oh共面（所以纯离子型的不会采用）
       <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>/post/2022/02/18/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/</guid>
-      <description>偏导数 当你知道$f=f(x,y)=f(x,y(x,z))$时： $$ \align{\d f&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\d y\\&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\left[\l{\f{y}{x}}_z\d x+\l{\f{y}{z}}_x\d z\right]\\&amp;amp;=\left[\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z\right]\d x+\l{\f{f}{y}}_x\l{\f{y}{z}}_x\d z} $$ 此时，根据偏导数的定义得到性质1： $$ \l{\f{f}{x}}_z=\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z $$ 它有什么用呢？考虑下面一个例子： $$ \align{\d f&amp;amp;=\lf fx_y\d x+\lf fy_x\d y\\\lf fx_z&amp;amp;=\lf fx_y+\lf fy_x\lf yx_z} $$ 直接把$\d x$除过去是很爽，但以前总会心有芥蒂——为啥出过去就自动$z$不变了？现在我们有了完美的解答——把$\d y$进一步用$x,z$表示出来即可。
-我们进一步推广，对于$f=f(u(x,y),v(x,y))$，如法炮制，得到： $$ \f fx=\f fu\f ux+\f fv\f vx $$ 其实这是复合函数偏导的链式法则。
+      <description>简单微分 $$ (\sin x)&#39;=\cos x\\
+(\cos x)&#39;=-\sin x\\
+(a^x)&#39;=a^x\ln a\\
+(\log a)&#39;=\frac{x\ln a}\\
+(uv)&#39;=u&amp;rsquo;v+v&amp;rsquo;u\\
+(\frac uv)&#39;=\frac{u&amp;rsquo;v-v&amp;rsquo;u}{v^2} $$
+偏导数 当你知道$f=f(x,y)=f(x,y(x,z))$时： $$ \align{\d f&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\d y\\&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\left[\l{\f{y}{x}}_z\d x+\l{\f{y}{z}}_x\d z\right]\\&amp;amp;=\left[\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z\right]\d x+\l{\f{f}{y}}_x\l{\f{y}{z}}_x\d z} $$ 此时，根据偏导数的定义得到性质1： $$ \l{\f{f}{x}}_z=\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z $$ 它有什么用呢？考虑下面一个例子： $$ \align{\d f&amp;amp;=\lf fx_y\d x+\lf fy_x\d y\\\lf fx_z&amp;amp;=\lf fx_y+\lf fy_x\lf yx_z} $$ 直接把$\d x$除过去是很爽，但以前总会心有芥蒂——为啥出过去就自动$z$不变了？现在我们有了完美的解答——把$\d y$进一步用$x,z$表示出来即可。
+我们进一步推广，对于$f=f(u(x,y),v(x,y))$，如法炮制，得到： $$ \f fx=\f fu\f ux+\f fv\f vx $$ 其实就是复合函数偏导的链式法则。
 同时，不难知道性质2： $$ \l{\f{x}{y}}_z=\frac1{\l{\f{y}{x}}_z} $$
 我们继续研究$x,y,z$的关系，知道： $$ x=x(y,z)=x\left[y(x,z),z\right] $$ 那么写出全微分： $$ \align{\d x&amp;amp;=\lf{x}{y}_z\d y+\lf{x}{z}_y\d z\\&amp;amp;=\lf{x}{y}_z\left[\lf{y}{x}_z\d x+\lf{y}{z}_x\d z\right]+\lf{x}{z}_y\d z\\&amp;amp;=\left[\lf{x}{y}_z\lf{y}{x}_z\right]\d x+\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z} $$ 根据性质2，得到性质3： $$ \align{\d x&amp;amp;=\d x+\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z\\0&amp;amp;=\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z\\\lf{x}{z}_y&amp;amp;=-\lf{x}{y}_z\lf{y}{z}_x} $$</description>
     </item>
@@ -298,6 +343,18 @@ $$ r_{\rm B}\doteq \frac{n_{\rm B}}{n_\color{red}{ \rm A}} $$
 $$ Z=Z(T,p,n_1,\dots,n_k) $$
 在等温等压下，有：
 $$ \mathrm dZ=\sum_{\mathrm B=1}^k\left(\frac{\partial Z}{\partial n_{\rm B}}\right)_{T,p,n_{\rm C}(\rm C\neq B)}\mathrm dn_{\rm B}=\sum_{\mathrm B=1}^kZ_{\rm B}\mathrm dn_{\rm B} $$</description>
+    </item>
+    
+    <item>
+      <title>平衡</title>
+      <link>/post/2022/02/18/%E5%B9%B3%E8%A1%A1/</link>
+      <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/02/18/%E5%B9%B3%E8%A1%A1/</guid>
+      <description>平衡常数 因为有： $$ \d G=-S\d T+V\d p+\sum_\C \mu_\C\d n_\C $$ 定义反应进度$\xi$： $$ \d \xi=\frac{\d n_\C}{\nu_\C} $$ 则： $$ \d G=-S\d T+V\d p+\sum_\C \mu_\C\nu_\C\d \xi $$ 那么： $$ \D_\r G=\lf{G}{\xi}_{p,T}=\sum_\C\nu_\C\mu_\C $$ 注意此处的$\D$指的是微分。根据热二，自发反应的方向是$G$减小的方向，因此可通过$\D_\r G$来判断反应的方向。
+在标准情况下： $$ \D_\r G^\o=\sum_\C\nu_\C\mu^\o_\C $$ 而在非标准情况下： $$ \align{\D_\r G&amp;amp;=\sum_\C\nu_\C\l{\mu_\C^\o + RT\ln a_\C}\\ &amp;amp;=\D_\r G^\o+RT\ln\prod_{\C}a_\C^{\nu_\C}} $$ 定义反应商$Q$，注意反应物的$\nu_\C&amp;lt;0$，生成物的$\nu_\C&amp;gt;0$： $$ Q=\prod_{\C}a_\C^{\nu_\C}=\frac{产物的活度}{反应物的活度} $$ 那么： $$ \D_\r G=\D_\r G^\o+RT\ln Q $$ 我们用习惯量替换活度（都要除以标准量，得到的是无单位的比值）：
+可以发现纯固纯液的$a=1$，因此不出现在反应商中。
+在平衡时，$G$的斜率$\D_\r G=0$，定义此时的$Q$为平衡常数$K$： $$ \D_\r G^\o=-RT\ln K $$</description>
     </item>
     
     <item>
@@ -369,6 +426,40 @@ $$ \mathrm dZ=\sum_{\mathrm B=1}^k\left(\frac{\partial Z}{\partial n_{\rm B}}\ri
     </item>
     
     <item>
+      <title>相变</title>
+      <link>/post/2022/02/18/%E7%9B%B8%E5%8F%98/</link>
+      <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/02/18/%E7%9B%B8%E5%8F%98/</guid>
+      <description>相律 对于有$C$各组分、$P$个相的系统，使用$p、V$以及每个相中组份的摩尔分数，那么强度变量的总数为：$CP+2$个。由于摩尔分数总和为1，总数变为$CP-P+2$。又因为组分在所有相里的$\mu$相等，总数变为$CP-C(P-1)-P+2=C-P+2$，因此得到Gibbs相律： $$ F=C-P+2 $$
+稳定性与条件的关系 根据以下两个关系（重要）： $$ \lf \mu T_p=-S_\m\\
+\lf \mu p_T=V_\m $$ 对于不同的相： $$ S_\m({\rm g})&amp;gt;S_\m({\rm l})&amp;gt;S_\m({\rm s})\\
+V_\m({\rm g})&amp;gt;V_\m({\rm l})&amp;gt;V_\m({\rm s}) $$
+压力对液体蒸气压的影响 通过惰性气体或使用只对液体有影响的活塞加（总）压可以增大蒸气压。
+等温，全程平衡，化学势相等（$p_{\rm tot}$为总压，$p^*$为原蒸气压，$p$为现蒸气压）： $$ V_\m({\rm l})\d p_{\rm tot}=\frac{RT}p\d p $$ 设压力增大了$\D p$，原来总压就是$p^*$，现总压为$p^*+\D p$，积分（加入$&#39;$防止混淆）： $$ \int_{p*}^{p^*+\D p} V_\m({\rm l})\d p&#39;=RT\int_{p*}^{p}\frac{RT}{p&#39;&#39;}\d p&#39;&#39; $$ 得到结果： $$ V_\m({\rm l})\D p=RT\ln{\frac{p}{p*}}\\
+\ln{\frac{p}{p*}}=\frac{V_\m({\rm l})\D p}{RT}\\
+p=p^*\exp\left[{\frac{V_\m({\rm l})\D p}{RT}}\right] $$ 该结果未考虑惰性气体的溶解。
+相界线的位置 根据定义： $$ \d \mu_\alpha=\d \mu_\beta\\
+-S_\m(\alpha)\d T+V_\m(\alpha)\d p=-S_\m(\beta)\d T+V_\m(\beta)\d p\\</description>
+    </item>
+    
+    <item>
+      <title>相图</title>
+      <link>/post/2022/02/18/%E7%9B%B8%E5%9B%BE/</link>
+      <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/02/18/%E7%9B%B8%E5%9B%BE/</guid>
+      <description>双组分理想液体混合物 对于两种挥发性液体组成的双组分理想溶液
+蒸气压图 由Raoult定律： $$ \align{p&amp;amp;=p_\A+p_\B\\ &amp;amp;=p^*_\A x_\A + p^*_\B (1-x_\A)\\&amp;amp;=p^*_\B + (p^*_\A- p^*_\B)x_\A} $$ 由此可以画出 $p-x_\A$图。
+对于气相组分（记为$y_{\rm C}$），根据分压定律： $$ \align{y_\A&amp;amp;=\frac{p_\A}{p}=\frac{p^*_\A x_\A}{p^*_\B + (p^*_\A- p^*_\B)x_\A}\\y_\B&amp;amp;=\frac{p_\B}{p}=\frac{p^*_\B (1-x_\A)}{p^*_\B + (p^*_\A- p^*_\B)x_\A}} $$ 由此可画出 $y_\A-x_\A$图。
+延伸一下思路，用压力表示$x_\C$和$y_\C$的关系（使用分压定律和Raoult定律）： $$ \frac{y_\C}{x_\C}=\frac{p_\C^*}{p} $$
+$T-x_\A$和$T-y_\A$图 我们主要关注气-液平衡，相界线上，对于每个组份都有如下关系： $$ p_\C({\rm l})=p_\C({\rm g})\\
+\mu_\C({\rm l})=\mu_\C({\rm g})\\
+T_\C({\rm l})=T_\C({\rm g}) $$ 同时： $$ \sum x_\C=\sum y_\C=1 $$
+首先使用温度表示某温度下饱和蒸气压$p^*$与总压$p$（默认为标准大气压，即该液体沸点时的饱和蒸汽压）之比： $$ \ln\frac{p_\A^*}{p}=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}} $$ 根据上一节得到的$x_\C$和$y_\C$关系，带入： $$ \ln\frac{y_\A}{x_\A}=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}} $$ 由于$x_\C$和$y_\A$的总和分别为1，可以得到两个方程： $$ \left \{\begin{align}\ln\frac{y_\A}{x_\A}&amp;amp;=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}}\\ \ln\frac{1-y_\A}{1-x_\A}&amp;amp;=-\frac{\D_{\rm vap}H_\B}{R}\l{\frac1T-\frac1{T_{\rm b}}}\end{align}\right.</description>
+    </item>
+    
+    <item>
       <title>马德隆常数计算方法扫雷</title>
       <link>/post/2022/01/25/%E9%A9%AC%E5%BE%B7%E9%9A%86%E5%B8%B8%E6%95%B0%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E6%89%AB%E9%9B%B7/</link>
       <pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate>
@@ -419,13 +510,10 @@ $$ \mathrm dZ=\sum_{\mathrm B=1}^k\left(\frac{\partial Z}{\partial n_{\rm B}}\ri
       <pubDate>Mon, 24 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>/post/2022/01/24/%E9%85%8D%E5%90%88%E7%89%A9%E5%9F%BA%E7%A1%80/</guid>
-      <description>简单的热力学 逐级稳定常数$K_n$随着$n$增大而减小。
-配位反应一般$\D H&amp;lt;0,\D S&amp;gt;0$（对溶剂分子的作用减小）。
-稳定性 一般越小、电荷越高、HSAB联系好的稳定。
-在水溶液中H-H不如S-S，因为水是硬的，在配位以前就已经存在不错的溶剂化作用。
-螯合 对于较大的金属（d区），五元环比六元环稳定
-解释 焓方面：
- 减小静电排斥：在从两个单齿配体变为一个双齿配体时，带$\delta^-$的供体原子之间的静电排斥减少； 去溶剂化效应：在配合物形成时破坏配体 - H2O 氢键相互作用——这种氢键相互作用对于例如 NH3 比对于 en 更大； $\ce{CH2CH2}$桥在二齿或多齿配体中的诱导效应，增加了配体相对于相应的单齿配体的供体强度。  熵方面：进少量多齿配体出大量单齿</description>
+      <description>异构现象 神奇的表格：
+           $\ce{Ma2b2cd}$ 6+2 $\ce{M(AA)b2c2}$ 3+1   $\ce{Ma2b2c2}$ 5+1 $\ce{M(AA)b2cd}$ 4+2   $\ce{Ma3bcd}$ 4+1 $\ce{M(AA)b3c}$ 2+0   $\ce{Ma3b2c}$ 3+0 $\ce{M(AA)2b2}$ 2+1   $\ce{Ma3b3}$ 2+0 $\ce{M(AA)3}$ 1+1   $\ce{Ma4bc}$ 2+0 $\ce{M(AB)2cd}$ 6+5   $\ce{Ma4b2}$ 2+0 $\ce{M(AB)3}$ 2+2   $\ce{M(AA)2bc}$ 2+1 $\ce{M(AB)2c2}$ 5+3    杂化轨道 根据是否有足够的d轨道判断内轨型或外轨型。
+晶体场理论 是一种静电模型——仅考虑负电荷配体与轨道中电子的排斥。
+八面体场 $d_{\rm x^2-y^2},d_{\rm z^2}$的轨道能相对上升。而两组简并轨道的能差为$\D_{\rm o}$，但要保证轨道能差之和为0。</description>
     </item>
     
     <item>
@@ -534,7 +622,9 @@ Co(CO)4(AuPPh3)等不用多说，甚至有Ti(CO)6(AuPEt3)-（Ti七配位）
 金属的结构 注意只有Po为简单立方堆积
 规律：sp电子数少（IA）为A2，中（IIA）为A3，多（Al）为A1
 A1的延展性高于A3：金属晶体沿密度最高的原子层方向滑动（密堆积），而A1在4条体对角线方向都是密堆积。
-合金 置换型（固溶体、混合物、不改变原有结构）：半径相差小；单质晶体结构相似；电负性相似（否则形成化合物）。例：Cu-Ni；Cu-Zn（α-黄铜）
+合金 Fe3C：
+注意：螺旋上升的八面体：实际为$\ce{Fe_{6\times\frac13}C}$
+置换型（固溶体、混合物、不改变原有结构）：半径相差小；单质晶体结构相似；电负性相似（否则形成化合物）。例：Cu-Ni；Cu-Zn（α-黄铜）
 填隙型（整比：化合物；非整比：固溶体；不改变原有结构）：金属和小原子（B、C、N等）；半径判断（最大填入八面体而不影响原有堆积——0.732）
 金属互化物（原有结构改变）：β-黄铜、MgZn2、Cu3Au、NaTl、Na5Zn21、A3B（A15型）……
 MgZn2：（注意Mg的14面体配位）
@@ -572,9 +662,7 @@ C3投影图的无敌画法（最好分层画）：分数坐标转换——
 缺陷 形成缺陷，$\Delta H&amp;gt;0,\Delta S&amp;gt;0$，高温、晶体较大时有利（状态数（W）更多，熵增更大）
 几种类型 本征缺陷 Schottky缺陷：粒子按化学计量比成对消失，在高配位结构（离子、金属等）中多见（MO一氧化物）
 Frenkel缺陷：一种粒子移动到空隙（位置改变）例：AgCl中Ag（Oh→Td）；PbF2的F（Td→Oh），在低配为结构中较多——空隙较多较大
-原子互换缺陷：两个不同粒子交换位置（二元离子中不多），如反式尖晶石
-上面都不改变化学式，离子强，高配位——Schottky；共价强，低配位——Frenkel。
-外赋缺陷 掺入杂质——电荷相等、大小相似；不能太多；掺杂通常改变固体电子结构（NP结、ZrO2中掺入CaO导电）</description>
+原子互换缺陷：两个不同粒子交换位置（二元离子中不多），如反式尖晶石</description>
     </item>
     
     <item>
@@ -706,19 +794,19 @@ de Broglie 关系和 Einstein 关系 $$ \begin{gather*} E=\color{blue}{{\frac12}
       
       <guid>/post/2020/07/30/%E5%B9%B2%E5%91%98%E8%80%83%E6%8D%AE%E8%89%BE%E9%9B%85%E6%B3%95%E6%8B%89/</guid>
       <description>艾雅法拉的种族是卡普里尼（Caprinae），也就是羊亚科。鉴于艾雅法拉所属羊亚科主要分布在高原山地地区，而奥地利1的确 70% 为高原山地，而European mouflon（Ovis aries musimon）在奥地利刚好分布广泛2，我们不妨认为艾雅法拉属于European mouflon。
-艾雅法拉（Eyjafjalla）的名字来源于冰岛南部的Eyjafjöll火山，该火山完全被名为Eyjafjallajökull3的冰盖覆盖。将Eyjafjöll拆开可以得到“岛屿的山脉（the mountains of the islands）”，可能暗示了附近的Vestmannaeyjar群岛。
+艾雅法拉（Eyjafjalla ）的名字来源于冰岛南部的Eyjafjöll火山，该火山完全被名为Eyjafjallajökull3的冰盖覆盖。将Eyjafjöll拆开可以得到“岛屿的山脉（the mountains of the islands）”，可能暗示了附近的Vestmannaeyjar群岛。
 当然，如果你仔细看了艾雅法拉预告中的盲文，你会发现：这正是Eyjafjöll的坐标——“63°37′12″N，19°36′48″W”。
 值得一提的是，该火山在 2010 年连续两次喷发，对欧洲的交通产生了极大影响。由于被冰盖覆盖，该火山喷发时常伴随着洪水。在Eyjafjöll以西仅 8 英里远的地方还有Katla火山。在如果剧烈的火山运动将这个更大的家伙“惊醒”4，那么交通瘫痪将蔓延到北美。
 讲完小羊的代号，作为舟游中为数不多出现真实姓名的人物，我们一定得好好谈谈艾雅法拉的真名——阿黛尔·瑙曼。
 首先聊聊这个姓，瑙曼
 Naumann是著名姓氏诺伊曼Neumann的中古德语写法，意思是“新（来）的人（New man）”。这个姓后来也随着日耳曼文化传播进入了多个语言之中，但显然还是德意志人用得多一点5。
 再说说很好听的名字——阿黛尔（Adele）
-Adele（常做女性名称）来自于德语Adel ，意思是“高贵品质”。尽管有一些叫Adel的地质学家，我本人偏向的来源是位于蒙大拿州中西部的Adel Mountains Volcanic Field（火山学家用火山起名字不是很正常吗？）。由于该地区位于美加边境，故它也曾出现在几部犯罪电影中（鹰角狂喜）。
+Adele（常做女性名称）来自于德语Adel ，意思是“高贵品质”。尽管有一些叫 Adel 的地质学家，我本人偏向的来源是位于蒙大拿州中西部的Adel Mountains Volcanic Field（火山学家用火山起名字不是很正常吗？）。由于该地区位于美加边境，故它也曾出现在几部犯罪电影中（鹰角狂喜）。
 我们接着说一下小羊的父母：
  干员艾雅法拉填报的资料显示，她出生于莱塔尼亚一个正统而充满学术氛围的家庭中，父母就职于莱塔尼亚威廉大学，其父为源石技艺学院教授，研修生导师，其母为自然环境与生态系统研究专家。两人已于一次火山实地考察中遭遇火山碎屑流，不幸丧生。
 艾雅法拉的父母曾共同起草了一项关于泰拉自然产生的天灾系统的调查项目，其中火山为该项目中的重点调查对象。艾雅法拉携带至罗德岛的资料中，她最为珍视的正是其父母关于火山学若干研究报告。她希望这些研究不会因父母的逝去而中断，因此主动选择继承了他们的火山学研究成果。
 火山学研究需要在火山喷发前后期进行实地考察，在调查期间需长期停留于火山地带。而火山地带饱含源石颗粒的火山烟尘，以及冷却岩浆中不断翻涌出的源石矿脉，使火山活跃地带同时也会成为一片典型的矿石病易感地区，相信这是艾雅法拉成为感染者的直接因素。（档案资料二）
- 从这几个关键词，我推测艾雅法拉父母的原型应该是 Katia and Maurice Krafft 夫妇。他们以摄影，拍摄和记录火山的先驱而闻名6。1991年6月3日，夫妇二人在日本云仙岳观测火山时因火山碎屑流脱离意料中的轨道而丧生。
+ 从这几个关键词，我推测艾雅法拉父母的原型应该是Katia and Maurice Krafft夫妇。他们以摄影，拍摄和记录火山的先驱而闻名6。1991年6月3日，夫妇二人在日本云仙岳观测火山时因火山碎屑流脱离意料中的轨道而丧生。
 但二者之间存在一些区别：Krafft 夫妇未诞下子嗣，且Maurice Krafft曾说——“I am never afraid because I have seen so many eruptions in 23 years that even if I die tomorrow, I don&amp;rsquo;t care.”。但从干员密录中我们可以发现艾雅法拉的父母在每次考察前都十分担心无法再见到自己的女儿。再加上干员密录暗示艾雅法拉的父母死于“阴谋”，但 Krafft 夫妇则是因为未计算到的突发情况。故该考证仍然存疑。
   莱塔尼亚的原型可能是奥匈帝国，奥地利地形图如下：&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description>
     </item>
@@ -731,9 +819,9 @@ Adele（常做女性名称）来自于德语Adel ，意思是“高贵品质”�
       <guid>/post/2020/07/30/%E5%B9%B2%E5%91%98%E8%80%83%E6%8D%AE%E8%93%9D%E6%AF%92/</guid>
       <description>就蓝毒的造型色调以及其精二立绘中的动物形象来看，可以确定其动物原型是钴蓝箭毒蛙。而她的代号——蓝毒（Blue Poison）可能正是取自于钴蓝箭毒蛙的英文写法（Blue poison dart frog）。而蓝毒的自称（Azureus）则来自于其学名（Dendrobates azureus）。1
  はじめまして、アズリウスと申しますわ。ケルシー先生から伺ってらっしゃると思いますが、「毒物」と呼ばれるこの私の力、使い方はお任せいたしますわ。（干员报道）
- 钴蓝箭毒蛙在箭毒蛙中属于体型比较大的种类，不过即使如此其体长也只有4厘米左右，这与游戏内蓝毒小巧的体型相近（蓝毒身高157，在女性干员中排到至少50名开外）。钴蓝箭毒蛙最为人称道的是其炫目的荧光蓝体色，这种颜色在自然界的动物体色中是非常少见的。根据人们一贯的认知，颜色越鲜艳的事物往往越危险——钴蓝箭毒蛙也不例外。钴蓝箭毒蛙带有剧毒，虽然在箭毒蛙中并非毒性最强的存在（最毒的是叶毒蛙属的金色箭毒蛙），暂居第二；但它分泌的箭毒蛙碱 (Batrachotoxin)2是已知毒性最强的生物碱之一：它在小鼠体内的静脉注射半致死剂量为 2-3 µg/kg。
+ 钴蓝箭毒蛙在箭毒蛙中属于体型比较大的种类，不过即使如此其体长也只有4厘米左右，这与游戏内蓝毒小巧的体型相近（蓝毒身高157，在女性干员中排到至少50名开外）。钴蓝箭毒蛙最为人称道的是其炫目的荧光蓝体色，这种颜色在自然界的动物体色中是非常少见的。根据人们一贯的认知，颜色越鲜艳的事物往往越危险——钴蓝箭毒蛙也不例外。钴蓝箭毒蛙带有剧毒，虽然在箭毒蛙中并非毒性最强的存在（最毒的是叶毒蛙属的金色箭毒蛙），暂居第二；但它分泌的箭毒蛙碱（Batrachotoxin）2是已知毒性最强的生物碱之一：它在小鼠体内的静脉注射半致死剂量为2-3µg/kg。
  尽管缺乏决定性的证据，但根据若干份秘密渠道获得的情报显示，一些对抗大型生物的战斗中曾有人指认过蓝毒的身影。（档案资料四）
- 在对话中，蓝毒询问博士为什么一直盯着他看，得到的答复是“眼睛很罕见”。观察立绘不难看出，蓝毒的眼睛呈亮蓝色，且瞳仁呈横向的梭形——梭形或椭圆形是蛙类眼睛瞳仁的常见特征3。至于蓝色嘛，有人解释为瓦登伯革氏症候群（ Waardenburg Syndrome ），奈何本人才疏学浅，只能解读为画师想设计一个蓝色色调的人物。
+ 在对话中，蓝毒询问博士为什么一直盯着他看，得到的答复是“眼睛很罕见”。观察立绘不难看出，蓝毒的眼睛呈亮蓝色，且瞳仁呈横向的梭形——梭形或椭圆形是蛙类眼睛瞳仁的常见特征3。至于蓝色嘛，有佬解释为瓦登伯革氏症候群（Waardenburg Syndrome），奈何本人才疏学浅，只能解读为画师想设计一个蓝色色调的人物。
 蓝毒的战斗方式主要是利用小型手弩以及含毒弩箭对敌人进行精确尿分叉4打击：
  蓝毒所使用的小型手弩被证明是一种拥有极为优秀的射程且威力不俗的狙击武器，而她自行调配的含有毒制剂的弩箭更使她的每一次攻击都会具备致命的杀伤力。蓝毒从不会让敌人以凄惨的状态死去，因为这实在是不怎么优雅。（档案资料一）
   似乎听到了毒液沸腾的声音，真让人心情愉快啊。（观看作战记录）
@@ -761,7 +849,9 @@ Adele（常做女性名称）来自于德语Adel ，意思是“高贵品质”�
  我是敌人最畏惧的存在。没办法啊，比起被“毒物”折磨而死，不如抢先杀死我，敌人们理所当然会这样选择吧&amp;hellip;&amp;hellip;只是有时候，我的同伴也会思考同样的事，这让我有些不安。（晋升后交谈1）
   各位，没必要离我那么远的&amp;hellip;&amp;hellip;（行动出发）
   请不要怕我。（选中干员2）8
-  用“毒物”去战胜阴谋和罪恶。会不会让您觉得这是种讽刺呢？（4星结束行动）</description>
+  用“毒物”去战胜阴谋和罪恶。会不会让您觉得这是种讽刺呢？（4星结束行动）
+ 类似于自卑的感情，始终在蓝毒的内心深处深植，让人不禁想到陨星。而为数不多的能够将蓝毒视为正常人对待的博士，在蓝毒看来或许就是自己的拯救者：
+ 因为我是“毒物”，所以谁都不想接近我&amp;hellip;&amp;hellip;但，这样的我的身边，现在总能有博士相伴。我很开心呦，真的。（信赖提升后交谈2）</description>
     </item>
     
     <item>

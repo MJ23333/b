@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN" >
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> 相图 | Edward Kerman&#39;s blog</title>
+    
+    <link rel="icon" type="image/png" href="/icons/Hi-Res.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  
+  
+  pangu.spacingElementByTagName('p');
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    pangu.autoSpacingPage();
+  });
+</script>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="相图"/>
+<meta name="twitter:description" content="双组分理想液体混合物 对于两种挥发性液体组成的双组分理想溶液
+蒸气压图 由Raoult定律： $$ \align{p&amp;=p_\A&#43;p_\B\\ &amp;=p^*_\A x_\A &#43; p^*_\B (1-x_\A)\\&amp;=p^*_\B &#43; (p^*_\A- p^*_\B)x_\A} $$ 由此可以画出 $p-x_\A$图。
+对于气相组分（记为$y_{\rm C}$），根据分压定律： $$ \align{y_\A&amp;=\frac{p_\A}{p}=\frac{p^*_\A x_\A}{p^*_\B &#43; (p^*_\A- p^*_\B)x_\A}\\y_\B&amp;=\frac{p_\B}{p}=\frac{p^*_\B (1-x_\A)}{p^*_\B &#43; (p^*_\A- p^*_\B)x_\A}} $$ 由此可画出 $y_\A-x_\A$图。
+延伸一下思路，用压力表示$x_\C$和$y_\C$的关系（使用分压定律和Raoult定律）： $$ \frac{y_\C}{x_\C}=\frac{p_\C^*}{p} $$
+$T-x_\A$和$T-y_\A$图 我们主要关注气-液平衡，相界线上，对于每个组份都有如下关系： $$ p_\C({\rm l})=p_\C({\rm g})\\
+\mu_\C({\rm l})=\mu_\C({\rm g})\\
+T_\C({\rm l})=T_\C({\rm g}) $$ 同时： $$ \sum x_\C=\sum y_\C=1 $$
+首先使用温度表示某温度下饱和蒸气压$p^*$与总压$p$（默认为标准大气压，即该液体沸点时的饱和蒸汽压）之比： $$ \ln\frac{p_\A^*}{p}=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}} $$ 根据上一节得到的$x_\C$和$y_\C$关系，带入： $$ \ln\frac{y_\A}{x_\A}=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}} $$ 由于$x_\C$和$y_\A$的总和分别为1，可以得到两个方程： $$ \left \{\begin{align}\ln\frac{y_\A}{x_\A}&amp;=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}}\\ \ln\frac{1-y_\A}{1-x_\A}&amp;=-\frac{\D_{\rm vap}H_\B}{R}\l{\frac1T-\frac1{T_{\rm b}}}\end{align}\right."/>
+
+  </head>
+  <body>
+
+    <nav class="menu">
+    <ul>
+      <li class="left">
+        <a href="/"><span>Edward Kerman&#39;s blog</span></a>
+      </li>
+      
+      <li>
+        <a href="/">Home</a>
+      </li>
+      
+      <li>
+        <a href="/about/">About</a>
+      </li>
+      
+      <li>
+        <a href="/sitemap/">Sitemap</a>
+      </li>
+      
+      <li id="menu-search">
+        <a href="/#">Search</a>
+      </li>
+      
+      <li>
+        <a href="/index.xml">Subscribe</a>
+      </li>
+      
+    </ul>
+    </nav>
+		
+
+
+<div class="container single">
+<main>
+
+<div class="article-meta">
+<h1><span class="title">相图</span></h1>
+
+<h3 class="author">
+Edward Kerman
+</h3>
+
+<h3 class="date">2022-02-18</h3>
+<p class="terms">
+  
+  
+  Categories: <a href="/categories/academic">Academic</a> <a href="/categories/%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%A6">物理化学</a> 
+  
+  
+  
+  Tags: <a href="/tags/%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%A6">物理化学</a> <a href="/tags/%E7%83%AD%E5%8A%9B%E5%AD%A6">热力学</a> <a href="/tags/%E5%85%A5%E9%97%A8">入门</a> 
+  
+  
+</p>
+</div>
+
+<div class="article">
+<!-- \(
+  \def\d{{\mathrm d}}
+	\def\B{{\mathrm B}}
+	\def\A{{\mathrm A}}
+	\def\D{{\Delta}}
+	\def\m{{\mathrm m}}
+	\def\align #1{{\begin{align*} #1 \end{align*}}}
+	\def\f #1#2{{\frac{\partial  #1}{\partial  #2}}}
+	\def\lf #1#2{{\left(\frac{\partial  #1}{\partial  #2}\right)}}
+	\def\l #1{{\left( #1\right)}}
+	\def\red #1{{\color{red}{ #1}}}
+	\def\green #1{{\color{green}{ #1}}}
+	\def\blue #1{{\color{blue}{ #1}}}
+\) -->
+<h2 id="双组分理想液体混合物">双组分理想液体混合物</h2>
+<p>对于两种挥发性液体组成的双组分理想溶液</p>
+<h3 id="蒸气压图">蒸气压图</h3>
+<p>由Raoult定律：
+$$
+\align{p&amp;=p_\A+p_\B\\ &amp;=p^*_\A x_\A + p^*_\B (1-x_\A)\\&amp;=p^*_\B + (p^*_\A- p^*_\B)x_\A}
+$$
+由此可以画出 $p-x_\A$图。</p>
+<p>对于气相组分（记为$y_{\rm C}$），根据分压定律：
+$$
+\align{y_\A&amp;=\frac{p_\A}{p}=\frac{p^*_\A x_\A}{p^*_\B + (p^*_\A- p^*_\B)x_\A}\\y_\B&amp;=\frac{p_\B}{p}=\frac{p^*_\B (1-x_\A)}{p^*_\B + (p^*_\A- p^*_\B)x_\A}}
+$$
+由此可画出 $y_\A-x_\A$图。</p>
+<p>延伸一下思路，用压力表示$x_\C$和$y_\C$的关系（使用分压定律和Raoult定律）：
+$$
+\frac{y_\C}{x_\C}=\frac{p_\C^*}{p}
+$$</p>
+<h3 id="t-x_a和t-y_a图">$T-x_\A$和$T-y_\A$图</h3>
+<p>我们主要关注气-液平衡，相界线上，对于每个组份都有如下关系：
+$$
+p_\C({\rm l})=p_\C({\rm g})\\<br>
+\mu_\C({\rm l})=\mu_\C({\rm g})\\<br>
+T_\C({\rm l})=T_\C({\rm g})
+$$
+同时：
+$$
+\sum x_\C=\sum y_\C=1
+$$</p>
+<p>首先使用温度表示某温度下饱和蒸气压$p^*$与总压$p$（默认为标准大气压，即<b>该液体沸点时的饱和蒸汽压</b>）之比：
+$$
+\ln\frac{p_\A^*}{p}=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}}
+$$
+根据上一节得到的$x_\C$和$y_\C$关系，带入：
+$$
+\ln\frac{y_\A}{x_\A}=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}}
+$$
+由于$x_\C$和$y_\A$的总和分别为1，可以得到两个方程：
+$$
+\left \{\begin{align}\ln\frac{y_\A}{x_\A}&amp;=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}}\\ \ln\frac{1-y_\A}{1-x_\A}&amp;=-\frac{\D_{\rm vap}H_\B}{R}\l{\frac1T-\frac1{T_{\rm b}}}\end{align}\right.
+$$
+解出两个曲线，其中$T-x_\A$为泡点曲线，泡点是于固定压力下加热多组分液体的过程中，形成第一个气泡时的温度；$T-y_\A$为露点取曲线，定义与泡点类似。</p>
+<p>当我们把横轴变成A的总摩尔分数$z_\A$（气相和液相之和）时，我们可以作一条与横轴平行的线，称为<b>等组成线</b>，该线表示了随温度变化总组成确定的体系的气相和液相组成与温度的关系：</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0u78yung0j20q40f4mxy.jpg" alt="image-20220401142223021" style="zoom:50%;" /></p>
+<p>我们可以利用<b>杠杆规则</b>预测气相和液相相对含量，知道以下关系
+$$
+\align{n_\A=\l{n_{\rm l}+n_{\rm g}}z_\A&amp;=n_{\rm l}x_\A+n_{\rm g}y_\A\\n_{\rm l}\l{z_\A-x_\A}&amp;=n_{\rm g}\l{y_\A-z_\A}\\n_{\rm l}l_{\rm l}&amp;=n_{\rm g}l_{\rm g}}
+$$
+其中$l_{\rm l},l_{\rm g}$分别对应图上的$l_{\rm L},l_{\rm V}$。</p>
+<h4 id="蒸馏">蒸馏</h4>
+<p>有一种组分更容易挥发，每次取出蒸汽冷凝后再次蒸馏：</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0u88qgmaaj20kk0ckjse.jpg" alt="image-20220401145645390" style="zoom:50%;" /></p>
+<p>每次蒸馏的气相组成可通过下式计算：
+$$</p>
+<p>$$</p>
+<p>对于恒沸物种</p>
+
+</div>
+</main>
+
+<section class="appendix">
+
+
+<div>
+  <div class="side side-left"><h3>Author&#39;s bio</h3></div>
+  <div>
+
+
+
+
+
+<div>Edward Kerman——化竞菜鸡，舟厨，ksp爱好者，花样滑冰云观众。</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Reuse</h3></div>
+  Text and figures are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution CC BY 4.0</a>.
+</div>
+
+
+
+<div>
+  <div class="side side-left"><h3>Suggest changes</h3></div>
+  
+  
+  
+    
+    
+  
+  If you find any mistakes (including typos) or want to suggest changes, please feel free to <a href="https://github.com/MJ23333/b/edit/master/content/post/wlhx/%e7%9b%b8%e5%9b%be.md" id="edit-link">edit the source file of this page on Github and create a pull request.</a>
+</div>
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Citation</h3></div>
+  <p>For attribution, please cite this work as</p>
+  <pre><code class="no-highlight">Edward Kerman (2022). 相图. Edward Kerman&#39;s blog. /post/2022/02/18/%E7%9B%B8%E5%9B%BE/</code></pre>
+  <p>BibTeX citation</p>
+  <pre><code class="no-highlight">@misc{
+  title = "相图",
+  author = "Edward Kerman",
+  year = "2022",
+  journal = "Edward Kerman&#39;s blog",
+  note = "/post/2022/02/18/%E7%9B%B8%E5%9B%BE/"
+}</code></pre>
+</div>
+
+</section>
+
+
+
+<nav class="post-nav">
+  <span class="nav-next">&larr; <a href="/post/2022/01/25/%E9%A9%AC%E5%BE%B7%E9%9A%86%E5%B8%B8%E6%95%B0%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E6%89%AB%E9%9B%B7/" title=Next&#32;post&#32;(older)>马德隆常数计算方法扫雷</a></span>
+  &hercon;
+  <span class="nav-prev"><a href="/post/2022/02/18/%E7%9B%B8%E5%8F%98/" title=Previous&#32;post&#32;(newer)>相变</a> &rarr;</span>
+</nav>
+
+
+
+
+
+</div>
+
+
+  <footer>
+  <script async src="//yihui.org/js/center-img.js"></script>
+
+			<script type="text/x-mathjax-config">
+				MathJax.Hub.Config({
+					extensions: ["tex2jax.js"],
+					jax: ["input/TeX", "output/HTML-CSS"],
+					TeX: {
+						extensions: ["mhchem.js"],
+						Macros: {
+								d: "{\\mathrm d}",
+								p: "{\\mathrm p}",
+								pKa: "{\\mathrm{p}K_{a}}",
+								Ka: "{K_{a}}",
+								pH: "{\\mathrm{pH}}",
+								H: "{\\left\[\\ce{H+}\\right\]}",
+								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
+								B: "{\\mathrm B}",
+								A: "{\\mathrm A}",
+								C: "{\\mathrm C}",
+								r: "{\\mathrm r}",
+								m: "{\\mathrm m}",
+								D: "{\\Delta}",
+								o: "{\\ominus}",
+								Ek: "{E_{\\mathrm k}}",
+								Ep: "{E_{\\mathrm p}}",
+								K: "{\\space\\mathrm K}",
+								J: "{\\space\\mathrm J}",
+								kJ: "{\\space\\mathrm {kJ}}",
+								eV: "{\\space\\mathrm {eV}}",
+								mol: "{\\space\\mathrm {mol}}",
+								kjm: "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
+								align: ["{\\begin{align*} #1 \\end{align*}}",1],
+								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
+								l: ["{\\left( #1\\right)}",1],
+								lf: ["{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",2],
+								red: ["{\\color{red}{ #1}}",1],
+								green: ["{\\color{green}{ #1}}",1],
+								blue: ["{\\color{blue}{ #1}}",1],
+								bm: ["{\\boldsymbol{ #1}}",1]
+						}
+					},
+					tex2jax: {
+						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+						processEscapes: true
+					},
+					CommonHTML: { linebreaks: { automatic: true } },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
+         	SVG: { linebreaks: { automatic: true } }
+				});
+			</script>
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+
+
+
+
+
+  <div class="footer">
+  
+  <ul class="copyright">
+    <li>© Edward Kerman 2020-2022</li>
+  </ul>
+  
+  <ul>
+    
+    <li class="optional">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    <li class="optional">
+      <a href="/tags/">Tags</a>
+    </li>
+    
+    <li id="menu-edit">
+      <a href="#">Suggest an edit</a>
+    </li>
+    
+    <li>
+      <a href="#">Back to top</a>
+    </li>
+    
+  </ul>
+  </div>
+  
+  </footer>
+  <script async src="/js/features.js" data-page-features="[null,[&#34;&#43;sidenotes&#34;],null]"></script>
+  </body>
+</html>
+

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-Hans-CN" >
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,9 +15,19 @@
 
 
 <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
-<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  
+  
+  pangu.spacingElementByTagName('p');
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    pangu.autoSpacingPage();
+  });
+</script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="具体晶体"/>
 <meta name="twitter:description" content="固体电解质 阳离子型 $\ce{Ag2HgI4}$：I一直十分规则，Ag、Hg分布在Td（有的地方没有）：低温——规则；高温——随机分布；而Td远多于Ag（类似的有$\ce{AgI}$、$\ce{RbAg4I5}$）：
@@ -70,7 +80,6 @@ YBCO（也叫“123”）型：$\ce{YBa2Cu3O7}$
 衍生结构：$\ce{Tl2Ba2Ca2Cu3O10}$（TlO——TlO——BaO——$\ce{CuO2}$——Ca——$\ce{CuO2}$——Ca——$\ce{CuO2}$——BaO），品味以下结构：更多
 其他结构：
    化合物 结构     $\ce{YBa2Cu3O7}$ 已经介绍（CaTiO3变体）   $\ce{Tl2Ba3Ca4Cu4O12}$ YBCO变体   $\ce{MgB2}$    $\ce{LiTi2O4}$ 尖晶石   $\ce{Nb3Ge，Nb3Sn}$ A15堆积   $\ce{K_{0."/>
-
 
   </head>
   <body>
@@ -487,10 +496,19 @@ $$
 						extensions: ["mhchem.js"],
 						Macros: {
 								d: "{\\mathrm d}",
+								p: "{\\mathrm p}",
+								pKa: "{\\mathrm{p}K_{a}}",
+								Ka: "{K_{a}}",
+								pH: "{\\mathrm{pH}}",
+								H: "{\\left\[\\ce{H+}\\right\]}",
+								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
 								B: "{\\mathrm B}",
 								A: "{\\mathrm A}",
+								C: "{\\mathrm C}",
+								r: "{\\mathrm r}",
 								m: "{\\mathrm m}",
 								D: "{\\Delta}",
+								o: "{\\ominus}",
 								Ek: "{E_{\\mathrm k}}",
 								Ep: "{E_{\\mathrm p}}",
 								K: "{\\space\\mathrm K}",
@@ -515,7 +533,7 @@ $$
 						processEscapes: true
 					},
 					CommonHTML: { linebreaks: { automatic: true } },
-  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
          	SVG: { linebreaks: { automatic: true } }
 				});
 			</script>

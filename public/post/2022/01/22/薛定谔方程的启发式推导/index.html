@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-Hans-CN" >
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,9 +15,19 @@
 
 
 <link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
-<link href="http://fonts.cdnfonts.com/css/neo-euler" rel="stylesheet">
+
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  
+  
+  pangu.spacingElementByTagName('p');
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    pangu.autoSpacingPage();
+  });
+</script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="薛定谔方程的启发式推导"/>
 <meta name="twitter:description" content="快速的启发式推导，仅用于帮助理解就行了。1
@@ -26,7 +36,6 @@ de Broglie 关系和 Einstein 关系 $$ \begin{gather*} E=\color{blue}{{\frac12}
 注意 Einstein 关系里的$E$是所有能量（不一定只有动能）。
 含时薛定谔方程 假设波函数是一个最简单的简谐波： $$ \Psi(x,t)=Ae^{i(kx-\omega t)} $$ 其中$\omega$是角频率，$k$为波数（都多乘了$2\pi$），请查看以获得更多介绍
 结合 Einstein 关系： $$ \omega=2\pi \nu=\frac E\hbar\newline $$ 我们可以推一波： $$ \begin{gather*} \frac{\partial}{\partial t} \Psi=-i\omega\Psi \ \hbar\frac{\partial}{\partial t} \Psi=-i\color{green}{E}\Psi \ i\hbar\frac{\partial}{\partial t} \Psi=\color{green}{E}\Psi \end{gather*} $$ 又知道$E=T&#43;V=p^2/2m&#43;V(x)$（假设势能与时间无关），结合关系： $$ \color{green}{E}=\color{green}{{\frac{\hbar^2k^2}{2m}}&#43;V(x)} $$ 得到： $$ i\hbar\frac{\partial}{\partial t} \Psi=\left(\color{green}{{\frac{\hbar^2\color{red}{k^2}}{2m}}&#43;V(x)}\right)\Psi $$ 做一波偏微分： $$ \frac\partial{\partial x}\Psi=ik\Psi,\qquad \frac{\partial^2}{\partial x^2}\Psi=-k^2\Psi $$ 推得： $$ \color{red}{k^2}=\color{red}{-{\frac{{\partial^2}/{\partial x^2}\Psi}\Psi}} $$ 带入上式： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{\color{red}{-}\frac{\hbar^2}{2m}\color{red}{{\frac{\partial^2}{\partial x^2}}}&#43;V(x)\right\}\Psi $$ 拓展到三次元： $$ i\hbar\frac{\partial}{\partial t}\Psi=\left\{-\frac{\hbar^2}{2m}{\color{blue}\nabla}^2&#43;V(\mathbf {\color{blue}r})\right\}\Psi $$ 定义哈密顿算子$\hat H$： $$ {\color{orange}{\hat H}}=-\frac{\hbar^2}{2m}\nabla^2&#43;V(\mathbf r) $$ 所以简写为： $$ {\color{orange}{\hat H}}\Psi=i\hbar\frac{\partial}{\partial t}\Psi $$"/>
-
 
   </head>
   <body>
@@ -291,10 +300,19 @@ $$</p>
 						extensions: ["mhchem.js"],
 						Macros: {
 								d: "{\\mathrm d}",
+								p: "{\\mathrm p}",
+								pKa: "{\\mathrm{p}K_{a}}",
+								Ka: "{K_{a}}",
+								pH: "{\\mathrm{pH}}",
+								H: "{\\left\[\\ce{H+}\\right\]}",
+								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
 								B: "{\\mathrm B}",
 								A: "{\\mathrm A}",
+								C: "{\\mathrm C}",
+								r: "{\\mathrm r}",
 								m: "{\\mathrm m}",
 								D: "{\\Delta}",
+								o: "{\\ominus}",
 								Ek: "{E_{\\mathrm k}}",
 								Ep: "{E_{\\mathrm p}}",
 								K: "{\\space\\mathrm K}",
@@ -319,7 +337,7 @@ $$</p>
 						processEscapes: true
 					},
 					CommonHTML: { linebreaks: { automatic: true } },
-  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Neo-Euler"] },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
          	SVG: { linebreaks: { automatic: true } }
 				});
 			</script>

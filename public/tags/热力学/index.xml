@@ -13,8 +13,14 @@
       <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>/post/2022/02/18/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/</guid>
-      <description>偏导数 当你知道$f=f(x,y)=f(x,y(x,z))$时： $$ \align{\d f&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\d y\\&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\left[\l{\f{y}{x}}_z\d x+\l{\f{y}{z}}_x\d z\right]\\&amp;amp;=\left[\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z\right]\d x+\l{\f{f}{y}}_x\l{\f{y}{z}}_x\d z} $$ 此时，根据偏导数的定义得到性质1： $$ \l{\f{f}{x}}_z=\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z $$ 它有什么用呢？考虑下面一个例子： $$ \align{\d f&amp;amp;=\lf fx_y\d x+\lf fy_x\d y\\\lf fx_z&amp;amp;=\lf fx_y+\lf fy_x\lf yx_z} $$ 直接把$\d x$除过去是很爽，但以前总会心有芥蒂——为啥出过去就自动$z$不变了？现在我们有了完美的解答——把$\d y$进一步用$x,z$表示出来即可。
-我们进一步推广，对于$f=f(u(x,y),v(x,y))$，如法炮制，得到： $$ \f fx=\f fu\f ux+\f fv\f vx $$ 其实这是复合函数偏导的链式法则。
+      <description>简单微分 $$ (\sin x)&#39;=\cos x\\
+(\cos x)&#39;=-\sin x\\
+(a^x)&#39;=a^x\ln a\\
+(\log a)&#39;=\frac{x\ln a}\\
+(uv)&#39;=u&amp;rsquo;v+v&amp;rsquo;u\\
+(\frac uv)&#39;=\frac{u&amp;rsquo;v-v&amp;rsquo;u}{v^2} $$
+偏导数 当你知道$f=f(x,y)=f(x,y(x,z))$时： $$ \align{\d f&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\d y\\&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\left[\l{\f{y}{x}}_z\d x+\l{\f{y}{z}}_x\d z\right]\\&amp;amp;=\left[\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z\right]\d x+\l{\f{f}{y}}_x\l{\f{y}{z}}_x\d z} $$ 此时，根据偏导数的定义得到性质1： $$ \l{\f{f}{x}}_z=\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z $$ 它有什么用呢？考虑下面一个例子： $$ \align{\d f&amp;amp;=\lf fx_y\d x+\lf fy_x\d y\\\lf fx_z&amp;amp;=\lf fx_y+\lf fy_x\lf yx_z} $$ 直接把$\d x$除过去是很爽，但以前总会心有芥蒂——为啥出过去就自动$z$不变了？现在我们有了完美的解答——把$\d y$进一步用$x,z$表示出来即可。
+我们进一步推广，对于$f=f(u(x,y),v(x,y))$，如法炮制，得到： $$ \f fx=\f fu\f ux+\f fv\f vx $$ 其实就是复合函数偏导的链式法则。
 同时，不难知道性质2： $$ \l{\f{x}{y}}_z=\frac1{\l{\f{y}{x}}_z} $$
 我们继续研究$x,y,z$的关系，知道： $$ x=x(y,z)=x\left[y(x,z),z\right] $$ 那么写出全微分： $$ \align{\d x&amp;amp;=\lf{x}{y}_z\d y+\lf{x}{z}_y\d z\\&amp;amp;=\lf{x}{y}_z\left[\lf{y}{x}_z\d x+\lf{y}{z}_x\d z\right]+\lf{x}{z}_y\d z\\&amp;amp;=\left[\lf{x}{y}_z\lf{y}{x}_z\right]\d x+\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z} $$ 根据性质2，得到性质3： $$ \align{\d x&amp;amp;=\d x+\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z\\0&amp;amp;=\left[\lf{x}{y}_z\lf{y}{z}_x+\lf{x}{z}_y\right]\d z\\\lf{x}{z}_y&amp;amp;=-\lf{x}{y}_z\lf{y}{z}_x} $$</description>
     </item>
@@ -55,6 +61,18 @@ $$ r_{\rm B}\doteq \frac{n_{\rm B}}{n_\color{red}{ \rm A}} $$
 $$ Z=Z(T,p,n_1,\dots,n_k) $$
 在等温等压下，有：
 $$ \mathrm dZ=\sum_{\mathrm B=1}^k\left(\frac{\partial Z}{\partial n_{\rm B}}\right)_{T,p,n_{\rm C}(\rm C\neq B)}\mathrm dn_{\rm B}=\sum_{\mathrm B=1}^kZ_{\rm B}\mathrm dn_{\rm B} $$</description>
+    </item>
+    
+    <item>
+      <title>平衡</title>
+      <link>/post/2022/02/18/%E5%B9%B3%E8%A1%A1/</link>
+      <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/02/18/%E5%B9%B3%E8%A1%A1/</guid>
+      <description>平衡常数 因为有： $$ \d G=-S\d T+V\d p+\sum_\C \mu_\C\d n_\C $$ 定义反应进度$\xi$： $$ \d \xi=\frac{\d n_\C}{\nu_\C} $$ 则： $$ \d G=-S\d T+V\d p+\sum_\C \mu_\C\nu_\C\d \xi $$ 那么： $$ \D_\r G=\lf{G}{\xi}_{p,T}=\sum_\C\nu_\C\mu_\C $$ 注意此处的$\D$指的是微分。根据热二，自发反应的方向是$G$减小的方向，因此可通过$\D_\r G$来判断反应的方向。
+在标准情况下： $$ \D_\r G^\o=\sum_\C\nu_\C\mu^\o_\C $$ 而在非标准情况下： $$ \align{\D_\r G&amp;amp;=\sum_\C\nu_\C\l{\mu_\C^\o + RT\ln a_\C}\\ &amp;amp;=\D_\r G^\o+RT\ln\prod_{\C}a_\C^{\nu_\C}} $$ 定义反应商$Q$，注意反应物的$\nu_\C&amp;lt;0$，生成物的$\nu_\C&amp;gt;0$： $$ Q=\prod_{\C}a_\C^{\nu_\C}=\frac{产物的活度}{反应物的活度} $$ 那么： $$ \D_\r G=\D_\r G^\o+RT\ln Q $$ 我们用习惯量替换活度（都要除以标准量，得到的是无单位的比值）：
+可以发现纯固纯液的$a=1$，因此不出现在反应商中。
+在平衡时，$G$的斜率$\D_\r G=0$，定义此时的$Q$为平衡常数$K$： $$ \D_\r G^\o=-RT\ln K $$</description>
     </item>
     
     <item>
@@ -123,6 +141,40 @@ $$ \mathrm dZ=\sum_{\mathrm B=1}^k\left(\frac{\partial Z}{\partial n_{\rm B}}\ri
       <guid>/post/2022/02/18/%E7%94%B5%E5%8C%96%E5%AD%A6/</guid>
       <description>参比电极 $$\ce{AgCl(s) + e- -&amp;gt; Ag(s) + Cl-(aq)}\\\ce{Hg2Cl2(s) + 2e- -&amp;gt; 2Hg(s) + 2Cl-(aq)}$$
 循环伏安法 加入惰性电解质（分析物浓度太低，加大电导率）。</description>
+    </item>
+    
+    <item>
+      <title>相变</title>
+      <link>/post/2022/02/18/%E7%9B%B8%E5%8F%98/</link>
+      <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/02/18/%E7%9B%B8%E5%8F%98/</guid>
+      <description>相律 对于有$C$各组分、$P$个相的系统，使用$p、V$以及每个相中组份的摩尔分数，那么强度变量的总数为：$CP+2$个。由于摩尔分数总和为1，总数变为$CP-P+2$。又因为组分在所有相里的$\mu$相等，总数变为$CP-C(P-1)-P+2=C-P+2$，因此得到Gibbs相律： $$ F=C-P+2 $$
+稳定性与条件的关系 根据以下两个关系（重要）： $$ \lf \mu T_p=-S_\m\\
+\lf \mu p_T=V_\m $$ 对于不同的相： $$ S_\m({\rm g})&amp;gt;S_\m({\rm l})&amp;gt;S_\m({\rm s})\\
+V_\m({\rm g})&amp;gt;V_\m({\rm l})&amp;gt;V_\m({\rm s}) $$
+压力对液体蒸气压的影响 通过惰性气体或使用只对液体有影响的活塞加（总）压可以增大蒸气压。
+等温，全程平衡，化学势相等（$p_{\rm tot}$为总压，$p^*$为原蒸气压，$p$为现蒸气压）： $$ V_\m({\rm l})\d p_{\rm tot}=\frac{RT}p\d p $$ 设压力增大了$\D p$，原来总压就是$p^*$，现总压为$p^*+\D p$，积分（加入$&#39;$防止混淆）： $$ \int_{p*}^{p^*+\D p} V_\m({\rm l})\d p&#39;=RT\int_{p*}^{p}\frac{RT}{p&#39;&#39;}\d p&#39;&#39; $$ 得到结果： $$ V_\m({\rm l})\D p=RT\ln{\frac{p}{p*}}\\
+\ln{\frac{p}{p*}}=\frac{V_\m({\rm l})\D p}{RT}\\
+p=p^*\exp\left[{\frac{V_\m({\rm l})\D p}{RT}}\right] $$ 该结果未考虑惰性气体的溶解。
+相界线的位置 根据定义： $$ \d \mu_\alpha=\d \mu_\beta\\
+-S_\m(\alpha)\d T+V_\m(\alpha)\d p=-S_\m(\beta)\d T+V_\m(\beta)\d p\\</description>
+    </item>
+    
+    <item>
+      <title>相图</title>
+      <link>/post/2022/02/18/%E7%9B%B8%E5%9B%BE/</link>
+      <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/02/18/%E7%9B%B8%E5%9B%BE/</guid>
+      <description>双组分理想液体混合物 对于两种挥发性液体组成的双组分理想溶液
+蒸气压图 由Raoult定律： $$ \align{p&amp;amp;=p_\A+p_\B\\ &amp;amp;=p^*_\A x_\A + p^*_\B (1-x_\A)\\&amp;amp;=p^*_\B + (p^*_\A- p^*_\B)x_\A} $$ 由此可以画出 $p-x_\A$图。
+对于气相组分（记为$y_{\rm C}$），根据分压定律： $$ \align{y_\A&amp;amp;=\frac{p_\A}{p}=\frac{p^*_\A x_\A}{p^*_\B + (p^*_\A- p^*_\B)x_\A}\\y_\B&amp;amp;=\frac{p_\B}{p}=\frac{p^*_\B (1-x_\A)}{p^*_\B + (p^*_\A- p^*_\B)x_\A}} $$ 由此可画出 $y_\A-x_\A$图。
+延伸一下思路，用压力表示$x_\C$和$y_\C$的关系（使用分压定律和Raoult定律）： $$ \frac{y_\C}{x_\C}=\frac{p_\C^*}{p} $$
+$T-x_\A$和$T-y_\A$图 我们主要关注气-液平衡，相界线上，对于每个组份都有如下关系： $$ p_\C({\rm l})=p_\C({\rm g})\\
+\mu_\C({\rm l})=\mu_\C({\rm g})\\
+T_\C({\rm l})=T_\C({\rm g}) $$ 同时： $$ \sum x_\C=\sum y_\C=1 $$
+首先使用温度表示某温度下饱和蒸气压$p^*$与总压$p$（默认为标准大气压，即该液体沸点时的饱和蒸汽压）之比： $$ \ln\frac{p_\A^*}{p}=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}} $$ 根据上一节得到的$x_\C$和$y_\C$关系，带入： $$ \ln\frac{y_\A}{x_\A}=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}} $$ 由于$x_\C$和$y_\A$的总和分别为1，可以得到两个方程： $$ \left \{\begin{align}\ln\frac{y_\A}{x_\A}&amp;amp;=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}}\\ \ln\frac{1-y_\A}{1-x_\A}&amp;amp;=-\frac{\D_{\rm vap}H_\B}{R}\l{\frac1T-\frac1{T_{\rm b}}}\end{align}\right.</description>
     </item>
     
   </channel>
