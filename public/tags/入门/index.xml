@@ -140,9 +140,10 @@ $I$系列 正十二面体(12)，正二十面体(20)，二者合体$\ce{C_60}$(12
       <description>简单微分 $$ (\sin x)&#39;=\cos x\\
 (\cos x)&#39;=-\sin x\\
 (a^x)&#39;=a^x\ln a\\
-(\log a)&#39;=\frac{x\ln a}\\
+(\log a)&#39;=\frac1{x\ln a}\\
 (uv)&#39;=u&amp;rsquo;v+v&amp;rsquo;u\\
 (\frac uv)&#39;=\frac{u&amp;rsquo;v-v&amp;rsquo;u}{v^2} $$
+全微分 满足如下条件： $$ \left[\f{}{B}\lf{X}{A}_B\right]_A=\left[\f{}{A}\lf{X}{B}_A\right]_B $$
 偏导数 当你知道$f=f(x,y)=f(x,y(x,z))$时： $$ \align{\d f&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\d y\\&amp;amp;=\l{\f{f}{x}}_y\d x+\l{\f{f}{y}}_x\left[\l{\f{y}{x}}_z\d x+\l{\f{y}{z}}_x\d z\right]\\&amp;amp;=\left[\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z\right]\d x+\l{\f{f}{y}}_x\l{\f{y}{z}}_x\d z} $$ 此时，根据偏导数的定义得到性质1： $$ \l{\f{f}{x}}_z=\l{\f{f}{x}}_y+\l{\f{f}{y}}_x\l{\f{y}{x}}_z $$ 它有什么用呢？考虑下面一个例子： $$ \align{\d f&amp;amp;=\lf fx_y\d x+\lf fy_x\d y\\\lf fx_z&amp;amp;=\lf fx_y+\lf fy_x\lf yx_z} $$ 直接把$\d x$除过去是很爽，但以前总会心有芥蒂——为啥出过去就自动$z$不变了？现在我们有了完美的解答——把$\d y$进一步用$x,z$表示出来即可。
 我们进一步推广，对于$f=f(u(x,y),v(x,y))$，如法炮制，得到： $$ \f fx=\f fu\f ux+\f fv\f vx $$ 其实就是复合函数偏导的链式法则。
 同时，不难知道性质2： $$ \l{\f{x}{y}}_z=\frac1{\l{\f{y}{x}}_z} $$
@@ -161,12 +162,31 @@ $I$系列 正十二面体(12)，正二十面体(20)，二者合体$\ce{C_60}$(12
     </item>
     
     <item>
+      <title>动力学</title>
+      <link>/post/2022/02/18/%E5%8A%A8%E5%8A%9B%E5%AD%A6/</link>
+      <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/02/18/%E5%8A%A8%E5%8A%9B%E5%AD%A6/</guid>
+      <description>测量的方法 光谱（吸收）、电导率、pH、发射光谱、质谱、气相色谱、核磁共振、电子顺磁共振（自由基、顺磁性金属）
+流动法——不同的位置相当于不同的反应时间
+速率 一般式： $$ v=\frac1V\frac{\d\xi}{\d t} $$
+对于等容的均相反应： $$ v=\frac1{\nu_\C}\frac{\d [\C]}{\d t} $$
+对于多相反应，用表面积（恒定）A替代体积V，用表面浓度$\sigma_\C$替代浓度： $$ v=\frac1{\nu_\C}\frac{\d \sigma_\C}{\d t} $$也可以使用催化剂质量、催化剂的堆体积等。
+速率方程的确定 微分法（一般是初始速率）： $$ n=\frac{\ln r_1/r_2}{\ln c_1/c_2} $$
+半衰期法： $$ n=1-\frac{\ln t_{1/2}&#39;/t_{1/2}&#39;&#39;}{\ln c_{0}&#39;/c_{0}&#39;&#39;} $$
+如果使用待测物质的浓度不会变则不能用上述方法，比如在$\ce{H+}$缓冲溶液中，应该将原来的表观速率常数拆开（此处对于一级反应）： $$ t_{1/2}=\frac{\ln 2}{k&#39;}=\frac{\ln2}{k[\ce{H+}]^\beta} $$ 再做进一步计算。
+根据键焓估算活化能  裂解为自由基的反应$E_\a=B.E.$ 自由基复合反应$E_\a=0$ 自由基的转移，放热方向$E_\a=5.5\% B.E.（断裂）$（不然过渡态能量还没产物高） 自由基转移吸热方向：求出逆方向的活化能（逆方向断裂——正方向形成），加上焓变 分子间基元反应，$E_\a=30\% B.E.（断裂）$  稳态近似 所有中间产物都稳态，速率按照方程式书写（看生成产物的那一步）
+快平衡 必须有决速步，决速步前处于平衡，以决速步计算速度（乘除相应计量系数，即决速步的产物可以被转换为几mol最终产物）</description>
+    </item>
+    
+    <item>
       <title>多组分热力学</title>
       <link>/post/2022/02/18/%E5%A4%9A%E7%BB%84%E5%88%86%E7%83%AD%E5%8A%9B%E5%AD%A6/</link>
       <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>/post/2022/02/18/%E5%A4%9A%E7%BB%84%E5%88%86%E7%83%AD%E5%8A%9B%E5%AD%A6/</guid>
-      <description>多组分系统：两种或两种以上组分所形成的系统
+      <description>$$ \def\d{{\mathrm d}} \def\B{{\mathrm B}} \def\A{{\mathrm A}} \def\D{{\Delta}} \def\m{{\mathrm m}} \def\align #1{{\begin{align*} #1 \end{align*}}} \def\f #1#2{{\frac{\partial #1}{\partial #2}}} \def\lf #1#2{{\left(\frac{\partial #1}{\partial #2}\right)}} \def\l #1{{\left( #1\right)}} \def\red #1{{\color{red}{ #1}}} \def\green #1{{\color{green}{ #1}}} \def\blue #1{{\color{blue}{ #1}}} $$
+多组分系统：两种或两种以上组分所形成的系统
 混合物：含有一种以上组分的系统
 溶液：含有一种以上组分的液相和固相（没有气相），分为溶质$\rm B$和溶剂$\rm A$。
 组成的表示 对于混合物 质量浓度（并不常用）：
@@ -176,15 +196,7 @@ $$ w_{\rm B}\doteq \frac{m({\rm B})}{m_{\rm tot}} $$
 物质的量浓度：
 $$ c_{\rm B}=[{\rm B}]\doteq \frac{n_{\rm B}}{V_{\rm tot}} $$
 摩尔分数：
-$$ x_{\rm B}\doteq \frac{n_{\rm B}}{n_{\rm tot}} $$
-对于溶液 质量摩尔浓度：
-$$ m_{\rm B}\doteq \frac{n_{\rm B}}{m_\color{red}{ \rm A}} $$
-溶质的摩尔比：
-$$ r_{\rm B}\doteq \frac{n_{\rm B}}{n_\color{red}{ \rm A}} $$
-偏摩尔量 对于一个$k$组分均相系统的广度性质$Z$，它与各个组分的物质的量有关$n_i$：
-$$ Z=Z(T,p,n_1,\dots,n_k) $$
-在等温等压下，有：
-$$ \mathrm dZ=\sum_{\mathrm B=1}^k\left(\frac{\partial Z}{\partial n_{\rm B}}\right)_{T,p,n_{\rm C}(\rm C\neq B)}\mathrm dn_{\rm B}=\sum_{\mathrm B=1}^kZ_{\rm B}\mathrm dn_{\rm B} $$</description>
+$$ x_{\rm B}\doteq \frac{n_{\rm B}}{n_{\rm tot}} $$</description>
     </item>
     
     <item>
@@ -196,7 +208,8 @@ $$ \mathrm dZ=\sum_{\mathrm B=1}^k\left(\frac{\partial Z}{\partial n_{\rm B}}\ri
       <description>平衡常数 因为有： $$ \d G=-S\d T+V\d p+\sum_\C \mu_\C\d n_\C $$ 定义反应进度$\xi$： $$ \d \xi=\frac{\d n_\C}{\nu_\C} $$ 则： $$ \d G=-S\d T+V\d p+\sum_\C \mu_\C\nu_\C\d \xi $$ 那么： $$ \D_\r G=\lf{G}{\xi}_{p,T}=\sum_\C\nu_\C\mu_\C $$ 注意此处的$\D$指的是微分。根据热二，自发反应的方向是$G$减小的方向，因此可通过$\D_\r G$来判断反应的方向。
 在标准情况下： $$ \D_\r G^\o=\sum_\C\nu_\C\mu^\o_\C $$ 而在非标准情况下： $$ \align{\D_\r G&amp;amp;=\sum_\C\nu_\C\l{\mu_\C^\o + RT\ln a_\C}\\ &amp;amp;=\D_\r G^\o+RT\ln\prod_{\C}a_\C^{\nu_\C}} $$ 定义反应商$Q$，注意反应物的$\nu_\C&amp;lt;0$，生成物的$\nu_\C&amp;gt;0$： $$ Q=\prod_{\C}a_\C^{\nu_\C}=\frac{产物的活度}{反应物的活度} $$ 那么： $$ \D_\r G=\D_\r G^\o+RT\ln Q $$ 我们用习惯量替换活度（都要除以标准量，得到的是无单位的比值）：
 可以发现纯固纯液的$a=1$，因此不出现在反应商中。
-在平衡时，$G$的斜率$\D_\r G=0$，定义此时的$Q$为平衡常数$K$： $$ \D_\r G^\o=-RT\ln K $$</description>
+在平衡时，$G$的斜率$\D_\r G=0$，定义此时的$Q$为平衡常数$K$： $$ \D_\r G^\o=-RT\ln K $$
+影响因素 温度的影响 我们知道范特霍夫方程：$$ \frac{\d\l{{\D_\r G^\ominus}/T}}{\d T}=-\frac{\D_\r H}{T^2} $$</description>
     </item>
     
     <item>
@@ -263,8 +276,19 @@ $$ \mathrm dZ=\sum_{\mathrm B=1}^k\left(\frac{\partial Z}{\partial n_{\rm B}}\ri
       <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>/post/2022/02/18/%E7%94%B5%E5%8C%96%E5%AD%A6/</guid>
-      <description>参比电极 $$\ce{AgCl(s) + e- -&amp;gt; Ag(s) + Cl-(aq)}\\\ce{Hg2Cl2(s) + 2e- -&amp;gt; 2Hg(s) + 2Cl-(aq)}$$
-循环伏安法 加入惰性电解质（分析物浓度太低，加大电导率）。</description>
+      <description>离子导体 包括电解质溶液或熔融电解质，注意随温度升高，溶液黏度下降，离子运动速度加快，导电性上升。
+可逆电池 可逆电池有两个要求：
+ 电极上的化学反应可向正、反两个方向进行 可逆电池工作时（无论方向）所通过的电流必须十分微小  书写方法  左负右正 |表示相界面、||表示盐桥（忽略接界电势） 注明温度、压力、活度、物态  电极 阳极发生氧化（负极）、阴极发生还原（正极）。
+可逆电极  金属-离子（-气体）电极，当存在气态物质时需要加入惰性导体作为电极 金属-难溶盐（覆盖于表面）电极 氧化-还原电极：两种金属离子，插入惰性导体（注意醌-氢醌电极）  电势 测定：对消法 原理——使用一个外加电源，连在一根电阻上，注意棒上两点的电势差与长度成正比：
+已知电势的电池和待测电池依次与外加电源并联，当电流计归零时可通过棒长得到电动势大小比值。
+液接电势 液接电势主要由扩散作用（正负离子都要扩散，但速率不同，比如 $\ce{H+}$ 更快）引起（参考 PN 结），可通过盐桥消除（相当于速率相同）。
+电极电势 一般规定标准氢电极的电极电势为0，放在电池负极，此时电池的电动势就是待测电极的电势。
+电势的组合 只需注意在加减时注意：$v_\C E^\ominus(\C)$
+Nerst 方程 $$ E=E^\ominus-\frac{RT}{zF}\ln Q $$
+参比电极 $$\ce{AgCl(s) + e- -&amp;gt; Ag(s) + Cl-(aq)}\\\ce{Hg2Cl2(s) + 2e- -&amp;gt; 2Hg(s) + 2Cl-(aq)}$$
+循环伏安法 加入惰性电解质（分析物浓度太低，加大电导率）。
+电解 电解时的分解电压一般大于可逆电动势： $$ E_{分解}=E_{可逆}+\D E_{不可逆} + IR（热能） $$
+极化  浓差极化——来不及扩散导致电极附近离子浓度小于溶液中的“平均浓度”（可逆电势照此计算） 电化学极化——多步电化学过程中某步骤具有较大的活化能  超电势的正负——无论在原电池还是在电解池中都是阻碍作用。</description>
     </item>
     
     <item>

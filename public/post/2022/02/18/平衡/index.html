@@ -33,7 +33,8 @@
 <meta name="twitter:description" content="平衡常数 因为有： $$ \d G=-S\d T&#43;V\d p&#43;\sum_\C \mu_\C\d n_\C $$ 定义反应进度$\xi$： $$ \d \xi=\frac{\d n_\C}{\nu_\C} $$ 则： $$ \d G=-S\d T&#43;V\d p&#43;\sum_\C \mu_\C\nu_\C\d \xi $$ 那么： $$ \D_\r G=\lf{G}{\xi}_{p,T}=\sum_\C\nu_\C\mu_\C $$ 注意此处的$\D$指的是微分。根据热二，自发反应的方向是$G$减小的方向，因此可通过$\D_\r G$来判断反应的方向。
 在标准情况下： $$ \D_\r G^\o=\sum_\C\nu_\C\mu^\o_\C $$ 而在非标准情况下： $$ \align{\D_\r G&amp;=\sum_\C\nu_\C\l{\mu_\C^\o &#43; RT\ln a_\C}\\ &amp;=\D_\r G^\o&#43;RT\ln\prod_{\C}a_\C^{\nu_\C}} $$ 定义反应商$Q$，注意反应物的$\nu_\C&lt;0$，生成物的$\nu_\C&gt;0$： $$ Q=\prod_{\C}a_\C^{\nu_\C}=\frac{产物的活度}{反应物的活度} $$ 那么： $$ \D_\r G=\D_\r G^\o&#43;RT\ln Q $$ 我们用习惯量替换活度（都要除以标准量，得到的是无单位的比值）：
 可以发现纯固纯液的$a=1$，因此不出现在反应商中。
-在平衡时，$G$的斜率$\D_\r G=0$，定义此时的$Q$为平衡常数$K$： $$ \D_\r G^\o=-RT\ln K $$"/>
+在平衡时，$G$的斜率$\D_\r G=0$，定义此时的$Q$为平衡常数$K$： $$ \D_\r G^\o=-RT\ln K $$
+影响因素 温度的影响 我们知道范特霍夫方程：$$ \frac{\d\l{{\D_\r G^\ominus}/T}}{\d T}=-\frac{\D_\r H}{T^2} $$"/>
 
   </head>
   <body>
@@ -149,6 +150,38 @@ $$
 $$
 \D_\r G^\o=-RT\ln K
 $$</p>
+<h2 id="影响因素">影响因素</h2>
+<h3 id="温度的影响">温度的影响</h3>
+<p>我们知道范特霍夫方程：$$
+\frac{\d\l{{\D_\r G^\ominus}/T}}{\d T}=-\frac{\D_\r H}{T^2}
+$$</p>
+<p>带入平衡常数的定义：$$
+\frac{\d\ln K}{\d T}=\frac{\D_\r H}{RT^2}
+$$</p>
+<p>积分：$$
+\ln \frac{K_2}{K_1}=-\frac{\D_\r H}R\l{\frac1{T_2}-\frac1{T_2}}
+$$</p>
+<p>对于低压气相反应，假如使用浓度进行表征（$p=cRT$）：
+$$
+K_p^\ominus=K_c^\ominus\l{\frac{c^\ominus RT}{p^\ominus}}^{\sum_\B\nu_\B}
+$$
+因此：
+$$
+\frac{\d\ln K_c}{\d T}=\frac{\d\l{\ln K_p + \sum_\B\nu_\B\ln c^\ominus RT}}{\d T}\\\frac{\d\ln K_c}{\d T}=\frac{\D_\r H}{RT^2}-\frac{\sum_\B\nu_\B}T=\frac{\D_\r U}{RT^2}
+$$</p>
+<h3 id="压力的影响">压力的影响</h3>
+<p>根据定义：$$
+\ln K_p^\ominus=-\frac{\sum_\B\nu_\B\mu_\B^\ominus(T)}{RT}\\K_p^\ominus=K_c^\ominus\l{\frac{c^\ominus RT}{p^\ominus}}^{\sum_\B \nu_\B}=K_x \l{\frac{p}{p^\ominus}}^{\sum_\B\nu_\B}
+$$
+发现只有$K_x$随压力改变。</p>
+<p>对于凝聚相体系，注意到：$$
+\lf{\Delta\mu_\B^*}{p}_T=\Delta V_\m^*(\B)\\<br>
+\lf{\ln K_a}{p}_T=-\frac{\D V_\m^*(\B)}{RT}
+$$</p>
+<h3 id="惰性气体">惰性气体</h3>
+<p>对于恒压反应，充入惰性气体可以降低分压，计算如下，因此效果与减压相同。</p>
+<h2 id="一些定义">一些定义</h2>
+<p>对于溶液中的反应，$\ce{H+ (aq,$m_{\ce {H+}}=1 \rm mol\cdot kg^{-1}$)}$标准摩尔生成吉布斯自由能为0.</p>
 
 </div>
 </main>
@@ -248,6 +281,7 @@ $$</p>
 								A: "{\\mathrm A}",
 								C: "{\\mathrm C}",
 								r: "{\\mathrm r}",
+								a: "{\\mathrm a}",
 								m: "{\\mathrm m}",
 								D: "{\\Delta}",
 								o: "{\\ominus}",

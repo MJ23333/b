@@ -203,11 +203,16 @@ $$
 那么，对于一个可逆循环，我们可以画出$T-S$图，每条曲线下面的面积等于该过程的热效应$Q_{\rm R}$。循环围的面积是做的功$W$。</p>
 <p><strong>Tip</strong>：对于各种各样的图，逆着坐标轴方向覆盖的面积是正的，顺着坐标轴的方向覆盖的面积是负的——就是<b>积分</b>。</p>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0kzq7ophxj217t0ol0vx.jpg" alt="Carnot cycle: p-V diagram and T-S diagram" style="zoom:33%;" /></p>
+<p>一张极好的图：</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h19a61pm6dj20qa0ewmxt.jpg" alt="image-20220414152648395"></p>
 <h2 id="熵变的计算">熵变的计算</h2>
-<p><strong>前提</strong>：必须<b>全程可逆</b>，以下讨论均是<strong>可逆的</strong>。</p>
+<p><strong>前提</strong>：设计的过程必须<b>全程可逆</b>，以下讨论均是<strong>可逆的</strong>。
+$$
+\d S=\lf ST_V\d T +\lf SV_T\d V=\frac{C_V}{T}\d T +\lf{p}{T}\d V
+$$</p>
 <p>理想气体等温可逆变化：
 $$
-\Delta S=nR\ln\frac{V_2}{V_1}=nR\ln\frac{p_1}{p_2}
+\Delta S=nR\ln\frac{V_2}{V_1}=-nR\ln\frac{p_2}{p_1}
 $$</p>
 <p>理想气体的等温等压混合：
 $$
@@ -228,6 +233,15 @@ $$</p>
 <p>注意与$H_\m^\ominus$不同，单质的标准熵在非$0\K$时不可能为0。</p>
 <h2 id="能量退降">能量退降</h2>
 <p>功可以无条件变成热，但热不能无条件变成功。当系统的熵增加时，一部分能量丧失了做功的能力——能量退降。</p>
+<p>我们再来看可逆热机，对于两个热源分别写出熵变：
+$$
+\frac{Q_{\rm tot}}{T_h}=\frac{Q_{\rm tot}+W}T
+$$</p>
+<h2 id="绝热过程">绝热过程</h2>
+<p>那就很简单了：
+$$
+\frac{C_V}{T}\d T +\lf{p}{T}\d V=0
+$$</p>
 <h2 id="微观含义">微观含义</h2>
 <p>$$
 S=k\ln\Omega
@@ -266,6 +280,11 @@ $$
 $$
 即在等温、等压过程中，一个封闭系统所能<b>对外做的</b>最大非膨胀功等于其吉布斯自由能的减少。</p>
 <h2 id="delta-g计算">$\Delta G$计算</h2>
+<p><b>根据定义</b>：</p>
+<p>$$
+G=H-TS\\<br>
+\D G=\D H-\D(TS)
+$$</p>
 <p><b>可逆相变</b>：
 $$
 \Delta G=0
@@ -475,6 +494,7 @@ $$</p>
 								A: "{\\mathrm A}",
 								C: "{\\mathrm C}",
 								r: "{\\mathrm r}",
+								a: "{\\mathrm a}",
 								m: "{\\mathrm m}",
 								D: "{\\Delta}",
 								o: "{\\ominus}",

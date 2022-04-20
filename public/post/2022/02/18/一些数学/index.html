@@ -33,9 +33,10 @@
 <meta name="twitter:description" content="简单微分 $$ (\sin x)&#39;=\cos x\\
 (\cos x)&#39;=-\sin x\\
 (a^x)&#39;=a^x\ln a\\
-(\log a)&#39;=\frac{x\ln a}\\
+(\log a)&#39;=\frac1{x\ln a}\\
 (uv)&#39;=u&rsquo;v&#43;v&rsquo;u\\
 (\frac uv)&#39;=\frac{u&rsquo;v-v&rsquo;u}{v^2} $$
+全微分 满足如下条件： $$ \left[\f{}{B}\lf{X}{A}_B\right]_A=\left[\f{}{A}\lf{X}{B}_A\right]_B $$
 偏导数 当你知道$f=f(x,y)=f(x,y(x,z))$时： $$ \align{\d f&amp;=\l{\f{f}{x}}_y\d x&#43;\l{\f{f}{y}}_x\d y\\&amp;=\l{\f{f}{x}}_y\d x&#43;\l{\f{f}{y}}_x\left[\l{\f{y}{x}}_z\d x&#43;\l{\f{y}{z}}_x\d z\right]\\&amp;=\left[\l{\f{f}{x}}_y&#43;\l{\f{f}{y}}_x\l{\f{y}{x}}_z\right]\d x&#43;\l{\f{f}{y}}_x\l{\f{y}{z}}_x\d z} $$ 此时，根据偏导数的定义得到性质1： $$ \l{\f{f}{x}}_z=\l{\f{f}{x}}_y&#43;\l{\f{f}{y}}_x\l{\f{y}{x}}_z $$ 它有什么用呢？考虑下面一个例子： $$ \align{\d f&amp;=\lf fx_y\d x&#43;\lf fy_x\d y\\\lf fx_z&amp;=\lf fx_y&#43;\lf fy_x\lf yx_z} $$ 直接把$\d x$除过去是很爽，但以前总会心有芥蒂——为啥出过去就自动$z$不变了？现在我们有了完美的解答——把$\d y$进一步用$x,z$表示出来即可。
 我们进一步推广，对于$f=f(u(x,y),v(x,y))$，如法炮制，得到： $$ \f fx=\f fu\f ux&#43;\f fv\f vx $$ 其实就是复合函数偏导的链式法则。
 同时，不难知道性质2： $$ \l{\f{x}{y}}_z=\frac1{\l{\f{y}{x}}_z} $$
@@ -118,9 +119,14 @@ Edward Kerman
 (\sin x)'=\cos x\\<br>
 (\cos x)'=-\sin x\\<br>
 (a^x)'=a^x\ln a\\<br>
-(\log a)'=\frac{x\ln a}\\<br>
+(\log a)'=\frac1{x\ln a}\\<br>
 (uv)'=u&rsquo;v+v&rsquo;u\\<br>
 (\frac uv)'=\frac{u&rsquo;v-v&rsquo;u}{v^2}
+$$</p>
+<h3 id="全微分">全微分</h3>
+<p>满足如下条件：
+$$
+\left[\f{}{B}\lf{X}{A}_B\right]_A=\left[\f{}{A}\lf{X}{B}_A\right]_B
 $$</p>
 <h3 id="偏导数">偏导数</h3>
 <p>当你知道$f=f(x,y)=f(x,y(x,z))$时：
@@ -331,6 +337,7 @@ $$</p>
 								A: "{\\mathrm A}",
 								C: "{\\mathrm C}",
 								r: "{\\mathrm r}",
+								a: "{\\mathrm a}",
 								m: "{\\mathrm m}",
 								D: "{\\Delta}",
 								o: "{\\ominus}",

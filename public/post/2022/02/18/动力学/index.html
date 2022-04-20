@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN" >
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> 动力学 | Edward Kerman&#39;s blog</title>
+    
+    <link rel="icon" type="image/png" href="/icons/Hi-Res.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+<link href="https://fonts.font.im/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" crossorigin>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+<script>
+  
+  
+  pangu.spacingElementByTagName('p');
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    pangu.autoSpacingPage();
+  });
+</script>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="动力学"/>
+<meta name="twitter:description" content="测量的方法 光谱（吸收）、电导率、pH、发射光谱、质谱、气相色谱、核磁共振、电子顺磁共振（自由基、顺磁性金属）
+流动法——不同的位置相当于不同的反应时间
+速率 一般式： $$ v=\frac1V\frac{\d\xi}{\d t} $$
+对于等容的均相反应： $$ v=\frac1{\nu_\C}\frac{\d [\C]}{\d t} $$
+对于多相反应，用表面积（恒定）A替代体积V，用表面浓度$\sigma_\C$替代浓度： $$ v=\frac1{\nu_\C}\frac{\d \sigma_\C}{\d t} $$也可以使用催化剂质量、催化剂的堆体积等。
+速率方程的确定 微分法（一般是初始速率）： $$ n=\frac{\ln r_1/r_2}{\ln c_1/c_2} $$
+半衰期法： $$ n=1-\frac{\ln t_{1/2}&#39;/t_{1/2}&#39;&#39;}{\ln c_{0}&#39;/c_{0}&#39;&#39;} $$
+如果使用待测物质的浓度不会变则不能用上述方法，比如在$\ce{H&#43;}$缓冲溶液中，应该将原来的表观速率常数拆开（此处对于一级反应）： $$ t_{1/2}=\frac{\ln 2}{k&#39;}=\frac{\ln2}{k[\ce{H&#43;}]^\beta} $$ 再做进一步计算。
+根据键焓估算活化能  裂解为自由基的反应$E_\a=B.E.$ 自由基复合反应$E_\a=0$ 自由基的转移，放热方向$E_\a=5.5\% B.E.（断裂）$（不然过渡态能量还没产物高） 自由基转移吸热方向：求出逆方向的活化能（逆方向断裂——正方向形成），加上焓变 分子间基元反应，$E_\a=30\% B.E.（断裂）$  稳态近似 所有中间产物都稳态，速率按照方程式书写（看生成产物的那一步）
+快平衡 必须有决速步，决速步前处于平衡，以决速步计算速度（乘除相应计量系数，即决速步的产物可以被转换为几mol最终产物）"/>
+
+  </head>
+  <body>
+
+    <nav class="menu">
+    <ul>
+      <li class="left">
+        <a href="/"><span>Edward Kerman&#39;s blog</span></a>
+      </li>
+      
+      <li>
+        <a href="/">Home</a>
+      </li>
+      
+      <li>
+        <a href="/about/">About</a>
+      </li>
+      
+      <li>
+        <a href="/sitemap/">Sitemap</a>
+      </li>
+      
+      <li id="menu-search">
+        <a href="/#">Search</a>
+      </li>
+      
+      <li>
+        <a href="/index.xml">Subscribe</a>
+      </li>
+      
+    </ul>
+    </nav>
+		
+
+
+<div class="container single">
+<main>
+
+<div class="article-meta">
+<h1><span class="title">动力学</span></h1>
+
+<h3 class="author">
+Edward Kerman
+</h3>
+
+<h3 class="date">2022-02-18</h3>
+<p class="terms">
+  
+  
+  Categories: <a href="/categories/academic">Academic</a> <a href="/categories/%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%A6">物理化学</a> 
+  
+  
+  
+  Tags: <a href="/tags/%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%A6">物理化学</a> <a href="/tags/%E5%8A%A8%E5%8A%9B%E5%AD%A6">动力学</a> <a href="/tags/%E5%85%A5%E9%97%A8">入门</a> 
+  
+  
+</p>
+</div>
+
+<div class="article">
+<h3 id="测量的方法">测量的方法</h3>
+<p>光谱（吸收）、电导率、pH、发射光谱、质谱、气相色谱、核磁共振、电子顺磁共振（自由基、顺磁性金属）</p>
+<p>流动法——不同的位置相当于不同的反应时间</p>
+<h3 id="速率">速率</h3>
+<p>一般式：
+$$
+v=\frac1V\frac{\d\xi}{\d t}
+$$</p>
+<p>对于等容的均相反应：
+$$
+v=\frac1{\nu_\C}\frac{\d [\C]}{\d t}
+$$</p>
+<p>对于多相反应，用表面积（恒定）A替代体积V，用表面浓度$\sigma_\C$替代浓度：
+$$
+v=\frac1{\nu_\C}\frac{\d \sigma_\C}{\d t}
+$$也可以使用催化剂质量、催化剂的堆体积等。</p>
+<h3 id="速率方程的确定">速率方程的确定</h3>
+<p>微分法（一般是初始速率）：
+$$
+n=\frac{\ln r_1/r_2}{\ln c_1/c_2}
+$$</p>
+<p>半衰期法：
+$$
+n=1-\frac{\ln t_{1/2}'/t_{1/2}''}{\ln c_{0}'/c_{0}''}
+$$</p>
+<p>如果使用待测物质的浓度不会变则不能用上述方法，比如在$\ce{H+}$缓冲溶液中，应该将原来的表观速率常数拆开（此处对于一级反应）：
+$$
+t_{1/2}=\frac{\ln 2}{k'}=\frac{\ln2}{k[\ce{H+}]^\beta}
+$$
+再做进一步计算。</p>
+<h3 id="根据键焓估算活化能">根据键焓估算活化能</h3>
+<ul>
+<li>裂解为自由基的反应$E_\a=B.E.$</li>
+<li>自由基复合反应$E_\a=0$</li>
+<li>自由基的转移，<b>放热方向</b>$E_\a=5.5\% B.E.（断裂）$（不然过渡态能量还没产物高）</li>
+<li>自由基转移吸热方向：求出逆方向的活化能（<b>逆方向断裂——正方向形成</b>），加上焓变</li>
+<li>分子间基元反应，$E_\a=30\% B.E.（断裂）$</li>
+</ul>
+<h3 id="稳态近似">稳态近似</h3>
+<p>所有中间产物都稳态，速率按照方程式书写（看生成产物的那一步）</p>
+<h3 id="快平衡">快平衡</h3>
+<p>必须有决速步，决速步前处于平衡，以决速步计算速度（乘除相应计量系数，即决速步的产物可以被转换为几mol最终产物）</p>
+
+</div>
+</main>
+
+<section class="appendix">
+
+
+<div>
+  <div class="side side-left"><h3>Author&#39;s bio</h3></div>
+  <div>
+
+
+
+
+
+<div>Edward Kerman——化竞菜鸡，舟厨，ksp爱好者，花样滑冰云观众。</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Reuse</h3></div>
+  Text and figures are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution CC BY 4.0</a>.
+</div>
+
+
+
+<div>
+  <div class="side side-left"><h3>Suggest changes</h3></div>
+  
+  
+  
+    
+    
+  
+  If you find any mistakes (including typos) or want to suggest changes, please feel free to <a href="https://github.com/MJ23333/b/edit/master/content/post/wlhx/%e5%8a%a8%e5%8a%9b%e5%ad%a6.md" id="edit-link">edit the source file of this page on Github and create a pull request.</a>
+</div>
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Citation</h3></div>
+  <p>For attribution, please cite this work as</p>
+  <pre><code class="no-highlight">Edward Kerman (2022). 动力学. Edward Kerman&#39;s blog. /post/2022/02/18/%E5%8A%A8%E5%8A%9B%E5%AD%A6/</code></pre>
+  <p>BibTeX citation</p>
+  <pre><code class="no-highlight">@misc{
+  title = "动力学",
+  author = "Edward Kerman",
+  year = "2022",
+  journal = "Edward Kerman&#39;s blog",
+  note = "/post/2022/02/18/%E5%8A%A8%E5%8A%9B%E5%AD%A6/"
+}</code></pre>
+</div>
+
+</section>
+
+
+
+<nav class="post-nav">
+  <span class="nav-next">&larr; <a href="/post/2022/02/18/%E5%A4%9A%E7%BB%84%E5%88%86%E7%83%AD%E5%8A%9B%E5%AD%A6/" title=Next&#32;post&#32;(older)>多组分热力学</a></span>
+  &hercon;
+  <span class="nav-prev"><a href="/post/2022/02/18/%E5%88%86%E5%B8%83/" title=Previous&#32;post&#32;(newer)>分布</a> &rarr;</span>
+</nav>
+
+
+
+
+
+</div>
+
+
+  <footer>
+  <script async src="//yihui.org/js/center-img.js"></script>
+
+			<script type="text/x-mathjax-config">
+				MathJax.Hub.Config({
+					extensions: ["tex2jax.js"],
+					jax: ["input/TeX", "output/HTML-CSS"],
+					TeX: {
+						extensions: ["mhchem.js"],
+						Macros: {
+								d: "{\\mathrm d}",
+								p: "{\\mathrm p}",
+								pKa: "{\\mathrm{p}K_{a}}",
+								Ka: "{K_{a}}",
+								pH: "{\\mathrm{pH}}",
+								H: "{\\left\[\\ce{H+}\\right\]}",
+								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
+								B: "{\\mathrm B}",
+								A: "{\\mathrm A}",
+								C: "{\\mathrm C}",
+								r: "{\\mathrm r}",
+								a: "{\\mathrm a}",
+								m: "{\\mathrm m}",
+								D: "{\\Delta}",
+								o: "{\\ominus}",
+								Ek: "{E_{\\mathrm k}}",
+								Ep: "{E_{\\mathrm p}}",
+								K: "{\\space\\mathrm K}",
+								J: "{\\space\\mathrm J}",
+								kJ: "{\\space\\mathrm {kJ}}",
+								eV: "{\\space\\mathrm {eV}}",
+								mol: "{\\space\\mathrm {mol}}",
+								kjm: "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
+								align: ["{\\begin{align*} #1 \\end{align*}}",1],
+								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
+								l: ["{\\left( #1\\right)}",1],
+								lf: ["{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",2],
+								red: ["{\\color{red}{ #1}}",1],
+								green: ["{\\color{green}{ #1}}",1],
+								blue: ["{\\color{blue}{ #1}}",1],
+								bm: ["{\\boldsymbol{ #1}}",1]
+						}
+					},
+					tex2jax: {
+						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+						processEscapes: true
+					},
+					CommonHTML: { linebreaks: { automatic: true } },
+  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
+         	SVG: { linebreaks: { automatic: true } }
+				});
+			</script>
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+
+
+
+
+
+  <div class="footer">
+  
+  <ul class="copyright">
+    <li>© Edward Kerman 2020-2022</li>
+  </ul>
+  
+  <ul>
+    
+    <li class="optional">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    <li class="optional">
+      <a href="/tags/">Tags</a>
+    </li>
+    
+    <li id="menu-edit">
+      <a href="#">Suggest an edit</a>
+    </li>
+    
+    <li>
+      <a href="#">Back to top</a>
+    </li>
+    
+  </ul>
+  </div>
+  
+  </footer>
+  <script async src="/js/features.js" data-page-features="[null,[&#34;&#43;sidenotes&#34;],null]"></script>
+  </body>
+</html>
+
