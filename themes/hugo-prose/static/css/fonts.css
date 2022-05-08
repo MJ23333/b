@@ -13,8 +13,31 @@
   src: url("fonts/CNI.TTF"); 
 	font-style:italic;
 }
+@font-face { 
+  font-family: "en";
+  src: url("fonts/texgyrepagella-regular.otf"); 
+	/* font-style:italic; */
+}
+@font-face { 
+  font-family: "en";
+  src: url("fonts/texgyrepagella-italic.otf"); 
+	font-style:italic;
+}
+@font-face { 
+  font-family: "en";
+  src: url("fonts/texgyrepagella-bold.otf"); 
+	font-weight:bold;
+	/* font-style:italic; */
+}
+@font-face { 
+  font-family: "en";
+  src: url("fonts/texgyrepagella-bolditalic.otf"); 
+	font-weight:bold;
+	font-style:italic;
+}
+
 body {
-  font-family: 'Palatino','Times New Roman','cn', Arial, serif;
+  font-family: 'en','cn', Arial, serif;
 }
 nav:lang(en) { font-style: italic!important; }
 code {
