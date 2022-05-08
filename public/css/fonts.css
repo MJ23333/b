@@ -1,43 +1,5 @@
-@font-face { 
-  font-family: "cn";
-	font-weight:normal;
-  src: url("fonts/CN.TTF"); 
-}
-@font-face { 
-  font-family: "cn";
-	font-weight:bold;
-  src: url("fonts/CNB.otf"); 
-}
-@font-face { 
-  font-family: "cn";
-  src: url("fonts/CNI.TTF"); 
-	font-style:italic;
-}
-@font-face { 
-  font-family: "en";
-  src: url("fonts/texgyrepagella-regular.otf"); 
-	/* font-style:italic; */
-}
-@font-face { 
-  font-family: "en";
-  src: url("fonts/texgyrepagella-italic.otf"); 
-	font-style:italic;
-}
-@font-face { 
-  font-family: "en";
-  src: url("fonts/texgyrepagella-bold.otf"); 
-	font-weight:bold;
-	/* font-style:italic; */
-}
-@font-face { 
-  font-family: "en";
-  src: url("fonts/texgyrepagella-bolditalic.otf"); 
-	font-weight:bold;
-	font-style:italic;
-}
-
 body {
-  font-family: 'en','cn', Arial, serif;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino,STSong, Arial, serif;
 }
 nav:lang(en) { font-style: italic!important; }
 code {
@@ -45,5 +7,5 @@ code {
   font-size: 85%;
 }
 h1, h2, h3 {
-  font-family: 'en','cn', Book Antiqua, serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande",STHei, sans-serif;
 }
