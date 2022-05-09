@@ -1,5 +1,5 @@
 body {
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino,STSong,serif;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino,STSong,SimSun,serif;
 }
 nav:lang(en) { font-style: italic!important; }
 code {
@@ -8,4 +8,10 @@ code {
 }
 h1, h2, h3 {
   font-family: "Lucida Sans Unicode", "Lucida Grande",STHei, sans-serif;
+}
+b {
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino,STHeiti, sans-serif;
+}
+i {
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino,STKaiti, KaiTi,serif;
 }
