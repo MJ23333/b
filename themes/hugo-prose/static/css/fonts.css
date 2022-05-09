@@ -1,9 +1,9 @@
 body {
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino,STSong, Arial, serif;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino,STSong,serif;
 }
 nav:lang(en) { font-style: italic!important; }
 code {
-  font-family: 'Operator Mono', Monaco, monospace,"Noto Sans SC";
+  font-family: 'Operator Mono', Monaco, monospace;
   font-size: 85%;
 }
 h1, h2, h3 {
