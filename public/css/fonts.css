@@ -9,7 +9,7 @@ code {
 h1, h2, h3 {
   font-family: "Lucida Sans Unicode", "Lucida Grande",STHei, sans-serif;
 }
-b {
+strong,b {
 	font-family:"Palatino Linotype", "Book Antiqua", Palatino,STHeiti, sans-serif;
 }
 i {
