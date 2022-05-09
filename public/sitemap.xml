@@ -2,12 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/card/anime/</loc>
-  </url><url>
-    <loc>/card/chem/</loc>
-  </url><url>
-    <loc>/card/games/</loc>
-  </url><url>
     <loc>/categories/academic/</loc>
     <lastmod>2022-03-29T00:00:00+00:00</lastmod>
   </url><url>
@@ -226,8 +220,6 @@
   </url><url>
     <loc>/tags/%E8%93%9D%E6%AF%92/</loc>
     <lastmod>2020-07-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/card/</loc>
   </url><url>
     <loc>/categories/hugo/</loc>
   </url><url>
