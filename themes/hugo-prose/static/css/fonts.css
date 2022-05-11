@@ -1,5 +1,21 @@
+@font-face{
+	font-family: 'cn';
+	src:  url('fonts/CN.TTF');
+}
+@font-face{
+	font-family: 'cnb';
+	font-weight:bold;
+	src:  url('fonts/CNB.ttf');
+}
+@font-face{
+	font-family: 'CNI';
+	font-style:italic;
+	src:  url('fonts/CNI.TTF');
+}
 body {
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino,STSong,SimSun,serif;
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, 'cn',serif;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 nav:lang(en) { font-style: italic!important; }
 code {
@@ -7,11 +23,13 @@ code {
   font-size: 85%;
 }
 h1, h2, h3 {
-  font-family: "Lucida Sans Unicode", "Lucida Grande",STHei, sans-serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande",'cnb', sans-serif;
 }
 strong,b {
-	font-family:"Palatino Linotype", "Book Antiqua", Palatino,STHeiti, sans-serif;
+	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia,'cnb',sans-serif;
+	color:rgb(27, 27, 27);
 }
-i {
-	font-family:"Palatino Linotype", "Book Antiqua", Palatino,STKaiti, KaiTi,serif;
+em {
+	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia,'CNI',sans-serif;
+	color:rgb(55, 55, 55);
 }

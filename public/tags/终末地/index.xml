@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 18 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E7%BB%88%E6%9C%AB%E5%9C%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>关于3终末地的若干猜测</title>
+      <link>/post/2022/03/18/%E5%85%B3%E4%BA%8E3%E7%BB%88%E6%9C%AB%E5%9C%B0%E7%9A%84%E8%8B%A5%E5%B9%B2%E7%8C%9C%E6%B5%8B/</link>
+      <pubDate>Fri, 18 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/03/18/%E5%85%B3%E4%BA%8E3%E7%BB%88%E6%9C%AB%E5%9C%B0%E7%9A%84%E8%8B%A5%E5%B9%B2%E7%8C%9C%E6%B5%8B/</guid>
+      <description>&lt;p&gt;万物的开端仅仅是一个图——更像钻石而不是石墨：每个节点都是四价的，通过四条边与其他四个节点相连。数一数边数，可以发现从任何一个节点回到自身的最短路径是一个六条边的环。每个节点都属于24个这样6条边的环、48个长为8条边的环和480个长为10条边的环。边没有长度或形状，节点也没有位置——该图仅表明了一些节点与其他节点相连的事实。一种连接图案，无休止地重复，这就是一切。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>关于终末地的若干猜测</title>
       <link>/post/2022/03/18/%E5%85%B3%E4%BA%8E%E7%BB%88%E6%9C%AB%E5%9C%B0%E7%9A%84%E8%8B%A5%E5%B9%B2%E7%8C%9C%E6%B5%8B/</link>
       <pubDate>Fri, 18 Mar 2022 00:00:00 +0000</pubDate>
