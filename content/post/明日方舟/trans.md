@@ -4,7 +4,6 @@ author: Edward Kerman
 date: '2022-03-18'
 categories:
   - 猜测
-  - Half-Academic
 tags:
   - 终末地
   - PV

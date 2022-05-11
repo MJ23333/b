@@ -1,13 +1,41 @@
 {{ partial "header.html" . }}
 
 <main>
+
 <h1>{{ .Title }}</h1>
 
-<ul class="terms">
+<ul class="cloud">
   {{ range (index .Site.Taxonomies (.Title | lower)) }}
-  <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <span class="bg-number">{{ .Count }}</span></a></li>
+  <li><a class='cloudw' href="{{ .Page.RelPermalink }}" data-weight={{ .Count }}>{{ .Page.Title }}</a></li>
   {{ end }}
 </ul>
+<script>
+	tags = document.querySelectorAll(".cloudw");
+	var size=0;
+	for (var i = 0; i < tags.length; ++i) {
+  size+=parseInt(tags[i].getAttribute('data-weight'));  // 调用 myNodeList.item(i) 是没有必要的
+	}
+	const maxFontSizeForTag = 5;
+	biggest=size/tags.length;
+	function handleResult(result, biggest){
+		let fontSize = parseInt(result.getAttribute('data-weight'))/ biggest/5+1;
+		// console.log(fontSize)
+		fontSize=fontSize.toFixed(2);
+		if(fontSize>maxFontSizeForTag){
+			fontSize=maxFontSizeForTag;
+		}
+		
+		// Make sure our font size will be at least 1em
+			op=fontSize/2;
+      result.setAttribute("style","font-size:"+fontSize+"em;"+"opacity:"+op+";")
+	}
+	tags.forEach((result) => handleResult(result, biggest));
+    // 5. Append all the tags to the tags element.
+    // if (data.length > 1) {
+			
+    // }
+  
+	</script>
 </main>
 
 {{ partial "footer.html" . }}

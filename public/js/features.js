@@ -62,10 +62,12 @@
   d.querySelectorAll('.fullscroll figure > figcaption, .fullscroll .figure > .caption').forEach(function(el) {
     insertAfter(el.parentNode, el);
   });
-
+	
   // move footnotes and citations to sidenotes
   if (config.indexOf('-sidenotes') === -1) {
+		
     d.querySelectorAll('.footnotes > ol > li[id^="fn"], #refs > div[id^="ref-"]').forEach(function(fn) {
+			// console.log(fn.id);
       a = d.querySelectorAll('a[href="#' + fn.id + '"]');  // <a> that points to note id in body
       if (a.length === 0) return;
       a.forEach(function(el) { el.removeAttribute('href') });

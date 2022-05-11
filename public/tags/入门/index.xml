@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>入门 on Edward Kerman&#39;s blog</title>
+    <title>入门 on Edward Kerman</title>
     <link>/tags/%E5%85%A5%E9%97%A8/</link>
-    <description>Recent content in 入门 on Edward Kerman&#39;s blog</description>
+    <description>Recent content in 入门 on Edward Kerman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 21 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E5%85%A5%E9%97%A8/index.xml" rel="self" type="application/rss+xml" />
@@ -185,8 +185,7 @@ $I$系列 正十二面体(12)，正二十面体(20)，二者合体$\ce{C_60}$(12
       <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>/post/2022/02/18/%E5%A4%9A%E7%BB%84%E5%88%86%E7%83%AD%E5%8A%9B%E5%AD%A6/</guid>
-      <description>$$ \def\d{{\mathrm d}} \def\B{{\mathrm B}} \def\A{{\mathrm A}} \def\D{{\Delta}} \def\m{{\mathrm m}} \def\align #1{{\begin{align*} #1 \end{align*}}} \def\f #1#2{{\frac{\partial #1}{\partial #2}}} \def\lf #1#2{{\left(\frac{\partial #1}{\partial #2}\right)}} \def\l #1{{\left( #1\right)}} \def\red #1{{\color{red}{ #1}}} \def\green #1{{\color{green}{ #1}}} \def\blue #1{{\color{blue}{ #1}}} $$
-多组分系统：两种或两种以上组分所形成的系统
+      <description>多组分系统：两种或两种以上组分所形成的系统
 混合物：含有一种以上组分的系统
 溶液：含有一种以上组分的液相和固相（没有气相），分为溶质$\rm B$和溶剂$\rm A$。
 组成的表示 对于混合物 质量浓度（并不常用）：
@@ -196,7 +195,15 @@ $$ w_{\rm B}\doteq \frac{m({\rm B})}{m_{\rm tot}} $$
 物质的量浓度：
 $$ c_{\rm B}=[{\rm B}]\doteq \frac{n_{\rm B}}{V_{\rm tot}} $$
 摩尔分数：
-$$ x_{\rm B}\doteq \frac{n_{\rm B}}{n_{\rm tot}} $$</description>
+$$ x_{\rm B}\doteq \frac{n_{\rm B}}{n_{\rm tot}} $$
+对于溶液 质量摩尔浓度：
+$$ m_{\rm B}\doteq \frac{n_{\rm B}}{m_\color{red}{ \rm A}} $$
+溶质的摩尔比：
+$$ r_{\rm B}\doteq \frac{n_{\rm B}}{n_\color{red}{ \rm A}} $$
+偏摩尔量 对于一个$k$组分均相系统的广度性质$Z$，它与各个组分的物质的量有关$n_i$：
+$$ Z=Z(T,p,n_1,\dots,n_k) $$
+在等温等压下，有：
+$$ \mathrm dZ=\sum_{\mathrm B=1}^k\left(\frac{\partial Z}{\partial n_{\rm B}}\right)_{T,p,n_{\rm C}(\rm C\neq B)}\mathrm dn_{\rm B}=\sum_{\mathrm B=1}^kZ_{\rm B}\mathrm dn_{\rm B} $$</description>
     </item>
     
     <item>

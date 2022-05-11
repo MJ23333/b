@@ -2,7 +2,7 @@ baseurl: "/"
 languageCode: "en-us"
 defaultContentLanguage: "en"
 # defaultContentLanguage: "zh"
-title: "Edward Kerman's blog"
+title: "Edward Kerman"
 theme: "hugo-prose"
 googleAnalytics: ""
 disqusShortname: ""
@@ -22,8 +22,8 @@ menu:
     - name: Search
       url: "#"
       identifier: menu-search
-    - name: Subscribe
-      url: "index.xml"
+    # - name: Subscribe
+    #   url: "index.xml"
   footer:
     - name: Categories
       url: "/categories/"
