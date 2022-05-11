@@ -114,6 +114,10 @@ footer { background: darkslategray; }
   line-height: 2em;
 
 }
+.article-meta{
+	padding-top:1.5em;
+	padding-bottom:2.3em;
+}
 .terms a, .bg-number {
   padding: 1px 5px;
 }

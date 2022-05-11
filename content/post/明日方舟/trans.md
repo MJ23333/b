@@ -1,5 +1,5 @@
 ---
-title: '关于3终末地的若干猜测'
+title: '斯柴尔德的阶梯，第一章'
 author: Edward Kerman
 date: '2022-03-18'
 categories:
