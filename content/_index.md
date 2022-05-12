@@ -4,7 +4,49 @@ menu:
   header:
     weight: 1
 ---
-<link href="https://fonts.googlefonts.cn/css?family=Fredericka+the+Great" rel="stylesheet">
-<p style="text-indent:0em;text-align:center;font-size:4em;font-family: 'Fredericka the Great', cursive;">
-<font color="ff0000">L</font><font color="#ff9900">i</font><font color="0000FF">f</font><font color="#66cc00">e</font><font color="ff0000"> </font><font color="#ff9900">i</font><font color="0000FF">s</font><font color="#66cc00"> </font><font color="ff0000">a</font><font color="#ff9900"> </font><font color="0000FF">R</font><font color="#66cc00">o</font><font color="ff0000">u</font><font color="#ff9900">g</font><font color="0000FF">e</font><font color="#66cc00">l</font><font color="ff0000">i</font><font color="#ff9900">k</font><font color="0000FF">e</font><font color="#66cc00">!</font>
-</p>
+<div id="words">
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vara@1.4.0/lib/vara.min.js" type="text/javascript"></script>
+<script>
+	new Vara("#words","js/a.json",[
+{
+	text:"Life is a Rougelike!", // String, text to be shown
+	fontSize:64, // Number, size of the text
+	strokeWidth:2, // Width / Thickness of the stroke
+	color:"black", // Color of the text
+	id:"", // String or integer, for if animations are called manually or when using the get() method. Default is the index of the object.
+	duration:2000, // Number, Duration of the animation in milliseconds
+	textAlign:"center", // String, text align, accepted values are left,center,right
+	x:0, // Number, x coordinate of the text
+	y:0, // Number, y coordinate of the text
+	fromCurrentPosition:{ // Whether the x or y coordinate should be from its calculated position, ie the position if x or y coordinates were not applied
+		x:true, // Boolean
+		y:true, // Boolean
+	},
+	autoAnimation:true, // Boolean, Whether to animate the text automatically
+	queued:true, // Boolean, Whether the animation should be in a queue
+    delay:0,     // Delay before the animation starts in milliseconds
+    /* Letter spacing can be a number or an object, if number, the spacing will be applied to every character.
+    If object, each letter can be assigned a different spacing as follows,
+    letterSpacing: {
+        a: 4,
+        j: -6,
+        global: -1
+    }
+    The global property is used to set spacing of all other characters
+    */
+	letterSpacing:0
+}],{
+	// The options given below will be applicable to every text created,
+	// however they will not override the options set above.
+	// They will work as secondary options.
+	fontSize:24, // Number, size of the text
+	strokeWidth:.5, // Width / Thickness of the stroke
+	color:"black", // Color of the text
+	duration:2000, // Number, Duration of the animation in milliseconds
+	textAlign:"left", // String, text align, accepted values are left,center,right
+	autoAnimation:true, // Boolean, Whether to animate the text automatically
+	queued:true, // Boolean, Whether the animation should be in a queue
+	letterSpacing:0
+})
+</script>
