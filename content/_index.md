@@ -12,20 +12,20 @@ menu:
 {
 	text:"Life is a Rougelike!", // String, text to be shown
 	fontSize:64, // Number, size of the text
-	strokeWidth:2, // Width / Thickness of the stroke
+	strokeWidth:3, // Width / Thickness of the stroke
 	color:"black", // Color of the text
 	id:"", // String or integer, for if animations are called manually or when using the get() method. Default is the index of the object.
-	duration:2000, // Number, Duration of the animation in milliseconds
+	duration:3000, // Number, Duration of the animation in milliseconds
 	textAlign:"center", // String, text align, accepted values are left,center,right
 	x:0, // Number, x coordinate of the text
-	y:0, // Number, y coordinate of the text
+	y:5, // Number, y coordinate of the text
 	fromCurrentPosition:{ // Whether the x or y coordinate should be from its calculated position, ie the position if x or y coordinates were not applied
 		x:true, // Boolean
 		y:true, // Boolean
 	},
 	autoAnimation:true, // Boolean, Whether to animate the text automatically
 	queued:true, // Boolean, Whether the animation should be in a queue
-    delay:0,     // Delay before the animation starts in milliseconds
+    delay:200,     // Delay before the animation starts in milliseconds
     /* Letter spacing can be a number or an object, if number, the spacing will be applied to every character.
     If object, each letter can be assigned a different spacing as follows,
     letterSpacing: {

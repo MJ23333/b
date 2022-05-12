@@ -85,7 +85,7 @@ footer { background: darkslategray; }
 .date{
 	padding-top: 1em;
 	
-	padding-bottom: 2em;
+	padding-bottom: 1em;
 	font-weight: normal;
 	/* font-style: italic; */
 	text-align: center;
@@ -94,6 +94,7 @@ h3.date{
 	font-family: 'Libre Barcode 39 Extended Text', cursive,Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia,serif;
 	text-align: right;
 	font-size:3em;
+	padding-bottom: 0em;
 }
 .article-meta, .menu a, .footer a, .terms a, .bg-number {
   text-decoration: none;
@@ -423,6 +424,11 @@ th, td { padding: 5px; }
 		right:0px;
 		margin: 0 auto 0;
 	}
+	.post-nav{
+		padding-top:2em;
+
+	}
+
   .appendix h3 { text-align: initial; }
 }
 @media (max-width: 800px) {

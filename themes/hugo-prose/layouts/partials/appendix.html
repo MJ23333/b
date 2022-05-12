@@ -28,8 +28,6 @@
 
 <div>
   <div class="side side-left"><h3>{{ i18n "citation" }}</h3></div>
-	<details>
-	<summary>Click to Expand</summary>
   <p>{{ i18n "citationText" }}</p>
   <pre><code class="no-highlight">{{ with .Params.author }}{{ if (reflect.IsSlice .) }}{{ delimit . ", " }}{{ else }}{{ . }}{{ end }}{{ end }} ({{ (or .Date now).Format "2006" }}). {{ .Title }}. {{ .Site.Title }}. {{ .Permalink}}</code></pre>
   <p>BibTeX citation</p>
@@ -40,7 +38,7 @@
   journal = "{{ .Site.Title }}",
   note = "{{ .Permalink }}"
 }</code></pre>
-</details>
+
 </div>
 {{ end }}
 </section>

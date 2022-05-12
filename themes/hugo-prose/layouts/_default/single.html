@@ -21,16 +21,20 @@
 </div>
 
 {{ if .Params.date }}<h3 class="date">{{ .Date.Format "2006-01-02" }}</h3>{{ end }}
-<p class="terms">
-  {{ range $i := (slice "categories" "tags") }}
-  {{ with ($.Param $i) }}
-  {{ $i | title }}: {{ range $k := . }}<a href="{{ relURL (print "/" $i "/" $k | urlize) }}">{{$k}}</a> {{ end }}
-  {{ end }}<br>
-  {{ end }}
-</p>
+
 
 </main>
+<details style="max-width:800px;margin: auto;">
+	<summary>Appendix</summary>
+	<p class="terms">
+		{{ range $i := (slice "categories" "tags") }}
+		{{ with ($.Param $i) }}
+		{{ $i | title }}: {{ range $k := . }}<a href="{{ relURL (print "/" $i "/" $k | urlize) }}">{{$k}}</a> {{ end }}
+		{{ end }}<br>
+		{{ end }}
+	</p>
 {{ partial "appendix.html" . }}
+</details>
 {{ if .Section }}
 <nav class="post-nav">
   <span class="nav-next">{{ with .PrevInSection }}&larr; <a href="{{ .RelPermalink }}" title={{ i18n "nextPost" }}>{{ .Title }}</a>{{ end }}</span>
