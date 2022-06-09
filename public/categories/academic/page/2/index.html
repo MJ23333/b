@@ -91,6 +91,41 @@
     </div>
     
     
+    <h1><a href="/post/2022/03/21/%E5%9C%86%E6%9F%B1%E5%9D%90%E6%A0%87%E4%B8%8B%E7%9A%84%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AE%97%E5%AD%90/">圆柱坐标下的拉普拉斯算子</a></h1>
+    <div>
+      <span>2022-03-21</span>
+      <span>Edward Kerman</span>
+    </div>
+    <div class="summary">
+      
+      
+      
+      
+      拉普兰德在使用圆规前必须掌握的圆柱坐标下拉普拉斯算子的推导。
+圆柱坐标与笛卡尔坐标关系如下： $$ x=r\cos \phi\tag1\\
+y=r\sin \phi\\
+$$ 把上下平方相加，得到： $$ F(x,y,r)=x^2+y^2-r^2=0\tag2 $$ 接下来只介绍对于$x$的部分，$y$部分方法完全一致,根据隐函数求偏导方法（见《一些数学》）： $$ \f &hellip;
+      <a href="/post/2022/03/21/%E5%9C%86%E6%9F%B1%E5%9D%90%E6%A0%87%E4%B8%8B%E7%9A%84%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AE%97%E5%AD%90/" class="more" title=Read&#32;More>Read More &rarr;</a>
+    </div>
+    </td>
+    
+    </tr>
+    </tbody>
+    </table>
+  </section>
+
+  <section class="article-list post-card">
+    <table>
+    <tbody>
+    <tr>
+    <td>
+    
+    
+    <div class="categories">
+      <a href="/categories/academic/">Academic</a>
+    </div>
+    
+    
     <h1><a href="/post/2022/03/19/%E4%B8%80%E4%BA%9B%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%BB%93%E8%AE%BA/">一些量子力学结论</a></h1>
     <div>
       <span>2022-03-19</span>
@@ -249,44 +284,6 @@ Oh或立方体每条边二分之一切角得到立方八面 &hellip;
     </table>
   </section>
 
-  <section class="article-list post-card">
-    <table>
-    <tbody>
-    <tr>
-    <td>
-    
-    
-    <div class="categories">
-      <a href="/categories/academic/">Academic</a>
-    </div>
-    
-    
-    <h1><a href="/post/2022/02/18/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/">一些数学</a></h1>
-    <div>
-      <span>2022-02-18</span>
-      <span>Edward Kerman</span>
-    </div>
-    <div class="summary">
-      
-      
-      
-      
-      $$ (\sin x)&#39;=\cos x\\
-(\cos x)&#39;=-\sin x\\
-(a^x)&#39;=a^x\ln a\\
-(\log a)&#39;=\frac1{x\ln a}\\
-(uv)&#39;=u&rsquo;v+v&rsquo;u\\
-(\frac uv)&#39;=\frac{u&rsquo;v-v&rsquo;u}{v^2} $$
-[&hellip;] 满足如下条件： $$ &hellip;
-      <a href="/post/2022/02/18/%E4%B8%80%E4%BA%9B%E6%95%B0%E5%AD%A6/" class="more" title=Read&#32;More>Read More &rarr;</a>
-    </div>
-    </td>
-    
-    </tr>
-    </tbody>
-    </table>
-  </section>
-
 
 
 
@@ -335,7 +332,7 @@ Oh或立方体每条边二分之一切角得到立方八面 &hellip;
 					extensions: ["tex2jax.js"],
 					jax: ["input/TeX", "output/HTML-CSS"],
 					TeX: {
-						extensions: ["mhchem.js"],
+						extensions: ["mhchem.js","AMSmath.js", "AMSsymbols.js"],
 						Macros: {
 								d: "{\\mathrm d}",
 								p: "{\\mathrm p}",

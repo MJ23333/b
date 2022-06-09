@@ -6,7 +6,28 @@
     <description>Recent content in Posts on Edward Kerman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>和声背后的心理物理学</title>
+      <link>/post/2022/06/09/%E5%92%8C%E5%A3%B0%E8%83%8C%E5%90%8E%E7%9A%84%E5%BF%83%E7%90%86%E7%89%A9%E7%90%86%E5%AD%A6/</link>
+      <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/06/09/%E5%92%8C%E5%A3%B0%E8%83%8C%E5%90%8E%E7%9A%84%E5%BF%83%E7%90%86%E7%89%A9%E7%90%86%E5%AD%A6/</guid>
+      <description>放一首月光吧：
+ 泛音（间谐波）理论 音符可以被表示为一堆正弦曲线，因此一个和弦可以认为是： $$ \alpha x_1(t)+\beta x_2(t)=\alpha\sum_{n=1}^N q_n\cos(2\pi nf_1t+\rho_n)+\beta\sum _{m=1}^Mr_m\cos(2\pi mf_2t+\varphi_m) $$ 其中，$N,M$ 代表由于可听范围而需要考虑的最高频谐波（泛音），$f_1,f_2$ 为基频，$\rho,\varphi$ 表示每个音符的初相（人为设定为 $0$）。
+调制（$\overline\omega$ 为平均值）当 $A=B$： $$ \cos\omega_1t+\cos\omega_2t=2\cos\frac{\Delta\omega}2t\cos\overline\omega t $$ 当 $A\neq B$ 时，近似（$\omega_c\approx\overline\omega$）： $$ A\cos\omega_1t+B\cos\omega_2t\approx B-A+2A\left\lVert\cos^{2-A/B}\frac{\Delta\omega}2t\right\rVert\cos\omega_c t $$ 这个复杂的式子对以后到讨论中作用不大，需要注意的是在 $A/B\to0$ 时（即强弱相差无限大）时，调制频率约为$\Delta\omega$（而非二分之一）。
+对于用赫兹计算的频率，对于 $A=B$ 的情况，调制频率： $$ \Delta f=\left |f_1-f_2\right| $$ 对于两个和弦，考虑临近的两个谐波（上箭头：$\Delta f$，下箭头：$\overline f$）：
+$\Delta f$ 越小越悦耳（太大了则被认为是两个音）：
+一作心目中的具体界限（$1\space\rm Hz$ 以下比较安全）：
+同时考虑泛音之间的调制，但泛音之间的调制对悦耳程度影响较小：即 $\overline f$ 越小影响越大。
+应用在古典乐理中：
+极完全协和音程和完全协和音程：
+不完全协和音程：
+不协和音程：
+次谐波理论 除去基频外泛音的影响理论上应该非常小，故转换思路。
+对于一个和弦，我们画出它最终的波形，该波形存在规律（周期），而这一“规律”的长度对应了共同次谐波，走完一次（近似的）周期用时为 $T_{\rm sub}$，悦耳和弦的规律十分明显（更为精确而非近似），我们可以认为各个音符在 $T_{\rm sub}$ 附近为 $0$ 的时间差很短：</description>
+    </item>
+    
     <item>
       <title>酸碱理论</title>
       <link>/post/2022/03/29/%E9%85%B8%E7%A2%B1%E7%90%86%E8%AE%BA/</link>
