@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hans-CN" >
+<html lang="zh-Hans-CN" class='han-la'>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,16 +18,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
-<script>
-  
-  
-  pangu.spacingElementByTagName('p');
-  document.addEventListener('DOMContentLoaded', () => {
-    
-    pangu.autoSpacingPage();
-  });
-</script>
+<script src="https://cdn.jsdelivr.net/gh/mastermay/text-autospace.js/text-autospace.min.js"></script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="分析化学"/>
 <meta name="twitter:description" content="酸碱滴定 分布系数，举一反三： $$ \delta_{\ce{H2PO4-}}=\frac{\H K_{a1}}{\H^2&#43;\H K_{a1}&#43;K_{a1}K_{a2}} $$ 通常与电荷守恒搭配使用。
@@ -39,9 +30,7 @@
 大可直接暴力计算——通过电荷守恒求出$c^{\rm ep}_{\ce{NaOH}}$（$\H$根据指示剂求出）。
 分步滴定 要求：$\pKa$相差（多元、多种）大于5。
 例子 配位滴定 注意，再次使用副反应系数代替分配系数（方便加减分母），副反应系数可针对配体、金属、指示剂等与之相关的计算：
-求和（一般题目上给出的$\alpha$默认包含自身的$1$，应减去）： $$ \alpha=\alpha_1&#43;\alpha_2\red{-1}\\
-$$ 不同$\alpha$的计算，注意此处的配位是广义的，可以针对金属配位、配体质子化（以及1：1配合物中配体的相关计算）： $$ \alpha_{自身}=1\\
-\alpha_L=1&#43;\sum\beta_i\c{L}^i\qquad $$ 计算分配系数$\delta$： $$ \delta_{自己}=\frac1{1&#43;\sum(\alpha-1)} $$
+求和（一般题目上给出的$\alpha$默认包含自身的$1$，应减去）： $$ \alpha=\alpha_1&#43;\alpha_2\red{-1} $$ 不同$\alpha$的计算，注意此处的配位是广义的，可以针对金属配位、配体质子化（以及1：1配合物中配体的相关计算）： $$ \alpha_{自身}=1\\ \alpha_L=1&#43;\sum\beta_i\c{L}^i\qquad $$ 计算分配系数$\delta$： $$ \delta_{自己}=\frac1{1&#43;\sum(\alpha-1)} $$
 以下计算仅假设滴定过程$\pH$不变（大多为缓冲溶液或直接给出中点$\pH$）。 首先算出滴定终点时的$\c M$，只需注意终点的定义时$\c{MIn}=\frac12c_M$： $$ \frac12=\frac1{1&#43;K_{\ce{MIn}}\c{M}&#43;\alpha_{\ce{InH}}-1} $$ 求出$\c M$后，列出关于M的物料守恒，即：分析浓度 = 分析浓度。 $$ \frac{c_{原}}{1&#43;V}=\c M\frac{1&#43;K_{\ce{MY}}\c Y}1 $$ 要求$\c Y$，写出分布系数： $$ \c Y=c_{\ce Y}\delta_{\ce Y}=\frac{Vc_{滴定剂}}{1&#43;V}\frac{1}{1&#43;\alpha_{\ce{YH}}-1&#43;K_{\ce{MY}}\c M} $$ 带入表达式，得到关于$V$的方程，求解，游戏结束： $$ E_t=\frac{V-1}{V} $$"/>
 
   </head>
@@ -131,12 +120,11 @@ $$</p>
 <p>注意，再次使用副反应系数代替分配系数（方便加减分母），副反应系数可针对配体、金属、指示剂等与之相关的计算：</p>
 <p>求和（一般题目上给出的$\alpha$默认包含自身的$1$，应减去）：
 $$
-\alpha=\alpha_1+\alpha_2\red{-1}\\<br>
+\alpha=\alpha_1+\alpha_2\red{-1}
 $$
 不同$\alpha$的计算，注意此处的配位是广义的，可以针对金属配位、配体质子化（以及<b>1：1</b>配合物中<b>配体的相关计算</b>）：
 $$
-\alpha_{自身}=1\\<br>
-\alpha_L=1+\sum\beta_i\c{L}^i\qquad
+\alpha_{自身}=1\\ \alpha_L=1+\sum\beta_i\c{L}^i\qquad
 $$
 计算分配系数$\delta$：
 $$
@@ -171,8 +159,7 @@ $$
 <h2 id="氧化还原滴定">氧化还原滴定</h2>
 <p>遵守以下两个等式：
 $$
-\begin{align}\varphi_{\rm A}-\frac{RT}{z_{\rm A}F}\ln\frac{{\rm [Red]_A}}{{\rm [Ox]_A}}&amp;=\varphi_{\rm B}-\frac{RT}{z_{\rm B}F}\ln\frac{{\rm [Red]_B}}{{\rm [Ox]_B}}\\\\<br>
-z_{\rm A}{\rm[Ox]_A}&amp;=z_{\rm B}{\rm[Red]_B}（电子守恒）\end{align}
+\begin{align*}\varphi_{\rm A}-\frac{RT}{z_{\rm A}F}\ln\frac{{\rm [Red]_A}}{{\rm [Ox]_A}}&amp;=\varphi_{\rm B}-\frac{RT}{z_{\rm B}F}\ln\frac{{\rm [Red]_B}}{{\rm [Ox]_B}}\\\\ z_{\rm A}{\rm[Ox]_A}&amp;=z_{\rm B}{\rm[Red]_B}（电子守恒）\end{align*}
 $$
 在化学计量点时还遵循：
 $$
@@ -281,57 +268,59 @@ $$</p>
   <footer>
   <script src="https://cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.js"></script>
 
-			<script type="text/x-mathjax-config">
-				MathJax.Hub.Config({
-					extensions: ["tex2jax.js"],
-					jax: ["input/TeX", "output/HTML-CSS"],
-					TeX: {
-						extensions: ["mhchem.js","AMSmath.js", "AMSsymbols.js"],
-						Macros: {
-								d: "{\\mathrm d}",
-								p: "{\\mathrm p}",
-								pKa: "{\\mathrm{p}K_{a}}",
-								Ka: "{K_{a}}",
-								pH: "{\\mathrm{pH}}",
-								H: "{\\left\[\\ce{H+}\\right\]}",
-								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
-								B: "{\\mathrm B}",
-								A: "{\\mathrm A}",
-								C: "{\\mathrm C}",
-								r: "{\\mathrm r}",
-								a: "{\\mathrm a}",
-								m: "{\\mathrm m}",
-								D: "{\\Delta}",
-								o: "{\\ominus}",
-								Ek: "{E_{\\mathrm k}}",
-								Ep: "{E_{\\mathrm p}}",
-								K: "{\\space\\mathrm K}",
-								J: "{\\space\\mathrm J}",
-								kJ: "{\\space\\mathrm {kJ}}",
-								eV: "{\\space\\mathrm {eV}}",
-								mol: "{\\space\\mathrm {mol}}",
-								kjm: "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
-								align: ["{\\begin{align*} #1 \\end{align*}}",1],
-								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
-								l: ["{\\left( #1\\right)}",1],
-								lf: ["{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",2],
-								red: ["{\\color{red}{ #1}}",1],
-								green: ["{\\color{green}{ #1}}",1],
-								blue: ["{\\color{blue}{ #1}}",1],
-								bm: ["{\\boldsymbol{ #1}}",1]
-						}
-					},
-					tex2jax: {
-						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-						processEscapes: true
-					},
-					CommonHTML: { linebreaks: { automatic: true } },
-  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
-         	SVG: { linebreaks: { automatic: true } }
-				});
-			</script>
-			<script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js" integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/mhchem.min.js" integrity="sha384-RTN08a0AXIioPBcVosEqPUfKK+rPp+h1x/izR7xMkdMyuwkcZCWdxO+RSwIFtJXN"  crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false,
+					macros:{
+						'\\d': "{\\mathrm d}",
+					'\\p': "{\\mathrm p}",
+					'\\pKa': "{\\mathrm{p}K_{a}}",
+					'\\Ka': "{K_{a}}",
+					'\\pH': "{\\mathrm{pH}}",
+					'\\H': "{\\left\[\\ce{H+}\\right\]}",
+					'\\c': ["{\\left\[\\ce{ #1}\\right\]}",1],
+					'\\B': "{\\mathrm B}",
+					'\\A': "{\\mathrm A}",
+					'\\C': "{\\mathrm C}",
+					'\\r': "{\\mathrm r}",
+					'\\a': "{\\mathrm a}",
+					'\\m': "{\\mathrm m}",
+					'\\D': "{\\Delta}",
+					'\\o': "{\\ominus}",
+					'\\Ek': "{E_{\\mathrm k}}",
+					'\\Ep': "{E_{\\mathrm p}}",
+					'\\K': "{\\space\\mathrm K}",
+					'\\J': "{\\space\\mathrm J}",
+					'\\kJ': "{\\space\\mathrm {kJ}}",
+					'\\eV': "{\\space\\mathrm {eV}}",
+					'\\mol': "{\\space\\mathrm {mol}}",
+					'\\kjm': "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
+					'\\align': "{\\begin{align*} #1 \\end{align*}}",
+					'\\f': "{\\frac{\\partial  #1}{\\partial  #2}}",
+					'\\l': "{\\left( #1\\right)}",
+					'\\lf': "{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",
+					'\\red': "{\\color{red}{ #1}}",
+					'\\green': "{\\color{green}{ #1}}",
+					'\\blue': "{\\color{blue}{ #1}}",
+					'\\bm': "{\\boldsymbol{ #1}}",
+					}
+        });
+    });
+</script>
 
 
 

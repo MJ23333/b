@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hans-CN" >
+<html lang="zh-Hans-CN" class='han-la'>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,22 +18,13 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
-<script>
-  
-  
-  pangu.spacingElementByTagName('p');
-  document.addEventListener('DOMContentLoaded', () => {
-    
-    pangu.autoSpacingPage();
-  });
-</script>
+<script src="https://cdn.jsdelivr.net/gh/mastermay/text-autospace.js/text-autospace.min.js"></script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="圆柱坐标下的拉普拉斯算子"/>
 <meta name="twitter:description" content="拉普兰德在使用圆规前必须掌握的圆柱坐标下拉普拉斯算子的推导。
-圆柱坐标与笛卡尔坐标关系如下： $$ x=r\cos \phi\tag1\\
-y=r\sin \phi\\
-$$ 把上下平方相加，得到： $$ F(x,y,r)=x^2&#43;y^2-r^2=0\tag2 $$ 接下来只介绍对于$x$的部分，$y$部分方法完全一致,根据隐函数求偏导方法（见《一些数学》）： $$ \f rx=-\frac{\partial F/\partial x}{\partial F/\partial r}=-\frac{2x}{-2r}=\frac xr=\cos\phi\tag3 $$ (1)式两边对$x$求偏导，并带入(3)式结果： $$ \align{1&amp;=\f rx\cos\phi&#43;\f{\cos\phi}xr\\&amp;=\cos^2\phi-r\sin\phi\f \phi x\\\f \phi x&amp;=-\frac{\sin\phi}r\tag4} $$ 显然，对于一个指定的点，$(x,y)$和$(r,\phi)$两种表示一一对应，必然有： $$\psi(r,\phi)=\psi(r(x,y),\phi(x,y))$$ 应用链式法则（《一些数学》），带入(3)、(4)得到： $$ \align{\f \psi x&amp;=\f \psi r \f rx&#43;\f \psi \phi \f \phi x\\&amp;=\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r \tag5} $$ 我们接着再求一次偏导，同样有（把一阶偏导看做一个函数）： $$\f \psi x(r,\phi)=\f \psi x(r(x,y),\phi(x,y))$$ 又用链式法则： $$ \align{\f{^2\psi}{x^2}=\f {\lf \psi x}{x}&amp;=\f {\lf \psi x} r \cos\phi-\f {\lf \psi x} \phi\frac{\sin\phi}r } $$ 把(5)带入其中，并使用乘法求导法则： $$ \align{\f{^2\psi}{x^2}=&amp;\f {\left(\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r\right)} r \cos\phi-\f {\left(\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r\right)} \phi\frac{\sin\phi}r \\ =&amp;\left(\f{^2\psi}{r^2}\cos\phi-\f{^2\psi}{\phi\partial r}\frac{\sin\phi}r&#43;\f{\psi}{\phi}\frac{\sin\phi}{r^2}\right)\cos\phi\\&amp;-\left(\f{^2\psi}{r\partial\phi}\cos\phi-\f\psi r\sin\phi-\f{^2\psi}{\phi^2}\frac{\sin \phi}{r}-\f{\psi}{\phi}\frac{\cos\phi}{r^2}\right)\frac{\sin\phi}r\\=&amp;\f{^2\psi}{r^2}\cos^2\phi-\f{^2\psi}{r\partial\phi}\frac{2\sin\phi\cos\phi}{r}&#43;\f{^2\psi}{\phi^2}\frac{\sin^2\phi}{r^2}&#43;\f\psi r\frac{\sin^2\phi}{r}&#43;\f\psi\phi\frac{2\sin\phi\cos\phi}{r^2}} $$ 同理，对$y$做相同的事情： $$ \f{^2\psi}{y^2}=\f{^2\psi}{r^2}\red{\sin^2}\phi\red{&#43;}\f{^2\psi}{r\partial\phi}\frac{2\sin\phi\cos\phi}{r}&#43;\f{^2\psi}{\phi^2}\frac{\red{\cos^2}\phi}{r^2}&#43;\f\psi r\frac{\red{\cos^2}\phi}{r}\red-\f\psi\phi\frac{2\sin\phi\cos\phi}{r^2} $$ 合体！写成算符形式 $$ \f{^2}{x^2}&#43;\f{^2}{y^2}=\f{^2}{r^2}&#43;\frac1r\f{}{r}&#43;\frac1{r^2}\f{^2}{\psi^2} $$ 去吃千层酥罢！"/>
+圆柱坐标与笛卡尔坐标关系如下：
+$$x=r\cos \phi \tag1 \\ y=r\sin \phi$$
+把上下平方相加，得到： $$ F(x,y,r)=x^2&#43;y^2-r^2=0\tag2 $$ 接下来只介绍对于$x$的部分，$y$部分方法完全一致,根据隐函数求偏导方法（见《一些数学》）： $$ \f rx=-\frac{\partial F/\partial x}{\partial F/\partial r}=-\frac{2x}{-2r}=\frac xr=\cos\phi\tag3 $$ (1)式两边对$x$求偏导，并带入(3)式结果： $$ \align{1&amp;=\f rx\cos\phi&#43;\f{\cos\phi}xr\\&amp;=\cos^2\phi-r\sin\phi\f \phi x\\\f \phi x&amp;=-\frac{\sin\phi}r\tag4} $$ 显然，对于一个指定的点，$(x,y)$和$(r,\phi)$两种表示一一对应，必然有： $$\psi(r,\phi)=\psi(r(x,y),\phi(x,y))$$ 应用链式法则（《一些数学》），带入(3)、(4)得到： $$ \align{\f \psi x&amp;=\f \psi r \f rx&#43;\f \psi \phi \f \phi x\\&amp;=\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r \tag5} $$ 我们接着再求一次偏导，同样有（把一阶偏导看做一个函数）： $$\f \psi x(r,\phi)=\f \psi x(r(x,y),\phi(x,y))$$ 又用链式法则： $$ \align{\f{^2\psi}{x^2}=\f {\lf \psi x}{x}&amp;=\f {\lf \psi x} r \cos\phi-\f {\lf \psi x} \phi\frac{\sin\phi}r } $$ 把(5)带入其中，并使用乘法求导法则： $$ \align{\f{^2\psi}{x^2}=&amp;\f {\left(\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r\right)} r \cos\phi-\f {\left(\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r\right)} \phi\frac{\sin\phi}r \\ =&amp;\left(\f{^2\psi}{r^2}\cos\phi-\f{^2\psi}{\phi\partial r}\frac{\sin\phi}r&#43;\f{\psi}{\phi}\frac{\sin\phi}{r^2}\right)\cos\phi\\&amp;-\left(\f{^2\psi}{r\partial\phi}\cos\phi-\f\psi r\sin\phi-\f{^2\psi}{\phi^2}\frac{\sin \phi}{r}-\f{\psi}{\phi}\frac{\cos\phi}{r^2}\right)\frac{\sin\phi}r\\=&amp;\f{^2\psi}{r^2}\cos^2\phi-\f{^2\psi}{r\partial\phi}\frac{2\sin\phi\cos\phi}{r}&#43;\f{^2\psi}{\phi^2}\frac{\sin^2\phi}{r^2}&#43;\f\psi r\frac{\sin^2\phi}{r}&#43;\f\psi\phi\frac{2\sin\phi\cos\phi}{r^2}} $$ 同理，对$y$做相同的事情： $$ \f{^2\psi}{y^2}=\f{^2\psi}{r^2}\red{\sin^2}\phi\red{&#43;}\f{^2\psi}{r\partial\phi}\frac{2\sin\phi\cos\phi}{r}&#43;\f{^2\psi}{\phi^2}\frac{\red{\cos^2}\phi}{r^2}&#43;\f\psi r\frac{\red{\cos^2}\phi}{r}\red-\f\psi\phi\frac{2\sin\phi\cos\phi}{r^2} $$ 合体！写成算符形式 $$ \f{^2}{x^2}&#43;\f{^2}{y^2}=\f{^2}{r^2}&#43;\frac1r\f{}{r}&#43;\frac1{r^2}\f{^2}{\psi^2} $$ 去吃千层酥罢！"/>
 
   </head>
   <body>
@@ -78,27 +69,11 @@ $$ 把上下平方相加，得到： $$ F(x,y,r)=x^2&#43;y^2-r^2=0\tag2 $$ 接�
 </div>
 
 <div class="article">
-<!-- \(
-  \def\d{{\mathrm d}}
-	\def\B{{\mathrm B}}
-	\def\A{{\mathrm A}}
-	\def\m{{\mathrm m}}
-	\def\align #1{{\begin{align*} #1 \end{align*}}}
-	\def\f #1#2{{\frac{\partial  #1}{\partial  #2}}}
-	\def\l #1{{\left( #1\right)}}
-	\def\red #1{{\color{red}{ #1}}}
-	\def\green #1{{\color{green}{ #1}}}
-	\def\blue #1{{\color{blue}{ #1}}}
-		\def\lf #1#2{{\left(\frac{\partial  #1}{\partial  #2}\right)}}
-	\def\bm #1{{\boldsymbol{ #1}}}
-\)  -->
 <p>拉普兰德在使用圆规前必须掌握的圆柱坐标下拉普拉斯算子的推导。</p>
-<p>圆柱坐标与笛卡尔坐标关系如下：
-$$
-x=r\cos \phi\tag1\\<br>
-y=r\sin \phi\\<br>
-$$
-把上下平方相加，得到：
+<p>圆柱坐标与笛卡尔坐标关系如下：</p>
+<p>$$x=r\cos \phi \tag1
+\\ y=r\sin \phi$$</p>
+<p>把上下平方相加，得到：
 $$
 F(x,y,r)=x^2+y^2-r^2=0\tag2
 $$
@@ -238,57 +213,59 @@ $$
   <footer>
   <script src="https://cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.js"></script>
 
-			<script type="text/x-mathjax-config">
-				MathJax.Hub.Config({
-					extensions: ["tex2jax.js"],
-					jax: ["input/TeX", "output/HTML-CSS"],
-					TeX: {
-						extensions: ["mhchem.js","AMSmath.js", "AMSsymbols.js"],
-						Macros: {
-								d: "{\\mathrm d}",
-								p: "{\\mathrm p}",
-								pKa: "{\\mathrm{p}K_{a}}",
-								Ka: "{K_{a}}",
-								pH: "{\\mathrm{pH}}",
-								H: "{\\left\[\\ce{H+}\\right\]}",
-								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
-								B: "{\\mathrm B}",
-								A: "{\\mathrm A}",
-								C: "{\\mathrm C}",
-								r: "{\\mathrm r}",
-								a: "{\\mathrm a}",
-								m: "{\\mathrm m}",
-								D: "{\\Delta}",
-								o: "{\\ominus}",
-								Ek: "{E_{\\mathrm k}}",
-								Ep: "{E_{\\mathrm p}}",
-								K: "{\\space\\mathrm K}",
-								J: "{\\space\\mathrm J}",
-								kJ: "{\\space\\mathrm {kJ}}",
-								eV: "{\\space\\mathrm {eV}}",
-								mol: "{\\space\\mathrm {mol}}",
-								kjm: "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
-								align: ["{\\begin{align*} #1 \\end{align*}}",1],
-								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
-								l: ["{\\left( #1\\right)}",1],
-								lf: ["{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",2],
-								red: ["{\\color{red}{ #1}}",1],
-								green: ["{\\color{green}{ #1}}",1],
-								blue: ["{\\color{blue}{ #1}}",1],
-								bm: ["{\\boldsymbol{ #1}}",1]
-						}
-					},
-					tex2jax: {
-						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-						processEscapes: true
-					},
-					CommonHTML: { linebreaks: { automatic: true } },
-  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
-         	SVG: { linebreaks: { automatic: true } }
-				});
-			</script>
-			<script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js" integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/mhchem.min.js" integrity="sha384-RTN08a0AXIioPBcVosEqPUfKK+rPp+h1x/izR7xMkdMyuwkcZCWdxO+RSwIFtJXN"  crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false,
+					macros:{
+						'\\d': "{\\mathrm d}",
+					'\\p': "{\\mathrm p}",
+					'\\pKa': "{\\mathrm{p}K_{a}}",
+					'\\Ka': "{K_{a}}",
+					'\\pH': "{\\mathrm{pH}}",
+					'\\H': "{\\left\[\\ce{H+}\\right\]}",
+					'\\c': ["{\\left\[\\ce{ #1}\\right\]}",1],
+					'\\B': "{\\mathrm B}",
+					'\\A': "{\\mathrm A}",
+					'\\C': "{\\mathrm C}",
+					'\\r': "{\\mathrm r}",
+					'\\a': "{\\mathrm a}",
+					'\\m': "{\\mathrm m}",
+					'\\D': "{\\Delta}",
+					'\\o': "{\\ominus}",
+					'\\Ek': "{E_{\\mathrm k}}",
+					'\\Ep': "{E_{\\mathrm p}}",
+					'\\K': "{\\space\\mathrm K}",
+					'\\J': "{\\space\\mathrm J}",
+					'\\kJ': "{\\space\\mathrm {kJ}}",
+					'\\eV': "{\\space\\mathrm {eV}}",
+					'\\mol': "{\\space\\mathrm {mol}}",
+					'\\kjm': "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
+					'\\align': "{\\begin{align*} #1 \\end{align*}}",
+					'\\f': "{\\frac{\\partial  #1}{\\partial  #2}}",
+					'\\l': "{\\left( #1\\right)}",
+					'\\lf': "{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",
+					'\\red': "{\\color{red}{ #1}}",
+					'\\green': "{\\color{green}{ #1}}",
+					'\\blue': "{\\color{blue}{ #1}}",
+					'\\bm': "{\\boldsymbol{ #1}}",
+					}
+        });
+    });
+</script>
 
 
 

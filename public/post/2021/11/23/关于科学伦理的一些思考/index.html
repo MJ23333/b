@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hans-CN" >
+<html lang="zh-Hans-CN" class='han-la'>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,16 +18,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
-<script>
-  
-  
-  pangu.spacingElementByTagName('p');
-  document.addEventListener('DOMContentLoaded', () => {
-    
-    pangu.autoSpacingPage();
-  });
-</script>
+<script src="https://cdn.jsdelivr.net/gh/mastermay/text-autospace.js/text-autospace.min.js"></script>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="关于科学伦理的一些思考🤔"/>
 <meta name="twitter:description" content="自近代科学兴起以来，人们见证了科学改造世界的力量，也充分享受到了近代科学成果带来的社会福祉。从衣食住行到生老病死，我们已经彻底离不开科学了。遥想18世纪启蒙运动的先辈们，热情地讴歌这人类智慧的结晶：他们为后世量身定做了“科学等同于进步”，“知识就是力量”（培根是17世纪的）的乐观理念。然而，他们万万没有想到，人类在享受科学福祉的同时，也开始遭遇来自科学的远虑近忧。
@@ -189,57 +180,59 @@
   <footer>
   <script src="https://cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.js"></script>
 
-			<script type="text/x-mathjax-config">
-				MathJax.Hub.Config({
-					extensions: ["tex2jax.js"],
-					jax: ["input/TeX", "output/HTML-CSS"],
-					TeX: {
-						extensions: ["mhchem.js","AMSmath.js", "AMSsymbols.js"],
-						Macros: {
-								d: "{\\mathrm d}",
-								p: "{\\mathrm p}",
-								pKa: "{\\mathrm{p}K_{a}}",
-								Ka: "{K_{a}}",
-								pH: "{\\mathrm{pH}}",
-								H: "{\\left\[\\ce{H+}\\right\]}",
-								c: ["{\\left\[\\ce{ #1}\\right\]}",1],
-								B: "{\\mathrm B}",
-								A: "{\\mathrm A}",
-								C: "{\\mathrm C}",
-								r: "{\\mathrm r}",
-								a: "{\\mathrm a}",
-								m: "{\\mathrm m}",
-								D: "{\\Delta}",
-								o: "{\\ominus}",
-								Ek: "{E_{\\mathrm k}}",
-								Ep: "{E_{\\mathrm p}}",
-								K: "{\\space\\mathrm K}",
-								J: "{\\space\\mathrm J}",
-								kJ: "{\\space\\mathrm {kJ}}",
-								eV: "{\\space\\mathrm {eV}}",
-								mol: "{\\space\\mathrm {mol}}",
-								kjm: "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
-								align: ["{\\begin{align*} #1 \\end{align*}}",1],
-								f: ["{\\frac{\\partial  #1}{\\partial  #2}}",2],
-								l: ["{\\left( #1\\right)}",1],
-								lf: ["{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",2],
-								red: ["{\\color{red}{ #1}}",1],
-								green: ["{\\color{green}{ #1}}",1],
-								blue: ["{\\color{blue}{ #1}}",1],
-								bm: ["{\\boldsymbol{ #1}}",1]
-						}
-					},
-					tex2jax: {
-						inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-						displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-						processEscapes: true
-					},
-					CommonHTML: { linebreaks: { automatic: true } },
-  				"HTML-CSS": { linebreaks: { automatic: true },fonts: ["Gyre-Pagella"] },
-         	SVG: { linebreaks: { automatic: true } }
-				});
-			</script>
-			<script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js" integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/mhchem.min.js" integrity="sha384-RTN08a0AXIioPBcVosEqPUfKK+rPp+h1x/izR7xMkdMyuwkcZCWdxO+RSwIFtJXN"  crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false,
+					macros:{
+						'\\d': "{\\mathrm d}",
+					'\\p': "{\\mathrm p}",
+					'\\pKa': "{\\mathrm{p}K_{a}}",
+					'\\Ka': "{K_{a}}",
+					'\\pH': "{\\mathrm{pH}}",
+					'\\H': "{\\left\[\\ce{H+}\\right\]}",
+					'\\c': ["{\\left\[\\ce{ #1}\\right\]}",1],
+					'\\B': "{\\mathrm B}",
+					'\\A': "{\\mathrm A}",
+					'\\C': "{\\mathrm C}",
+					'\\r': "{\\mathrm r}",
+					'\\a': "{\\mathrm a}",
+					'\\m': "{\\mathrm m}",
+					'\\D': "{\\Delta}",
+					'\\o': "{\\ominus}",
+					'\\Ek': "{E_{\\mathrm k}}",
+					'\\Ep': "{E_{\\mathrm p}}",
+					'\\K': "{\\space\\mathrm K}",
+					'\\J': "{\\space\\mathrm J}",
+					'\\kJ': "{\\space\\mathrm {kJ}}",
+					'\\eV': "{\\space\\mathrm {eV}}",
+					'\\mol': "{\\space\\mathrm {mol}}",
+					'\\kjm': "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
+					'\\align': "{\\begin{align*} #1 \\end{align*}}",
+					'\\f': "{\\frac{\\partial  #1}{\\partial  #2}}",
+					'\\l': "{\\left( #1\\right)}",
+					'\\lf': "{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",
+					'\\red': "{\\color{red}{ #1}}",
+					'\\green': "{\\color{green}{ #1}}",
+					'\\blue': "{\\color{blue}{ #1}}",
+					'\\bm': "{\\boldsymbol{ #1}}",
+					}
+        });
+    });
+</script>
 
 
 
