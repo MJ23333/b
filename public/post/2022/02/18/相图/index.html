@@ -25,10 +25,8 @@
 蒸气压图 由Raoult定律： $$ \align{p&amp;=p_\A&#43;p_\B\\ &amp;=p^*_\A x_\A &#43; p^*_\B (1-x_\A)\\&amp;=p^*_\B &#43; (p^*_\A- p^*_\B)x_\A} $$ 由此可以画出 $p-x_\A$图。
 对于气相组分（记为$y_{\rm C}$），根据分压定律： $$ \align{y_\A&amp;=\frac{p_\A}{p}=\frac{p^*_\A x_\A}{p^*_\B &#43; (p^*_\A- p^*_\B)x_\A}\\y_\B&amp;=\frac{p_\B}{p}=\frac{p^*_\B (1-x_\A)}{p^*_\B &#43; (p^*_\A- p^*_\B)x_\A}} $$ 由此可画出 $y_\A-x_\A$图。
 延伸一下思路，用压力表示$x_\C$和$y_\C$的关系（使用分压定律和Raoult定律）： $$ \frac{y_\C}{x_\C}=\frac{p_\C^*}{p} $$
-$T-x_\A$和$T-y_\A$图 我们主要关注气-液平衡，相界线上，对于每个组份都有如下关系： $$ p_\C({\rm l})=p_\C({\rm g})\\
-\mu_\C({\rm l})=\mu_\C({\rm g})\\
-T_\C({\rm l})=T_\C({\rm g}) $$ 同时： $$ \sum x_\C=\sum y_\C=1 $$
-首先使用温度表示某温度下饱和蒸气压$p^*$与总压$p$（默认为标准大气压，即该液体沸点时的饱和蒸汽压）之比： $$ \ln\frac{p_\A^*}{p}=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}} $$ 根据上一节得到的$x_\C$和$y_\C$关系，带入： $$ \ln\frac{y_\A}{x_\A}=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}} $$ 由于$x_\C$和$y_\A$的总和分别为1，可以得到两个方程： $$ \left \{\begin{align}\ln\frac{y_\A}{x_\A}&amp;=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}}\\ \ln\frac{1-y_\A}{1-x_\A}&amp;=-\frac{\D_{\rm vap}H_\B}{R}\l{\frac1T-\frac1{T_{\rm b}}}\end{align}\right."/>
+$T-x_\A$和$T-y_\A$图 我们主要关注气-液平衡，相界线上，对于每个组份都有如下关系： $$ p_\C({\rm l})=p_\C({\rm g})\\\mu_\C({\rm l})=\mu_\C({\rm g})\\T_\C({\rm l})=T_\C({\rm g}) $$ 同时： $$ \sum x_\C=\sum y_\C=1 $$
+首先使用温度表示某温度下饱和蒸气压$p^*$与总压$p$（默认为标准大气压，即该液体沸点时的饱和蒸汽压）之比： $$ \ln\frac{p_\A^*}{p}=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}} $$ 根据上一节得到的$x_\C$和$y_\C$关系，带入： $$ \ln\frac{y_\A}{x_\A}=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}} $$ 由于$x_\C$和$y_\A$的总和分别为1，可以得到两个方程： $$ \left \{\begin{align*}\ln\frac{y_\A}{x_\A}&amp;=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}}\\ \ln\frac{1-y_\A}{1-x_\A}&amp;=-\frac{\D_{\rm vap}H_\B}{R}\l{\frac1T-\frac1{T_{\rm b}}}\end{align*}\right."/>
 
   </head>
   <body>
@@ -107,9 +105,7 @@ $$</p>
 <h3 id="t-x_a和t-y_a图">$T-x_\A$和$T-y_\A$图</h3>
 <p>我们主要关注气-液平衡，相界线上，对于每个组份都有如下关系：
 $$
-p_\C({\rm l})=p_\C({\rm g})\\<br>
-\mu_\C({\rm l})=\mu_\C({\rm g})\\<br>
-T_\C({\rm l})=T_\C({\rm g})
+p_\C({\rm l})=p_\C({\rm g})\\\mu_\C({\rm l})=\mu_\C({\rm g})\\T_\C({\rm l})=T_\C({\rm g})
 $$
 同时：
 $$
@@ -125,7 +121,7 @@ $$
 $$
 由于$x_\C$和$y_\A$的总和分别为1，可以得到两个方程：
 $$
-\left \{\begin{align}\ln\frac{y_\A}{x_\A}&amp;=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}}\\ \ln\frac{1-y_\A}{1-x_\A}&amp;=-\frac{\D_{\rm vap}H_\B}{R}\l{\frac1T-\frac1{T_{\rm b}}}\end{align}\right.
+\left \{\begin{align*}\ln\frac{y_\A}{x_\A}&amp;=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}}\\ \ln\frac{1-y_\A}{1-x_\A}&amp;=-\frac{\D_{\rm vap}H_\B}{R}\l{\frac1T-\frac1{T_{\rm b}}}\end{align*}\right.
 $$
 解出两个曲线，其中$T-x_\A$为泡点曲线，泡点是于固定压力下加热多组分液体的过程中，形成第一个气泡时的温度；$T-y_\A$为露点取曲线，定义与泡点类似。</p>
 <p>当我们把横轴变成A的总摩尔分数$z_\A$（气相和液相之和）时，我们可以作一条与横轴平行的线，称为<b>等组成线</b>，该线表示了随温度变化总组成确定的体系的气相和液相组成与温度的关系：</p>
@@ -138,10 +134,6 @@ $$
 <h4 id="蒸馏">蒸馏</h4>
 <p>有一种组分更容易挥发，每次取出蒸汽冷凝后再次蒸馏：</p>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h0u88qgmaaj20kk0ckjse.jpg" alt="image-20220401145645390" style="zoom:50%;" /></p>
-<p>每次蒸馏的气相组成可通过下式计算：
-$$</p>
-<p>$$</p>
-<p>对于恒沸物种</p>
 
 </div>
 
@@ -283,6 +275,7 @@ $$</p>
 					'\\mol': "{\\space\\mathrm {mol}}",
 					'\\kjm': "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
 					'\\align': "{\\begin{align*} #1 \\end{align*}}",
+					'\\ga': "{\\begin{gather*} #1 \\end{gather*}}",
 					'\\f': "{\\frac{\\partial  #1}{\\partial  #2}}",
 					'\\l': "{\\left( #1\\right)}",
 					'\\lf': "{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",

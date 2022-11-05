@@ -22,15 +22,10 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="相变"/>
 <meta name="twitter:description" content="相律 对于有$C$各组分、$P$个相的系统，使用$p、V$以及每个相中组份的摩尔分数，那么强度变量的总数为：$CP&#43;2$个。由于摩尔分数总和为1，总数变为$CP-P&#43;2$。又因为组分在所有相里的$\mu$相等，总数变为$CP-C(P-1)-P&#43;2=C-P&#43;2$，因此得到Gibbs相律： $$ F=C-P&#43;2 $$
-稳定性与条件的关系 根据以下两个关系（重要）： $$ \lf \mu T_p=-S_\m\\
-\lf \mu p_T=V_\m $$ 对于不同的相： $$ S_\m({\rm g})&gt;S_\m({\rm l})&gt;S_\m({\rm s})\\
-V_\m({\rm g})&gt;V_\m({\rm l})&gt;V_\m({\rm s}) $$
+稳定性与条件的关系 根据以下两个关系（重要）： $$ \ga{\lf \mu T_p=-S_\m\\\lf \mu p_T=V_\m} $$ 对于不同的相： $$ \ga{S_\m({\rm g})&gt;S_\m({\rm l})&gt;S_\m({\rm s})\\ V_\m({\rm g})&gt;V_\m({\rm l})&gt;V_\m({\rm s})} $$
 压力对液体蒸气压的影响 通过惰性气体或使用只对液体有影响的活塞加（总）压可以增大蒸气压。
-等温，全程平衡，化学势相等（$p_{\rm tot}$为总压，$p^*$为原蒸气压，$p$为现蒸气压）： $$ V_\m({\rm l})\d p_{\rm tot}=\frac{RT}p\d p $$ 设压力增大了$\D p$，原来总压就是$p^*$，现总压为$p^*&#43;\D p$，积分（加入$&#39;$防止混淆）： $$ \int_{p*}^{p^*&#43;\D p} V_\m({\rm l})\d p&#39;=RT\int_{p*}^{p}\frac{RT}{p&#39;&#39;}\d p&#39;&#39; $$ 得到结果： $$ V_\m({\rm l})\D p=RT\ln{\frac{p}{p*}}\\
-\ln{\frac{p}{p*}}=\frac{V_\m({\rm l})\D p}{RT}\\
-p=p^*\exp\left[{\frac{V_\m({\rm l})\D p}{RT}}\right] $$ 该结果未考虑惰性气体的溶解。
-相界线的位置 根据定义： $$ \d \mu_\alpha=\d \mu_\beta\\
--S_\m(\alpha)\d T&#43;V_\m(\alpha)\d p=-S_\m(\beta)\d T&#43;V_\m(\beta)\d p\\"/>
+等温，全程平衡，化学势相等（$p_{\rm tot}$为总压，$p^*$为原蒸气压，$p$为现蒸气压）： $$ V_\m({\rm l})\d p_{\rm tot}=\frac{RT}p\d p $$ 设压力增大了$\D p$，原来总压就是$p^*$，现总压为$p^*&#43;\D p$，积分（加入$&#39;$防止混淆）： $$ \int_{p*}^{p^*&#43;\D p} V_\m({\rm l})\d p&#39;=RT\int_{p*}^{p}\frac{RT}{p&#39;&#39;}\d p&#39;&#39; $$ 得到结果： $$ \ga{V_\m({\rm l})\D p=RT\ln{\frac{p}{p*}}\\\ln{\frac{p}{p*}}=\frac{V_\m({\rm l})\D p}{RT}\\ p=p^*\exp\left[{\frac{V_\m({\rm l})\D p}{RT}}\right]} $$ 该结果未考虑惰性气体的溶解。
+相界线的位置 根据定义： $$ \ga{\d \mu_\alpha=\d \mu_\beta\\ -S_\m(\alpha)\d T&#43;V_\m(\alpha)\d p=-S_\m(\beta)\d T&#43;V_\m(\beta)\d p\\ \frac{\d p}{\d T}=\frac{\D_{\rm trs}S}{\D_{\rm trs}V}} $$ 这就是克拉贝龙方程，由于相界线上是可逆的： $$ \frac{\d p}{\d T}=\frac{\D_{\rm trs}H}{T\D_{\rm trs}V} $$"/>
 
   </head>
   <body>
@@ -83,13 +78,11 @@ $$</p>
 <h2 id="稳定性与条件的关系">稳定性与条件的关系</h2>
 <p>根据以下两个关系（重要）：
 $$
-\lf \mu T_p=-S_\m\\<br>
-\lf \mu p_T=V_\m
+\ga{\lf \mu T_p=-S_\m\\\lf \mu p_T=V_\m}
 $$
 对于不同的相：
 $$
-S_\m({\rm g})&gt;S_\m({\rm l})&gt;S_\m({\rm s})\\<br>
-V_\m({\rm g})&gt;V_\m({\rm l})&gt;V_\m({\rm s})
+\ga{S_\m({\rm g})&gt;S_\m({\rm l})&gt;S_\m({\rm s})\\ V_\m({\rm g})&gt;V_\m({\rm l})&gt;V_\m({\rm s})}
 $$</p>
 <h3 id="压力对液体蒸气压的影响">压力对液体蒸气压的影响</h3>
 <p>通过惰性气体或使用只对液体有影响的活塞加（总）压可以增大蒸气压。</p>
@@ -103,17 +96,13 @@ $$
 $$
 得到结果：
 $$
-V_\m({\rm l})\D p=RT\ln{\frac{p}{p*}}\\<br>
-\ln{\frac{p}{p*}}=\frac{V_\m({\rm l})\D p}{RT}\\<br>
-p=p^*\exp\left[{\frac{V_\m({\rm l})\D p}{RT}}\right]
+\ga{V_\m({\rm l})\D p=RT\ln{\frac{p}{p*}}\\\ln{\frac{p}{p*}}=\frac{V_\m({\rm l})\D p}{RT}\\ p=p^*\exp\left[{\frac{V_\m({\rm l})\D p}{RT}}\right]}
 $$
 该结果未考虑惰性气体的溶解。</p>
 <h2 id="相界线的位置">相界线的位置</h2>
 <p>根据定义：
 $$
-\d \mu_\alpha=\d \mu_\beta\\<br>
--S_\m(\alpha)\d T+V_\m(\alpha)\d p=-S_\m(\beta)\d T+V_\m(\beta)\d p\\<br>
-\frac{\d p}{\d T}=\frac{\D_{\rm trs}S}{\D_{\rm trs}V}
+\ga{\d \mu_\alpha=\d \mu_\beta\\ -S_\m(\alpha)\d T+V_\m(\alpha)\d p=-S_\m(\beta)\d T+V_\m(\beta)\d p\\ \frac{\d p}{\d T}=\frac{\D_{\rm trs}S}{\D_{\rm trs}V}}
 $$
 这就是<b>克拉贝龙方程</b>，由于相界线上是可逆的：
 $$
@@ -121,8 +110,7 @@ $$
 $$</p>
 <p>对于与气体相关的相界线，可以加上理想气体近似，并忽略另一项的$V_\m$：
 $$
-\frac{\d p}{\d T}=\frac{p\D_{\rm trs}H}{RT^2}\\<br>
-\frac{\d \ln p}{\d T}=\frac{\D_{\rm trs}H}{RT^2}
+\ga{\frac{\d p}{\d T}=\frac{p\D_{\rm trs}H}{RT^2}\\ \frac{\d \ln p}{\d T}=\frac{\D_{\rm trs}H}{RT^2}}
 $$
 这是克劳修斯-克拉贝龙方程，它的积分形式为：
 $$
@@ -269,6 +257,7 @@ $$</p>
 					'\\mol': "{\\space\\mathrm {mol}}",
 					'\\kjm': "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
 					'\\align': "{\\begin{align*} #1 \\end{align*}}",
+					'\\ga': "{\\begin{gather*} #1 \\end{gather*}}",
 					'\\f': "{\\frac{\\partial  #1}{\\partial  #2}}",
 					'\\l': "{\\left( #1\\right)}",
 					'\\lf': "{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",

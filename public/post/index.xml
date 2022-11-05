@@ -130,7 +130,7 @@ v=\frac{n\hbar}{rm_e} $$
       <description>拉普兰德在使用圆规前必须掌握的圆柱坐标下拉普拉斯算子的推导。
 圆柱坐标与笛卡尔坐标关系如下：
 $$x=r\cos \phi \tag1 \\ y=r\sin \phi$$
-把上下平方相加，得到： $$ F(x,y,r)=x^2+y^2-r^2=0\tag2 $$ 接下来只介绍对于$x$的部分，$y$部分方法完全一致,根据隐函数求偏导方法（见《一些数学》）： $$ \f rx=-\frac{\partial F/\partial x}{\partial F/\partial r}=-\frac{2x}{-2r}=\frac xr=\cos\phi\tag3 $$ (1)式两边对$x$求偏导，并带入(3)式结果： $$ \align{1&amp;amp;=\f rx\cos\phi+\f{\cos\phi}xr\\&amp;amp;=\cos^2\phi-r\sin\phi\f \phi x\\\f \phi x&amp;amp;=-\frac{\sin\phi}r\tag4} $$ 显然，对于一个指定的点，$(x,y)$和$(r,\phi)$两种表示一一对应，必然有： $$\psi(r,\phi)=\psi(r(x,y),\phi(x,y))$$ 应用链式法则（《一些数学》），带入(3)、(4)得到： $$ \align{\f \psi x&amp;amp;=\f \psi r \f rx+\f \psi \phi \f \phi x\\&amp;amp;=\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r \tag5} $$ 我们接着再求一次偏导，同样有（把一阶偏导看做一个函数）： $$\f \psi x(r,\phi)=\f \psi x(r(x,y),\phi(x,y))$$ 又用链式法则： $$ \align{\f{^2\psi}{x^2}=\f {\lf \psi x}{x}&amp;amp;=\f {\lf \psi x} r \cos\phi-\f {\lf \psi x} \phi\frac{\sin\phi}r } $$ 把(5)带入其中，并使用乘法求导法则： $$ \align{\f{^2\psi}{x^2}=&amp;amp;\f {\left(\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r\right)} r \cos\phi-\f {\left(\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r\right)} \phi\frac{\sin\phi}r \\ =&amp;amp;\left(\f{^2\psi}{r^2}\cos\phi-\f{^2\psi}{\phi\partial r}\frac{\sin\phi}r+\f{\psi}{\phi}\frac{\sin\phi}{r^2}\right)\cos\phi\\&amp;amp;-\left(\f{^2\psi}{r\partial\phi}\cos\phi-\f\psi r\sin\phi-\f{^2\psi}{\phi^2}\frac{\sin \phi}{r}-\f{\psi}{\phi}\frac{\cos\phi}{r^2}\right)\frac{\sin\phi}r\\=&amp;amp;\f{^2\psi}{r^2}\cos^2\phi-\f{^2\psi}{r\partial\phi}\frac{2\sin\phi\cos\phi}{r}+\f{^2\psi}{\phi^2}\frac{\sin^2\phi}{r^2}+\f\psi r\frac{\sin^2\phi}{r}+\f\psi\phi\frac{2\sin\phi\cos\phi}{r^2}} $$ 同理，对$y$做相同的事情： $$ \f{^2\psi}{y^2}=\f{^2\psi}{r^2}\red{\sin^2}\phi\red{+}\f{^2\psi}{r\partial\phi}\frac{2\sin\phi\cos\phi}{r}+\f{^2\psi}{\phi^2}\frac{\red{\cos^2}\phi}{r^2}+\f\psi r\frac{\red{\cos^2}\phi}{r}\red-\f\psi\phi\frac{2\sin\phi\cos\phi}{r^2} $$ 合体！写成算符形式 $$ \f{^2}{x^2}+\f{^2}{y^2}=\f{^2}{r^2}+\frac1r\f{}{r}+\frac1{r^2}\f{^2}{\psi^2} $$ 去吃千层酥罢！</description>
+把上下平方相加，得到： $$ F(x,y,r)=x^2+y^2-r^2=0\tag2 $$ 接下来只介绍对于$x$的部分，$y$部分方法完全一致,根据隐函数求偏导方法（见《一些数学》）： $$ \f rx=-\frac{\partial F/\partial x}{\partial F/\partial r}=-\frac{2x}{-2r}=\frac xr=\cos\phi\tag3 $$ (1)式两边对$x$求偏导，并带入(3)式结果： $$ \align{1&amp;amp;=\f rx\cos\phi+\f{\cos\phi}xr\\&amp;amp;=\cos^2\phi-r\sin\phi\f \phi x\\\f \phi x&amp;amp;=-\frac{\sin\phi}r }\tag4 $$ 显然，对于一个指定的点，$(x,y)$和$(r,\phi)$两种表示一一对应，必然有： $$\psi(r,\phi)=\psi(r(x,y),\phi(x,y))$$ 应用链式法则（《一些数学》），带入(3)、(4)得到： $$ \align{\f \psi x&amp;amp;=\f \psi r \f rx+\f \psi \phi \f \phi x\\&amp;amp;=\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r \tag5} $$ 我们接着再求一次偏导，同样有（把一阶偏导看做一个函数）： $$\f \psi x(r,\phi)=\f \psi x(r(x,y),\phi(x,y))$$ 又用链式法则： $$ \align{\f{^2\psi}{x^2}=\f {\lf \psi x}{x}&amp;amp;=\f {\lf \psi x} r \cos\phi-\f {\lf \psi x} \phi\frac{\sin\phi}r } $$ 把(5)带入其中，并使用乘法求导法则： $$ \align{\f{^2\psi}{x^2}=&amp;amp;\f {\left(\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r\right)} r \cos\phi-\f {\left(\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r\right)} \phi\frac{\sin\phi}r \\ =&amp;amp;\left(\f{^2\psi}{r^2}\cos\phi-\f{^2\psi}{\phi\partial r}\frac{\sin\phi}r+\f{\psi}{\phi}\frac{\sin\phi}{r^2}\right)\cos\phi\\&amp;amp;-\left(\f{^2\psi}{r\partial\phi}\cos\phi-\f\psi r\sin\phi-\f{^2\psi}{\phi^2}\frac{\sin \phi}{r}-\f{\psi}{\phi}\frac{\cos\phi}{r^2}\right)\frac{\sin\phi}r\\=&amp;amp;\f{^2\psi}{r^2}\cos^2\phi-\f{^2\psi}{r\partial\phi}\frac{2\sin\phi\cos\phi}{r}+\f{^2\psi}{\phi^2}\frac{\sin^2\phi}{r^2}+\f\psi r\frac{\sin^2\phi}{r}+\f\psi\phi\frac{2\sin\phi\cos\phi}{r^2}} $$ 同理，对$y$做相同的事情： $$ \f{^2\psi}{y^2}=\f{^2\psi}{r^2}\red{\sin^2}\phi\red{+}\f{^2\psi}{r\partial\phi}\frac{2\sin\phi\cos\phi}{r}+\f{^2\psi}{\phi^2}\frac{\red{\cos^2}\phi}{r^2}+\f\psi r\frac{\red{\cos^2}\phi}{r}\red-\f\psi\phi\frac{2\sin\phi\cos\phi}{r^2} $$ 合体！写成算符形式 $$ \f{^2}{x^2}+\f{^2}{y^2}=\f{^2}{r^2}+\frac1r\f{}{r}+\frac1{r^2}\f{^2}{\psi^2} $$ 去吃千层酥罢！</description>
     </item>
     
     <item>
@@ -142,16 +142,13 @@ $$x=r\cos \phi \tag1 \\ y=r\sin \phi$$
       <description>旧量子论 光电效应 $$ \frac12mv^2=h\nu-\Phi $$ 其中$\Phi$为脱出功（功函）。
 Bohr的氢原子模型 两个假设：
  在氢原子中，电子围绕著原子核进行圆周运动。 在轨道中运动的电子的角动量的大小$L$被量子化为正整数乘以约化普朗克常数$\hbar$。  根据圆周运动和库仑定律： $$ r=\frac1{4\pi\varepsilon_0}\frac{e^2}{r^2} $$
-另外，圆周运动的角动量大小是半径乘以动量，结合假设2： $$ L=rm_ev=n\hbar\\
-v=\frac{n\hbar}{rm_e} $$
+另外，圆周运动的角动量大小是半径乘以动量，结合假设2： $$ L=rm_ev=n\hbar \\ v=\frac{n\hbar}{rm_e} $$
 得到： $$ r=\frac{4\pi\varepsilon_0\hbar^2}{m_ee^2}n^2 $$
-波粒关系 de Broglie和Einstein关系 对于实物粒子和光子都适用： $$ E=h\nu=hc\overline\nu=\frac{hc}\lambda\\
-\lambda=\frac h p $$
+波粒关系 de Broglie和Einstein关系 对于实物粒子和光子都适用： $$ E=h\nu=hc\overline\nu=\frac{hc}\lambda\\\lambda=\frac h p $$
 激发光谱 外界给粒子能量 → 电子跃迁到激发态 → 回落到基态 → 发光
 不确定性原理 $$ \Delta x\Delta p_x\ge\frac\hbar2 $$
 简单的量子力学 薛定谔方程 $$ \left[-\frac{\hbar^2}{2m}\nabla^2+V\right]\psi(x,y,z)=E\psi(x,y,z) $$
-一维势箱 一维势箱外$V=\infty$（显然此时$\psi=0$），势箱内$V=0$，带入薛定谔方程： $$ \frac{\hbar^2}{2m}\frac{\d^2\psi(x)}{\d x^2}+E\psi(x)=0 $$ 我们把常数搞到一块： $$ k^2=\frac{2mE}{\hbar^2}\\
-\frac{\d^2\psi(x)}{\d x^2}+k^2\psi(x)=0 $$ 联想我另一个博客里写的求解简谐振动的方法，通解为： $$ \psi(x)=A\cos(kx)+B\sin(kx) $$ 接着带入边界条件：$\psi(0)=0$，显然$A=0$，得到： $$ \psi(x)=B\sin(kx) $$ 同时，让另一个边界$\psi(l)=0$，那么： $$ k=\frac{n\pi}{l} $$ 带回$E$： $$ E=\frac{n^2h^2}{8ml^2}\qquad n=1,2,3,\cdots $$ 注意，$n=0$无法满足归一化条件。此时最低可能能量为$n=1$时的$E$，称为零点能。</description>
+一维势箱 一维势箱外$V=\infty$（显然此时$\psi=0$），势箱内$V=0$，带入薛定谔方程： $$ \frac{\hbar^2}{2m}\frac{\d^2\psi(x)}{\d x^2}+E\psi(x)=0 $$ 我们把常数搞到一块： $$ k^2=\frac{2mE}{\hbar^2}\\\frac{\d^2\psi(x)}{\d x^2}+k^2\psi(x)=0 $$ 联想我另一个博客里写的求解简谐振动的方法，通解为： $$ \psi(x)=A\cos(kx)+B\sin(kx) $$ 接着带入边界条件：$\psi(0)=0$，显然$A=0$，得到： $$ \psi(x)=B\sin(kx) $$ 同时，让另一个边界$\psi(l)=0$，那么： $$ k=\frac{n\pi}{l} $$ 带回$E$： $$ E=\frac{n^2h^2}{8ml^2}\qquad n=1,2,3,\cdots $$ 注意，$n=0$无法满足归一化条件。此时最低可能能量为$n=1$时的$E$，称为零点能。</description>
     </item>
     
     <item>
@@ -491,15 +488,10 @@ Nerst 方程 $$ E=E^\ominus-\frac{RT}{zF}\ln Q $$
       
       <guid>/post/2022/02/18/%E7%9B%B8%E5%8F%98/</guid>
       <description>相律 对于有$C$各组分、$P$个相的系统，使用$p、V$以及每个相中组份的摩尔分数，那么强度变量的总数为：$CP+2$个。由于摩尔分数总和为1，总数变为$CP-P+2$。又因为组分在所有相里的$\mu$相等，总数变为$CP-C(P-1)-P+2=C-P+2$，因此得到Gibbs相律： $$ F=C-P+2 $$
-稳定性与条件的关系 根据以下两个关系（重要）： $$ \lf \mu T_p=-S_\m\\
-\lf \mu p_T=V_\m $$ 对于不同的相： $$ S_\m({\rm g})&amp;gt;S_\m({\rm l})&amp;gt;S_\m({\rm s})\\
-V_\m({\rm g})&amp;gt;V_\m({\rm l})&amp;gt;V_\m({\rm s}) $$
+稳定性与条件的关系 根据以下两个关系（重要）： $$ \ga{\lf \mu T_p=-S_\m\\\lf \mu p_T=V_\m} $$ 对于不同的相： $$ \ga{S_\m({\rm g})&amp;gt;S_\m({\rm l})&amp;gt;S_\m({\rm s})\\ V_\m({\rm g})&amp;gt;V_\m({\rm l})&amp;gt;V_\m({\rm s})} $$
 压力对液体蒸气压的影响 通过惰性气体或使用只对液体有影响的活塞加（总）压可以增大蒸气压。
-等温，全程平衡，化学势相等（$p_{\rm tot}$为总压，$p^*$为原蒸气压，$p$为现蒸气压）： $$ V_\m({\rm l})\d p_{\rm tot}=\frac{RT}p\d p $$ 设压力增大了$\D p$，原来总压就是$p^*$，现总压为$p^*+\D p$，积分（加入$&#39;$防止混淆）： $$ \int_{p*}^{p^*+\D p} V_\m({\rm l})\d p&#39;=RT\int_{p*}^{p}\frac{RT}{p&#39;&#39;}\d p&#39;&#39; $$ 得到结果： $$ V_\m({\rm l})\D p=RT\ln{\frac{p}{p*}}\\
-\ln{\frac{p}{p*}}=\frac{V_\m({\rm l})\D p}{RT}\\
-p=p^*\exp\left[{\frac{V_\m({\rm l})\D p}{RT}}\right] $$ 该结果未考虑惰性气体的溶解。
-相界线的位置 根据定义： $$ \d \mu_\alpha=\d \mu_\beta\\
--S_\m(\alpha)\d T+V_\m(\alpha)\d p=-S_\m(\beta)\d T+V_\m(\beta)\d p\\</description>
+等温，全程平衡，化学势相等（$p_{\rm tot}$为总压，$p^*$为原蒸气压，$p$为现蒸气压）： $$ V_\m({\rm l})\d p_{\rm tot}=\frac{RT}p\d p $$ 设压力增大了$\D p$，原来总压就是$p^*$，现总压为$p^*+\D p$，积分（加入$&#39;$防止混淆）： $$ \int_{p*}^{p^*+\D p} V_\m({\rm l})\d p&#39;=RT\int_{p*}^{p}\frac{RT}{p&#39;&#39;}\d p&#39;&#39; $$ 得到结果： $$ \ga{V_\m({\rm l})\D p=RT\ln{\frac{p}{p*}}\\\ln{\frac{p}{p*}}=\frac{V_\m({\rm l})\D p}{RT}\\ p=p^*\exp\left[{\frac{V_\m({\rm l})\D p}{RT}}\right]} $$ 该结果未考虑惰性气体的溶解。
+相界线的位置 根据定义： $$ \ga{\d \mu_\alpha=\d \mu_\beta\\ -S_\m(\alpha)\d T+V_\m(\alpha)\d p=-S_\m(\beta)\d T+V_\m(\beta)\d p\\ \frac{\d p}{\d T}=\frac{\D_{\rm trs}S}{\D_{\rm trs}V}} $$ 这就是克拉贝龙方程，由于相界线上是可逆的： $$ \frac{\d p}{\d T}=\frac{\D_{\rm trs}H}{T\D_{\rm trs}V} $$</description>
     </item>
     
     <item>
@@ -512,10 +504,8 @@ p=p^*\exp\left[{\frac{V_\m({\rm l})\D p}{RT}}\right] $$ 该结果未考虑惰性
 蒸气压图 由Raoult定律： $$ \align{p&amp;amp;=p_\A+p_\B\\ &amp;amp;=p^*_\A x_\A + p^*_\B (1-x_\A)\\&amp;amp;=p^*_\B + (p^*_\A- p^*_\B)x_\A} $$ 由此可以画出 $p-x_\A$图。
 对于气相组分（记为$y_{\rm C}$），根据分压定律： $$ \align{y_\A&amp;amp;=\frac{p_\A}{p}=\frac{p^*_\A x_\A}{p^*_\B + (p^*_\A- p^*_\B)x_\A}\\y_\B&amp;amp;=\frac{p_\B}{p}=\frac{p^*_\B (1-x_\A)}{p^*_\B + (p^*_\A- p^*_\B)x_\A}} $$ 由此可画出 $y_\A-x_\A$图。
 延伸一下思路，用压力表示$x_\C$和$y_\C$的关系（使用分压定律和Raoult定律）： $$ \frac{y_\C}{x_\C}=\frac{p_\C^*}{p} $$
-$T-x_\A$和$T-y_\A$图 我们主要关注气-液平衡，相界线上，对于每个组份都有如下关系： $$ p_\C({\rm l})=p_\C({\rm g})\\
-\mu_\C({\rm l})=\mu_\C({\rm g})\\
-T_\C({\rm l})=T_\C({\rm g}) $$ 同时： $$ \sum x_\C=\sum y_\C=1 $$
-首先使用温度表示某温度下饱和蒸气压$p^*$与总压$p$（默认为标准大气压，即该液体沸点时的饱和蒸汽压）之比： $$ \ln\frac{p_\A^*}{p}=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}} $$ 根据上一节得到的$x_\C$和$y_\C$关系，带入： $$ \ln\frac{y_\A}{x_\A}=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}} $$ 由于$x_\C$和$y_\A$的总和分别为1，可以得到两个方程： $$ \left \{\begin{align}\ln\frac{y_\A}{x_\A}&amp;amp;=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}}\\ \ln\frac{1-y_\A}{1-x_\A}&amp;amp;=-\frac{\D_{\rm vap}H_\B}{R}\l{\frac1T-\frac1{T_{\rm b}}}\end{align}\right.</description>
+$T-x_\A$和$T-y_\A$图 我们主要关注气-液平衡，相界线上，对于每个组份都有如下关系： $$ p_\C({\rm l})=p_\C({\rm g})\\\mu_\C({\rm l})=\mu_\C({\rm g})\\T_\C({\rm l})=T_\C({\rm g}) $$ 同时： $$ \sum x_\C=\sum y_\C=1 $$
+首先使用温度表示某温度下饱和蒸气压$p^*$与总压$p$（默认为标准大气压，即该液体沸点时的饱和蒸汽压）之比： $$ \ln\frac{p_\A^*}{p}=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}} $$ 根据上一节得到的$x_\C$和$y_\C$关系，带入： $$ \ln\frac{y_\A}{x_\A}=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}} $$ 由于$x_\C$和$y_\A$的总和分别为1，可以得到两个方程： $$ \left \{\begin{align*}\ln\frac{y_\A}{x_\A}&amp;amp;=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}}\\ \ln\frac{1-y_\A}{1-x_\A}&amp;amp;=-\frac{\D_{\rm vap}H_\B}{R}\l{\frac1T-\frac1{T_{\rm b}}}\end{align*}\right.</description>
     </item>
     
     <item>

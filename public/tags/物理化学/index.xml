@@ -181,15 +181,10 @@ Nerst 方程 $$ E=E^\ominus-\frac{RT}{zF}\ln Q $$
       
       <guid>/post/2022/02/18/%E7%9B%B8%E5%8F%98/</guid>
       <description>相律 对于有$C$各组分、$P$个相的系统，使用$p、V$以及每个相中组份的摩尔分数，那么强度变量的总数为：$CP+2$个。由于摩尔分数总和为1，总数变为$CP-P+2$。又因为组分在所有相里的$\mu$相等，总数变为$CP-C(P-1)-P+2=C-P+2$，因此得到Gibbs相律： $$ F=C-P+2 $$
-稳定性与条件的关系 根据以下两个关系（重要）： $$ \lf \mu T_p=-S_\m\\
-\lf \mu p_T=V_\m $$ 对于不同的相： $$ S_\m({\rm g})&amp;gt;S_\m({\rm l})&amp;gt;S_\m({\rm s})\\
-V_\m({\rm g})&amp;gt;V_\m({\rm l})&amp;gt;V_\m({\rm s}) $$
+稳定性与条件的关系 根据以下两个关系（重要）： $$ \ga{\lf \mu T_p=-S_\m\\\lf \mu p_T=V_\m} $$ 对于不同的相： $$ \ga{S_\m({\rm g})&amp;gt;S_\m({\rm l})&amp;gt;S_\m({\rm s})\\ V_\m({\rm g})&amp;gt;V_\m({\rm l})&amp;gt;V_\m({\rm s})} $$
 压力对液体蒸气压的影响 通过惰性气体或使用只对液体有影响的活塞加（总）压可以增大蒸气压。
-等温，全程平衡，化学势相等（$p_{\rm tot}$为总压，$p^*$为原蒸气压，$p$为现蒸气压）： $$ V_\m({\rm l})\d p_{\rm tot}=\frac{RT}p\d p $$ 设压力增大了$\D p$，原来总压就是$p^*$，现总压为$p^*+\D p$，积分（加入$&#39;$防止混淆）： $$ \int_{p*}^{p^*+\D p} V_\m({\rm l})\d p&#39;=RT\int_{p*}^{p}\frac{RT}{p&#39;&#39;}\d p&#39;&#39; $$ 得到结果： $$ V_\m({\rm l})\D p=RT\ln{\frac{p}{p*}}\\
-\ln{\frac{p}{p*}}=\frac{V_\m({\rm l})\D p}{RT}\\
-p=p^*\exp\left[{\frac{V_\m({\rm l})\D p}{RT}}\right] $$ 该结果未考虑惰性气体的溶解。
-相界线的位置 根据定义： $$ \d \mu_\alpha=\d \mu_\beta\\
--S_\m(\alpha)\d T+V_\m(\alpha)\d p=-S_\m(\beta)\d T+V_\m(\beta)\d p\\</description>
+等温，全程平衡，化学势相等（$p_{\rm tot}$为总压，$p^*$为原蒸气压，$p$为现蒸气压）： $$ V_\m({\rm l})\d p_{\rm tot}=\frac{RT}p\d p $$ 设压力增大了$\D p$，原来总压就是$p^*$，现总压为$p^*+\D p$，积分（加入$&#39;$防止混淆）： $$ \int_{p*}^{p^*+\D p} V_\m({\rm l})\d p&#39;=RT\int_{p*}^{p}\frac{RT}{p&#39;&#39;}\d p&#39;&#39; $$ 得到结果： $$ \ga{V_\m({\rm l})\D p=RT\ln{\frac{p}{p*}}\\\ln{\frac{p}{p*}}=\frac{V_\m({\rm l})\D p}{RT}\\ p=p^*\exp\left[{\frac{V_\m({\rm l})\D p}{RT}}\right]} $$ 该结果未考虑惰性气体的溶解。
+相界线的位置 根据定义： $$ \ga{\d \mu_\alpha=\d \mu_\beta\\ -S_\m(\alpha)\d T+V_\m(\alpha)\d p=-S_\m(\beta)\d T+V_\m(\beta)\d p\\ \frac{\d p}{\d T}=\frac{\D_{\rm trs}S}{\D_{\rm trs}V}} $$ 这就是克拉贝龙方程，由于相界线上是可逆的： $$ \frac{\d p}{\d T}=\frac{\D_{\rm trs}H}{T\D_{\rm trs}V} $$</description>
     </item>
     
     <item>
@@ -202,10 +197,8 @@ p=p^*\exp\left[{\frac{V_\m({\rm l})\D p}{RT}}\right] $$ 该结果未考虑惰性
 蒸气压图 由Raoult定律： $$ \align{p&amp;amp;=p_\A+p_\B\\ &amp;amp;=p^*_\A x_\A + p^*_\B (1-x_\A)\\&amp;amp;=p^*_\B + (p^*_\A- p^*_\B)x_\A} $$ 由此可以画出 $p-x_\A$图。
 对于气相组分（记为$y_{\rm C}$），根据分压定律： $$ \align{y_\A&amp;amp;=\frac{p_\A}{p}=\frac{p^*_\A x_\A}{p^*_\B + (p^*_\A- p^*_\B)x_\A}\\y_\B&amp;amp;=\frac{p_\B}{p}=\frac{p^*_\B (1-x_\A)}{p^*_\B + (p^*_\A- p^*_\B)x_\A}} $$ 由此可画出 $y_\A-x_\A$图。
 延伸一下思路，用压力表示$x_\C$和$y_\C$的关系（使用分压定律和Raoult定律）： $$ \frac{y_\C}{x_\C}=\frac{p_\C^*}{p} $$
-$T-x_\A$和$T-y_\A$图 我们主要关注气-液平衡，相界线上，对于每个组份都有如下关系： $$ p_\C({\rm l})=p_\C({\rm g})\\
-\mu_\C({\rm l})=\mu_\C({\rm g})\\
-T_\C({\rm l})=T_\C({\rm g}) $$ 同时： $$ \sum x_\C=\sum y_\C=1 $$
-首先使用温度表示某温度下饱和蒸气压$p^*$与总压$p$（默认为标准大气压，即该液体沸点时的饱和蒸汽压）之比： $$ \ln\frac{p_\A^*}{p}=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}} $$ 根据上一节得到的$x_\C$和$y_\C$关系，带入： $$ \ln\frac{y_\A}{x_\A}=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}} $$ 由于$x_\C$和$y_\A$的总和分别为1，可以得到两个方程： $$ \left \{\begin{align}\ln\frac{y_\A}{x_\A}&amp;amp;=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}}\\ \ln\frac{1-y_\A}{1-x_\A}&amp;amp;=-\frac{\D_{\rm vap}H_\B}{R}\l{\frac1T-\frac1{T_{\rm b}}}\end{align}\right.</description>
+$T-x_\A$和$T-y_\A$图 我们主要关注气-液平衡，相界线上，对于每个组份都有如下关系： $$ p_\C({\rm l})=p_\C({\rm g})\\\mu_\C({\rm l})=\mu_\C({\rm g})\\T_\C({\rm l})=T_\C({\rm g}) $$ 同时： $$ \sum x_\C=\sum y_\C=1 $$
+首先使用温度表示某温度下饱和蒸气压$p^*$与总压$p$（默认为标准大气压，即该液体沸点时的饱和蒸汽压）之比： $$ \ln\frac{p_\A^*}{p}=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}} $$ 根据上一节得到的$x_\C$和$y_\C$关系，带入： $$ \ln\frac{y_\A}{x_\A}=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}} $$ 由于$x_\C$和$y_\A$的总和分别为1，可以得到两个方程： $$ \left \{\begin{align*}\ln\frac{y_\A}{x_\A}&amp;amp;=-\frac{\D_{\rm vap}H_\A}{R}\l{\frac1T-\frac1{T_{\rm b}}}\\ \ln\frac{1-y_\A}{1-x_\A}&amp;amp;=-\frac{\D_{\rm vap}H_\B}{R}\l{\frac1T-\frac1{T_{\rm b}}}\end{align*}\right.</description>
     </item>
     
   </channel>

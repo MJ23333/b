@@ -6,16 +6,25 @@ body {
   line-height: 1.5em;
   overflow-x: hidden;
 }
+.katex { font-size: 1em!important;}
 .katex-display > .katex {
-  display: inline-block;
-  white-space: nowrap;
-  max-width: 100%;
-  overflow-x: scroll;
-  text-align: initial;
+	max-width: 100%;
+	
 }
-.katex {
-  font: 1em;
+.katex-display {
+	/* line-height: 1.2em; */
+	height: 120%;
 }
+.katex-display > .katex > .katex-html {
+	max-width: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
 html.han-la hanla:after {
 	content: " ";
 	display: inline;
@@ -54,8 +63,8 @@ html hanla:after {
 p{
 	text-indent: 2em;
 	font-weight:400;
-	line-height: 2em;
-	font-size: 1.1em;
+	line-height: 1.7em;
+	font-size: 1em;
   color:rgb(37, 37, 37);
 }
 
@@ -76,7 +85,7 @@ display: none;
   justify-content: space-between;
 }
 .list main > * {
-  flex: 1 0 100%;
+  flex: 1 0 100%; 
 }
 .list main > .post-card {
   flex: 0 0 calc(50% - .5em);
@@ -155,7 +164,7 @@ a{
 }
 .title {
   font-size: 1.2em;
-	letter-spacing:0.1em;
+	/* letter-spacing:0.1em; */
   line-height: 1em;
 }
 .article-meta .terms, .appendix, .footnotes, main .side > *, figcaption, .caption { font-size: .9em; text-indent: 0em;}

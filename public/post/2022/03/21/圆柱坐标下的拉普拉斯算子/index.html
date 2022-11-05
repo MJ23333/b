@@ -24,7 +24,7 @@
 <meta name="twitter:description" content="拉普兰德在使用圆规前必须掌握的圆柱坐标下拉普拉斯算子的推导。
 圆柱坐标与笛卡尔坐标关系如下：
 $$x=r\cos \phi \tag1 \\ y=r\sin \phi$$
-把上下平方相加，得到： $$ F(x,y,r)=x^2&#43;y^2-r^2=0\tag2 $$ 接下来只介绍对于$x$的部分，$y$部分方法完全一致,根据隐函数求偏导方法（见《一些数学》）： $$ \f rx=-\frac{\partial F/\partial x}{\partial F/\partial r}=-\frac{2x}{-2r}=\frac xr=\cos\phi\tag3 $$ (1)式两边对$x$求偏导，并带入(3)式结果： $$ \align{1&amp;=\f rx\cos\phi&#43;\f{\cos\phi}xr\\&amp;=\cos^2\phi-r\sin\phi\f \phi x\\\f \phi x&amp;=-\frac{\sin\phi}r\tag4} $$ 显然，对于一个指定的点，$(x,y)$和$(r,\phi)$两种表示一一对应，必然有： $$\psi(r,\phi)=\psi(r(x,y),\phi(x,y))$$ 应用链式法则（《一些数学》），带入(3)、(4)得到： $$ \align{\f \psi x&amp;=\f \psi r \f rx&#43;\f \psi \phi \f \phi x\\&amp;=\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r \tag5} $$ 我们接着再求一次偏导，同样有（把一阶偏导看做一个函数）： $$\f \psi x(r,\phi)=\f \psi x(r(x,y),\phi(x,y))$$ 又用链式法则： $$ \align{\f{^2\psi}{x^2}=\f {\lf \psi x}{x}&amp;=\f {\lf \psi x} r \cos\phi-\f {\lf \psi x} \phi\frac{\sin\phi}r } $$ 把(5)带入其中，并使用乘法求导法则： $$ \align{\f{^2\psi}{x^2}=&amp;\f {\left(\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r\right)} r \cos\phi-\f {\left(\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r\right)} \phi\frac{\sin\phi}r \\ =&amp;\left(\f{^2\psi}{r^2}\cos\phi-\f{^2\psi}{\phi\partial r}\frac{\sin\phi}r&#43;\f{\psi}{\phi}\frac{\sin\phi}{r^2}\right)\cos\phi\\&amp;-\left(\f{^2\psi}{r\partial\phi}\cos\phi-\f\psi r\sin\phi-\f{^2\psi}{\phi^2}\frac{\sin \phi}{r}-\f{\psi}{\phi}\frac{\cos\phi}{r^2}\right)\frac{\sin\phi}r\\=&amp;\f{^2\psi}{r^2}\cos^2\phi-\f{^2\psi}{r\partial\phi}\frac{2\sin\phi\cos\phi}{r}&#43;\f{^2\psi}{\phi^2}\frac{\sin^2\phi}{r^2}&#43;\f\psi r\frac{\sin^2\phi}{r}&#43;\f\psi\phi\frac{2\sin\phi\cos\phi}{r^2}} $$ 同理，对$y$做相同的事情： $$ \f{^2\psi}{y^2}=\f{^2\psi}{r^2}\red{\sin^2}\phi\red{&#43;}\f{^2\psi}{r\partial\phi}\frac{2\sin\phi\cos\phi}{r}&#43;\f{^2\psi}{\phi^2}\frac{\red{\cos^2}\phi}{r^2}&#43;\f\psi r\frac{\red{\cos^2}\phi}{r}\red-\f\psi\phi\frac{2\sin\phi\cos\phi}{r^2} $$ 合体！写成算符形式 $$ \f{^2}{x^2}&#43;\f{^2}{y^2}=\f{^2}{r^2}&#43;\frac1r\f{}{r}&#43;\frac1{r^2}\f{^2}{\psi^2} $$ 去吃千层酥罢！"/>
+把上下平方相加，得到： $$ F(x,y,r)=x^2&#43;y^2-r^2=0\tag2 $$ 接下来只介绍对于$x$的部分，$y$部分方法完全一致,根据隐函数求偏导方法（见《一些数学》）： $$ \f rx=-\frac{\partial F/\partial x}{\partial F/\partial r}=-\frac{2x}{-2r}=\frac xr=\cos\phi\tag3 $$ (1)式两边对$x$求偏导，并带入(3)式结果： $$ \align{1&amp;=\f rx\cos\phi&#43;\f{\cos\phi}xr\\&amp;=\cos^2\phi-r\sin\phi\f \phi x\\\f \phi x&amp;=-\frac{\sin\phi}r }\tag4 $$ 显然，对于一个指定的点，$(x,y)$和$(r,\phi)$两种表示一一对应，必然有： $$\psi(r,\phi)=\psi(r(x,y),\phi(x,y))$$ 应用链式法则（《一些数学》），带入(3)、(4)得到： $$ \align{\f \psi x&amp;=\f \psi r \f rx&#43;\f \psi \phi \f \phi x\\&amp;=\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r \tag5} $$ 我们接着再求一次偏导，同样有（把一阶偏导看做一个函数）： $$\f \psi x(r,\phi)=\f \psi x(r(x,y),\phi(x,y))$$ 又用链式法则： $$ \align{\f{^2\psi}{x^2}=\f {\lf \psi x}{x}&amp;=\f {\lf \psi x} r \cos\phi-\f {\lf \psi x} \phi\frac{\sin\phi}r } $$ 把(5)带入其中，并使用乘法求导法则： $$ \align{\f{^2\psi}{x^2}=&amp;\f {\left(\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r\right)} r \cos\phi-\f {\left(\f \psi r \cos\phi-\f \psi \phi\frac{\sin\phi}r\right)} \phi\frac{\sin\phi}r \\ =&amp;\left(\f{^2\psi}{r^2}\cos\phi-\f{^2\psi}{\phi\partial r}\frac{\sin\phi}r&#43;\f{\psi}{\phi}\frac{\sin\phi}{r^2}\right)\cos\phi\\&amp;-\left(\f{^2\psi}{r\partial\phi}\cos\phi-\f\psi r\sin\phi-\f{^2\psi}{\phi^2}\frac{\sin \phi}{r}-\f{\psi}{\phi}\frac{\cos\phi}{r^2}\right)\frac{\sin\phi}r\\=&amp;\f{^2\psi}{r^2}\cos^2\phi-\f{^2\psi}{r\partial\phi}\frac{2\sin\phi\cos\phi}{r}&#43;\f{^2\psi}{\phi^2}\frac{\sin^2\phi}{r^2}&#43;\f\psi r\frac{\sin^2\phi}{r}&#43;\f\psi\phi\frac{2\sin\phi\cos\phi}{r^2}} $$ 同理，对$y$做相同的事情： $$ \f{^2\psi}{y^2}=\f{^2\psi}{r^2}\red{\sin^2}\phi\red{&#43;}\f{^2\psi}{r\partial\phi}\frac{2\sin\phi\cos\phi}{r}&#43;\f{^2\psi}{\phi^2}\frac{\red{\cos^2}\phi}{r^2}&#43;\f\psi r\frac{\red{\cos^2}\phi}{r}\red-\f\psi\phi\frac{2\sin\phi\cos\phi}{r^2} $$ 合体！写成算符形式 $$ \f{^2}{x^2}&#43;\f{^2}{y^2}=\f{^2}{r^2}&#43;\frac1r\f{}{r}&#43;\frac1{r^2}\f{^2}{\psi^2} $$ 去吃千层酥罢！"/>
 
   </head>
   <body>
@@ -83,7 +83,7 @@ $$
 $$
 (1)式两边对$x$求偏导，并带入(3)式结果：
 $$
-\align{1&amp;=\f rx\cos\phi+\f{\cos\phi}xr\\&amp;=\cos^2\phi-r\sin\phi\f \phi x\\\f \phi x&amp;=-\frac{\sin\phi}r\tag4}
+\align{1&amp;=\f rx\cos\phi+\f{\cos\phi}xr\\&amp;=\cos^2\phi-r\sin\phi\f \phi x\\\f \phi x&amp;=-\frac{\sin\phi}r }\tag4
 $$
 显然，对于一个指定的点，$(x,y)$和$(r,\phi)$两种表示一一对应，必然有：
 $$\psi(r,\phi)=\psi(r(x,y),\phi(x,y))$$
@@ -255,6 +255,7 @@ $$
 					'\\mol': "{\\space\\mathrm {mol}}",
 					'\\kjm': "{\\space\\mathrm {kJ}\\cdot\\mathrm {mol}^{-1}}",
 					'\\align': "{\\begin{align*} #1 \\end{align*}}",
+					'\\ga': "{\\begin{gather*} #1 \\end{gather*}}",
 					'\\f': "{\\frac{\\partial  #1}{\\partial  #2}}",
 					'\\l': "{\\left( #1\\right)}",
 					'\\lf': "{\\left(\\frac{\\partial  #1}{\\partial  #2}\\right)}",
