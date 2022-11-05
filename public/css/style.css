@@ -121,16 +121,17 @@ footer { background: darkslategray; }
 }
 .date{
 	padding-top: 1em;
-	
 	padding-bottom: 1em;
 	font-weight: normal;
 	/* font-style: italic; */
 	text-align: center;
 }
 h3.date{
-	font-family: 'Libre Barcode 39 Extended Text', cursive,Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia,serif;
+	font-family: "Times New Roman",Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia,serif;
+	/* font-style:italic; */
+	font-weight: bold;
 	text-align: right;
-	font-size:3em;
+	font-size:1.5em;
 	padding-bottom: 0em;
 }
 .article-meta, .menu a, .footer a, .terms a, .bg-number {
